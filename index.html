@@ -50,15 +50,17 @@
         }
 
         .slide-frame {
+            position: absolute;
+            left: 50%;
+            top: 50%;
             width: 1280px;
             height: 720px;
             border: none;
             border-radius: 12px;
             background-color: white;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-            max-width: 100%;
-            max-height: 100%;
+            transition: opacity 0.3s ease;
+            transform-origin: center center;
         }
 
         /* Loading Overlay */
@@ -468,6 +470,36 @@
         fullscreenBtn.addEventListener('click', toggleFullscreen);
         themeBtn.addEventListener('click', toggleTheme);
         document.addEventListener('keydown', handleKeyDown);
+
+        // Responsive Scaling Logic
+        function resizeSlides() {
+            const container = document.querySelector('.deck-container');
+            const frames = document.querySelectorAll('.slide-frame');
+            if (!container || frames.length === 0) return;
+
+            const contentW = 1280;
+            const contentH = 720;
+
+            // Available space (minus small padding)
+            const availableW = container.clientWidth - 20;
+            const availableH = container.clientHeight - 20;
+
+            const scaleX = availableW / contentW;
+            const scaleY = availableH / contentH;
+
+            // Use the smaller scale to ensure it fits entirely
+            const scale = Math.min(scaleX, scaleY, 1.5);
+
+            frames.forEach(frame => {
+                // Must use translate(-50%, -50%) to keep it centered since top/left are 50%
+                frame.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            });
+        }
+
+        window.addEventListener('resize', resizeSlides);
+        // Call initially and after a slight delay to ensure layout is settled
+        resizeSlides();
+        setTimeout(resizeSlides, 100);
 
         setTimeout(() => {
             loader.style.opacity = '0';
