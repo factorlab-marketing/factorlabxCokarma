@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What Our Approach Achieves</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Decorative Background Elements */
+        .bg-shape-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 720px;
+            background-color: #f0fdfa; /* teal-50 */
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Success Story Cards */
+        .story-card {
+            background-color: white;
+            border-left: 6px solid #0d9488; /* teal-600 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            border-radius: 8px 16px 16px 8px;
+            margin-bottom: 24px;
+            transition: transform 0.2s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .story-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: #ccfbf1; /* teal-100 */
+            color: #0d9488; /* teal-600 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* Chart Container Styling */
+        .chart-wrapper {
+            background-color: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            position: relative;
+            z-index: 10;
+        }
+
+        .growth-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #0d9488;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(13, 148, 136, 0.3);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .tagline-box {
+            background-color: #111827; /* gray-900 */
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body style="">
+<div class="slide-container">
+<!-- Backgrounds -->
+<div class="bg-shape-1"></div>
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">Real Impact</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900 max-w-2xl">What Our Approach <span class="text-teal-600">Achieves</span></h1>
+<p class="text-xl text-gray-500 mt-3 font-light max-w-2xl">Results from disciplined, data-driven investing over the long term.</p>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 pt-8 pb-12 flex relative z-10 items-center">
+<!-- Left Column: Success Stories -->
+<div class="w-1/2 pr-12">
+<!-- Story 1 -->
+<div class="story-card">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-600">
+<i class="fas fa-seedling"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Small SIP Power</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Small SIP starters who stayed disciplined for <strong>7–10 years</strong> saw their corpus grow <strong>3–4x</strong> despite interim market volatility.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="story-card border-teal-500">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+<i class="fas fa-shield-alt"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Crisis Management</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Data-driven rebalancing helped investors <strong>avoid panic-selling</strong> during downturns, capturing full recovery gains when markets bounced back.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Story 3 -->
+<div class="story-card border-teal-400">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+<i class="fas fa-trophy"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Alpha Generation</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Rule-based portfolios consistently <strong>outperformed random stock-picking</strong> while keeping investor emotions completely in check.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Proof -->
+<div class="w-1/2 pl-4 relative h-full flex flex-col justify-center">
+<div class="chart-wrapper h-80 w-full mb-12" style="transform: translate(-0.997921px, -20.9563px);">
+<div class="growth-badge">
+<i class="fas fa-arrow-up mr-2"></i>3.8x Growth
+                    </div>
+<div class="mb-2">
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Historical Performance Simulation</p>
+<p class="text-lg font-bold text-gray-800">Disciplined SIP vs. Volatility</p>
+</div>
+<div style="height: 240px; width: 100%;">
+<canvas height="240" id="impactChart" style="display: block; box-sizing: border-box; height: 240px; width: 512px;" width="512"></canvas>
+</div>
+</div>
+<!-- Emotional Hook Tagline -->
+<div class="tagline-box" style="transform: translate(-1.99584px, 15.9667px);">
+<i class="fas fa-check-circle text-teal-400 text-2xl mr-4"></i>
+<div>
+<p class="text-xs text-gray-400 uppercase tracking-widest font-bold">The Formula</p>
+<p class="text-2xl font-bold">Discipline + Data = <span class="text-teal-400">Wealth</span></p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Brand -->
+
+</div>
+<script>
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        
+        const labels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8'];
+        const investedData = [10, 22, 35, 48, 62, 75, 90, 105]; // Linear investment
+        const wealthData =   [11, 25, 32, 55, 78, 92, 125, 168]; // Volatile but growing wealth
+        
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Portfolio Value',
+                        data: wealthData,
+                        borderColor: '#0d9488', // Teal
+                        backgroundColor: (context) => {
+                            const ctx = context.chart.ctx;
+                            const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                            gradient.addColorStop(0, 'rgba(13, 148, 136, 0.2)');
+                            gradient.addColorStop(1, 'rgba(13, 148, 136, 0)');
+                            return gradient;
+                        },
+                        borderWidth: 3,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#0d9488',
+                        pointRadius: 4,
+                        fill: true,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Invested Amount',
+                        data: investedData,
+                        borderColor: '#9ca3af', // Gray
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false,
+                        tension: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            font: { family: "'Roboto', sans-serif", size: 11 }
+                        }
+                    },
+                    tooltip: { enabled: true }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#f3f4f6' },
+                        ticks: { display: false }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { size: 10 } }
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        });
+    </script>
+<script>
+        window.addEventListener('message', function(event) {
+            if (event.data.type === 'theme-update') {
+                const isDark = event.data.isDark;
+                const css = event.data.css;
+                const styleId = 'dark-theme-style';
+                let style = document.getElementById(styleId);
+                
+                if (isDark) {
+                    if (!style) {
+                        style = document.createElement('style');
+                        style.id = styleId;
+                        style.textContent = css;
+                        document.head.appendChild(style);
+                    }
+                } else {
+                    if (style) {
+                        style.remove();
+                    }
+                }
+            }
+        });
+    </script>
+</body></html>

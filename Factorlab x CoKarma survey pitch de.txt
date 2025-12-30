@@ -1,0 +1,2991 @@
+Factorlab x CoKarma survey pitch deck
+slide - 1
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FactorLab Title Slide</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        .hero-section {
+            background-color: #0d2b38; /* Deep Teal/Blue characteristic of fintech */
+            position: relative;
+            overflow: hidden;
+        }
+        /* Geometric accent shapes instead of gradients */
+        .accent-shape-1 {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 400px;
+            height: 400px;
+            background-color: #06b6d4; /* Cyan-500 */
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        .accent-shape-2 {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background-color: #10b981; /* Emerald-500 */
+            border-radius: 50%;
+            opacity: 0.05;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .cokarma-pill {
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Main Content Area -->
+<div class="hero-section flex-1 flex flex-col justify-center items-center relative text-white px-20">
+<!-- Background Elements -->
+<div class="grid-pattern"></div>
+<div class="accent-shape-1"></div>
+<div class="accent-shape-2"></div>
+<!-- Top Logos -->
+<div class="absolute top-12 left-12 flex items-center space-x-6 z-10">
+<!-- FactorLab Logo Simulation -->
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-white rounded flex items-center justify-center text-teal-800 text-xl font-bold">
+<i class="fas fa-chart-line"></i>
+</div>
+<p class="text-2xl font-bold tracking-tight">FactorLab</p>
+</div>
+<div class="h-8 w-px bg-gray-500 opacity-50"></div>
+<!-- CoKarma Logo Simulation -->
+<div class="flex items-center space-x-2 opacity-90">
+<div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center text-xs">
+                        CK
+                    </div>
+<p class="text-lg font-medium">CoKarma</p>
+</div>
+</div>
+<!-- Central Content -->
+<div class="z-10 text-center max-w-4xl mt-10">
+<div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-teal-900 bg-opacity-50 text-teal-300 text-sm font-semibold tracking-wide uppercase mb-8 border border-teal-700">
+<p>Employee Investing Session</p>
+</div>
+<h1 class="text-6xl font-extrabold leading-tight mb-6">
+                    Turn Your Salary Into <span class="text-transparent bg-clip-text" style="color: #22d3ee;">Wealth</span>
+</h1>
+<p class="text-2xl text-gray-300 font-light mb-12">
+                    Smart Investing Made Simple
+                </p>
+<!-- Tagline Cards -->
+<div class="flex justify-center gap-6 mb-16">
+<div class="flex items-center space-x-2 px-5 py-3 rounded-lg bg-gray-800 bg-opacity-40 border border-gray-700">
+<i class="fas fa-database text-teal-400"></i>
+<p class="font-medium text-sm">Data-Driven</p>
+</div>
+<div class="flex items-center space-x-2 px-5 py-3 rounded-lg bg-gray-800 bg-opacity-40 border border-gray-700">
+<i class="fas fa-gavel text-teal-400"></i>
+<p class="font-medium text-sm">Rule-Based</p>
+</div>
+<div class="flex items-center space-x-2 px-5 py-3 rounded-lg bg-gray-800 bg-opacity-40 border border-gray-700">
+<i class="fas fa-hourglass-half text-teal-400"></i>
+<p class="font-medium text-sm">Long-Term</p>
+</div>
+</div>
+</div>
+<!-- Footer Details -->
+<div class="absolute bottom-0 w-full h-24 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-between items-center px-12 border-t border-gray-700 z-20">
+<div class="flex items-center space-x-8 text-gray-300">
+<div class="flex items-center space-x-3">
+<i class="far fa-calendar-alt text-teal-500"></i>
+<p class="text-sm font-medium">2025-12-30</p>
+</div>
+<div class="flex items-center space-x-3">
+<i class="fas fa-map-marker-alt text-teal-500"></i>
+<p class="text-sm font-medium">CoKarma Coworking Space</p>
+</div>
+</div>
+<div class="flex items-center">
+<p class="text-xs text-gray-400 uppercase tracking-widest mr-2">Powered by</p>
+<p class="text-sm font-bold text-white">FactorLab Quantitative Research</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+slide - 2
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quick Poll - Investing Story</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #f8fafc; /* Slate-50 */
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .poll-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .poll-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .dashed-circle {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23CBD5E1FF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 9999px;
+        }
+        /* No gradients allowed per instructions, using solid colors/opacity */
+        .bg-teal-primary {
+            background-color: #0d2b38;
+        }
+        .text-teal-accent {
+            color: #06b6d4;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header Section -->
+<header class="pt-12 px-16 pb-8">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-yellow-500 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-gray-500 uppercase">Interactive Session</p>
+</div>
+<h1 class="text-5xl font-bold text-gray-900 mb-4">Let's Start Here: Your Investing Story</h1>
+<p class="text-xl text-gray-600 font-light max-w-3xl">
+                Everyone starts somewhere. Raise your hand if this sounds like your current portfolio.
+            </p>
+</header>
+<!-- Main Content: 3 Columns -->
+<main class="flex-1 px-16 pb-8 flex space-x-8 items-stretch justify-center">
+<!-- Card 1: FDs & Insurance -->
+<div class="flex-1 bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col items-center justify-between poll-card relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-blue-500"></div>
+<div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 text-3xl">
+<i class="fas fa-shield-alt"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 text-center mb-2">FDs &amp; Insurance</h3>
+<p class="text-gray-500 text-center mb-8 text-sm px-4">Safety first. Traditional savings and endowment plans.</p>
+<!-- Live Counter Placeholder -->
+<div class="w-full mt-auto">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Audience Poll</span>
+<div class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded animate-pulse">LIVE</div>
+</div>
+<div class="bg-gray-100 rounded-lg p-6 text-center border border-gray-200">
+<p class="text-5xl font-bold text-gray-300">--%</p>
+<p class="text-xs text-gray-400 mt-2">Waiting for input...</p>
+</div>
+</div>
+</div>
+<!-- Card 2: SIPs & Mutual Funds -->
+<div class="flex-1 bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col items-center justify-between poll-card relative overflow-hidden transform scale-105 border-teal-200 ring-4 ring-teal-50 ring-opacity-50">
+<div class="absolute top-0 left-0 w-full h-2 bg-teal-500"></div>
+<div class="w-24 h-24 rounded-full bg-teal-50 flex items-center justify-center mb-6 text-teal-600 text-4xl">
+<i class="fas fa-seedling"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 text-center mb-2">SIPs &amp; Mutual Funds</h3>
+<p class="text-gray-500 text-center mb-8 text-sm px-4">Building habits. Automated monthly investments in funds.</p>
+<!-- Live Counter Placeholder -->
+<div class="w-full mt-auto">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Audience Poll</span>
+<div class="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded animate-pulse">LIVE</div>
+</div>
+<div class="bg-teal-50 rounded-lg p-6 text-center border border-teal-100">
+<p class="text-6xl font-bold text-teal-300">--%</p>
+<p class="text-xs text-teal-400 mt-2">Waiting for input...</p>
+</div>
+</div>
+</div>
+<!-- Card 3: Direct Stocks & Trading -->
+<div class="flex-1 bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col items-center justify-between poll-card relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-purple-500"></div>
+<div class="w-20 h-20 rounded-full bg-purple-50 flex items-center justify-center mb-6 text-purple-600 text-3xl">
+<i class="fas fa-chart-line"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 text-center mb-2">Direct Stocks</h3>
+<p class="text-gray-500 text-center mb-8 text-sm px-4">Active management. Buying stocks, trading, F&amp;O.</p>
+<!-- Live Counter Placeholder -->
+<div class="w-full mt-auto">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-gray-400 uppercase tracking-wide">Audience Poll</span>
+<div class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded animate-pulse">LIVE</div>
+</div>
+<div class="bg-gray-100 rounded-lg p-6 text-center border border-gray-200">
+<p class="text-5xl font-bold text-gray-300">--%</p>
+<p class="text-xs text-gray-400 mt-2">Waiting for input...</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Note -->
+<footer class="bg-white border-t border-gray-200 py-4 px-16 flex items-center justify-center">
+<div class="flex items-center space-x-3 text-gray-500">
+<i class="fas fa-info-circle text-teal-500"></i>
+<p class="text-sm font-medium">We'll update these figures live based on your show of hands. There are no wrong answers here.</p>
+</div>
+</footer>
+<!-- Brand Mark -->
+<div class="absolute bottom-4 right-6 text-right">
+<p class="text-xs font-bold text-gray-300 tracking-wider">FactorLab</p>
+</div>
+</div>
+</body>
+</html>
+
+
+slide - 3
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Salaried Professional's Dilemma</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #fffaf6; /* Very light warm background */
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom shape for the visual background */
+        .blob-bg {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            background-color: #fff7ed; /* Orange-50 */
+            border-radius: 45% 55% 70% 30% / 40% 60% 40% 60%;
+            z-index: 0;
+        }
+        .pain-point-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .pain-point-card:hover {
+            transform: translateX(10px);
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #f97316; /* Orange-500 */
+        }
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .pain-point-card:hover .icon-box {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        /* Decorative dots */
+        .dots-pattern {
+            background-image: radial-gradient(#fb923c 2px, transparent 2px);
+            background-size: 20px 20px;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="blob-bg"></div>
+<div class="dots-pattern" style="top: 40px; right: 40px;"></div>
+<div class="dots-pattern" style="bottom: 40px; left: 40px;"></div>
+<!-- Header -->
+<header class="pt-12 px-16 z-10">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-orange-500 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-orange-600 uppercase">The Problem</p>
+</div>
+<h1 class="text-5xl font-bold text-gray-900 leading-tight">
+                The Salaried Professional's <br/>
+<span class="text-orange-600">Dilemma</span>
+</h1>
+</header>
+<main class="flex-1 px-16 py-8 flex items-center z-10">
+<!-- Left Column: Pain Points List -->
+<div class="w-3/5 pr-12 space-y-6">
+<!-- Point 1: Confusion -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-question text-2xl"></i>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Confusion &amp; Complexity</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Which product fits me? What returns are realistic? Who can I actually trust with my money?
+                        </p>
+</div>
+</div>
+<!-- Point 2: No Time -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-hourglass-half text-2xl"></i>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">No Time to Manage</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Too busy managing career and life. Tracking markets and rebalancing portfolios feels overwhelming.
+                        </p>
+</div>
+</div>
+<!-- Point 3: Random Advice -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-comments text-2xl"></i>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Random Advice</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Acting on hot tips from friends, colleagues, or YouTube gurus without a cohesive strategy.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Metaphor -->
+<div class="w-2/5 flex flex-col items-center justify-center relative">
+<!-- Central Visual Composition -->
+<div class="relative w-80 h-80">
+<!-- Circle Background -->
+<div class="absolute inset-0 bg-white rounded-full shadow-lg flex items-center justify-center z-10 border border-orange-100">
+<div class="text-center p-8">
+<i class="fas fa-user-tie text-6xl text-gray-300 mb-4"></i>
+<div class="absolute top-16 right-16 text-orange-500 animate-bounce">
+<i class="fas fa-exclamation-circle text-3xl"></i>
+</div>
+<div class="absolute top-16 left-16 text-orange-500 animate-pulse">
+<i class="fas fa-chart-line text-3xl transform rotate-180"></i>
+</div>
+<div class="absolute bottom-16 right-20 text-orange-500">
+<i class="fas fa-file-invoice-dollar text-3xl"></i>
+</div>
+</div>
+</div>
+<!-- Floating Bubbles representing noise -->
+<div class="absolute -top-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Buy Crypto?</p>
+</div>
+<div class="absolute top-1/2 -right-12 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Market Crash!</p>
+</div>
+<div class="absolute bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Best FD Rate?</p>
+</div>
+<div class="absolute top-0 -left-8 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Tax Saving?</p>
+</div>
+</div>
+<p class="mt-8 text-center text-gray-400 font-medium italic">"I know I should invest better,<br/>but I don't know where to start."</p>
+</div>
+</main>
+<!-- Footer -->
+<div class="absolute bottom-6 right-8">
+<div class="flex items-center space-x-2 opacity-50">
+<div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">FactorLab</p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide - 4
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why Time Is Your Biggest Asset</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .accent-bar {
+            background-color: #0d2b38; /* FactorLab Primary */
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .scenario-card {
+            border-left-width: 6px;
+            transition: transform 0.2s;
+        }
+        .scenario-card:hover {
+            transform: translateX(5px);
+        }
+        .delay-badge {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .highlight-text {
+            color: #ef4444; /* Red-500 */
+        }
+        .math-quote {
+            background-image: repeating-linear-gradient(45deg, #f9fafb 25%, transparent 25%, transparent 75%, #f9fafb 75%, #f9fafb), repeating-linear-gradient(45deg, #f9fafb 25%, #ffffff 25%, #ffffff 75%, #f9fafb 75%, #f9fafb);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<header class="pt-10 px-16 flex justify-between items-end">
+<div>
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-500 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-600 uppercase">The Opportunity</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900">Why Time Is Your <span class="text-teal-600">Biggest Asset</span></h1>
+</div>
+<div class="flex items-center space-x-2 text-gray-400">
+<i class="fas fa-calculator"></i>
+<p class="text-sm font-medium">Live SIP Demo</p>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-16 py-8 flex space-x-12">
+<!-- Left Column: Scenarios -->
+<div class="w-5/12 flex flex-col justify-center space-y-6">
+<!-- Scenario 1 -->
+<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-teal-500 card-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<i class="fas fa-running text-6xl text-teal-600"></i>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-gray-800">Scenario 1: Start at 25</h3>
+<span class="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded">Smart Move</span>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+<div><p class="font-bold">Invest</p><p>₹5,000 / mo</p></div>
+<div><p class="font-bold">Duration</p><p>20 Years</p></div>
+<div><p class="font-bold">Rate</p><p>12%</p></div>
+<div><p class="font-bold text-gray-400">Total Invested</p><p class="text-gray-800 font-medium">₹12 Lakhs</p></div>
+</div>
+<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
+<p class="text-sm text-gray-500">Final Corpus</p>
+<p class="text-3xl font-extrabold text-teal-600">₹50 Lakhs+</p>
+</div>
+</div>
+</div>
+<!-- Scenario 2 -->
+<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-orange-500 card-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<i class="fas fa-user-clock text-6xl text-orange-600"></i>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-gray-800">Scenario 2: Delay 5 Years</h3>
+<span class="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded">Late Start</span>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+<div><p class="font-bold">Invest</p><p>₹5,000 / mo</p></div>
+<div><p class="font-bold">Duration</p><p>15 Years</p></div>
+<div><p class="font-bold">Rate</p><p>12%</p></div>
+<div><p class="font-bold text-gray-400">Total Invested</p><p class="text-gray-800 font-medium">₹9 Lakhs</p></div>
+</div>
+<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
+<p class="text-sm text-gray-500">Final Corpus</p>
+<p class="text-3xl font-extrabold text-orange-500">₹28 Lakhs+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visualization & Impact -->
+<div class="w-7/12 flex flex-col">
+<!-- Chart Area -->
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex-1 relative">
+<h4 class="text-gray-500 font-bold text-sm mb-4 uppercase tracking-wide">Wealth Accumulation Comparison</h4>
+<div class="relative h-64 w-full">
+<canvas id="sipChart"></canvas>
+</div>
+<!-- Cost of Delay Badge -->
+<div class="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2 bg-white border-2 border-red-500 shadow-lg rounded-xl p-4 delay-badge w-64 z-20">
+<div class="flex items-center space-x-3 mb-1">
+<i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
+<p class="text-xs font-bold text-red-500 uppercase tracking-wider">Cost of Delay</p>
+</div>
+<p class="text-3xl font-black text-gray-900 leading-none">₹22 Lakhs</p>
+<p class="text-xs text-gray-500 mt-2 leading-tight">Lost by waiting just 5 years. That's nearly <span class="font-bold text-red-500">44%</span> of potential wealth.</p>
+</div>
+</div>
+<!-- Bottom Message -->
+<div class="mt-6 math-quote rounded-lg p-4 border border-gray-200 text-center">
+<p class="text-xl font-medium text-gray-700">
+                        "That's not our opinion; that's <span class="font-black text-gray-900 underline decoration-teal-500 decoration-4">pure math</span>."
+                    </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="absolute bottom-6 right-8 text-right">
+<p class="text-xs font-bold text-gray-300 tracking-wider">FactorLab</p>
+</footer>
+</div>
+<script>
+        const ctx = document.getElementById('sipChart').getContext('2d');
+        const sipChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Start at 25', 'Start at 30'],
+                datasets: [
+                    {
+                        label: 'Principal Invested',
+                        data: [12, 9], // 12 Lakhs, 9 Lakhs
+                        backgroundColor: '#9ca3af', // Gray-400
+                        stack: 'Stack 0',
+                        barPercentage: 0.6,
+                    },
+                    {
+                        label: 'Wealth Gained (Returns)',
+                        data: [38, 19], // 38 Lakhs, 19 Lakhs (Approx)
+                        backgroundColor: ['#0d9488', '#f97316'], // Teal-600, Orange-500
+                        stack: 'Stack 0',
+                        barPercentage: 0.6,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Roboto',
+                                size: 12
+                            },
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ₹' + context.raw + ' Lakhs';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            borderDash: [5, 5],
+                            color: '#f3f4f6'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '₹' + value + 'L';
+                            },
+                            font: {
+                                family: 'Roboto'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Amount (in Lakhs)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                family: 'Montserrat',
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+slide - 5
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Power of Compounding</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .compounding-curve {
+            height: 200px;
+            width: 100%;
+        }
+        .highlight-box {
+            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.15), 0 8px 10px -6px rgba(13, 148, 136, 0.1);
+        }
+        .tree-icon {
+            transition: transform 1s ease-out;
+            transform-origin: bottom center;
+        }
+        .slide-up-fade {
+            animation: slideUpFade 0.8s ease-out forwards;
+        }
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern"></div>
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">Financial Physics</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900">The Power of <span class="text-teal-600">Compounding</span></h1>
+<p class="text-xl text-gray-500 mt-2 font-light">It's not just about how much you save, but how long you let it grow.</p>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-16 py-8 relative z-10 flex space-x-8">
+<!-- Column 1: Delay Investing -->
+<div class="flex-1 flex flex-col">
+<div class="glass-panel rounded-2xl p-8 border-t-4 border-gray-400 h-full flex flex-col relative overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<i class="fas fa-hourglass-end text-8xl text-gray-400"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-700 mb-1">Delay Investing</h3>
+<p class="text-sm text-gray-400 font-medium uppercase tracking-wide mb-6">The Hard Path</p>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-start space-x-3">
+<i class="fas fa-times-circle text-red-400 mt-1"></i>
+<p class="text-gray-600"><strong>Small Corpus:</strong> Missing the "exponential" years means significantly less wealth.</p>
+</li>
+<li class="flex items-start space-x-3">
+<i class="fas fa-exclamation-circle text-red-400 mt-1"></i>
+<p class="text-gray-600"><strong>Retirement Stress:</strong> Forced to save huge amounts later to catch up.</p>
+</li>
+<li class="flex items-start space-x-3">
+<i class="fas fa-chart-line text-red-400 mt-1 transform rotate-180"></i>
+<p class="text-gray-600"><strong>Linear Growth:</strong> Your money works linearly, not geometrically.</p>
+</li>
+</ul>
+<!-- Visual Representation: Small Plant -->
+<div class="bg-gray-50 rounded-xl p-6 flex flex-col items-center justify-end h-48 border border-gray-100">
+<div class="text-center mb-2">
+<p class="text-xs text-gray-400 font-bold uppercase">Result</p>
+<p class="text-lg font-bold text-gray-600">Struggle</p>
+</div>
+<div class="flex items-end space-x-1">
+<div class="w-8 h-8 bg-gray-300 rounded-t-sm"></div>
+<div class="w-8 h-12 bg-gray-300 rounded-t-sm"></div>
+<div class="w-8 h-16 bg-gray-400 rounded-t-sm"></div>
+</div>
+<p class="text-xs text-gray-400 mt-2">Linear Effort</p>
+</div>
+</div>
+</div>
+<!-- Column 2: Start Small -->
+<div class="flex-1 flex flex-col">
+<div class="glass-panel rounded-2xl p-8 border-t-4 border-teal-500 bg-white h-full flex flex-col relative overflow-hidden highlight-box transform scale-105 z-20">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<i class="fas fa-rocket text-8xl text-teal-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-teal-700 mb-1">Start Small, Stay Consistent</h3>
+<p class="text-sm text-teal-400 font-medium uppercase tracking-wide mb-6">The Smart Path</p>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-start space-x-3">
+<i class="fas fa-check-circle text-teal-500 mt-1"></i>
+<p class="text-gray-600"><strong>Large Corpus:</strong> Small sums snowball into massive amounts over decades.</p>
+</li>
+<li class="flex items-start space-x-3">
+<i class="fas fa-umbrella-beach text-teal-500 mt-1"></i>
+<p class="text-gray-600"><strong>Financial Freedom:</strong> Let the market do the heavy lifting for you.</p>
+</li>
+<li class="flex items-start space-x-3">
+<i class="fas fa-chart-line text-teal-500 mt-1"></i>
+<p class="text-gray-600"><strong>Compound Interest:</strong> Interest earning interest (the 8th wonder).</p>
+</li>
+</ul>
+<!-- Visual Representation: Growth Chart -->
+<div class="bg-teal-50 rounded-xl p-4 h-48 border border-teal-100 relative">
+<canvas id="compoundingChart"></canvas>
+<div class="absolute top-4 left-4">
+<p class="text-xs text-teal-600 font-bold uppercase">Result</p>
+<p class="text-lg font-bold text-teal-800">Wealth</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Fact Banner -->
+<div class="absolute bottom-8 left-0 w-full px-16 z-30">
+<div class="bg-gray-900 text-white rounded-xl p-6 flex items-center justify-between shadow-2xl border-l-8 border-teal-500 slide-up-fade">
+<div class="flex items-center space-x-6">
+<div class="bg-teal-600 p-3 rounded-full bg-opacity-20 text-teal-400">
+<i class="fas fa-lightbulb text-2xl"></i>
+</div>
+<div>
+<p class="text-sm text-gray-400 uppercase tracking-widest font-bold mb-1">Did You Know?</p>
+<p class="text-xl font-medium">Starting at <span class="text-teal-400 font-bold">25 vs 30</span> can mean a <span class="text-teal-400 font-bold text-2xl">₹20 Lakhs+</span> difference—just from 5 years of waiting.</p>
+</div>
+</div>
+<div class="h-10 w-px bg-gray-700 mx-4"></div>
+<div class="text-right whitespace-nowrap">
+<p class="text-sm text-gray-500">Based on standard equity returns</p>
+<p class="text-xs text-gray-600">Historic data @ 12% CAGR</p>
+</div>
+</div>
+</div>
+<!-- Footer Brand -->
+<div class="absolute top-10 right-16">
+<p class="text-xs font-bold text-gray-300 tracking-wider">FactorLab</p>
+</div>
+</div>
+<script>
+        const ctx = document.getElementById('compoundingChart').getContext('2d');
+        
+        // Generate exponential data points
+        const labels = Array.from({length: 20}, (_, i) => i + 1);
+        const dataPoints = labels.map(x => Math.pow(1.15, x)); // 15% growth curve simulation
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Compounding Effect',
+                    data: dataPoints,
+                    borderColor: '#0d9488', // Teal-600
+                    backgroundColor: (context) => {
+                        const ctx = context.chart.ctx;
+                        const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+                        gradient.addColorStop(0, 'rgba(13, 148, 136, 0.5)');
+                        gradient.addColorStop(1, 'rgba(13, 148, 136, 0.0)');
+                        return gradient;
+                    },
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+                scales: {
+                    x: { display: false },
+                    y: { display: false, min: 0 }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+Slide - 6
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>From Salary Mindset to Wealth Mindset</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .mindset-column {
+            transition: all 0.3s ease;
+        }
+        .mindset-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        /* Geometric decorations */
+        .circle-accent {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10 text-center">
+<div class="inline-flex items-center space-x-2 mb-2 bg-gray-100 px-3 py-1 rounded-full">
+<i class="fas fa-brain text-teal-600"></i>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">Psychology of Money</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900 mb-2">From Salary Mindset to <span class="text-teal-600">Wealth Mindset</span></h1>
+<p class="text-xl text-gray-500 font-light">The difference isn't just in the numbers—it's in the approach.</p>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-16 py-6 flex space-x-8 relative z-10 items-stretch">
+<!-- Left Column: Salary Mindset (Gray/Muted) -->
+<div class="flex-1 bg-gray-100 rounded-2xl p-8 border border-gray-200 flex flex-col relative overflow-hidden mindset-column">
+<!-- Header -->
+<div class="flex items-center space-x-4 mb-8 border-b border-gray-300 pb-4">
+<div class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 text-2xl">
+<i class="fas fa-briefcase"></i>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-gray-700">Salary Mindset</h3>
+<p class="text-sm text-gray-500">Working for money</p>
+</div>
+</div>
+<!-- List Items -->
+<div class="space-y-4 flex-1">
+<div class="mindset-item border-l-4 border-gray-400">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-4 text-gray-500">
+<i class="fas fa-lock"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">FDs Only</p>
+<p class="text-xs text-gray-500">Prioritizing safety over growth (inflation risk)</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-gray-400">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-4 text-gray-500">
+<i class="fas fa-file-contract"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Insurance as "Investment"</p>
+<p class="text-xs text-gray-500">Mixing protection with low returns</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-gray-400">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-4 text-gray-500">
+<i class="fas fa-history"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Delayed Start</p>
+<p class="text-xs text-gray-500">"I'll invest when I earn more"</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-gray-400">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mr-4 text-gray-500">
+<i class="fas fa-sad-tear"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Emotional Decisions</p>
+<p class="text-xs text-gray-500">Panic selling when markets drop</p>
+</div>
+</div>
+</div>
+<!-- Background Icon -->
+<div class="absolute bottom-[-20px] right-[-20px] text-gray-200 opacity-50 z-0">
+<i class="fas fa-wallet text-9xl"></i>
+</div>
+</div>
+<!-- Center Divider / Arrow -->
+<div class="flex flex-col justify-center items-center px-2">
+<div class="w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center z-20">
+<i class="fas fa-arrow-right text-teal-500 text-xl"></i>
+</div>
+</div>
+<!-- Right Column: Wealth Mindset (Teal/Active) -->
+<div class="flex-1 bg-teal-50 rounded-2xl p-8 border border-teal-200 flex flex-col relative overflow-hidden mindset-column shadow-lg">
+<!-- Header -->
+<div class="flex items-center space-x-4 mb-8 border-b border-teal-200 pb-4">
+<div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 text-2xl">
+<i class="fas fa-seedling"></i>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-teal-800">Wealth Mindset</h3>
+<p class="text-sm text-teal-600">Money working for you</p>
+</div>
+</div>
+<!-- List Items -->
+<div class="space-y-4 flex-1 relative z-10">
+<div class="mindset-item border-l-4 border-teal-500 bg-white shadow-sm">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4 text-teal-600">
+<i class="fas fa-bullseye"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Clear Goals</p>
+<p class="text-xs text-gray-500">Investing with a specific purpose &amp; horizon</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-teal-500 bg-white shadow-sm">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4 text-teal-600">
+<i class="fas fa-chart-pie"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Asset Allocation</p>
+<p class="text-xs text-gray-500">Diversifying: Equity, Debt, Gold</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-teal-500 bg-white shadow-sm">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4 text-teal-600">
+<i class="fas fa-gavel"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Rule-Based Investing</p>
+<p class="text-xs text-gray-500">Following a system, not feelings</p>
+</div>
+</div>
+<div class="mindset-item border-l-4 border-teal-500 bg-white shadow-sm">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4 text-teal-600">
+<i class="fas fa-balance-scale"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Disciplined Rebalancing</p>
+<p class="text-xs text-gray-500">Buying low, selling high systematically</p>
+</div>
+</div>
+</div>
+<!-- Background Icon -->
+<div class="absolute bottom-[-20px] right-[-20px] text-teal-100 opacity-60 z-0">
+<i class="fas fa-coins text-9xl"></i>
+</div>
+</div>
+</main>
+<!-- Bottom Prompt -->
+<div class="absolute bottom-0 w-full bg-white border-t border-gray-200 py-6 text-center z-20">
+<div class="inline-block bg-teal-600 text-white px-8 py-3 rounded-full shadow-lg transform -translate-y-10 border-4 border-white">
+<p class="text-lg font-bold">Which one are you?</p>
+</div>
+</div>
+<!-- Brand Mark -->
+<div class="absolute top-8 right-12 opacity-30">
+<p class="text-xl font-bold text-gray-400 tracking-wider">FactorLab</p>
+</div>
+</div>
+</body>
+</html>
+
+
+slide - 7
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>What Is FactorLab</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            overflow: hidden;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Custom Background Pattern */
+        .bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+
+        /* Feature Box Styling */
+        .feature-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #cbd5e1; /* Default gray */
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #cbd5e1;
+        }
+
+        /* Unique border colors per card */
+        .feature-box.box-1::before { background-color: #0d9488; } /* Teal */
+        .feature-box.box-2::before { background-color: #0ea5e9; } /* Blue */
+        .feature-box.box-3::before { background-color: #6366f1; } /* Indigo */
+
+        .feature-box.box-1:hover { border-color: #99f6e4; }
+        .feature-box.box-2:hover { border-color: #bae6fd; }
+        .feature-box.box-3:hover { border-color: #c7d2fe; }
+
+        .icon-wrapper {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .tag-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .hero-statement {
+            position: relative;
+        }
+        
+        .hero-statement::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            width: 80px;
+            height: 4px;
+            background-color: #0d9488; /* Teal-600 */
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-grid"></div>
+<!-- Decorative Circle -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-teal-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/3 -translate-y-1/3"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform -translate-x-1/3 translate-y-1/3"></div>
+<!-- Header Section -->
+<header class="pt-12 px-16 relative z-10 w-full max-w-5xl">
+<div class="flex items-center space-x-3 mb-4">
+<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">Introducing FactorLab</p>
+</div>
+<div class="flex justify-between items-end">
+<div class="w-2/3 pr-12">
+<h1 class="text-5xl font-extrabold text-gray-900 mb-6">What Is <span class="text-teal-600">FactorLab?</span></h1>
+<div class="hero-statement">
+<p class="text-2xl text-gray-600 font-light leading-relaxed">
+                            A quantitative wealth-management platform that uses <strong class="text-gray-900 font-bold">data-driven, rule-based portfolios</strong> to help Indian investors build long-term wealth.
+                        </p>
+</div>
+</div>
+<div class="w-1/3 pl-8 border-l border-gray-200">
+<p class="text-lg text-gray-500 font-medium italic">
+                        "We combine research + technology to remove emotion from investing."
+                    </p>
+</div>
+</div>
+</header>
+<!-- Main Features Section -->
+<main class="flex-1 px-16 pb-12 pt-16 relative z-10 flex space-x-8 items-stretch">
+<!-- Feature 1: Equity Baskets -->
+<div class="feature-box box-1 flex-1 p-8 flex flex-col">
+<div class="flex justify-between items-start">
+<div class="icon-wrapper bg-teal-50 text-teal-600">
+<i class="fas fa-layer-group"></i>
+</div>
+<span class="tag-badge bg-teal-100 text-teal-800">For Everyone</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Equity Baskets</h3>
+<p class="text-sm text-gray-500 font-medium mb-4">(powered by smallcase)</p>
+<p class="text-gray-600 leading-relaxed flex-1">
+                    Research-backed portfolios of stocks that you can buy and manage yourself with a single click. No lock-ins.
+                </p>
+<div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-teal-600 font-bold text-sm cursor-pointer group">
+<span>Explore Baskets</span>
+<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+</div>
+</div>
+<!-- Feature 2: Smart Fund Selection -->
+<div class="feature-box box-2 flex-1 p-8 flex flex-col">
+<div class="flex justify-between items-start">
+<div class="icon-wrapper bg-blue-50 text-blue-600">
+<i class="fas fa-search-dollar"></i>
+</div>
+<span class="tag-badge bg-blue-100 text-blue-800">For SIP Investors</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Fund Selection</h3>
+<p class="text-sm text-gray-500 font-medium mb-4">Proprietary Ranking Model</p>
+<p class="text-gray-600 leading-relaxed flex-1">
+                    We analyze thousands of mutual funds to pick the consistent performers, helping you filter out the noise.
+                </p>
+<div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-blue-600 font-bold text-sm cursor-pointer group">
+<span>See Rankings</span>
+<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+</div>
+</div>
+<!-- Feature 3: PMS / AIF Access -->
+<div class="feature-box box-3 flex-1 p-8 flex flex-col">
+<div class="flex justify-between items-start">
+<div class="icon-wrapper bg-indigo-50 text-indigo-600">
+<i class="fas fa-crown"></i>
+</div>
+<span class="tag-badge bg-indigo-100 text-indigo-800">High Net Worth</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">PMS / AIF Access</h3>
+<p class="text-sm text-gray-500 font-medium mb-4">Sophisticated Solutions</p>
+<p class="text-gray-600 leading-relaxed flex-1">
+                    Exclusive access to Portfolio Management Services and Alternative Investment Funds for higher-ticket investors.
+                </p>
+<div class="mt-6 pt-6 border-t border-gray-100 flex items-center text-indigo-600 font-bold text-sm cursor-pointer group">
+<span>Request Access</span>
+<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="absolute bottom-6 right-8 z-10">
+<div class="flex items-center space-x-2 opacity-40">
+<i class="fas fa-chart-bar text-gray-400"></i>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">FactorLab</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
+
+
+slide - 8
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data-Driven Factor-Based Investing</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Step Card Styling */
+        .step-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -5px rgba(13, 148, 136, 0.15);
+            border-color: #99f6e4;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #0f172a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            border: 4px solid white;
+            z-index: 20;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover .icon-circle {
+            transform: scale(1.1);
+        }
+
+        /* Connecting Line */
+        .flow-connector {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+        
+        /* Animated flow dots */
+        .flow-dot {
+            position: absolute;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: #0d9488;
+            border-radius: 50%;
+            animation: flowAnimation 3s infinite linear;
+        }
+        
+        @keyframes flowAnimation {
+            0% { left: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<header class="pt-12 px-16 z-10">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">The Secret Sauce</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900">Data-Driven <span class="text-teal-600">Factor-Based Investing</span></h1>
+<p class="text-xl text-gray-500 mt-2 font-light">How we systematically build wealth without the guesswork.</p>
+</header>
+<!-- Main Content: Process Flow -->
+<main class="flex-1 px-16 py-8 flex flex-col justify-center relative">
+<!-- Background Connector -->
+<div class="relative w-full h-80 flex items-center justify-between px-8">
+<div class="flow-connector">
+<div class="flow-dot" style="animation-delay: 0s;"></div>
+<div class="flow-dot" style="animation-delay: 1s;"></div>
+<div class="flow-dot" style="animation-delay: 2s;"></div>
+</div>
+<!-- Step 1: Research -->
+<div class="step-card w-1/3 mx-4 p-8 text-center h-72 flex flex-col">
+<div class="step-number">1</div>
+<div class="icon-circle bg-blue-50 text-blue-600">
+<i class="fas fa-microscope"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-3">Research</h3>
+<p class="text-gray-600 leading-relaxed">
+                    We analyze decades of historical data across different market cycles to understand what truly drives returns.
+                </p>
+<div class="mt-auto pt-4 flex justify-center space-x-2">
+<span class="tag bg-gray-100 text-gray-500">Big Data</span>
+<span class="tag bg-gray-100 text-gray-500">Backtesting</span>
+</div>
+</div>
+<!-- Arrow Icon -->
+<div class="z-10 text-gray-300 text-2xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+<!-- Step 2: Rules -->
+<div class="step-card w-1/3 mx-4 p-8 text-center h-72 flex flex-col border-teal-200 shadow-md">
+<div class="step-number bg-teal-600 border-teal-600">2</div>
+<div class="icon-circle bg-teal-50 text-teal-600">
+<i class="fas fa-cogs"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-3">Rules</h3>
+<p class="text-gray-600 leading-relaxed">
+                    Building systematic portfolios based on proven quantitative factors rather than stories.
+                </p>
+<div class="mt-auto pt-4 flex justify-center space-x-2">
+<span class="tag bg-green-100 text-green-700">Momentum</span>
+<span class="tag bg-blue-100 text-blue-700">Value</span>
+<span class="tag bg-purple-100 text-purple-700">Low Vol</span>
+</div>
+</div>
+<!-- Arrow Icon -->
+<div class="z-10 text-gray-300 text-2xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+<!-- Step 3: Rebalance -->
+<div class="step-card w-1/3 mx-4 p-8 text-center h-72 flex flex-col">
+<div class="step-number">3</div>
+<div class="icon-circle bg-orange-50 text-orange-600">
+<i class="fas fa-sync-alt"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-3">Rebalance</h3>
+<p class="text-gray-600 leading-relaxed">
+                    Regular, emotion-free adjustments based on data signals, not gut feelings or news headlines.
+                </p>
+<div class="mt-auto pt-4 flex justify-center space-x-2">
+<span class="tag bg-gray-100 text-gray-500">Quarterly</span>
+<span class="tag bg-gray-100 text-gray-500">Automated</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Message Bar -->
+<div class="w-full bg-gray-900 py-6 px-16 mt-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-teal-500 flex items-center justify-center text-white">
+<i class="fas fa-check"></i>
+</div>
+<p class="text-xl text-white font-medium">
+                    The Bottom Line: <span class="text-gray-400 font-light">Instead of one human guessing, we use</span> <strong class="text-teal-400">data science to build smarter portfolios.</strong>
+</p>
+</div>
+<div class="opacity-30">
+<i class="fas fa-chart-line text-white text-3xl"></i>
+</div>
+</div>
+</div>
+<!-- Footer Brand -->
+<div class="absolute top-12 right-16">
+<p class="text-xs font-bold text-gray-300 tracking-wider">FactorLab</p>
+</div>
+</div>
+</body>
+</html>
+
+slide - 9
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why It's Different</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .vs-circle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 20;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #1f2937;
+            border: 4px solid #f3f4f6;
+        }
+
+        .comparison-col {
+            transition: all 0.3s ease;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 12px;
+            border-radius: 12px;
+            background-color: rgba(255,255,255, 0.6);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Random Side Styles */
+        .random-col .icon-box {
+            background-color: #e5e7eb; /* gray-200 */
+            color: #6b7280; /* gray-500 */
+        }
+        
+        /* FactorLab Side Styles */
+        .factor-col .icon-box {
+            background-color: #ccfbf1; /* teal-100 */
+            color: #0d9488; /* teal-600 */
+        }
+        
+        .pattern-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #e5e7eb;
+            position: absolute;
+        }
+        
+        .bg-dots {
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10 text-center mb-6">
+<div class="inline-flex items-center space-x-2 mb-2 bg-gray-100 px-3 py-1 rounded-full">
+<i class="fas fa-balance-scale text-teal-600"></i>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">The Methodology Gap</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900">Why It's <span class="text-teal-600">Different</span></h1>
+<p class="text-xl text-gray-500 mt-2 font-light">Comparing the traditional way vs. the FactorLab way</p>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-16 pb-12 flex relative z-10">
+<!-- VS Badge -->
+<div class="vs-circle">VS</div>
+<!-- Left Column: Random Approach -->
+<div class="flex-1 bg-gray-50 border border-gray-200 rounded-l-3xl p-10 flex flex-col comparison-col random-col relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-gray-300"></div>
+<!-- Title Area -->
+<div class="text-center mb-10 pb-6 border-b border-gray-200">
+<div class="w-16 h-16 mx-auto bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-3xl mb-4">
+<i class="fas fa-dice"></i>
+</div>
+<h3 class="text-3xl font-bold text-gray-700">Random Investing</h3>
+<p class="text-sm text-gray-500 font-medium uppercase tracking-wide mt-1">The Guesswork Path</p>
+</div>
+<!-- List Content -->
+<div class="flex-1 flex flex-col justify-center">
+<div class="list-item">
+<div class="icon-box">
+<i class="fas fa-user-friends"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800 text-lg">Tips &amp; Rumors</p>
+<p class="text-sm text-gray-500">Advice from friends, YouTube, or office colleagues.</p>
+</div>
+</div>
+<div class="list-item">
+<div class="icon-box">
+<i class="fas fa-random"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800 text-lg">Random Picks</p>
+<p class="text-sm text-gray-500">Choosing funds based on last year's top performer.</p>
+</div>
+</div>
+<div class="list-item">
+<div class="icon-box">
+<i class="fas fa-heart-broken"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800 text-lg">Emotional Decisions</p>
+<p class="text-sm text-gray-500">Buying high on greed, selling low on panic.</p>
+</div>
+</div>
+<div class="list-item mb-0">
+<div class="icon-box">
+<i class="fas fa-ban"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800 text-lg">No Rebalancing</p>
+<p class="text-sm text-gray-500">Portfolio drifts without any maintenance or checks.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: FactorLab Approach -->
+<div class="flex-1 bg-white border border-teal-200 rounded-r-3xl p-10 flex flex-col comparison-col factor-col relative shadow-2xl overflow-hidden z-10 transform scale-105 my-[-20px] py-[60px]">
+<div class="absolute top-0 left-0 w-full h-2 bg-teal-500"></div>
+<div class="bg-dots absolute inset-0 opacity-10 pointer-events-none"></div>
+<!-- Title Area -->
+<div class="text-center mb-10 pb-6 border-b border-teal-100 relative">
+<div class="w-16 h-16 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 text-3xl mb-4">
+<i class="fas fa-chart-line"></i>
+</div>
+<h3 class="text-3xl font-bold text-gray-900">FactorLab Approach</h3>
+<p class="text-sm text-teal-600 font-bold uppercase tracking-wide mt-1">The Scientific Path</p>
+</div>
+<!-- List Content -->
+<div class="flex-1 flex flex-col justify-center">
+<div class="list-item border border-teal-50 bg-teal-50/30">
+<div class="icon-box">
+<i class="fas fa-microscope"></i>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-lg">Research-Backed</p>
+<p class="text-sm text-gray-600">Strategies validated by decades of historical data.</p>
+</div>
+</div>
+<div class="list-item border border-teal-50 bg-teal-50/30">
+<div class="icon-box">
+<i class="fas fa-clipboard-check"></i>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-lg">Rule-Based</p>
+<p class="text-sm text-gray-600">Strict algorithms remove human bias and emotion.</p>
+</div>
+</div>
+<div class="list-item border border-teal-50 bg-teal-50/30">
+<div class="icon-box">
+<i class="fas fa-shield-alt"></i>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-lg">Disciplined</p>
+<p class="text-sm text-gray-600">Systematic execution regardless of market noise.</p>
+</div>
+</div>
+<div class="list-item border border-teal-50 bg-teal-50/30">
+<div class="icon-box">
+<i class="fas fa-sync"></i>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-lg">Systematic Rebalancing</p>
+<p class="text-sm text-gray-600">Periodic adjustments to optimize risk &amp; return.</p>
+</div>
+</div>
+</div>
+<!-- Badge -->
+<div class="absolute top-6 right-6">
+<span class="bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
+</div>
+</div>
+</main>
+<!-- Footer Brand -->
+<div class="absolute bottom-6 right-8 opacity-50">
+<p class="text-xs font-bold text-gray-400 tracking-wider">FactorLab</p>
+</div>
+</div>
+</body>
+</html>
+
+slide - 10
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>What Our Approach Achieves</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Decorative Background Elements */
+        .bg-shape-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 720px;
+            background-color: #f0fdfa; /* teal-50 */
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Success Story Cards */
+        .story-card {
+            background-color: white;
+            border-left: 6px solid #0d9488; /* teal-600 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            border-radius: 8px 16px 16px 8px;
+            margin-bottom: 24px;
+            transition: transform 0.2s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .story-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: #ccfbf1; /* teal-100 */
+            color: #0d9488; /* teal-600 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* Chart Container Styling */
+        .chart-wrapper {
+            background-color: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            position: relative;
+            z-index: 10;
+        }
+
+        .growth-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #0d9488;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(13, 148, 136, 0.3);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .tagline-box {
+            background-color: #111827; /* gray-900 */
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body style="">
+<div class="slide-container">
+<!-- Backgrounds -->
+<div class="bg-shape-1"></div>
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10">
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">Real Impact</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900 max-w-2xl">What Our Approach <span class="text-teal-600">Achieves</span></h1>
+<p class="text-xl text-gray-500 mt-3 font-light max-w-2xl">Results from disciplined, data-driven investing over the long term.</p>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 pt-8 pb-12 flex relative z-10 items-center">
+<!-- Left Column: Success Stories -->
+<div class="w-1/2 pr-12">
+<!-- Story 1 -->
+<div class="story-card">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-600">
+<i class="fas fa-seedling"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Small SIP Power</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Small SIP starters who stayed disciplined for <strong>7–10 years</strong> saw their corpus grow <strong>3–4x</strong> despite interim market volatility.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="story-card border-teal-500">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+<i class="fas fa-shield-alt"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Crisis Management</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Data-driven rebalancing helped investors <strong>avoid panic-selling</strong> during downturns, capturing full recovery gains when markets bounced back.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Story 3 -->
+<div class="story-card border-teal-400">
+<div class="flex items-start">
+<div class="mr-4 mt-1">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+<i class="fas fa-trophy"></i>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Alpha Generation</h3>
+<p class="text-gray-600 leading-relaxed text-sm">
+                            Rule-based portfolios consistently <strong>outperformed random stock-picking</strong> while keeping investor emotions completely in check.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Proof -->
+<div class="w-1/2 pl-4 relative h-full flex flex-col justify-center">
+<div class="chart-wrapper h-80 w-full mb-12" style="transform: translate(-0.997921px, -20.9563px);">
+<div class="growth-badge">
+<i class="fas fa-arrow-up mr-2"></i>3.8x Growth
+                    </div>
+<div class="mb-2">
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider">Historical Performance Simulation</p>
+<p class="text-lg font-bold text-gray-800">Disciplined SIP vs. Volatility</p>
+</div>
+<div style="height: 240px; width: 100%;">
+<canvas id="impactChart" width="512" height="240" style="display: block; box-sizing: border-box; height: 240px; width: 512px;"></canvas>
+</div>
+</div>
+<!-- Emotional Hook Tagline -->
+<div class="tagline-box" style="transform: translate(-1.99584px, 15.9667px);">
+<i class="fas fa-check-circle text-teal-400 text-2xl mr-4"></i>
+<div>
+<p class="text-xs text-gray-400 uppercase tracking-widest font-bold">The Formula</p>
+<p class="text-2xl font-bold">Discipline + Data = <span class="text-teal-400">Wealth</span></p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Brand -->
+<div class="absolute bottom-6 left-16">
+<p class="text-xs font-bold text-gray-300 tracking-wider">FactorLab</p>
+</div>
+</div>
+<script>
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        
+        const labels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8'];
+        const investedData = [10, 22, 35, 48, 62, 75, 90, 105]; // Linear investment
+        const wealthData =   [11, 25, 32, 55, 78, 92, 125, 168]; // Volatile but growing wealth
+        
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Portfolio Value',
+                        data: wealthData,
+                        borderColor: '#0d9488', // Teal
+                        backgroundColor: (context) => {
+                            const ctx = context.chart.ctx;
+                            const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                            gradient.addColorStop(0, 'rgba(13, 148, 136, 0.2)');
+                            gradient.addColorStop(1, 'rgba(13, 148, 136, 0)');
+                            return gradient;
+                        },
+                        borderWidth: 3,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#0d9488',
+                        pointRadius: 4,
+                        fill: true,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Invested Amount',
+                        data: investedData,
+                        borderColor: '#9ca3af', // Gray
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false,
+                        tension: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            font: { family: "'Roboto', sans-serif", size: 11 }
+                        }
+                    },
+                    tooltip: { enabled: true }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#f3f4f6' },
+                        ticks: { display: false }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { size: 10 } }
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        });
+    </script>
+
+</body></html>
+
+
+slide - 11
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Future Self Will Thank You</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0f172a;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #0f172a;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.85); /* Dark blue overlay */
+            z-index: 1;
+        }
+
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px);
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: rgba(13, 148, 136, 0.5);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #0d9488; /* teal-600 */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .content-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: rgba(13, 148, 136, 0.2);
+            color: #2dd4bf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(45, 212, 191, 0.3);
+        }
+        
+        /* Decorative Accent */
+        .accent-line {
+            width: 80px;
+            height: 6px;
+            background-color: #0d9488;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Image: Family/Sunset representing future/warmth -->
+<img alt="Family looking at view" class="bg-image" src="https://page.gensparksite.com/slides_images/be9acb2c76f9c5ddeae1226eecfdae21.webp"/>
+<!-- Dark Overlay -->
+<div class="overlay"></div>
+<!-- Main Content -->
+<div class="relative z-10 flex flex-col h-full px-20 py-16">
+<!-- Header Section -->
+<div class="max-w-3xl mb-12">
+<div class="flex items-center space-x-3 mb-4">
+<div class="h-1 w-12 bg-teal-400 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-400 uppercase">The Long Term View</p>
+</div>
+<h1 class="text-6xl font-extrabold text-white mb-6 leading-tight">
+                    Your Future Self <br/>
+<span class="text-teal-400">Will Thank You</span>
+</h1>
+<p class="text-xl text-gray-300 font-light leading-relaxed max-w-2xl">
+                    Investing isn't just about numbers on a screen. It's about securing choices, freedom, and peace of mind for the people you love.
+                </p>
+</div>
+<!-- Cards Container -->
+<div class="grid grid-cols-3 gap-8 mt-auto">
+<!-- Card 1: The Opportunity -->
+<div class="content-card">
+<div class="icon-circle">
+<i class="fas fa-book-reader"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">The New Playbook</h3>
+<p class="text-gray-300 text-sm leading-relaxed">
+                        We are a first-generation earning generation. Our parents didn't have access to modern markets or data-driven tools. <span class="text-teal-300 font-medium">You do.</span>
+</p>
+</div>
+<!-- Card 2: The Action -->
+<div class="content-card">
+<div class="icon-circle">
+<i class="fas fa-graduation-cap"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Small Steps, Big Dreams</h3>
+<p class="text-gray-300 text-sm leading-relaxed">
+                        Starting a simple <strong class="text-white">₹5,000 SIP</strong> today could fund your child's dream college in 15 years—without the stress of loans or compromise.
+                    </p>
+</div>
+<!-- Card 3: The Result -->
+<div class="content-card">
+<div class="icon-circle">
+<i class="fas fa-umbrella-beach"></i>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Peace of Mind</h3>
+<p class="text-gray-300 text-sm leading-relaxed">
+                        Imagine a retirement where you never worry about money, because <span class="text-teal-300 font-medium">discipline and data</span> did the heavy lifting for you while you lived your life.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer Brand -->
+<div class="absolute bottom-8 right-12 z-20 opacity-40">
+<div class="flex items-center space-x-2">
+<i class="fas fa-chart-line text-teal-400 text-xl"></i>
+<p class="text-sm font-bold text-white tracking-widest uppercase">FactorLab</p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide - 12
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interactive Poll: Market Drop</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            overflow: hidden;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Background Pattern */
+        .bg-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#e2e8f0 2px, transparent 2px);
+            background-size: 32px 32px;
+            z-index: 0;
+        }
+
+        /* Option Cards */
+        .option-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: default;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .option-letter {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #f1f5f9;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 16px;
+            border: 2px solid #e2e8f0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Wrong/Inactive State (Simulated for A and B) */
+        .option-card.muted {
+            opacity: 0.6;
+            background-color: #f8fafc;
+        }
+
+        /* Correct State (C) */
+        .option-card.correct {
+            border-color: #0d9488; /* teal-600 */
+            background-color: #f0fdfa; /* teal-50 */
+            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.15), 0 10px 10px -5px rgba(13, 148, 136, 0.1);
+            transform: translateY(-8px);
+            z-index: 10;
+        }
+
+        .option-card.correct .option-letter {
+            background-color: #0d9488;
+            color: white;
+            border-color: #0d9488;
+        }
+
+        .check-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background-color: #0d9488;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        /* Insight Box */
+        .insight-box {
+            background-color: #1e293b; /* slate-800 */
+            border-radius: 16px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #2dd4bf; /* teal-400 */
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-dots"></div>
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10 text-center">
+<div class="inline-flex items-center space-x-2 mb-3 bg-white px-4 py-1.5 rounded-full shadow-sm border border-gray-100">
+<i class="fas fa-poll text-teal-600"></i>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">Quick Poll #2</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900 mb-2">If Markets Fall <span class="text-red-500">20%</span>, You Would...</h1>
+<p class="text-xl text-gray-500 font-light">How do you react to volatility?</p>
+</header>
+<!-- Main Poll Area -->
+<main class="flex-1 px-16 py-8 relative z-10">
+<div class="grid grid-cols-3 gap-8 h-80">
+<!-- Option A -->
+<div class="option-card muted">
+<div class="option-letter">A</div>
+<div class="mb-4 text-gray-400 text-4xl">
+<i class="fas fa-pause-circle"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-600 mb-2">Pause SIP</h3>
+<p class="text-sm text-gray-400">"I'll wait for the market to recover before investing more."</p>
+</div>
+<!-- Option B -->
+<div class="option-card muted">
+<div class="option-letter">B</div>
+<div class="mb-4 text-gray-400 text-4xl">
+<i class="fas fa-sign-out-alt"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-600 mb-2">Withdraw</h3>
+<p class="text-sm text-gray-400">"I need to stop the bleeding and book my losses now."</p>
+</div>
+<!-- Option C (Correct) -->
+<div class="option-card correct">
+<div class="check-badge">
+<i class="fas fa-check mr-2"></i> Best Strategy
+                    </div>
+<div class="option-letter">C</div>
+<div class="mb-4 text-teal-600 text-4xl">
+<i class="fas fa-cart-arrow-down"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Continue SIP</h3>
+<p class="text-sm text-teal-700 font-medium">"I'll buy more units at lower prices (accumulate)."</p>
+</div>
+</div>
+<!-- Revelation / Insight Section -->
+<div class="mt-8 insight-box p-6 flex items-center shadow-xl animate-fade-in-up">
+<div class="mr-6 flex-shrink-0">
+<div class="w-12 h-12 bg-teal-500 bg-opacity-20 rounded-full flex items-center justify-center text-teal-400 text-2xl border border-teal-500 border-opacity-30">
+<i class="fas fa-lightbulb"></i>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Why C is the Winner: <span class="text-teal-400">Rupee Cost Averaging</span></h4>
+<p class="text-gray-300 text-sm leading-relaxed">
+                        When markets fall, your SIP amount buys <strong>more units</strong>. When markets recover, these extra units multiply your gains. FactorLab portfolios are built to help you stay disciplined and capture this advantage automatically.
+                    </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="absolute bottom-6 right-8 opacity-50">
+<p class="text-xs font-bold text-gray-400 tracking-wider">FactorLab</p>
+</div>
+</div>
+</body>
+</html>
+
+
+slide - 13
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Next Step: Let's Build Your Plan</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Layout Elements */
+        .left-col {
+            background-color: #f0fdfa; /* teal-50 */
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* QR Card Styling */
+        .qr-card {
+            background: white;
+            padding: 24px;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .qr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 30px -5px rgba(13, 148, 136, 0.2);
+            border-color: #2dd4bf;
+        }
+
+        .qr-image-container {
+            width: 240px;
+            height: 240px;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 2px solid #f1f5f9;
+        }
+
+        /* Form Mockup Styling */
+        .form-mockup {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .form-field {
+            height: 12px;
+            background-color: #f1f5f9;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+        .form-label {
+            height: 8px;
+            background-color: #cbd5e1;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            width: 40%;
+        }
+
+        /* Timeline/Process Steps */
+        .step-item {
+            display: flex;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-line {
+            position: absolute;
+            left: 24px;
+            top: 48px;
+            bottom: -20px;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        .step-item:last-child .step-line {
+            display: none;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 2px solid #0d9488;
+            color: #0d9488;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-shape {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background-color: #f0f9ff;
+            border-radius: 50%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<div class="flex h-full">
+<!-- Left Column: The Action (QR Code) -->
+<div class="w-5/12 left-col flex flex-col justify-center items-center px-12 relative">
+<!-- Decorative Pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#0d9488 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10 w-full max-w-sm">
+<!-- QR Card -->
+<div class="qr-card">
+<div class="qr-image-container p-2">
+<!-- Generating a static QR code pointing to the link -->
+<img alt="Scan to start" class="w-full h-full object-contain" src="https://page.gensparksite.com/slides_images/3ec60e23a985f098fb8c43cd8a248c02.png"/>
+</div>
+<div class="text-center w-full">
+<p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Scan or Visit</p>
+<div class="bg-gray-100 rounded-lg py-2 px-4 mb-4 border border-gray-200">
+<p class="text-teal-700 font-bold font-mono text-lg">bit.ly/FactorLabCoKarma</p>
+</div>
+<div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
+<i class="fas fa-camera"></i>
+<span>Open Camera App to Scan</span>
+</div>
+</div>
+</div>
+<!-- Backup Note -->
+<div class="mt-6 text-center">
+<p class="text-teal-800 text-sm font-medium bg-teal-100/50 py-2 px-4 rounded-full inline-block border border-teal-100">
+<i class="fas fa-info-circle mr-2"></i>Link also available on whiteboard
+                </p>
+</div>
+</div>
+</div>
+<!-- Right Column: Value & Process -->
+<div class="w-7/12 p-16 flex flex-col justify-center relative bg-white">
+<div class="bg-shape"></div>
+<header class="mb-10 relative z-10">
+<div class="inline-flex items-center space-x-2 mb-3 bg-teal-50 px-3 py-1 rounded-full text-teal-700">
+<i class="fas fa-bolt"></i>
+<p class="text-xs font-bold uppercase tracking-widest">Take Action</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
+                    Next Step: <br/><span class="text-teal-600">Let's Build Your Plan</span>
+</h1>
+<p class="text-xl text-gray-500 mt-4 font-light">It takes just 1 minute to start your wealth journey.</p>
+</header>
+<div class="flex items-start space-x-12 relative z-10">
+<!-- Step List -->
+<div class="flex-1">
+<h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-6">What Happens Next</h3>
+<div class="step-item">
+<div class="step-line"></div>
+<div class="step-icon">
+<i class="fas fa-file-signature"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">Fill the Form</h4>
+<p class="text-sm text-gray-500 mt-1">Basic details, top goal, and current investments.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-line"></div>
+<div class="step-icon">
+<i class="fas fa-phone-alt"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">48-Hour Review</h4>
+<p class="text-sm text-gray-500 mt-1">We analyze your inputs and book a free 1-on-1 slot.</p>
+</div>
+</div>
+<div class="step-item">
+<div class="step-icon">
+<i class="fas fa-map-marked-alt"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">Your Roadmap</h4>
+<p class="text-sm text-gray-500 mt-1">Get a portfolio check-in and actionable advice. No pressure.</p>
+</div>
+</div>
+</div>
+<!-- Form Preview Visual -->
+<div class="w-64 pt-8">
+<div class="form-mockup shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
+<div class="flex items-center justify-between mb-4 border-b border-gray-100 pb-2">
+<span class="text-xs font-bold text-gray-400">FactorLab Investing Plan</span>
+<div class="flex space-x-1">
+<div class="w-2 h-2 rounded-full bg-red-400"></div>
+<div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+<div class="w-2 h-2 rounded-full bg-green-400"></div>
+</div>
+</div>
+<div class="space-y-3">
+<div>
+<div class="form-label w-1/3"></div>
+<div class="form-field"></div>
+</div>
+<div>
+<div class="form-label w-1/2"></div>
+<div class="form-field"></div>
+</div>
+<div>
+<div class="form-label w-1/4"></div>
+<div class="form-field"></div>
+</div>
+<div>
+<div class="form-label w-2/3"></div>
+<div class="form-field h-8"></div>
+</div>
+<div class="mt-4 pt-2">
+<div class="h-8 bg-teal-500 rounded w-full flex items-center justify-center">
+<span class="text-white text-xs font-bold">Submit Request</span>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center text-xs text-gray-400 mt-4 font-medium">100% Privacy Safe</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+Slide - 14
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You &amp; Contacts</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Background Decorations */
+        .bg-circle-1 {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); /* gradient simulated with flat colors for safety */
+            background-color: #f0fdfa;
+            z-index: 0;
+        }
+        
+        .bg-circle-2 {
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 40px solid #f0f9ff;
+            z-index: 0;
+        }
+
+        .dots-pattern {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 80%;
+            height: 60%;
+            background-image: radial-gradient(#e2e8f0 2px, transparent 2px);
+            background-size: 40px 40px;
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        /* Contact Cards */
+        .contact-card {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 240px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            border-color: #2dd4bf;
+            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.1), 0 10px 10px -5px rgba(13, 148, 136, 0.04);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #f0fdfa;
+            color: #0d9488;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .icon-box {
+            background-color: #0d9488;
+            color: white;
+        }
+
+        /* Logos Section */
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .divider-vertical {
+            width: 2px;
+            height: 40px;
+            background-color: #e2e8f0;
+            margin: 0 32px;
+        }
+
+        /* Large Watermark */
+        .watermark {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 400px;
+            color: #f1f5f9;
+            opacity: 0.3;
+            transform: translate(20%, 20%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-circle-1"></div>
+<div class="bg-circle-2"></div>
+<div class="dots-pattern"></div>
+<div class="watermark">
+<i class="fas fa-chart-line"></i>
+</div>
+<!-- Main Content -->
+<div class="relative z-10 flex flex-col items-center justify-center h-full px-16 pb-16 pt-8">
+<!-- Header Group -->
+<div class="text-center mb-12 max-w-4xl">
+<div class="inline-block mb-4">
+<span class="bg-teal-100 text-teal-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-teal-200">
+                        Session Complete
+                    </span>
+</div>
+<h1 class="text-6xl font-black text-gray-900 mb-4 leading-tight">
+                    Thank You! <br/>
+<span class="text-teal-600">Let's Grow Together</span>
+</h1>
+<p class="text-xl text-gray-500 font-medium tracking-wide">
+                    QUANTITATIVE WEALTH MANAGEMENT FOR INDIA
+                </p>
+</div>
+<!-- Contact Grid -->
+<div class="flex space-x-8 mb-16">
+<!-- Website -->
+<div class="contact-card">
+<div class="icon-box">
+<i class="fas fa-globe"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Visit Website</h3>
+<p class="text-teal-600 font-medium">factorlab.in</p>
+</div>
+<!-- Email -->
+<div class="contact-card">
+<div class="icon-box">
+<i class="fas fa-envelope"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Email Us</h3>
+<p class="text-gray-500 font-medium text-sm">[your email]</p>
+</div>
+<!-- Social -->
+<div class="contact-card">
+<div class="icon-box">
+<i class="fas fa-share-alt"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Connect</h3>
+<div class="flex space-x-4 mt-1 text-gray-400">
+<i class="fab fa-linkedin text-xl hover:text-blue-700 cursor-pointer transition-colors"></i>
+<i class="fab fa-twitter text-xl hover:text-blue-400 cursor-pointer transition-colors"></i>
+<i class="fab fa-instagram text-xl hover:text-pink-600 cursor-pointer transition-colors"></i>
+</div>
+</div>
+</div>
+<!-- Footer / Partners -->
+<div class="w-full max-w-4xl border-t border-gray-200 pt-8 flex items-center justify-between">
+<!-- FactorLab Logo -->
+<div class="flex flex-col">
+<div class="logo-placeholder text-2xl text-gray-800 mb-1">
+<i class="fas fa-chart-line text-teal-600 mr-2"></i>
+                        FactorLab
+                    </div>
+<p class="text-xs text-gray-400 uppercase tracking-widest font-bold ml-8">Data-Driven Investing</p>
+</div>
+<!-- Partnership Indicator -->
+<div class="flex items-center text-gray-300">
+<span class="text-sm font-bold uppercase tracking-widest mr-4">Hosted At</span>
+<i class="fas fa-arrow-right"></i>
+</div>
+<!-- CoKarma Logo & Location -->
+<div class="flex flex-col items-end">
+<div class="logo-placeholder text-2xl text-gray-700 mb-1">
+<span class="bg-gray-800 text-white w-8 h-8 flex items-center justify-center rounded text-sm mr-2 font-bold">CK</span>
+                        CoKarma
+                    </div>
+<div class="flex items-center text-gray-500 text-sm font-medium">
+<i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
+<p>CoKarma [Location Name]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

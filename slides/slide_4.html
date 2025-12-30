@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Why Time Is Your Biggest Asset</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .accent-bar {
+            background-color: #0d2b38;
+            /* FactorLab Primary */
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .scenario-card {
+            border-left-width: 6px;
+            transition: transform 0.2s;
+        }
+
+        .scenario-card:hover {
+            transform: translateX(5px);
+        }
+
+        .delay-badge {
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .highlight-text {
+            color: #ef4444;
+            /* Red-500 */
+        }
+
+        .math-quote {
+            background-image: repeating-linear-gradient(45deg, #f9fafb 25%, transparent 25%, transparent 75%, #f9fafb 75%, #f9fafb), repeating-linear-gradient(45deg, #f9fafb 25%, #ffffff 25%, #ffffff 75%, #f9fafb 75%, #f9fafb);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .modal-header {
+            padding: 16px;
+            background-color: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<header class="pt-10 px-16 flex justify-between items-end">
+<div>
+<div class="flex items-center space-x-3 mb-2">
+<div class="h-1 w-12 bg-teal-500 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-teal-600 uppercase">The Opportunity</p>
+</div>
+<h1 class="text-5xl font-extrabold text-gray-900">Why Time Is Your <span class="text-teal-600">Biggest
+                        Asset</span></h1>
+</div>
+<!-- SIP Calculator Button -->
+<button class="flex items-center space-x-2 bg-teal-600 hover:bg-teal-700 text-gray-900 px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1" onclick="openModal()">
+<i class="fas fa-calculator"></i>
+<span class="font-bold">Open SIP Calculator</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-16 py-8 flex space-x-12">
+<!-- Left Column: Scenarios -->
+<div class="w-5/12 flex flex-col justify-center space-y-6">
+<!-- Scenario 1 -->
+<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-teal-500 card-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<i class="fas fa-running text-6xl text-teal-600"></i>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-gray-800">Scenario 1: Start at 25</h3>
+<span class="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded">Smart
+                                Move</span>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+<div>
+<p class="font-bold">Invest</p>
+<p>₹5,000 / mo</p>
+</div>
+<div>
+<p class="font-bold">Duration</p>
+<p>20 Years</p>
+</div>
+<div>
+<p class="font-bold">Rate</p>
+<p>12%</p>
+</div>
+<div>
+<p class="font-bold text-gray-400">Total Invested</p>
+<p class="text-gray-800 font-medium">₹12 Lakhs</p>
+</div>
+</div>
+<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
+<p class="text-sm text-gray-500">Final Corpus</p>
+<p class="text-3xl font-extrabold text-teal-600">₹50 Lakhs+</p>
+</div>
+</div>
+</div>
+<!-- Scenario 2 -->
+<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-orange-500 card-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<i class="fas fa-user-clock text-6xl text-orange-600"></i>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-gray-800">Scenario 2: Delay 5 Years</h3>
+<span class="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded">Late
+                                Start</span>
+</div>
+<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+<div>
+<p class="font-bold">Invest</p>
+<p>₹5,000 / mo</p>
+</div>
+<div>
+<p class="font-bold">Duration</p>
+<p>15 Years</p>
+</div>
+<div>
+<p class="font-bold">Rate</p>
+<p>12%</p>
+</div>
+<div>
+<p class="font-bold text-gray-400">Total Invested</p>
+<p class="text-gray-800 font-medium">₹9 Lakhs</p>
+</div>
+</div>
+<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
+<p class="text-sm text-gray-500">Final Corpus</p>
+<p class="text-3xl font-extrabold text-orange-500">₹28 Lakhs+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visualization & Impact -->
+<div class="w-7/12 flex flex-col">
+<!-- Chart Area -->
+<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex-1 relative flex flex-col">
+<h4 class="text-gray-500 font-bold text-sm mb-4 uppercase tracking-wide">Wealth Accumulation
+                        Comparison</h4>
+<div class="relative h-64 w-full flex-1">
+<canvas id="sipChart"></canvas>
+</div>
+<!-- Cost of Delay Badge (Repositioned) -->
+<!-- Positioned absolutely relative to the container, targeted at the bottom right/center area -->
+<div class="absolute bottom-4 right-16 bg-white border-2 border-red-500 shadow-xl rounded-xl p-4 delay-badge w-60 z-20 text-center transform translate-y-6">
+<!-- Arrow pointing up to the short orange bar -->
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white border-t-2 border-l-2 border-red-500 w-4 h-4 rotate-45">
+</div>
+<div class="flex items-center justify-center space-x-2 mb-1">
+<i class="fas fa-exclamation-triangle text-red-500 text-lg"></i>
+<p class="text-xs font-bold text-red-500 uppercase tracking-wider">Cost of Delay</p>
+</div>
+<p class="text-2xl font-black text-gray-900 leading-none">₹22 Lakhs</p>
+<p class="text-xs text-gray-600 mt-2 leading-tight">Lost by waiting just 5 years. This
+                            represents the gap in the 2nd bar.</p>
+</div>
+</div>
+<!-- Bottom Message -->
+<div class="mt-8 math-quote rounded-lg p-3 border border-gray-200 text-center">
+<p class="text-lg font-medium text-gray-700">
+                        "That's not our opinion; that's <span class="font-black text-gray-900 underline decoration-teal-500 decoration-4">pure
+                            math</span>."
+                    </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+
+<!-- Modal -->
+<div class="modal-overlay" id="sipModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="font-bold text-lg"><i class="fas fa-calculator mr-2 text-teal-400"></i>SIP Calculator
+                    </h3>
+<button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+</div>
+<div class="flex-1 relative bg-gray-100 p-0 overflow-hidden rounded-b-xl">
+<!-- Iframe -->
+<iframe class="w-full h-full border-none" frameborder="0" src="sip_calculator.html"></iframe>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+        const ctx = document.getElementById('sipChart').getContext('2d');
+        const sipChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Start at 25', 'Start at 30'],
+                datasets: [
+                    {
+                        label: 'Principal Invested',
+                        data: [12, 9], // 12 Lakhs, 9 Lakhs
+                        backgroundColor: '#9ca3af', // Gray-400
+                        stack: 'Stack 0',
+                        barPercentage: 0.5,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Wealth Gained (Returns)',
+                        data: [38, 19], // 38 Lakhs, 19 Lakhs (Approx)
+                        backgroundColor: ['#0d9488', '#f97316'], // Teal-600, Orange-500
+                        stack: 'Stack 0',
+                        barPercentage: 0.5,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        align: 'start',
+                        labels: {
+                            font: { family: 'Roboto', size: 10 },
+                            usePointStyle: true,
+                            boxWidth: 8
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ₹' + context.raw + ' Lakhs';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { borderDash: [5, 5], color: '#f3f4f6' },
+                        ticks: {
+                            callback: function (value) { return '₹' + value + 'L'; },
+                            font: { family: 'Roboto', size: 10 }
+                        },
+                        title: { display: true, text: 'Amount (in Lakhs)' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Montserrat', weight: 'bold' } }
+                    }
+                }
+            }
+        });
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('sipModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('sipModal').style.display = 'none';
+        }
+    </script>
+<script>
+        window.addEventListener('message', function (event) {
+            if (event.data.type === 'theme-update') {
+                const isDark = event.data.isDark;
+                const css = event.data.css;
+                const styleId = 'dark-theme-style';
+                let style = document.getElementById(styleId);
+
+                if (isDark) {
+                    if (!style) {
+                        style = document.createElement('style');
+                        style.id = styleId;
+                        style.textContent = css;
+                        document.head.appendChild(style);
+                    }
+                } else {
+                    if (style) {
+                        style.remove();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
