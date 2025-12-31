@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating PDF...</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- HTML2PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* PDF/Print Specific Reset */
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            /* Force distinct width */
+        }
+
+        .slide-page {
+            width: 1280px;
+            /* buffer to prevent double-paging due to sub-pixel overflow */
+            height: 718px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            page-break-inside: avoid;
+            page-break-after: always;
+        }
+
+        /* Remove break after the last child */
+        .slide-page:last-child {
+            page-break-after: auto;
+        }
+
+        /* Hide scrollbars during capture */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="print-container"></div>
+
+    <!-- Status indicator for user if they open this page manually -->
+    <div id="status-overlay"
+        style="position: fixed; inset: 0; background: rgba(0,0,0,0.8); color: white; display: flex; align-items: center; justify-content: center; z-index: 9999;">
+        <div style="text-align: center;">
+            <h1 style="font-size: 24px; font-family: 'Montserrat', sans-serif;">Preparing PDF...</h1>
+            <p id="status-text">Loading slides...</p>
+        </div>
+    </div>
+
+    <!-- PDF Maker Scripts -->
+    <script src="pdfMaker.js"></script>
+</body>
+
+</html>

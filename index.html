@@ -262,6 +262,11 @@
             <button class="nav-btn" id="themeBtn" title="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
             </button>
+
+            <!-- Download PDF -->
+            <button class="nav-btn" id="downloadBtn" title="Download PDF of all slides">
+                <i class="fas fa-file-download"></i>
+            </button>
         </div>
 
         <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen (F)">
@@ -269,6 +274,7 @@
         </button>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         // Configuration
         const TOTAL_SLIDES = 14;
@@ -306,6 +312,7 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const themeBtn = document.getElementById('themeBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
         const currentNumEl = document.getElementById('currentSlideNum');
         const totalNumEl = document.getElementById('totalSlidesNum');
         const progressBar = document.getElementById('progressBar');
@@ -464,11 +471,34 @@
             }
         }
 
+        // PDF Download Logic
+        function downloadPitchDeck() {
+            // We delegate the heavy lifting to print.html
+            // This ensures a clean environment and robust rendering
+
+            // Check for localhost
+            if (window.location.protocol === 'file:') {
+                alert('Security Error (CORS): Browsers block this when opening files directly.\n\nPlease run a local server (python -m http.server).');
+                return;
+            }
+
+            // Open the print generator in a new tab/window to allow full resource usage
+            // and avoid freezing the main presentation.
+            const width = 1300;
+            const height = 800;
+            const left = (screen.width / 2) - (width / 2);
+            const top = (screen.height / 2) - (height / 2);
+
+            window.open('print.html', 'PDFGenerator',
+                `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=${width}, height=${height}, top=${top}, left=${left}`);
+        }
+
         // Event Listeners
         prevBtn.addEventListener('click', goToPrev);
         nextBtn.addEventListener('click', goToNext);
         fullscreenBtn.addEventListener('click', toggleFullscreen);
         themeBtn.addEventListener('click', toggleTheme);
+        downloadBtn.addEventListener('click', downloadPitchDeck);
         document.addEventListener('keydown', handleKeyDown);
 
         // Responsive Scaling Logic
