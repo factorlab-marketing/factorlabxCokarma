@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Thank You &amp; Contacts</title>
+    <title>Next Step: Let's Build Your Plan</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
@@ -37,200 +37,251 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Background Decorations */
-        .bg-circle-1 {
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
-            /* gradient simulated with flat colors for safety */
+        /* Layout Elements */
+        .left-col {
             background-color: #f0fdfa;
-            z-index: 0;
+            /* teal-50 */
+            position: relative;
+            z-index: 1;
         }
 
-        .bg-circle-2 {
-            position: absolute;
-            bottom: -50px;
-            left: -50px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            border: 40px solid #f0f9ff;
-            z-index: 0;
-        }
-
-        .dots-pattern {
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            width: 80%;
-            height: 60%;
-            background-image: radial-gradient(#e2e8f0 2px, transparent 2px);
-            background-size: 40px 40px;
-            z-index: 0;
-            opacity: 0.5;
-        }
-
-        /* Contact Cards */
-        .contact-card {
-            background-color: white;
+        /* QR Card Styling */
+        .qr-card {
+            background: white;
+            padding: 24px;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-width: 240px;
+            transition: transform 0.3s ease;
         }
 
-        .contact-card:hover {
-            transform: translateY(-8px);
+        .qr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 30px -5px rgba(13, 148, 136, 0.2);
             border-color: #2dd4bf;
-            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.1), 0 10px 10px -5px rgba(13, 148, 136, 0.04);
         }
 
-        .icon-box {
-            width: 64px;
-            height: 64px;
+        .qr-image-container {
+            width: 240px;
+            height: 240px;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 2px solid #f1f5f9;
+        }
+
+        /* Form Mockup Styling */
+        .form-mockup {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .form-field {
+            height: 12px;
+            background-color: #f1f5f9;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            width: 100%;
+        }
+
+        .form-label {
+            height: 8px;
+            background-color: #cbd5e1;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            width: 40%;
+        }
+
+        /* Timeline/Process Steps */
+        .step-item {
+            display: flex;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-line {
+            position: absolute;
+            left: 24px;
+            top: 48px;
+            bottom: -20px;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        .step-item:last-child .step-line {
+            display: none;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
-            background-color: #f0fdfa;
+            background-color: #ffffff;
+            border: 2px solid #0d9488;
             color: #0d9488;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
+            font-size: 20px;
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .contact-card:hover .icon-box {
-            background-color: #0d9488;
-            color: white;
-        }
-
-        /* Logos Section */
-        .logo-placeholder {
-            display: flex;
-            align-items: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-        }
-
-        .divider-vertical {
-            width: 2px;
-            height: 40px;
-            background-color: #e2e8f0;
-            margin: 0 32px;
-        }
-
-        /* Large Watermark */
-        .watermark {
+        .bg-shape {
             position: absolute;
-            bottom: 0;
-            right: 0;
-            font-size: 400px;
-            color: #f1f5f9;
-            opacity: 0.3;
-            transform: translate(20%, 20%);
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background-color: #f0f9ff;
+            border-radius: 50%;
             z-index: 0;
-            pointer-events: none;
         }
     </style>
 </head>
 
 <body>
     <div class="slide-container">
-        <!-- Background Elements -->
-        <div class="bg-circle-1"></div>
-        <div class="bg-circle-2"></div>
-        <div class="dots-pattern"></div>
-        <div class="watermark">
-            <i class="fas fa-chart-line"></i>
-        </div>
-        <!-- Main Content -->
-        <div class="relative z-10 flex flex-col items-center justify-center h-full px-16 pb-16 pt-8">
-            <!-- Header Group -->
-            <div class="text-center mb-12 max-w-4xl">
-                <div class="inline-block mb-4">
-                    <span
-                        class="bg-teal-100 text-teal-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-teal-200">
-                        Session Complete
-                    </span>
+        <div class="flex h-full">
+            <!-- Left Column: The Action (QR Code) -->
+            <div class="w-5/12 left-col flex flex-col justify-center items-center px-12 relative">
+                <!-- Decorative Pattern -->
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(#0d9488 1px, transparent 1px); background-size: 20px 20px;">
                 </div>
-                <h1 class="text-6xl font-black text-gray-900 mb-4 leading-tight">
-                    Thank You! <br />
-                    <span class="text-teal-600">Let's Grow Together</span>
-                </h1>
-                <p class="text-xl text-gray-500 font-medium tracking-wide">
-                    QUANTITATIVE WEALTH MANAGEMENT FOR INDIA
-                </p>
-            </div>
-            <!-- Contact Grid -->
-            <div class="flex space-x-8 mb-16">
-                <!-- Website -->
-                <div class="contact-card">
-                    <div class="icon-box">
-                        <i class="fas fa-globe"></i>
+                <div class="relative z-10 w-full max-w-sm">
+                    <!-- QR Card -->
+                    <div class="qr-card">
+                        <div class="qr-image-container p-2">
+                            <!-- Generating a static QR code pointing to the link -->
+                            <img alt="Scan to start" class="w-full h-full object-contain"
+                                src="../cokarma%20x%20factorlab%20form%20QR%20Code.png" />
+                        </div>
+                        <div class="text-center w-full">
+                            <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Scan or Visit</p>
+                            <div class="bg-gray-100 rounded-lg py-2 px-4 mb-4 border border-gray-200">
+                                <p class="text-teal-700 font-bold font-mono text-lg">forms.gle/c2ToFHkYr3VX7Eat5
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-center space-x-2 text-gray-400 text-xs">
+                                <i class="fas fa-camera"></i>
+                                <span>Open Camera App to Scan</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Visit Website</h3>
-                    <a href="https://factorlab.in" target="_blank"
-                        class="text-teal-600 font-medium hover:underline">factorlab.in</a>
-                </div>
-                <!-- Email -->
-                <div class="contact-card">
-                    <div class="icon-box">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Email Us</h3>
-                    <a href="mailto:research@factorlab.in"
-                        class="text-gray-500 font-medium text-sm hover:text-teal-600">research@factorlab.in</a>
-                </div>
-                <!-- Social -->
-                <div class="contact-card">
-                    <div class="icon-box">
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Connect</h3>
-                    <div class="flex space-x-4 mt-1 text-gray-400">
-                        <a href="https://www.linkedin.com/company/factor-lab-in/" target="_blank"><i
-                                class="fab fa-linkedin text-xl hover:text-blue-700 cursor-pointer transition-colors"></i></a>
-                        <a href="https://x.com/factorlab_in" target="_blank"><i
-                                class="fab fa-twitter text-xl hover:text-blue-400 cursor-pointer transition-colors"></i></a>
-                        <!-- Using Twitter icon for X as FA usually maps it -->
-                        <a href="https://www.youtube.com/@factorlab_IN" target="_blank"><i
-                                class="fab fa-youtube text-xl hover:text-red-600 cursor-pointer transition-colors"></i></a>
+                    <!-- Backup Note -->
+                    <div class="mt-6 text-center">
+                        <p
+                            class="text-teal-800 text-sm font-medium bg-teal-100/50 py-2 px-4 rounded-full inline-block border border-teal-100">
+                            <i class="fas fa-info-circle mr-2"></i>Link also available on whiteboard
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- Footer / Partners -->
-            <div class="w-full max-w-4xl border-t border-gray-200 pt-8 flex items-center justify-between">
-                <!-- FactorLab Logo -->
-                <div class="flex flex-col">
-                    <div class="logo-placeholder mb-2 bg-gray-900 rounded-lg p-3 inline-block shadow-sm">
-                        <img src="../factorlab%20logo.png" alt="FactorLab Logo" class="h-12 w-auto object-contain">
+            <!-- Right Column: Value & Process -->
+            <div class="w-7/12 p-16 flex flex-col justify-center relative bg-white">
+                <div class="bg-shape"></div>
+                <header class="mb-10 relative z-10">
+                    <div
+                        class="inline-flex items-center space-x-2 mb-3 bg-teal-50 px-3 py-1 rounded-full text-teal-700">
+                        <i class="fas fa-bolt"></i>
+                        <p class="text-xs font-bold uppercase tracking-widest">Take Action</p>
                     </div>
-                    <p class="text-xs text-gray-400 uppercase tracking-widest font-bold ml-1">Data-Driven Investing</p>
-                </div>
-                <!-- Partnership Indicator -->
-                <div class="flex items-center text-gray-300">
-                    <span class="text-sm font-bold uppercase tracking-widest mr-4">Hosted At</span>
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                <!-- CoKarma Logo & Location -->
-                <div class="flex flex-col items-end">
-                    <div class="logo-placeholder mb-2">
-                        <img src="../Co-karma%20logo.png" alt="CoKarma Logo" class="h-20 w-auto object-contain">
+                    <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
+                        Next Step: <br /><span class="text-teal-600">Let's Build Your Plan</span>
+                    </h1>
+                    <p class="text-xl text-gray-500 mt-4 font-light">It takes just 1 minute to start your wealth
+                        journey.</p>
+                </header>
+                <div class="flex items-start space-x-12 relative z-10">
+                    <!-- Step List -->
+                    <div class="flex-1">
+                        <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-6">What Happens Next
+                        </h3>
+                        <div class="step-item">
+                            <div class="step-line"></div>
+                            <div class="step-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Fill the Form</h4>
+                                <p class="text-sm text-gray-500 mt-1">Basic details, top goal, and current investments.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-line"></div>
+                            <div class="step-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">48-Hour Review</h4>
+                                <p class="text-sm text-gray-500 mt-1">We analyze your inputs and book a free 1-on-1
+                                    slot.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Your Roadmap</h4>
+                                <p class="text-sm text-gray-500 mt-1">Get a portfolio check-in and actionable advice. No
+                                    pressure.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center text-gray-500 text-sm font-medium">
-                        <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
-                        <p>CoKarma Madhapur</p>
+                    <!-- Form Preview Visual -->
+                    <div class="w-64 pt-8">
+                        <div
+                            class="form-mockup shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                            <div class="flex items-center justify-between mb-4 border-b border-gray-100 pb-2">
+                                <span class="text-xs font-bold text-gray-400">FactorLab Investing Plan</span>
+                                <div class="flex space-x-1">
+                                    <div class="w-2 h-2 rounded-full bg-red-400"></div>
+                                    <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+                                    <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="form-label w-1/3"></div>
+                                    <div class="form-field"></div>
+                                </div>
+                                <div>
+                                    <div class="form-label w-1/2"></div>
+                                    <div class="form-field"></div>
+                                </div>
+                                <div>
+                                    <div class="form-label w-1/4"></div>
+                                    <div class="form-field"></div>
+                                </div>
+                                <div>
+                                    <div class="form-label w-2/3"></div>
+                                    <div class="form-field h-8"></div>
+                                </div>
+                                <div class="mt-4 pt-2">
+                                    <div class="h-8 bg-teal-500 rounded w-full flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">Submit Request</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center text-xs text-gray-400 mt-4 font-medium">100% Privacy Safe</p>
                     </div>
                 </div>
             </div>

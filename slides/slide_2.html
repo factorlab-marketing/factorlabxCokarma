@@ -65,76 +65,120 @@
 <body>
     <div class="slide-container">
         <!-- Header Section -->
-        <header class="pt-8 px-16 pb-4">
-            <div class="flex items-center space-x-3 mb-2">
+        <header class="pt-6 px-12 pb-2">
+            <div class="flex items-center space-x-3 mb-1">
                 <div class="h-1 w-12 bg-yellow-500 rounded-full"></div>
                 <p class="text-sm font-bold tracking-widest text-gray-500 uppercase">Interactive Session</p>
             </div>
-            <h1 class="text-4xl font-bold text-gray-900 mb-2">Let's Start Here: Your Investing Story</h1>
+            <h1 class="text-4xl font-bold text-gray-900 mb-1">Let's Start Here: Your Investing Story</h1>
             <p class="text-lg text-gray-600 font-light max-w-3xl">
-                Everyone starts somewhere. Raise your hand if this sounds like your portfolio.
+                Everyone starts somewhere. Which profile matches your history?
             </p>
         </header>
-        <!-- Main Content: 3 Columns -->
-        <main class="flex-1 px-16 pb-6 flex space-x-6 items-stretch justify-center">
-            <!-- Card 1: FDs & Insurance -->
-            <div
-                class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col items-center justify-between poll-card relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-blue-500"></div>
+
+        <!-- Main Content -->
+        <main class="flex-1 px-12 pb-4 flex flex-col">
+
+            <!-- Top Row: 3 Profiles (Compacted) -->
+            <div class="flex space-x-4 items-stretch justify-center h-64 mb-4">
+                <!-- Card 1: Conservative -->
                 <div
-                    class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4 text-blue-600 text-2xl">
-                    <i class="fas fa-shield-alt"></i>
+                    class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <div
+                            class="bg-blue-50 text-blue-600 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                            Conservative</div>
+                        <i
+                            class="fas fa-shield-alt text-blue-200 text-2xl group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">FDs &amp; Insurance</h3>
+                    <p class="text-xs text-gray-500 mb-3 leading-snug">Safety first. Traditional savings & endowment
+                        plans.</p>
+
+                    <div class="mt-auto space-y-2">
+                        <div class="flex justify-between items-center text-sm border-b border-gray-100 pb-1">
+                            <span class="text-gray-600">FD Returns</span>
+                            <span class="font-bold text-blue-700">6-7%</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600">Endowment</span>
+                            <span class="font-bold text-blue-700">4-5%</span>
+                        </div>
+                        <p class="text-[10px] text-gray-400 italic text-center mt-1">"Safe, but inflation eats it."</p>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 text-center mb-2">FDs &amp; Insurance</h3>
-                <p class="text-gray-500 text-center mb-4 text-sm px-2 leading-tight">Safety first. Traditional savings
-                    and endowment plans.</p>
-                <!-- Meaningful Label -->
-                <div class="w-full mt-auto">
-                    <div class="bg-gray-100 rounded-lg p-3 text-center border border-gray-200">
-                        <p class="text-xl font-bold text-gray-400 uppercase tracking-widest">Conservative</p>
+
+                <!-- Card 2: Disciplined (Hero Card) -->
+                <div
+                    class="flex-1 bg-teal-50 rounded-xl shadow-md border-2 border-teal-500 p-4 flex flex-col relative overflow-hidden transform scale-105 z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-teal-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
+                        RECOMMENDED</div>
+                    <div class="flex justify-between items-start mb-2">
+                        <div
+                            class="bg-teal-200 text-teal-800 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                            Disciplined</div>
+                        <i class="fas fa-seedling text-teal-500 text-2xl"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">SIPs &amp; Mutual Funds</h3>
+                    <p class="text-xs text-teal-700 mb-3 leading-snug">Automated wealth building. The steady path.</p>
+
+                    <div class="mt-auto bg-white rounded-lg p-3 border border-teal-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-sm font-bold text-gray-600">5-Yr Avg Return</span>
+                            <span class="text-lg font-bold text-teal-600">12-15%</span>
+                        </div>
+                        <div class="text-xs text-gray-500 border-t border-gray-100 pt-1 mt-1">
+                            <div class="flex justify-between"><span>Inv: ₹3L</span> <span>Val: <strong
+                                        class="text-teal-700">₹4.8L</strong></span></div>
+                            <div class="text-center text-teal-600 font-bold mt-1 text-[10px]">+₹60k more than FD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Aggressive -->
+                <div
+                    class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <div
+                            class="bg-purple-50 text-purple-600 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider">
+                            Aggressive</div>
+                        <i
+                            class="fas fa-chart-line text-purple-200 text-2xl group-hover:text-purple-500 transition-colors"></i>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Direct Stocks</h3>
+                    <p class="text-xs text-gray-500 mb-3 leading-snug">High risk. Trading, F&amp;O, Stock picking.</p>
+
+                    <div class="mt-auto bg-red-50 rounded-lg p-2 border border-red-100 text-center">
+                        <p class="text-3xl font-bold text-red-500 mb-0 leading-none">91%</p>
+                        <p class="text-[10px] font-bold text-red-400 uppercase mb-2">Lose Money</p>
+                        <hr class="border-red-200/50 mb-1">
+                        <p class="text-xs text-gray-600">Avg Loss: <strong class="text-red-600">₹1.1 Lakh</strong></p>
                     </div>
                 </div>
             </div>
-            <!-- Card 2: SIPs & Mutual Funds -->
+
+            <!-- Bottom Section: Comparison Chart (Chart.js) -->
             <div
-                class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col items-center justify-between poll-card relative overflow-hidden transform scale-100 border-teal-200 ring-2 ring-teal-50 ring-opacity-50">
-                <div class="absolute top-0 left-0 w-full h-2 bg-teal-500"></div>
-                <div
-                    class="w-20 h-20 rounded-full bg-teal-50 flex items-center justify-center mb-4 text-teal-600 text-3xl">
-                    <i class="fas fa-seedling"></i>
+                class="flex-1 bg-white rounded-xl border border-gray-200 p-4 mt-2 shadow-sm relative flex flex-col justify-center overflow-hidden">
+                <div class="absolute top-4 left-6 z-10">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest">Growth of ₹1 Lakh (5 Years)
+                    </h4>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 text-center mb-2">SIPs &amp; Mutual Funds</h3>
-                <p class="text-gray-500 text-center mb-4 text-sm px-2 leading-tight">Building habits. Automated monthly
-                    investments in funds.</p>
-                <!-- Meaningful Label -->
-                <div class="w-full mt-auto">
-                    <div class="bg-teal-50 rounded-lg p-3 text-center border border-teal-100">
-                        <p class="text-xl font-bold text-teal-600 uppercase tracking-widest">Disciplined</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3: Direct Stocks & Trading -->
-            <div
-                class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col items-center justify-between poll-card relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-purple-500"></div>
-                <div
-                    class="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center mb-4 text-purple-600 text-2xl">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 text-center mb-2">Direct Stocks</h3>
-                <p class="text-gray-500 text-center mb-4 text-sm px-2 leading-tight">Active management. Buying stocks,
-                    trading, F&amp;O.</p>
-                <!-- Meaningful Label -->
-                <div class="w-full mt-auto">
-                    <div class="bg-gray-100 rounded-lg p-3 text-center border border-gray-200">
-                        <p class="text-xl font-bold text-gray-400 uppercase tracking-widest">Aggressive</p>
-                    </div>
+                <!-- Chart Container -->
+                <div class="relative h-full w-full pt-6">
+                    <canvas id="comparisonChart"></canvas>
                 </div>
             </div>
         </main>
-        <!-- Footer Brand -->
-
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         window.addEventListener('message', function (event) {
             if (event.data.type === 'theme-update') {
@@ -154,6 +198,137 @@
                     if (style) {
                         style.remove();
                     }
+                }
+            }
+        });
+
+        // Chart.js Implementation
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+        // Data Generation (Simulated Growth of 1L)
+        // Years 0-5
+        const labels = ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
+
+        // Invested (Baseline) - Flat 1L for comparison simplicity
+        const investedData = [100, 100, 100, 100, 100, 100];
+
+        // Insurance (4%) -> 100 -> 104 -> 108 ... -> ~121
+        const insuranceData = [100, 104, 108, 112, 117, 122];
+
+        // FD (7%) -> 100 -> 107 -> 114 ... -> ~140
+        const fdData = [100, 107, 114, 122, 131, 140];
+
+        // SIP/MF (15%) -> 100 -> 115 -> 132 ... -> ~200
+        const sipData = [100, 115, 132, 152, 175, 201];
+
+        // Trading (Loss) -> 100 -> 80 -> 60 ... -> Loss of Capital (simulated erosion)
+        const tradingData = [100, 70, 50, 40, 25, 10];
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'SIP / Mutual Funds (Winner)',
+                        data: sipData,
+                        borderColor: '#0d9488', // Teal-600
+                        backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#0d9488',
+                        fill: true
+                    },
+                    {
+                        label: 'Fixed Deposits',
+                        data: fdData,
+                        borderColor: '#2563eb', // Blue-600
+                        borderWidth: 2,
+                        tension: 0.4,
+                        pointRadius: 3,
+                        fill: false
+                    },
+                    {
+                        label: 'Insurance',
+                        data: insuranceData,
+                        borderColor: '#93c5fd', // Blue-300
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.4,
+                        pointRadius: 0,
+                        fill: false
+                    },
+                    {
+                        label: 'Trading (Capital Erosion)',
+                        data: tradingData,
+                        borderColor: '#ef4444', // Red-500
+                        borderWidth: 2,
+                        tension: 0.4,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#ef4444',
+                        fill: false,
+                        borderDash: [2, 2]
+                    },
+                    {
+                        label: 'Invested Capital',
+                        data: investedData,
+                        borderColor: '#9ca3af', // Gray-400
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        align: 'center',
+                        labels: {
+                            font: { family: "'Roboto', sans-serif", size: 10 },
+                            usePointStyle: true,
+                            boxWidth: 8
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        titleColor: '#1f2937',
+                        bodyColor: '#374151',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        padding: 10,
+                        bodyFont: { family: "'Roboto', sans-serif" },
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.parsed.y + 'k';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        grid: { color: '#f3f4f6' },
+                        ticks: {
+                            callback: function (value) { return '₹' + value + 'k'; },
+                            font: { size: 10 },
+                            color: '#9ca3af'
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#9ca3af'
+                        }
+                    }
+                },
+                layout: {
+                    padding: { left: 10, right: 20, top: 20, bottom: 10 }
                 }
             }
         });

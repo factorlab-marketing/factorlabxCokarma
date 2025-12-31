@@ -4,239 +4,254 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>What Is FactorLab</title>
+<title>From Salary Mindset to Wealth Mindset</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
 <style>
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8fafc;
             overflow: hidden;
+            background-color: #f3f4f6;
         }
 
         .slide-container {
             width: 1280px;
             height: 720px;
-            position: relative;
-            background-color: #ffffff;
             display: flex;
             flex-direction: column;
+            position: relative;
+            background-color: white;
             overflow: hidden;
         }
 
         h1,
         h2,
-        h3,
-        h4 {
+        h3 {
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Custom Background Pattern */
-        .bg-grid {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(to right, #f1f5f9 1px, transparent 1px),
-                linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: 0;
-            opacity: 0.2;
-        }
-
-        /* Feature Box Styling */
-        .feature-box {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background-color: #cbd5e1;
-            /* Default gray */
-            transition: background-color 0.3s ease;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #cbd5e1;
-        }
-
-        /* Unique border colors per card */
-        .feature-box.box-1::before {
-            background-color: #0d9488;
-        }
-
-        /* Teal */
-        .feature-box.box-2::before {
-            background-color: #0ea5e9;
-        }
-
-        /* Blue */
-        .feature-box.box-3::before {
-            background-color: #6366f1;
-        }
-
-        /* Indigo */
-
-        .feature-box.box-1:hover {
-            border-color: #99f6e4;
-        }
-
-        .feature-box.box-2:hover {
-            border-color: #bae6fd;
-        }
-
-        .feature-box.box-3:hover {
-            border-color: #c7d2fe;
-        }
-
-        .icon-wrapper {
-            width: 72px;
-            height: 72px;
-            border-radius: 16px;
+        .transform-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            height: 100%;
+            padding: 0 40px;
+        }
+
+        .mindset-card {
+            flex: 1;
+            height: 480px;
+            border-radius: 20px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .salary-connected {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .wealth-connected {
+            background: linear-gradient(145deg, #ffffff, #f0fdfa);
+            border: 1px solid #99f6e4;
+            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.15), 0 10px 10px -5px rgba(13, 148, 136, 0.1);
+            transform: scale(1.05);
+            /* Make it pop */
+            z-index: 10;
+        }
+
+        .arrow-connector {
+            flex: 0 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .arrow-circle {
+            width: 64px;
+            height: 64px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e2e8f0;
+        }
+
+        .list-row {
+            display: flex;
+            align-items: center;
             margin-bottom: 24px;
         }
 
-        .tag-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            font-size: 11px;
+        .icon-small {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        /* Salary Styling */
+        .salary-active .icon-small {
+            background: #f3f4f6;
+            color: #64748b;
+        }
+
+        .salary-title {
+            color: #64748b;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 12px;
+            font-size: 1.1rem;
         }
 
-        .hero-statement {
-            position: relative;
+        .salary-desc {
+            color: #94a3b8;
+            font-size: 0.85rem;
         }
 
-        .hero-statement::after {
-            content: '';
+        /* Wealth Styling */
+        .wealth-active .icon-small {
+            background: #ccfbf1;
+            color: #0d9488;
+        }
+
+        .wealth-title {
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .wealth-desc {
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .bg-dots {
             position: absolute;
-            left: 0;
-            bottom: -20px;
-            width: 80px;
-            height: 4px;
-            background-color: #0d9488;
-            /* Teal-600 */
+            inset: 0;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.3;
+        }
+
+        .blur-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
 <div class="slide-container">
-<!-- Background -->
-<div class="bg-grid"></div>
-<!-- Decorative Circle -->
-<div class="absolute top-0 right-0 w-96 h-96 bg-teal-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/3 -translate-y-1/3">
+<div class="bg-dots"></div>
+<!-- Decorative Blobs -->
+<div class="blur-blob bg-gray-200 top-[-50px] left-[-50px]"></div>
+<div class="blur-blob bg-teal-100 bottom-[-50px] right-[-50px]"></div>
+<!-- Header -->
+<header class="pt-10 px-16 relative z-10 text-center">
+<div class="inline-flex items-center space-x-2 mb-3 bg-white px-3 py-1 rounded-full border border-gray-100 shadow-sm">
+<i class="fas fa-brain text-teal-600"></i>
+<p class="text-xs font-bold tracking-widest text-gray-500 uppercase">The Psychology of Money</p>
 </div>
-<div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform -translate-x-1/3 translate-y-1/3">
-</div>
-<!-- Header Section -->
-<header class="pt-8 px-16 relative z-10 w-full max-w-5xl">
-<div class="flex items-center space-x-3 mb-2">
-<div class="h-1 w-12 bg-teal-600 rounded-full"></div>
-<p class="text-sm font-bold tracking-widest text-teal-700 uppercase">Introducing FactorLab</p>
-</div>
-<div class="flex justify-between items-end">
-<div class="w-2/3 pr-12">
-<h1 class="text-4xl font-extrabold text-gray-900 mb-2">What Is <span class="text-teal-600">FactorLab?</span></h1>
-<div class="hero-statement">
-<p class="text-xl text-gray-600 font-light leading-relaxed">
-                            A quantitative wealth-management platform that uses <strong class="text-gray-900 font-bold">data-driven, rule-based portfolios</strong> to help
-                            Indian investors build long-term wealth.
-                        </p>
-</div>
-</div>
-<div class="w-1/3 pl-8 border-l border-gray-200">
-<p class="text-base text-gray-500 font-medium italic">
-                        "We combine research + technology to remove emotion from investing."
-                    </p>
-</div>
-</div>
+<h1 class="text-5xl font-extrabold text-gray-900 mb-2">From Salary Mindset to <span class="text-teal-600">Wealth Mindset</span></h1>
+<p class="text-xl text-gray-500 font-light">The difference isn't just in the numbers—it's in the approach.
+            </p>
 </header>
-<!-- Main Features Section -->
-<main class="flex-1 px-16 pb-4 pt-4 relative z-10 flex space-x-6 items-stretch">
-<!-- Feature 1: Equity Baskets -->
-<div class="feature-box box-1 flex-1 p-6 flex flex-col">
-<div class="flex justify-between items-start">
-<div class="icon-wrapper bg-teal-50 text-teal-600" style="margin-bottom: 16px;">
-<i class="fas fa-layer-group"></i>
+<!-- Main Content -->
+<div class="transform-section relative z-10 mt-4">
+<!-- Left Card: Salary Mindset -->
+<div class="mindset-card salary-connected salary-active">
+<div class="absolute top-0 left-0 w-full h-1 bg-gray-300"></div>
+<div class="text-center mb-8">
+<div class="w-16 h-16 mx-auto bg-gray-100 rounded-full flex items-center justify-center text-gray-500 text-2xl mb-3">
+<i class="fas fa-briefcase"></i>
 </div>
-<span class="tag-badge bg-teal-100 text-teal-800">For Everyone</span>
+<h3 class="text-2xl font-bold text-gray-700">Salary Mindset</h3>
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-1">Working for Money</p>
 </div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">Equity Baskets</h3>
-<p class="text-xs text-gray-500 font-medium mb-3">(powered by smallcase)</p>
-<p class="text-gray-600 leading-snug flex-1 text-sm">
-                    Research-backed portfolios of stocks that you can buy and manage yourself with a single click. No
-                    lock-ins.
-                </p>
-<div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-teal-600 font-bold text-xs cursor-pointer group">
-<span>Explore Baskets</span>
-<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
-</div>
-</div>
-<!-- Feature 2: Smart Fund Selection -->
-<div class="feature-box box-2 flex-1 p-6 flex flex-col">
-<div class="flex justify-between items-start">
-<div class="icon-wrapper bg-blue-50 text-blue-600" style="margin-bottom: 16px;">
-<i class="fas fa-search-dollar"></i>
-</div>
-<span class="tag-badge bg-blue-100 text-blue-800">For SIP Investors</span>
-</div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">Smart Fund Selection</h3>
-<p class="text-xs text-gray-500 font-medium mb-3">Proprietary Ranking Model</p>
-<p class="text-gray-600 leading-snug flex-1 text-sm">
-                    We analyze thousands of mutual funds to pick the consistent performers, helping you filter out the
-                    noise.
-                </p>
-<div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-blue-600 font-bold text-xs cursor-pointer group">
-<span>See Rankings</span>
-<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+<div class="flex-1 px-4">
+<div class="list-row">
+<div class="icon-small"><i class="fas fa-lock"></i></div>
+<div>
+<p class="salary-title">FDs &amp; Traditional</p>
+<p class="salary-desc">Safety over growth (Losing to inflation)</p>
 </div>
 </div>
-<!-- Feature 3: PMS / AIF Access -->
-<div class="feature-box box-3 flex-1 p-6 flex flex-col">
-<div class="flex justify-between items-start">
-<div class="icon-wrapper bg-indigo-50 text-indigo-600" style="margin-bottom: 16px;">
-<i class="fas fa-crown"></i>
-</div>
-<span class="tag-badge bg-indigo-100 text-indigo-800">High Net Worth</span>
-</div>
-<h3 class="text-xl font-bold text-gray-900 mb-2">PMS / AIF Access</h3>
-<p class="text-xs text-gray-500 font-medium mb-3">Sophisticated Solutions</p>
-<p class="text-gray-600 leading-snug flex-1 text-sm">
-                    Exclusive access to Portfolio Management Services and Alternative Investment Funds for higher-ticket
-                    investors.
-                </p>
-<div class="mt-4 pt-4 border-t border-gray-100 flex items-center text-indigo-600 font-bold text-xs cursor-pointer group">
-<span>Request Access</span>
-<i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+<div class="list-row">
+<div class="icon-small"><i class="fas fa-history"></i></div>
+<div>
+<p class="salary-title">"I'll Start Later"</p>
+<p class="salary-desc">Waiting for the "perfect" time</p>
 </div>
 </div>
-</main>
-<!-- Footer -->
+<div class="list-row">
+<div class="icon-small"><i class="fas fa-exclamation-triangle"></i></div>
+<div>
+<p class="salary-title">Emotional Selling</p>
+<p class="salary-desc">Panicking when markets dip</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Arrow -->
+<div class="arrow-connector">
+<div class="arrow-circle text-teal-500 text-2xl animate-pulse">
+<i class="fas fa-chevron-right"></i>
+</div>
+</div>
+<!-- Right Card: Wealth Mindset -->
+<div class="mindset-card wealth-connected wealth-active">
+<div class="absolute top-0 left-0 w-full h-1 bg-teal-500"></div>
+<div class="text-center mb-8">
+<div class="w-16 h-16 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 text-2xl mb-3 shadow-md">
+<i class="fas fa-seedling"></i>
+</div>
+<h3 class="text-2xl font-bold text-teal-800">Wealth Mindset</h3>
+<p class="text-xs text-teal-500 font-bold uppercase tracking-wider mt-1">Money Working For You</p>
+</div>
+<div class="flex-1 px-4">
+<div class="list-row">
+<div class="icon-small shadow-sm"><i class="fas fa-bullseye"></i></div>
+<div>
+<p class="wealth-title">Goal-Based Investing</p>
+<p class="wealth-desc">Clear horizon &amp; purpose</p>
+</div>
+</div>
+<div class="list-row">
+<div class="icon-small shadow-sm"><i class="fas fa-chart-pie"></i></div>
+<div>
+<p class="wealth-title">Asset Allocation</p>
+<p class="wealth-desc">Diversified across Equity, Debt, Gold</p>
+</div>
+</div>
+<div class="list-row">
+<div class="icon-small shadow-sm"><i class="fas fa-robot"></i></div>
+<div>
+<p class="wealth-title">Systematic Rules</p>
+<p class="wealth-desc">Buying low, selling high automatically</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Brand -->
 
 </div>
 <script>
@@ -262,4 +277,5 @@
             }
         });
     </script>
-</body></html>
+</body>
+</html>

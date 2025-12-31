@@ -4,11 +4,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Why Time Is Your Biggest Asset</title>
+<title>The Salaried Professional's Dilemma</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -17,343 +16,167 @@
             overflow: hidden;
             background-color: #f3f4f6;
         }
-
         .slide-container {
             width: 1280px;
             height: 720px;
             display: flex;
             flex-direction: column;
             position: relative;
-            background-color: white;
+            background-color: #fffaf6; /* Very light warm background */
             overflow: hidden;
         }
-
-        h1,
-        h2,
-        h3,
-        h4 {
+        h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
         }
-
-        .accent-bar {
-            background-color: #0d2b38;
-            /* FactorLab Primary */
-        }
-
-        .card-shadow {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .scenario-card {
-            border-left-width: 6px;
-            transition: transform 0.2s;
-        }
-
-        .scenario-card:hover {
-            transform: translateX(5px);
-        }
-
-        .delay-badge {
-            animation: pulse-border 2s infinite;
-        }
-
-        @keyframes pulse-border {
-            0% {
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
-            }
-        }
-
-        .highlight-text {
-            color: #ef4444;
-            /* Red-500 */
-        }
-
-        .math-quote {
-            background-image: repeating-linear-gradient(45deg, #f9fafb 25%, transparent 25%, transparent 75%, #f9fafb 75%, #f9fafb), repeating-linear-gradient(45deg, #f9fafb 25%, #ffffff 25%, #ffffff 75%, #f9fafb 75%, #f9fafb);
-            background-position: 0 0, 10px 10px;
-            background-size: 20px 20px;
-        }
-
-        /* Modal Styles */
-        .modal-overlay {
-            display: none;
+        /* Custom shape for the visual background */
+        .blob-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 100;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            background-color: #fff7ed; /* Orange-50 */
+            border-radius: 45% 55% 70% 30% / 40% 60% 40% 60%;
+            z-index: 0;
+        }
+        .pain-point-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .pain-point-card:hover {
+            transform: translateX(10px);
+            background-color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #f97316; /* Orange-500 */
+        }
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(4px);
+            border-radius: 16px;
+            transition: all 0.3s ease;
         }
-
-        .modal-content {
-            width: 90%;
-            height: 90%;
-            background-color: white;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        .pain-point-card:hover .icon-box {
+            transform: scale(1.1) rotate(-5deg);
         }
-
-        .modal-header {
-            padding: 16px;
-            background-color: #0f172a;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .close-btn:hover {
-            color: #ef4444;
+        /* Decorative dots */
+        .dots-pattern {
+            background-image: radial-gradient(#fb923c 2px, transparent 2px);
+            background-size: 20px 20px;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
 <div class="slide-container">
+<!-- Background Elements -->
+<div class="blob-bg"></div>
+<div class="dots-pattern" style="top: 40px; right: 40px;"></div>
+<div class="dots-pattern" style="bottom: 40px; left: 40px;"></div>
 <!-- Header -->
-<header class="pt-10 px-16 flex justify-between items-end">
-<div>
+<header class="pt-12 px-16 z-10">
 <div class="flex items-center space-x-3 mb-2">
-<div class="h-1 w-12 bg-teal-500 rounded-full"></div>
-<p class="text-sm font-bold tracking-widest text-teal-600 uppercase">The Opportunity</p>
+<div class="h-1 w-12 bg-orange-500 rounded-full"></div>
+<p class="text-sm font-bold tracking-widest text-orange-600 uppercase">The Problem</p>
 </div>
-<h1 class="text-5xl font-extrabold text-gray-900">Why Time Is Your <span class="text-teal-600">Biggest
-                        Asset</span></h1>
-</div>
-<!-- SIP Calculator Button -->
-<button class="flex items-center space-x-2 bg-teal-600 hover:bg-teal-700 text-gray-900 px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1" onclick="openModal()">
-<i class="fas fa-calculator"></i>
-<span class="font-bold">Open SIP Calculator</span>
-</button>
+<h1 class="text-5xl font-bold text-gray-900 leading-tight">
+                The Salaried Professional's <br/>
+<span class="text-orange-600">Dilemma</span>
+</h1>
 </header>
-<!-- Main Content -->
-<main class="flex-1 px-16 py-8 flex space-x-12">
-<!-- Left Column: Scenarios -->
-<div class="w-5/12 flex flex-col justify-center space-y-6">
-<!-- Scenario 1 -->
-<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-teal-500 card-shadow relative overflow-hidden">
-<div class="absolute top-0 right-0 p-3 opacity-10">
-<i class="fas fa-running text-6xl text-teal-600"></i>
-</div>
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-bold text-gray-800">Scenario 1: Start at 25</h3>
-<span class="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded">Smart
-                                Move</span>
-</div>
-<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
-<div>
-<p class="font-bold">Invest</p>
-<p>₹5,000 / mo</p>
+<main class="flex-1 px-16 py-8 flex items-center z-10">
+<!-- Left Column: Pain Points List -->
+<div class="w-3/5 pr-12 space-y-6">
+<!-- Point 1: Confusion -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-question text-2xl"></i>
 </div>
 <div>
-<p class="font-bold">Duration</p>
-<p>20 Years</p>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Confusion &amp; Complexity</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Which product fits me? What returns are realistic? Who can I actually trust with my money?
+                        </p>
+</div>
+</div>
+<!-- Point 2: No Time -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-hourglass-half text-2xl"></i>
 </div>
 <div>
-<p class="font-bold">Rate</p>
-<p>12%</p>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">No Time to Manage</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Too busy managing career and life. Tracking markets and rebalancing portfolios feels overwhelming.
+                        </p>
+</div>
+</div>
+<!-- Point 3: Random Advice -->
+<div class="pain-point-card p-6 rounded-xl flex items-start space-x-6">
+<div class="icon-box bg-orange-100 text-orange-600 shrink-0">
+<i class="fas fa-comments text-2xl"></i>
 </div>
 <div>
-<p class="font-bold text-gray-400">Total Invested</p>
-<p class="text-gray-800 font-medium">₹12 Lakhs</p>
-</div>
-</div>
-<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
-<p class="text-sm text-gray-500">Final Corpus</p>
-<p class="text-3xl font-extrabold text-teal-600">₹50 Lakhs+</p>
+<h3 class="text-2xl font-bold text-gray-800 mb-2">Random Advice</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                            Acting on hot tips from friends, colleagues, or YouTube gurus without a cohesive strategy.
+                        </p>
 </div>
 </div>
 </div>
-<!-- Scenario 2 -->
-<div class="scenario-card bg-white p-6 rounded-r-xl border border-gray-100 border-l-orange-500 card-shadow relative overflow-hidden">
-<div class="absolute top-0 right-0 p-3 opacity-10">
-<i class="fas fa-user-clock text-6xl text-orange-600"></i>
+<!-- Right Column: Visual Metaphor -->
+<div class="w-2/5 flex flex-col items-center justify-center relative">
+<!-- Central Visual Composition -->
+<div class="relative w-80 h-80">
+<!-- Circle Background -->
+<div class="absolute inset-0 bg-white rounded-full shadow-lg flex items-center justify-center z-10 border border-orange-100">
+<div class="text-center p-8">
+<i class="fas fa-user-tie text-6xl text-gray-300 mb-4"></i>
+<div class="absolute top-16 right-16 text-orange-500 animate-bounce">
+<i class="fas fa-exclamation-circle text-3xl"></i>
 </div>
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-xl font-bold text-gray-800">Scenario 2: Delay 5 Years</h3>
-<span class="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded">Late
-                                Start</span>
+<div class="absolute top-16 left-16 text-orange-500 animate-pulse">
+<i class="fas fa-chart-line text-3xl transform rotate-180"></i>
 </div>
-<div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
-<div>
-<p class="font-bold">Invest</p>
-<p>₹5,000 / mo</p>
-</div>
-<div>
-<p class="font-bold">Duration</p>
-<p>15 Years</p>
-</div>
-<div>
-<p class="font-bold">Rate</p>
-<p>12%</p>
-</div>
-<div>
-<p class="font-bold text-gray-400">Total Invested</p>
-<p class="text-gray-800 font-medium">₹9 Lakhs</p>
-</div>
-</div>
-<div class="pt-3 border-t border-gray-100 flex justify-between items-end">
-<p class="text-sm text-gray-500">Final Corpus</p>
-<p class="text-3xl font-extrabold text-orange-500">₹28 Lakhs+</p>
+<div class="absolute bottom-16 right-20 text-orange-500">
+<i class="fas fa-file-invoice-dollar text-3xl"></i>
 </div>
 </div>
 </div>
+<!-- Floating Bubbles representing noise -->
+<div class="absolute -top-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Buy Crypto?</p>
 </div>
-<!-- Right Column: Visualization & Impact -->
-<div class="w-7/12 flex flex-col">
-<!-- Chart Area -->
-<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex-1 relative flex flex-col">
-<h4 class="text-gray-500 font-bold text-sm mb-4 uppercase tracking-wide">Wealth Accumulation
-                        Comparison</h4>
-<div class="relative h-64 w-full flex-1">
-<canvas id="sipChart"></canvas>
+<div class="absolute top-1/2 -right-12 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Market Crash!</p>
 </div>
-<!-- Cost of Delay Badge (Repositioned) -->
-<!-- Positioned absolutely relative to the container, targeted at the bottom right/center area -->
-<div class="absolute bottom-4 right-16 bg-white border-2 border-red-500 shadow-xl rounded-xl p-4 delay-badge w-60 z-20 text-center transform translate-y-6">
-<!-- Arrow pointing up to the short orange bar -->
-<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-white border-t-2 border-l-2 border-red-500 w-4 h-4 rotate-45">
+<div class="absolute bottom-4 -left-4 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Best FD Rate?</p>
 </div>
-<div class="flex items-center justify-center space-x-2 mb-1">
-<i class="fas fa-exclamation-triangle text-red-500 text-lg"></i>
-<p class="text-xs font-bold text-red-500 uppercase tracking-wider">Cost of Delay</p>
-</div>
-<p class="text-2xl font-black text-gray-900 leading-none">₹22 Lakhs</p>
-<p class="text-xs text-gray-600 mt-2 leading-tight">Lost by waiting just 5 years. This
-                            represents the gap in the 2nd bar.</p>
+<div class="absolute top-0 -left-8 bg-white px-4 py-2 rounded-lg shadow-md border border-gray-100 z-20">
+<p class="text-xs font-bold text-gray-500">Tax Saving?</p>
 </div>
 </div>
-<!-- Bottom Message -->
-<div class="mt-8 math-quote rounded-lg p-3 border border-gray-200 text-center">
-<p class="text-lg font-medium text-gray-700">
-                        "That's not our opinion; that's <span class="font-black text-gray-900 underline decoration-teal-500 decoration-4">pure
-                            math</span>."
-                    </p>
-</div>
+<p class="mt-8 text-center text-gray-400 font-medium italic">"I know I should invest better,<br/>but I don't know where to start."</p>
 </div>
 </main>
 <!-- Footer -->
 
-<!-- Modal -->
-<div class="modal-overlay" id="sipModal">
-<div class="modal-content">
-<div class="modal-header">
-<h3 class="font-bold text-lg"><i class="fas fa-calculator mr-2 text-teal-400"></i>SIP Calculator
-                    </h3>
-<button class="close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
 </div>
-<div class="flex-1 relative bg-gray-100 p-0 overflow-hidden rounded-b-xl">
-<!-- Iframe -->
-<iframe class="w-full h-full border-none" frameborder="0" src="sip_calculator.html"></iframe>
-</div>
-</div>
-</div>
-</div>
-
 <script>
-        const ctx = document.getElementById('sipChart').getContext('2d');
-        const sipChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Start at 25', 'Start at 30'],
-                datasets: [
-                    {
-                        label: 'Principal Invested',
-                        data: [12, 9], // 12 Lakhs, 9 Lakhs
-                        backgroundColor: '#9ca3af', // Gray-400
-                        stack: 'Stack 0',
-                        barPercentage: 0.5,
-                        categoryPercentage: 0.8
-                    },
-                    {
-                        label: 'Wealth Gained (Returns)',
-                        data: [38, 19], // 38 Lakhs, 19 Lakhs (Approx)
-                        backgroundColor: ['#0d9488', '#f97316'], // Teal-600, Orange-500
-                        stack: 'Stack 0',
-                        barPercentage: 0.5,
-                        categoryPercentage: 0.8
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        align: 'start',
-                        labels: {
-                            font: { family: 'Roboto', size: 10 },
-                            usePointStyle: true,
-                            boxWidth: 8
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function (context) {
-                                return context.dataset.label + ': ₹' + context.raw + ' Lakhs';
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: { borderDash: [5, 5], color: '#f3f4f6' },
-                        ticks: {
-                            callback: function (value) { return '₹' + value + 'L'; },
-                            font: { family: 'Roboto', size: 10 }
-                        },
-                        title: { display: true, text: 'Amount (in Lakhs)' }
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { font: { family: 'Montserrat', weight: 'bold' } }
-                    }
-                }
-            }
-        });
-
-        // Modal Functions
-        function openModal() {
-            document.getElementById('sipModal').style.display = 'flex';
-        }
-        function closeModal() {
-            document.getElementById('sipModal').style.display = 'none';
-        }
-    </script>
-<script>
-        window.addEventListener('message', function (event) {
+        window.addEventListener('message', function(event) {
             if (event.data.type === 'theme-update') {
                 const isDark = event.data.isDark;
                 const css = event.data.css;
                 const styleId = 'dark-theme-style';
                 let style = document.getElementById(styleId);
-
+                
                 if (isDark) {
                     if (!style) {
                         style = document.createElement('style');
@@ -369,5 +192,4 @@
             }
         });
     </script>
-</body>
-</html>
+</body></html>
