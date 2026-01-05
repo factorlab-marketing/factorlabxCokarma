@@ -145,6 +145,46 @@
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         }
+
+        /* Citation Styles */
+        .citation-sup {
+            color: #2563eb;
+            /* Blue-600 matches nice link color */
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.7em;
+            vertical-align: super;
+            margin-left: 2px;
+            font-weight: bold;
+        }
+
+        .citation-sup:hover {
+            text-decoration: underline;
+        }
+
+        /* Sources Footer */
+        .sources-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 8px;
+            margin-bottom: 8px;
+            font-size: 9px;
+            color: #94a3b8;
+        }
+
+        .source-link {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-right: 12px;
+            transition: color 0.2s;
+        }
+
+        .source-link:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -197,7 +237,10 @@
                         <div>
                             <h3 class="font-bold text-base text-gray-800 mb-0.5">Large-cap Funds</h3>
                             <p class="text-gray-600 leading-snug text-sm">
-                                <span class="font-bold text-red-600 text-base">73%</span> underperformed Nifty 50 over
+                                <span class="font-bold text-red-600 text-base">73%</span><a
+                                    href="https://www.angelone.in/news/mutual-funds/most-indian-equity-funds-underperform-s-p-indices-over-10-years"
+                                    target="_blank" class="citation-sup"
+                                    title="Source: SPIVA India 2025, S&P Global">[1]</a> underperformed Nifty 50 over
                                 10 years
                             </p>
                         </div>
@@ -212,7 +255,10 @@
                         <div>
                             <h3 class="font-bold text-base text-gray-800 mb-0.5">Mid-cap Funds</h3>
                             <p class="text-gray-600 leading-snug text-sm">
-                                <span class="font-bold text-red-600 text-base">82%</span> underperformed Nifty Midcap
+                                <span class="font-bold text-red-600 text-base">82%</span><a
+                                    href="https://www.spglobal.com/spdji/en/documents/spiva/spiva-india-scorecard-mid-year-2025.pdf"
+                                    target="_blank" class="citation-sup"
+                                    title="Source: SPIVA India Scorecard 2025">[2]</a> underperformed Nifty Midcap
                                 150 over 3-10 years
                             </p>
                         </div>
@@ -227,7 +273,10 @@
                             <h3 class="font-bold text-base text-gray-800 mb-0.5">The Cost</h3>
                             <p class="text-gray-600 leading-snug text-sm">
                                 Average investor loses <span
-                                    class="font-bold text-gray-900 border-b-2 border-red-200">₹7-10 lakh</span> per ₹1M
+                                    class="font-bold text-gray-900 border-b-2 border-red-200">₹7-10 lakh</span><a
+                                    href="https://getbelong.com/blog/mutual-funds/index-funds-vs-actively-managed-mutual-funds/"
+                                    target="_blank" class="citation-sup"
+                                    title="Source: Active vs Index Fund Analysis">[3]</a> per ₹1M
                                 invested over 10 years
                             </p>
                         </div>
@@ -310,6 +359,23 @@
                         class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
                         <i class="fas fa-arrow-right text-xs"></i>
                     </div>
+                </div>
+            </div>
+
+            <!-- Sources Footer -->
+            <div class="sources-footer">
+                <div>
+                    <span class="font-bold mr-2 text-gray-500">SOURCES:</span>
+                    <a href="https://www.angelone.in/news/mutual-funds/most-indian-equity-funds-underperform-s-p-indices-over-10-years"
+                        target="_blank" class="source-link">[1] SPIVA India / AngelOne</a>
+                    <a href="https://www.spglobal.com/spdji/en/documents/spiva/spiva-india-scorecard-mid-year-2025.pdf"
+                        target="_blank" class="source-link">[2] S&P Global Scorecard</a>
+                    <a href="https://getbelong.com/blog/mutual-funds/index-funds-vs-actively-managed-mutual-funds/"
+                        target="_blank" class="source-link">[3] Fund Analysis</a>
+                </div>
+                <div class="flex items-center space-x-2 text-gray-400 cursor-pointer hover:text-gray-600">
+                    <i class="fas fa-qrcode"></i>
+                    <span>Share Sources</span>
                 </div>
             </div>
 

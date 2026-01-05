@@ -152,7 +152,7 @@
                 <div class="flex items-center space-x-8 text-gray-300">
                     <div class="flex items-center space-x-3">
                         <i class="far fa-calendar-alt text-teal-500"></i>
-                        <p class="text-sm font-medium">2025-12-30</p>
+                        <p class="text-sm font-medium" id="currentDate">loading...</p>
                     </div>
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-map-marker-alt text-teal-500"></i>
@@ -168,6 +168,16 @@
     </div>
 
     <script>
+        // Set dynamic date
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const dateStr = `${year}-${month}-${day}`;
+            document.getElementById('currentDate').textContent = dateStr;
+        });
+
         window.addEventListener('message', function (event) {
             if (event.data.type === 'theme-update') {
                 const isDark = event.data.isDark;

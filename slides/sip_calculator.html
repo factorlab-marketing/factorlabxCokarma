@@ -4,390 +4,588 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIP Calculator</title>
+    <title>FactorLab - Advanced SIP Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
         }
 
-        /* Custom Rate Slider Styling */
-        input[type=range] {
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
             appearance: none;
-            -webkit-appearance: none;
-            width: 100%;
-            background: transparent;
+            width: 20px;
+            height: 20px;
+            background: #0d9488;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
+        /* Range Slider Styling */
+        input[type=range] {
+            height: 6px;
+            border-radius: 5px;
+            background: #e2e8f0;
+            outline: none;
+            transition: background 450ms;
+        }
+
+        /* Toggle Switch */
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
             height: 20px;
             width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
             border-radius: 50%;
-            background: #0d9488;
-            cursor: pointer;
-            margin-top: -8px;
-            box-shadow: 0 0 10px rgba(13, 148, 136, 0.5);
-            transition: transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        input[type=range]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
+        input:checked+.slider {
+            background-color: #0d9488;
         }
 
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 4px;
-            cursor: pointer;
-            background: #e2e8f0;
-            border-radius: 2px;
+        input:focus+.slider {
+            box-shadow: 0 0 1px #0d9488;
         }
 
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        input:checked+.slider:before {
+            -webkit-transform: translateX(22px);
+            -ms-transform: translateX(22px);
+            transform: translateX(22px);
         }
 
-        .dark .glass {
-            background: rgba(30, 41, 59, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .result-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
         }
 
-        /* Animated Counter Class */
-        .counter {
-            transition: all 0.3s ease-out;
-        }
-
-        /* Hide scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-
-        .dark ::-webkit-scrollbar-thumb {
-            background: #475569;
+        /* Smooth number transition? */
+        .number-transition {
+            transition: all 0.5s ease-out;
         }
     </style>
+</head>
+
+<body class="bg-gray-50 flex flex-col h-screen overflow-hidden text-gray-800">
+
+    <!-- Header / Toggle -->
+    <header
+        class="bg-white border-b border-gray-200 px-6 py-4 flex flex-col md:flex-row justify-between items-center z-10 shadow-sm">
+        <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white text-xl shadow-lg">
+                <i class="fas fa-calculator"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-gray-900 leading-none">Smart SIP Planner</h1>
+                <p class="text-xs text-gray-500 font-medium tracking-wide">PLAN YOUR FINANCIAL FREEDOM</p>
+            </div>
+        </div>
+
+        <div class="flex items-center bg-gray-100 p-1.5 rounded-full border border-gray-200 shadow-inner">
+            <button id="modeStandard" onclick="setMode('standard')"
+                class="px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 transform"
+                style="background-color: white; color: #0d9488; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Standard
+                SIP</button>
+            <button id="modeStepUp" onclick="setMode('stepup')"
+                class="px-5 py-2 rounded-full text-sm font-bold text-gray-500 transition-all duration-300 hover:text-gray-700">Step-Up
+                SIP</button>
+        </div>
+    </header>
+
+    <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+
+        <!-- Left Panel: Inputs -->
+        <div
+            class="w-full lg:w-4/12 h-full overflow-y-auto bg-white border-r border-gray-200 p-6 z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+
+            <div class="space-y-8">
+
+                <!-- Input Group: Monthly Investment -->
+                <div class="input-group">
+                    <div class="flex justify-between items-end mb-2">
+                        <label class="text-sm font-bold text-gray-700 uppercase tracking-wide">Initial Monthly
+                            SIP</label>
+                        <div class="flex items-center bg-teal-50 px-3 py-1 rounded border border-teal-100">
+                            <span class="text-teal-600 font-bold mr-1">₹</span>
+                            <input type="number" id="inputSIP"
+                                class="w-20 bg-transparent text-teal-800 font-bold text-right outline-none" value="5000"
+                                min="1000" max="100000" step="500">
+                        </div>
+                    </div>
+                    <input type="range" id="sliderSIP" min="1000" max="50000" step="500" value="5000"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between mt-1">
+                        <span class="text-xs text-gray-400">₹1k</span>
+                        <span class="text-xs text-gray-400">₹50k</span>
+                    </div>
+                </div>
+
+                <!-- Input Group: Step Up (Hidden for Standard) -->
+                <div id="stepUpContainer"
+                    class="input-group transition-all duration-300 opacity-0 h-0 overflow-hidden transform scale-95 origin-top">
+                    <div class="flex justify-between items-end mb-2">
+                        <div class="flex items-center">
+                            <label class="text-sm font-bold text-indigo-700 uppercase tracking-wide">Annual
+                                Step-Up</label>
+                            <div class="ml-2 group relative cursor-help">
+                                <i class="fas fa-info-circle text-indigo-400 text-xs"></i>
+                                <div
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                                    Increase your SIP amount each year as your income grows.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-indigo-50 px-3 py-1 rounded border border-indigo-100">
+                            <input type="number" id="inputStepUp"
+                                class="w-12 bg-transparent text-indigo-800 font-bold text-right outline-none" value="10"
+                                min="0" max="50">
+                            <span class="text-indigo-600 font-bold ml-1">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="sliderStepUp" min="0" max="50" step="1" value="10"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                        style="background-image: linear-gradient(to right, #4f46e5, #4f46e5); background-size: 0% 100%; background-repeat: no-repeat;">
+                    <style>
+                        #sliderStepUp::-webkit-slider-thumb {
+                            background: #4f46e5;
+                        }
+                    </style>
+                    <div class="flex justify-between mt-1">
+                        <span class="text-xs text-gray-400">0%</span>
+                        <span class="text-xs text-gray-400">50%</span>
+                    </div>
+                </div>
+
+                <!-- Input Group: Expected Return -->
+                <div class="input-group">
+                    <div class="flex justify-between items-end mb-2">
+                        <label class="text-sm font-bold text-gray-700 uppercase tracking-wide">Expected Annual
+                            Return</label>
+                        <div class="flex items-center bg-gray-100 px-3 py-1 rounded border border-gray-200">
+                            <input type="number" id="inputReturn"
+                                class="w-12 bg-transparent text-gray-800 font-bold text-right outline-none" value="12"
+                                min="5" max="30">
+                            <span class="text-gray-500 font-bold ml-1">%</span>
+                        </div>
+                    </div>
+                    <input type="range" id="sliderReturn" min="5" max="25" step="0.5" value="12"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gray-600">
+                    <style>
+                        #sliderReturn::-webkit-slider-thumb {
+                            background: #4b5563;
+                        }
+                    </style>
+                    <div class="flex justify-between mt-1">
+                        <span class="text-xs text-gray-400">Conservative (5%)</span>
+                        <span class="text-xs text-gray-400">Aggressive (25%)</span>
+                    </div>
+                </div>
+
+                <!-- Input Group: Duration -->
+                <div class="input-group">
+                    <div class="flex justify-between items-end mb-2">
+                        <label class="text-sm font-bold text-gray-700 uppercase tracking-wide">Time Period</label>
+                        <div class="flex items-center bg-gray-100 px-3 py-1 rounded border border-gray-200">
+                            <input type="number" id="inputTime"
+                                class="w-12 bg-transparent text-gray-800 font-bold text-right outline-none" value="10"
+                                min="1" max="40">
+                            <span class="text-gray-500 font-bold ml-1">Yr</span>
+                        </div>
+                    </div>
+                    <input type="range" id="sliderTime" min="1" max="30" step="1" value="10"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+                    <div class="flex justify-between mt-1">
+                        <span class="text-xs text-gray-400">1 Yr</span>
+                        <span class="text-xs text-gray-400">30 Yrs</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-12 flex space-x-4">
+                <button onclick="calculate()"
+                    class="flex-1 bg-white border border-gray-300 text-gray-600 font-semibold py-3 rounded-xl hover:bg-gray-50 transition-colors shadow-sm text-sm uppercase tracking-wider">
+                    <i class="fas fa-rotate-left mr-2"></i> Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Output & Charts -->
+        <div class="w-full lg:w-8/12 bg-gray-50 p-6 flex flex-col h-full overflow-y-auto">
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <!-- Final Corpus -->
+                <div
+                    class="md:col-span-3 bg-white rounded-2xl p-6 shadow-sm border border-teal-100 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 h-full w-2 bg-teal-500"></div>
+                    <div class="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-teal-50 z-0"></div>
+                    <p class="text-gray-500 font-medium text-sm uppercase tracking-wider relative z-10">Projected Corpus
+                        Value</p>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 relative z-10" id="valCorpus">
+                        ₹11.62 L</h2>
+                    <div
+                        class="mt-2 flex items-center space-x-2 text-xs font-semibold bg-teal-50 text-teal-700 w-max px-2 py-1 rounded relative z-10">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Compounded Monthly</span>
+                    </div>
+                </div>
+
+                <!-- Invested -->
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                    <p class="text-gray-400 font-bold text-xs uppercase">Total Invested</p>
+                    <p class="text-2xl font-bold text-gray-700 mt-1" id="valInvested">₹6.00 L</p>
+                </div>
+
+                <!-- Gains -->
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                    <p class="text-gray-400 font-bold text-xs uppercase">Wealth Gained</p>
+                    <p class="text-2xl font-bold text-teal-600 mt-1" id="valGains">₹5.62 L</p>
+                </div>
+
+                <!-- XIRR (or Return) -->
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+                    <p class="text-gray-400 font-bold text-xs uppercase">Effective XIRR</p>
+                    <p class="text-2xl font-bold text-indigo-600 mt-1" id="valXIRR">12.00%</p>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="flex-1 bg-white rounded-2xl p-4 shadow-sm border border-gray-200 relative min-h-[300px]">
+                <canvas id="growthChart"></canvas>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
+                <p>Calculations are estimates. Past performance doesn't guarantee future returns.</p>
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <span class="font-medium">Powered by <strong class="text-gray-600">FactorLab</strong></span>
+                    <a href="https://factorlab.smallcase.com/" target="_blank"
+                        class="text-teal-600 font-bold hover:underline">Explore Baskets</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://calendly.com/manideepak-factorlab/20min" target="_blank"
+                        class="text-teal-600 font-bold hover:underline">Book Advice</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0d9488',
-                        primaryDark: '#115e59',
-                        secondary: '#3b82f6',
+        // State
+        let state = {
+            mode: 'standard', // 'standard' or 'stepup'
+            sip: 5000,
+            stepUp: 10,
+            rate: 12,
+            years: 10
+        };
+
+        // DOM Elements
+        const sliderSIP = document.getElementById('sliderSIP');
+        const inputSIP = document.getElementById('inputSIP');
+
+        const sliderStepUp = document.getElementById('sliderStepUp');
+        const inputStepUp = document.getElementById('inputStepUp');
+
+        const sliderReturn = document.getElementById('sliderReturn');
+        const inputReturn = document.getElementById('inputReturn');
+
+        const sliderTime = document.getElementById('sliderTime');
+        const inputTime = document.getElementById('inputTime');
+
+        const stepUpContainer = document.getElementById('stepUpContainer');
+        const modeStandardBtn = document.getElementById('modeStandard');
+        const modeStepUpBtn = document.getElementById('modeStepUp');
+
+        // Chart
+        let growthChart;
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            initInputs();
+            initChart();
+            updateUI();
+        });
+
+        function setMode(mode) {
+            state.mode = mode;
+
+            if (mode === 'standard') {
+                modeStandardBtn.style.backgroundColor = 'white';
+                modeStandardBtn.style.color = '#0d9488';
+                modeStandardBtn.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+
+                modeStepUpBtn.style.backgroundColor = 'transparent';
+                modeStepUpBtn.style.color = '#64748b';
+                modeStepUpBtn.style.boxShadow = 'none';
+
+                stepUpContainer.style.opacity = '0';
+                stepUpContainer.style.height = '0';
+                stepUpContainer.style.marginTop = '0';
+                setTimeout(() => stepUpContainer.classList.add('hidden'), 300);
+            } else {
+                modeStepUpBtn.style.backgroundColor = 'white';
+                modeStepUpBtn.style.color = '#4f46e5'; // Indigo
+                modeStepUpBtn.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+
+                modeStandardBtn.style.backgroundColor = 'transparent';
+                modeStandardBtn.style.color = '#64748b';
+                modeStandardBtn.style.boxShadow = 'none';
+
+                stepUpContainer.classList.remove('hidden');
+                // Allow reflow
+                void stepUpContainer.offsetWidth;
+                stepUpContainer.style.height = 'auto'; // Or specific height if smooth needed
+                stepUpContainer.style.opacity = '1';
+                stepUpContainer.style.marginTop = '2rem'; // Match gap
+            }
+            updateUI();
+        }
+
+        function initInputs() {
+            // Helpers
+            const sync = (slider, input, key) => {
+                slider.addEventListener('input', (e) => {
+                    input.value = e.target.value;
+                    state[key] = parseFloat(e.target.value);
+                    updateUI();
+                });
+                input.addEventListener('input', (e) => {
+                    let val = parseFloat(e.target.value);
+                    // Simple validation
+                    if (val < parseFloat(slider.min)) val = parseFloat(slider.min);
+                    // if(val > parseFloat(slider.max)) val = parseFloat(slider.max); // Allow typing higher?
+                    state[key] = val;
+                    slider.value = val;
+                    updateUI();
+                });
+            };
+
+            sync(sliderSIP, inputSIP, 'sip');
+            sync(sliderStepUp, inputStepUp, 'stepUp');
+            sync(sliderReturn, inputReturn, 'rate');
+            sync(sliderTime, inputTime, 'years');
+        }
+
+        function calculateResults() {
+            const monthlyRate = state.rate / 100 / 12;
+            const months = state.years * 12;
+
+            let currentCorpus = 0;
+            let totalInvested = 0;
+            let currentSIP = state.sip;
+
+            let labels = [];
+            let dataInvested = [];
+            let dataGains = [];
+            let dataTotal = [];
+
+            let yearlyData = [];
+
+            for (let i = 1; i <= months; i++) {
+                // Invest first? Usually SIP is beginning of month or end. Assuming beginning.
+                // But simplified: Add SIP, then compound for month.
+                // Formula: corpus = (corpus + sip) * (1 + r)
+
+                totalInvested += currentSIP;
+                currentCorpus = (currentCorpus + currentSIP) * (1 + monthlyRate);
+
+                // Check for year end
+                if (i % 12 === 0) {
+                    const year = i / 12;
+                    labels.push(`Year ${year}`);
+                    dataInvested.push(totalInvested);
+                    dataTotal.push(currentCorpus);
+                    dataGains.push(currentCorpus - totalInvested);
+
+                    // Apply Step Up
+                    if (state.mode === 'stepup') {
+                        currentSIP = currentSIP * (1 + state.stepUp / 100);
                     }
                 }
             }
+
+            return {
+                finalCorpus: currentCorpus,
+                totalInvested: totalInvested,
+                wealthGained: currentCorpus - totalInvested,
+                chartData: { labels, invested: dataInvested, total: dataTotal }
+            };
         }
-    </script>
-</head>
 
-<body class="bg-gray-50 text-gray-800 transition-colors duration-300 min-h-screen flex items-center justify-center p-4">
+        function formatCurrency(num) {
+            // Indian Format
+            const x = Math.round(num).toString();
+            let lastThree = x.substring(x.length - 3);
+            const otherNumbers = x.substring(0, x.length - 3);
+            if (otherNumbers != '')
+                lastThree = ',' + lastThree;
+            const res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
 
-    <!-- Calculator Card -->
-    <div class="glass w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+            // Format to L/Cr if large
+            if (num >= 10000000) return '₹' + (num / 10000000).toFixed(2) + ' Cr';
+            if (num >= 100000) return '₹' + (num / 100000).toFixed(2) + ' L';
+            return '₹' + res;
+        }
 
-        <!-- Left: Inputs -->
-        <div
-            class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700">
-            <div class="mb-8">
-                <span
-                    class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider dark:bg-teal-900 dark:text-teal-300">Calculator</span>
-                <h2 class="text-3xl font-bold mt-2 dark:text-white">SIP Return Estimator</h2>
-                <p class="text-gray-500 text-sm mt-1 dark:text-gray-400">Calculate how your small investments grow over
-                    time.</p>
-            </div>
+        function updateUI() {
+            const res = calculateResults();
 
-            <!-- Monthly Investment -->
-            <div class="mb-8 input-group">
-                <div class="flex justify-between items-center mb-4">
-                    <label
-                        class="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">Monthly
-                        Investment</label>
-                    <div
-                        class="flex items-center bg-teal-50 dark:bg-gray-800 rounded-lg px-3 py-1 border border-teal-100 dark:border-gray-600">
-                        <span class="text-teal-600 font-bold mr-1">₹</span>
-                        <input type="number" id="investInput" value="5000" min="500" max="100000"
-                            class="w-20 bg-transparent text-right font-bold text-teal-700 dark:text-teal-400 outline-none"
-                            oninput="syncSlider('invest')">
-                    </div>
-                </div>
-                <input type="range" id="investSlider" value="5000" min="500" max="100000" step="500" class="w-full"
-                    oninput="syncInput('invest')">
-            </div>
+            document.getElementById('valCorpus').textContent = formatCurrency(res.finalCorpus);
+            document.getElementById('valInvested').textContent = formatCurrency(res.totalInvested);
+            document.getElementById('valGains').textContent = formatCurrency(res.wealthGained);
+            document.getElementById('valXIRR').textContent = state.rate.toFixed(2) + '%';
 
-            <!-- Annual Rate -->
-            <div class="mb-8 input-group">
-                <div class="flex justify-between items-center mb-4">
-                    <label
-                        class="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">Expected
-                        Return (p.a)</label>
-                    <div
-                        class="flex items-center bg-blue-50 dark:bg-gray-800 rounded-lg px-3 py-1 border border-blue-100 dark:border-gray-600">
-                        <input type="number" id="rateInput" value="12" min="5" max="30" step="0.5"
-                            class="w-16 bg-transparent text-right font-bold text-blue-600 dark:text-blue-400 outline-none"
-                            oninput="syncSlider('rate')">
-                        <span class="text-blue-600 font-bold ml-1">%</span>
-                    </div>
-                </div>
-                <input type="range" id="rateSlider" value="12" min="5" max="30" step="0.5"
-                    class="w-full accent-blue-600"
-                    style="background:linear-gradient(to right, #3b82f6 0%, #3b82f6 50%, #e2e8f0 50%, #e2e8f0 100%)"
-                    oninput="syncInput('rate')">
-            </div>
+            // Update Background Gradient based on size (gamification)
+            // Not implemented for simplicity, keep clean.
 
-            <!-- Time Period -->
-            <div class="mb-8 input-group">
-                <div class="flex justify-between items-center mb-4">
-                    <label class="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">Time
-                        Period</label>
-                    <div
-                        class="flex items-center bg-purple-50 dark:bg-gray-800 rounded-lg px-3 py-1 border border-purple-100 dark:border-gray-600">
-                        <input type="number" id="timeInput" value="10" min="1" max="30"
-                            class="w-12 bg-transparent text-right font-bold text-purple-600 dark:text-purple-400 outline-none"
-                            oninput="syncSlider('time')">
-                        <span class="text-purple-600 font-bold ml-1 dark:text-purple-400">Yr</span>
-                    </div>
-                </div>
-                <input type="range" id="timeSlider" value="10" min="1" max="30" class="w-full accent-purple-600"
-                    style="background:linear-gradient(to right, #9333ea 0%, #9333ea 33%, #e2e8f0 33%, #e2e8f0 100%)"
-                    oninput="syncInput('time')">
-            </div>
+            // Update Chart
+            updateChart(res.chartData);
+        }
 
-            <button onclick="resetCalculator()"
-                class="self-start text-xs text-gray-400 hover:text-red-500 font-medium flex items-center transition-colors">
-                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
-                    </path>
-                </svg>
-                Reset Default
-            </button>
-        </div>
+        function initChart() {
+            const ctx = document.getElementById('growthChart').getContext('2d');
 
-        <!-- Right: Results & Visualization -->
-        <div class="w-full md:w-1/2 bg-gray-50 dark:bg-slate-800 p-8 md:p-10 flex flex-col justify-between">
+            // Gradient
+            const gradientTotal = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientTotal.addColorStop(0, 'rgba(13, 148, 136, 0.5)'); // Teal
+            gradientTotal.addColorStop(1, 'rgba(13, 148, 136, 0.0)');
 
-            <!-- Result Cards -->
-            <div class="grid grid-cols-2 gap-4 mb-8">
-                <div
-                    class="p-4 rounded-xl bg-white dark:bg-slate-700 shadow-sm border border-gray-100 dark:border-gray-600">
-                    <p class="text-xs text-gray-400 font-bold uppercase">Invested Amount</p>
-                    <p class="text-lg font-bold text-gray-900 dark:text-white mt-1" id="investedAmount">₹6,00,000</p>
-                </div>
-                <div
-                    class="p-4 rounded-xl bg-white dark:bg-slate-700 shadow-sm border border-gray-100 dark:border-gray-600">
-                    <p class="text-xs text-teal-500 font-bold uppercase">Est. Returns</p>
-                    <p class="text-lg font-bold text-teal-600 dark:text-teal-400 mt-1" id="estReturns">₹5,61,695</p>
-                </div>
-            </div>
-
-            <!-- Big Total -->
-            <div class="text-center mb-8 relative">
-                <p class="text-sm font-medium text-gray-400 uppercase tracking-widest mb-2">Total Value</p>
-                <div class="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 dark:from-teal-400 dark:to-blue-400"
-                    id="totalValue">
-                    ₹11,61,695
-                </div>
-                <div
-                    class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-teal-500 rounded-full filter blur-[80px] opacity-20 animate-pulse">
-                </div>
-            </div>
-
-            <!-- Chart Container -->
-            <div class="flex-1 flex items-center justify-center relative min-h-[220px]">
-                <canvas id="sipChart"></canvas>
-                <!-- Center overlay for doughnut -->
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="text-center">
-                        <span class="block text-xs text-gray-400 font-bold">Gain</span>
-                        <span class="block text-sm font-bold text-teal-600" id="gainPercent">48%</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Script to handle calculation and chart -->
-    <script>
-        // formatting
-        const formatMoney = (amount) => {
-            return "₹" + Math.round(amount).toLocaleString('en-IN');
-        };
-
-        // Elements
-        const inputs = {
-            invest: { slide: document.getElementById('investSlider'), num: document.getElementById('investInput') },
-            rate: { slide: document.getElementById('rateSlider'), num: document.getElementById('rateInput') },
-            time: { slide: document.getElementById('timeSlider'), num: document.getElementById('timeInput') }
-        };
-
-        const outputs = {
-            invested: document.getElementById('investedAmount'),
-            returns: document.getElementById('estReturns'),
-            total: document.getElementById('totalValue'),
-            gainP: document.getElementById('gainPercent')
-        };
-
-        let chartInstance = null;
-
-        // Chart Setup
-        function initChart(invested, returns) {
-            const ctx = document.getElementById('sipChart').getContext('2d');
-
-            // Check theme for colors
-            const isDark = document.documentElement.classList.contains('dark');
-            const borderColor = isDark ? '#1e293b' : '#ffffff';
-
-            if (chartInstance) chartInstance.destroy();
-
-            chartInstance = new Chart(ctx, {
-                type: 'doughnut',
+            growthChart = new Chart(ctx, {
+                type: 'line',
                 data: {
-                    labels: ['Invested Amount', 'Est. Returns'],
-                    datasets: [{
-                        data: [invested, returns],
-                        backgroundColor: ['#e2e8f0', '#0d9488'], // Slate-200, Teal-600
-                        hoverBackgroundColor: ['#cbd5e1', '#115e59'],
-                        borderWidth: 4,
-                        borderColor: borderColor,
-                        hoverOffset: 4
-                    }]
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Period Value',
+                            data: [],
+                            borderColor: '#0d9488', // Teal 600
+                            backgroundColor: gradientTotal,
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            pointHoverRadius: 6,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Invested Amount',
+                            data: [],
+                            borderColor: '#94a3b8', // Gray 400
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            pointRadius: 0,
+                            fill: false,
+                            tension: 0.1
+                        }
+                    ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    cutout: '75%',
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
                     plugins: {
-                        legend: { display: false },
+                        legend: { position: 'top', align: 'end' },
                         tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                            titleFont: { family: 'Montserrat' },
+                            bodyFont: { family: 'Inter' },
                             callbacks: {
                                 label: function (context) {
-                                    let label = context.label || '';
-                                    if (label) label += ': ';
-                                    label += formatMoney(context.raw);
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += formatCurrency(context.parsed.y);
+                                    }
                                     return label;
                                 }
                             }
                         }
                     },
-                    animation: {
-                        animateScale: true,
-                        animateRotate: true
+                    scales: {
+                        x: {
+                            grid: { display: false }
+                        },
+                        y: {
+                            grid: { borderDash: [5, 5], color: '#f1f5f9' },
+                            ticks: {
+                                callback: function (value) {
+                                    if (value >= 100000) return (value / 100000).toFixed(0) + 'L';
+                                    return value;
+                                },
+                                font: { size: 10 }
+                            }
+                        }
                     }
                 }
             });
         }
 
-        // Calculation Logic
-        function calculate() {
-            const P = parseFloat(inputs.invest.num.value); // Monthly Investment
-            const r = parseFloat(inputs.rate.num.value);   // Annual Rate
-            const years = parseFloat(inputs.time.num.value); // Years
+        function updateChart(data) {
+            if (!growthChart) return;
 
-            // Formula as requested: 
-            // i = (1 + r/100)^(1/12) - 1
-            const i = Math.pow(1 + r / 100, 1 / 12) - 1;
-            const n = years * 12;
+            growthChart.data.labels = data.labels;
+            growthChart.data.datasets[0].data = data.total;
+            growthChart.data.datasets[1].data = data.invested;
 
-            // Total Maturity using USER supplied formula:
-            // M = P * [ ((1+i)^n - 1) / i ] * (1+i)
-            const M = P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
-
-            const totalInvested = P * n;
-            const totalReturns = M - totalInvested;
-            const gainPercentage = (totalReturns / totalInvested) * 100;
-
-            // Update DOM
-            animateValue(outputs.invested, totalInvested);
-            animateValue(outputs.returns, totalReturns);
-            animateValue(outputs.total, M);
-            outputs.gainP.innerText = Math.round(gainPercentage) + "%";
-
-            // Update Chart
-            if (chartInstance) {
-                chartInstance.data.datasets[0].data = [totalInvested, totalReturns];
-                chartInstance.data.datasets[0].borderColor = document.documentElement.classList.contains('dark') ? '#1e293b' : '#ffffff';
-                chartInstance.update();
-            } else {
-                initChart(totalInvested, totalReturns);
-            }
-
-            // Update Slider Background gradients
-            updateSliderTrack('rate', r, 5, 30, '#3b82f6');
-            updateSliderTrack('time', years, 1, 30, '#9333ea');
+            growthChart.update();
         }
 
-        function updateSliderTrack(id, val, min, max, color) {
-            const percentage = ((val - min) / (max - min)) * 100;
-            inputs[id].slide.style.background = `linear-gradient(to right, ${color} 0%, ${color} ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`;
-        }
-
-        function animateValue(obj, end) {
-            // Simple text update for calculating... in real implementation could use requestAnimationFrame for counting
-            obj.innerHTML = formatMoney(end);
-        }
-
-        // Synchronization
-        function syncSlider(type) {
-            inputs[type].slide.value = inputs[type].num.value;
-            calculate();
-        }
-
-        function syncInput(type) {
-            inputs[type].num.value = inputs[type].slide.value;
-            calculate();
-        }
-
-        function resetCalculator() {
-            inputs.invest.num.value = 5000;
-            inputs.invest.slide.value = 5000;
-            inputs.rate.num.value = 12;
-            inputs.rate.slide.value = 12;
-            inputs.time.num.value = 10;
-            inputs.time.slide.value = 10;
-            calculate();
-        }
-
-        // Theme Listener from Index.html
-        window.addEventListener('message', (event) => {
-            if (event.data.type === 'theme-update') {
-                const isDark = event.data.isDark;
-                if (isDark) {
-                    document.documentElement.classList.add('dark');
-                    if (chartInstance) {
-                        chartInstance.data.datasets[0].backgroundColor = ['#475569', '#2dd4bf']; // Slate-600, Teal-400
-                        chartInstance.data.datasets[0].borderColor = '#1e293b';
-                        chartInstance.update();
-                    }
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    if (chartInstance) {
-                        chartInstance.data.datasets[0].backgroundColor = ['#e2e8f0', '#0d9488'];
-                        chartInstance.data.datasets[0].borderColor = '#ffffff';
-                        chartInstance.update();
-                    }
-                }
-            }
-        });
-
-        // Init
-        resetCalculator(); // Initializes everything
     </script>
 </body>
 
