@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FactorLab - Employee Wellness Session</title>
+    <title>FactorLab - Faculty Deck 2</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
@@ -12,8 +12,11 @@
     <style>
         :root {
             --primary-color: #0d9488;
+            /* Teal 600 */
             --bg-color: #0f172a;
+            /* Slate 900 */
             --text-color: #f1f5f9;
+            /* Slate 100 */
             --control-bg: rgba(15, 23, 42, 0.8);
             --control-hover: rgba(30, 41, 59, 0.9);
         }
@@ -58,7 +61,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             transition: opacity 0.3s ease;
             transform-origin: center center;
-            /* Center translation handled in JS via transform */
         }
 
         /* Loading Overlay */
@@ -332,6 +334,7 @@
             background-color: #334155;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
             .controls-bar {
                 padding: 0 20px;
@@ -371,7 +374,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="deck-link active">
+                <a href="../hr_deck/index.html" class="deck-link">
                     <i class="fas fa-users"></i>
                     HR Deck
                 </a>
@@ -383,7 +386,7 @@
                 </a>
             </li>
             <li>
-                <a href="../faculty_deck_2/index.html" class="deck-link">
+                <a href="#" class="deck-link active">
                     <i class="fas fa-chalkboard-teacher"></i>
                     Faculty Deck 2
                 </a>
@@ -405,6 +408,7 @@
         <iframe class="slide-frame" id="slideFrameA" src="" title="Presentation Slide"></iframe>
         <iframe class="slide-frame" id="slideFrameB" src="" title="Presentation Slide"
             style="display: none; opacity: 0; position: absolute;"></iframe>
+
     </div>
 
     <!-- Controls -->
@@ -414,8 +418,8 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="deck-info">
-                <span class="deck-title">FactorLab x CoKarma</span>
-                <span class="deck-subtitle">Employee Session Deck</span>
+                <span class="deck-title">FactorLab x Faculty</span>
+                <span class="deck-subtitle">Investment Comparison</span>
             </div>
         </div>
 
@@ -453,18 +457,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         // Configuration
-        const TOTAL_SLIDES = 4;
+        const TOTAL_SLIDES = 13;
         let currentSlide = 1;
         let isDarkTheme = false;
         let activeFrameId = 'slideFrameA';
         let preloadFrameId = 'slideFrameB';
 
+        // Dark Theme CSS Injection
+        // Using CSS Filter Inversion for instant Dark Mode
         const DARK_THEME_CSS = `
-            body { background-color: #0f172a !important; }
-            .bg-white { background-color: #1e293b !important; border-color: #334155 !important; }
-            .text-slate-900, .text-gray-900, .text-gray-800 { color: #f1f5f9 !important; }
-            .text-slate-500, .text-gray-500 { color: #cbd5e1 !important; }
-            .bg-slate-50 { background-color: #0f172a !important; }
+            html { 
+                filter: invert(1) hue-rotate(180deg); 
+            }
+            /* Re-invert images and videos so they look natural */
+            img, video, .no-invert { 
+                filter: invert(1) hue-rotate(180deg); 
+            }
+            /* Smooth transition */
+            html { transition: filter 0.3s ease; }
         `;
 
         // DOM Elements
@@ -485,7 +495,8 @@
         // Init
         document.addEventListener('DOMContentLoaded', () => {
             totalNumEl.textContent = TOTAL_SLIDES;
-            resizeSlides();
+
+            // Initial load
             loadSlideIntoFrame(activeFrameId, currentSlide, true);
             preloadNext();
             updateUI();
@@ -498,12 +509,16 @@
         function loadSlideIntoFrame(frameId, slideIndex, isVisible) {
             const frame = document.getElementById(frameId);
             frame.src = `slides/slide_${slideIndex}.html`;
+
             frame.onload = () => {
+                // Apply theme
                 sendThemeMessageToFrame(frame);
+
+                // Keyboard setup
                 try {
                     const iframeDoc = frame.contentDocument || frame.contentWindow.document;
                     iframeDoc.addEventListener('keydown', handleKeyDown);
-                    if (isVisible) window.focus();
+                    if (isVisible) window.focus(); // Keep focus out unless clicked
                 } catch (e) { }
             };
         }
@@ -511,43 +526,60 @@
         function switchFrames() {
             const active = getActiveFrame();
             const preload = getPreloadFrame();
+
+            // Swap IDs conceptually
             const temp = activeFrameId;
             activeFrameId = preloadFrameId;
             preloadFrameId = temp;
 
+            // Animate
             active.style.opacity = '0';
             setTimeout(() => { active.style.display = 'none'; }, 300);
 
             preload.style.display = 'block';
+            // Force reflow
             void preload.offsetWidth;
             preload.style.opacity = '1';
+
+            // Ensure newly active frame has theme
             sendThemeMessageToFrame(preload);
         }
 
         function preloadNext() {
-            if (currentSlide < TOTAL_SLIDES) loadSlideIntoFrame(preloadFrameId, currentSlide + 1, false);
+            if (currentSlide < TOTAL_SLIDES) {
+                loadSlideIntoFrame(preloadFrameId, currentSlide + 1, false);
+            }
         }
+
         function preloadPrev() {
-            if (currentSlide > 1) loadSlideIntoFrame(preloadFrameId, currentSlide - 1, false);
+            if (currentSlide > 1) {
+                loadSlideIntoFrame(preloadFrameId, currentSlide - 1, false);
+            }
         }
 
         function toggleTheme() {
             isDarkTheme = !isDarkTheme;
-            themeBtn.querySelector('i').className = isDarkTheme ? 'fas fa-sun' : 'fas fa-moon';
+            const icon = themeBtn.querySelector('i');
+            icon.className = isDarkTheme ? 'fas fa-sun' : 'fas fa-moon';
+
             sendThemeMessageToFrame(getActiveFrame());
             sendThemeMessageToFrame(getPreloadFrame());
         }
 
         function sendThemeMessageToFrame(frame) {
             if (frame && frame.contentWindow) {
-                frame.contentWindow.postMessage({ type: 'theme-update', isDark: isDarkTheme, css: DARK_THEME_CSS }, '*');
+                frame.contentWindow.postMessage({
+                    type: 'theme-update',
+                    isDark: isDarkTheme,
+                    css: DARK_THEME_CSS
+                }, '*');
             }
         }
 
         function updateUI() {
             currentNumEl.textContent = currentSlide;
-            const percentage = ((currentSlide - 1) / ((TOTAL_SLIDES > 1 ? TOTAL_SLIDES : 1) - 1)) * 100;
-            progressBar.style.width = `${Math.min(percentage, 100)}%`;
+            const percentage = ((currentSlide - 1) / (TOTAL_SLIDES - 1)) * 100;
+            progressBar.style.width = `${percentage}%`;
             prevBtn.disabled = currentSlide === 1;
             nextBtn.disabled = currentSlide === TOTAL_SLIDES;
         }
@@ -555,10 +587,15 @@
         function goToNext() {
             if (currentSlide < TOTAL_SLIDES) {
                 currentSlide++;
+
                 const nextFrame = getPreloadFrame();
-                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                // Simple check if it's already loaded?
+                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) {
+                    loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                }
+
                 switchFrames();
-                preloadNext();
+                preloadNext(); // Prepare for next
                 updateUI();
             }
         }
@@ -566,10 +603,14 @@
         function goToPrev() {
             if (currentSlide > 1) {
                 currentSlide--;
+
                 const nextFrame = getPreloadFrame();
-                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) {
+                    loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                }
+
                 switchFrames();
-                preloadPrev();
+                preloadPrev(); // Heuristic: user might go back further
                 updateUI();
             }
         }
@@ -587,23 +628,22 @@
         }
 
         function handleKeyDown(e) {
-            if (e.key === 'ArrowRight' || e.key === 'Space') goToNext();
-            else if (e.key === 'ArrowLeft') goToPrev();
-            else if (e.key.toLowerCase() === 'f') toggleFullscreen();
-        }
-
-        function downloadPitchDeck() {
-            if (window.location.protocol === 'file:') {
-                alert('Security Error (CORS): Browsers block this when opening files directly.\\n\\nPlease run a local server (python -m http.server).');
-                return;
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                goToNext();
+            } else if (e.key === 'ArrowLeft') {
+                goToPrev();
+            } else if (e.key.toLowerCase() === 'f') {
+                toggleFullscreen();
             }
-            const width = 1300;
-            const height = 800;
-            const left = (screen.width / 2) - (width / 2);
-            const top = (screen.height / 2) - (height / 2);
-            window.open('print.html', 'PDFGenerator', `toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no, width=${width}, height=${height}, top=${top}, left=${left}`);
         }
 
+        // PDF Download Logic
+        function downloadPitchDeck() {
+            // Placeholder for now, can implement similar to others if print.html exists
+            alert('PDF Download not yet configured for this deck.');
+        }
+
+        // Event Listeners
         prevBtn.addEventListener('click', goToPrev);
         nextBtn.addEventListener('click', goToNext);
         fullscreenBtn.addEventListener('click', toggleFullscreen);
@@ -621,18 +661,41 @@
         closeSidebarBtn.addEventListener('click', toggleSidebar);
         sidebarOverlay.addEventListener('click', toggleSidebar);
 
+        // Responsive Scaling Logic
         function resizeSlides() {
             const container = document.querySelector('.deck-container');
             const frames = document.querySelectorAll('.slide-frame');
             if (!container || frames.length === 0) return;
-            const scale = Math.min((container.clientWidth - 20) / 1280, (container.clientHeight - 20) / 720, 1.5);
+
+            const contentW = 1280;
+            const contentH = 720;
+
+            // Available space (minus small padding)
+            const availableW = container.clientWidth - 20;
+            const availableH = container.clientHeight - 20;
+
+            const scaleX = availableW / contentW;
+            const scaleY = availableH / contentH;
+
+            // Use the smaller scale to ensure it fits entirely
+            const scale = Math.min(scaleX, scaleY, 1.5);
+
             frames.forEach(frame => {
+                // Must use translate(-50%, -50%) to keep it centered since top/left are 50%
                 frame.style.transform = `translate(-50%, -50%) scale(${scale})`;
             });
         }
+
         window.addEventListener('resize', resizeSlides);
+        // Call initially and after a slight delay to ensure layout is settled
+        resizeSlides();
         setTimeout(resizeSlides, 100);
-        setTimeout(() => { loader.style.opacity = '0'; loader.style.pointerEvents = 'none'; }, 800);
+
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+        }, 800);
+
     </script>
 </body>
 

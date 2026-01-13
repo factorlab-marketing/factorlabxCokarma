@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quick Poll - Investing Story</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #f8fafc;
+            /* Slate-50 */
+            overflow: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .poll-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .poll-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .dashed-circle {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23CBD5E1FF' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+            border-radius: 9999px;
+        }
+
+        /* No gradients allowed per instructions, using solid colors/opacity */
+        .bg-teal-primary {
+            background-color: #0d2b38;
+        }
+
+        .text-teal-accent {
+            color: #06b6d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Header Section -->
+        <header class="pt-6 px-12 pb-2">
+            <div class="flex items-center space-x-3 mb-1">
+                <div class="h-1 w-12 bg-yellow-500 rounded-full"></div>
+                <p class="text-sm font-bold tracking-widest text-gray-500 uppercase">Interactive Session</p>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-1">Let's Start Here: Your Investing Story</h1>
+            <p class="text-lg text-gray-600 font-light max-w-3xl">
+                Everyone starts somewhere. Which profile matches your history?
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 px-12 pb-4 flex flex-col">
+
+            <!-- Top Row: 3 Profiles (Compacted) -->
+            <div class="flex space-x-4 items-stretch justify-center h-64 mb-4">
+                <!-- Card 1: Conservative (Muted/Dull) -->
+                <div
+                    class="flex-1 bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col relative overflow-hidden group hover:bg-white hover:border-blue-300 transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2 cursor-pointer">
+                    <!-- Top accent bar (hidden by default, shown on hover) -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gray-300 group-hover:bg-blue-500 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start mb-2 opacity-70 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-gray-200 text-gray-600 group-hover:bg-blue-50 group-hover:text-blue-600 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider transition-colors">
+                            Conservative</div>
+                        <i
+                            class="fas fa-shield-alt text-gray-300 text-2xl group-hover:text-blue-500 transition-colors duration-300"></i>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-gray-600 group-hover:text-gray-900 mb-1 transition-colors">FDs
+                        &amp; Insurance</h3>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-500 mb-3 leading-snug transition-colors">
+                        Safety first. Traditional savings & endowment plans.</p>
+
+                    <div class="mt-auto space-y-2 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="flex justify-between items-center text-sm border-b border-gray-200 pb-1">
+                            <span class="text-gray-500 group-hover:text-gray-600">FD Returns</span>
+                            <span class="font-bold text-gray-500 group-hover:text-blue-700">6-7%</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500 group-hover:text-gray-600">Endowment</span>
+                            <span class="font-bold text-gray-500 group-hover:text-blue-700">4-5%</span>
+                        </div>
+                        <p
+                            class="text-[10px] text-gray-400 italic text-center mt-1 group-hover:text-red-400 transition-colors">
+                            "Safe, but inflation eats it."</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Disciplined (Recommended - Vibrant & Embossed) -->
+                <div
+                    class="flex-1 bg-gradient-to-b from-teal-50 to-white rounded-xl shadow-lg border-2 border-teal-500 p-4 flex flex-col relative overflow-hidden transform scale-105 z-10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out cursor-pointer ring-1 ring-teal-100 ring-offset-4 ring-offset-transparent">
+
+                    <div class="flex justify-between items-start mb-2">
+                        <div
+                            class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider shadow-sm">
+                            Disciplined</div>
+                        <i class="fas fa-seedling text-teal-600 text-2xl drop-shadow-sm"></i>
+                    </div>
+
+                    <h3 class="text-xl font-extrabold text-gray-900 mb-1">SIPs &amp; Mutual Funds</h3>
+                    <p class="text-xs text-teal-800 font-medium mb-3 leading-snug">Automated wealth building. The steady
+                        path.</p>
+
+                    <div class="mt-auto bg-white rounded-lg p-3 border border-teal-200 shadow-inner">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-sm font-bold text-gray-700">5-Yr Avg Return</span>
+                            <span class="text-lg font-bold text-teal-600">12-15%</span>
+                        </div>
+                        <div class="text-xs text-gray-500 border-t border-gray-100 pt-1 mt-1">
+                            <div class="flex justify-between"><span>Inv: ₹3L</span> <span>Val: <strong
+                                        class="text-teal-700">₹4.8L</strong></span></div>
+                            <div class="text-center text-teal-600 font-bold mt-1 text-[10px] bg-teal-50 rounded py-0.5">
+                                50% Higher Returns than FD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Aggressive (Muted/Risky) -->
+                <div
+                    class="flex-1 bg-gray-50 rounded-xl border border-gray-200 p-4 flex flex-col relative overflow-hidden group hover:bg-white hover:border-red-300 transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2 cursor-pointer">
+                    <!-- Top accent bar -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gray-300 group-hover:bg-red-500 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start mb-2 opacity-70 group-hover:opacity-100 transition-opacity">
+                        <div
+                            class="bg-gray-200 text-gray-600 group-hover:bg-red-50 group-hover:text-red-600 px-2 py-1 rounded text-xs font-bold uppercase tracking-wider transition-colors">
+                            Aggressive</div>
+                        <i
+                            class="fas fa-chart-line text-gray-300 text-2xl group-hover:text-red-500 transition-colors duration-300"></i>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-gray-600 group-hover:text-gray-900 mb-1 transition-colors">Direct
+                        Stocks</h3>
+                    <p class="text-xs text-gray-400 group-hover:text-gray-500 mb-3 leading-snug transition-colors">High
+                        risk. Trading, F&amp;O, Stock picking.</p>
+
+                    <div
+                        class="mt-auto bg-gray-100 group-hover:bg-red-50 rounded-lg p-2 border border-gray-200 group-hover:border-red-100 text-center transition-colors duration-300">
+                        <p
+                            class="text-3xl font-bold text-gray-400 group-hover:text-red-500 mb-0 leading-none transition-colors">
+                            91%</p>
+                        <p
+                            class="text-[10px] font-bold text-gray-400 group-hover:text-red-400 uppercase mb-2 transition-colors">
+                            Lose Money</p>
+                        <hr class="border-gray-200 group-hover:border-red-200/50 mb-1 transition-colors">
+                        <p class="text-xs text-gray-400 group-hover:text-gray-600 transition-colors">Avg Loss: <strong
+                                class="text-gray-500 group-hover:text-red-600 transition-colors">₹1.1 Lakh</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Comparison Chart (Chart.js) -->
+            <div
+                class="flex-1 bg-white rounded-xl border border-gray-200 p-4 mt-2 shadow-sm relative flex flex-col justify-center overflow-hidden">
+                <div class="absolute top-4 left-6 z-10">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest">Growth of ₹1 Lakh (5 Years)
+                    </h4>
+                </div>
+                <!-- Chart Container -->
+                <div class="relative h-full w-full pt-6">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        window.addEventListener('message', function (event) {
+            if (event.data.type === 'theme-update') {
+                const isDark = event.data.isDark;
+                const css = event.data.css;
+                const styleId = 'dark-theme-style';
+                let style = document.getElementById(styleId);
+
+                if (isDark) {
+                    if (!style) {
+                        style = document.createElement('style');
+                        style.id = styleId;
+                        style.textContent = css;
+                        document.head.appendChild(style);
+                    }
+                } else {
+                    if (style) {
+                        style.remove();
+                    }
+                }
+            }
+        });
+
+        // Chart.js Implementation
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+        // Data Generation (Simulated Growth of 1L)
+        // Years 0-5
+        const labels = ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'];
+
+        // Invested (Baseline) - Flat 1L for comparison simplicity
+        const investedData = [100, 100, 100, 100, 100, 100];
+
+        // Insurance (4%) -> 100 -> 104 -> 108 ... -> ~121
+        const insuranceData = [100, 104, 108, 112, 117, 122];
+
+        // FD (7%) -> 100 -> 107 -> 114 ... -> ~140
+        const fdData = [100, 107, 114, 122, 131, 140];
+
+        // SIP/MF (15%) -> 100 -> 115 -> 132 ... -> ~200
+        const sipData = [100, 115, 132, 152, 175, 201];
+
+        // Trading (Loss) -> 100 -> 80 -> 60 ... -> Loss of Capital (simulated erosion)
+        const tradingData = [100, 70, 50, 40, 25, 10];
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'SIP / Mutual Funds (Winner)',
+                        data: sipData,
+                        borderColor: '#0d9488', // Teal-600
+                        backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#0d9488',
+                        fill: true
+                    },
+                    {
+                        label: 'Fixed Deposits',
+                        data: fdData,
+                        borderColor: '#2563eb', // Blue-600
+                        borderWidth: 2,
+                        tension: 0.4,
+                        pointRadius: 3,
+                        fill: false
+                    },
+                    {
+                        label: 'Insurance',
+                        data: insuranceData,
+                        borderColor: '#93c5fd', // Blue-300
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.4,
+                        pointRadius: 0,
+                        fill: false
+                    },
+                    {
+                        label: 'Trading (Capital Erosion)',
+                        data: tradingData,
+                        borderColor: '#ef4444', // Red-500
+                        borderWidth: 2,
+                        tension: 0.4,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#ef4444',
+                        fill: false,
+                        borderDash: [2, 2]
+                    },
+                    {
+                        label: 'Invested Capital',
+                        data: investedData,
+                        borderColor: '#9ca3af', // Gray-400
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        align: 'center',
+                        labels: {
+                            font: { family: "'Roboto', sans-serif", size: 10 },
+                            usePointStyle: true,
+                            boxWidth: 8
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        titleColor: '#1f2937',
+                        bodyColor: '#374151',
+                        borderColor: '#e5e7eb',
+                        borderWidth: 1,
+                        padding: 10,
+                        bodyFont: { family: "'Roboto', sans-serif" },
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.parsed.y + 'k';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        grid: { color: '#f3f4f6' },
+                        ticks: {
+                            callback: function (value) { return '₹' + value + 'k'; },
+                            font: { size: 10 },
+                            color: '#9ca3af'
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            font: { size: 10 },
+                            color: '#9ca3af'
+                        }
+                    }
+                },
+                layout: {
+                    padding: { left: 10, right: 20, top: 20, bottom: 10 }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
