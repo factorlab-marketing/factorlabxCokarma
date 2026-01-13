@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 2 - Traditional Savings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative">
+
+    <!-- Background Decoration -->
+    <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+    </div>
+
+    <div class="px-16 py-12 h-full flex flex-col justify-center relative z-10">
+
+        <!-- Header -->
+        <div class="mb-10 text-center">
+            <h1 class="text-5xl font-extrabold text-slate-800">
+                Traditional Instruments
+            </h1>
+            <h2 class="text-2xl font-semibold text-slate-500 mt-2">Insurance & Fixed Deposits</h2>
+        </div>
+
+        <!-- Two Column Layout: FDs and Insurance -->
+        <div class="grid grid-cols-2 gap-12">
+
+            <!-- Fixed Deposits -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-600">
+                        <i class="fas fa-piggy-bank text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800">Fixed Deposits</h3>
+                </div>
+
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Concept:</strong> Lending money to a bank for a fixed tenure.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Primary Benefit:</strong> Capital protection and guaranteed (nominal)
+                            returns.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-chart-pie text-slate-400 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Returns:</strong> Fixed interest rates (Taxable).</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-info-circle text-orange-400 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Consideration:</strong> Post-tax returns may struggle to beat high
+                            inflation.</span>
+                    </li>
+                </ul>
+                <div class="mt-6 relative h-32 w-full">
+                    <canvas id="fdChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Insurance -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex items-center mb-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 text-purple-600">
+                        <i class="fas fa-umbrella text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-800">Traditional Insurance</h3>
+                </div>
+
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Concept:</strong> Risk management tool for life/health coverage.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-file-contract text-purple-500 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Investment Policies:</strong> Endowment/Moneyback policies combine insurance +
+                            savings.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-lock text-slate-400 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Stability:</strong> Long-term commitments with surrender clauses.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-info-circle text-orange-400 mt-1 mr-3 text-xs"></i>
+                        <span><strong>Consideration:</strong> Insurance and Investment goals are often best kept
+                            separate for efficiency.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FD Chart Script -->
+    <script>
+        const ctx = document.getElementById('fdChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Nominal Return', 'Real Return (Post-Tax & Inflation)'],
+                datasets: [{
+                    label: 'Return %',
+                    data: [7.0, -1.6],
+                    backgroundColor: ['#3b82f6', '#ef4444'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+                }
+            }
+        });
+    </script>
+    <!-- Theme Listener -->
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'theme-update') {
+                const { isDark, css } = event.data;
+                let styleTag = document.getElementById('theme-style');
+                if (!styleTag) {
+                    styleTag = document.createElement('style');
+                    styleTag.id = 'theme-style';
+                    document.head.appendChild(styleTag);
+                }
+                styleTag.innerHTML = isDark ? css : '';
+            }
+        });
+    </script>
+</body>
+
+</html>

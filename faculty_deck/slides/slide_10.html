@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 6 - Comparison</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        th {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Slate-50 */
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col items-center justify-center p-8">
+
+    <!-- Header -->
+    <div class="text-center mb-6">
+        <h1 class="text-4xl font-bold mb-2 text-slate-900">Asset Class Comparison</h1>
+        <p class="text-slate-500">Understanding the right fit for your portfolio</p>
+    </div>
+
+    <!-- Table Container -->
+    <div class="w-full max-w-6xl bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xl mb-4">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider border-b border-slate-200">
+                    <th class="p-4 pl-6 font-bold w-1/5">Feature</th>
+                    <th class="p-4 text-slate-500 w-1/5">Insurance / FDs</th>
+                    <th class="p-4 text-slate-500 w-1/5">Real Estate</th>
+                    <th class="p-4 text-teal-600 font-bold bg-teal-50 w-1/5 border-l border-teal-100">Mutual Funds</th>
+                    <th class="p-4 text-emerald-600 font-bold bg-emerald-50 w-1/5 border-l border-emerald-100">Stocks
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="text-sm font-medium">
+                <!-- RETURNS -->
+                <!-- RETURNS -->
+                <tr class="border-b border-slate-100">
+                    <td class="p-4 pl-6 text-slate-500 font-bold text-xs uppercase">Historical Returns<br><span
+                            class="font-normal text-[10px] lowercase text-slate-400">(Past 5 Yrs, Post-Tax)</span></td>
+                    <td class="p-4">6-7%<br><span class="text-xs text-slate-400">(Fixed)</span></td>
+                    <td class="p-4 text-sm">Rental + Appr.<br><span class="text-xs text-slate-400">(Varies)</span></td>
+                    <td class="p-4 bg-teal-50/50 text-slate-900 font-bold border-l border-teal-100">10-12%*<br><span
+                            class="text-xs font-normal text-slate-500">(Market-Linked)</span></td>
+                    <td class="p-4 bg-emerald-50/50 text-emerald-700 font-bold border-l border-emerald-100">
+                        12-14%*<br><span class="text-xs font-normal text-emerald-600">(Market-Linked)</span></td>
+                </tr>
+                <!-- INFLATION BEATING -->
+                <tr class="border-b border-slate-100">
+                    <td class="p-4 pl-6 text-slate-500">Inflation Protection</td>
+                    <td class="p-4 text-red-500">Low</td>
+                    <td class="p-4 text-orange-500">Moderate</td>
+                    <td class="p-4 bg-teal-50/50 text-teal-700 border-l border-teal-100">Good Potential</td>
+                    <td class="p-4 bg-emerald-50/50 text-emerald-700 border-l border-emerald-100">High Potential</td>
+                </tr>
+                <!-- LIQUIDITY -->
+                <tr class="border-b border-slate-100">
+                    <td class="p-4 pl-6 text-slate-500">Liquidity</td>
+                    <td class="p-4 text-orange-500">Moderate (Lock-ins)</td>
+                    <td class="p-4 text-red-500">Low</td>
+                    <td class="p-4 bg-teal-50/50 text-teal-600 border-l border-teal-100">High</td>
+                    <td class="p-4 bg-emerald-50/50 text-emerald-600 border-l border-emerald-100">High</td>
+                </tr>
+                <!-- STARTING CAPITAL -->
+                <tr class="border-b border-slate-100">
+                    <td class="p-4 pl-6 text-slate-500">Min. Investment</td>
+                    <td class="p-4">Varied</td>
+                    <td class="p-4 text-red-500">Very High</td>
+                    <td class="p-4 bg-teal-50/50 font-bold text-slate-900 border-l border-teal-100">Low (SIPs)</td>
+                    <td class="p-4 bg-emerald-50/50 font-bold text-slate-900 border-l border-emerald-100">Moderate</td>
+                </tr>
+                <!-- CONTROL -->
+                <tr class="border-b border-slate-100">
+                    <td class="p-4 pl-6 text-slate-500">Transparency</td>
+                    <td class="p-4 text-slate-500">Low/Moderate</td>
+                    <td class="p-4 text-slate-500">Low</td>
+                    <td class="p-4 bg-teal-50/50 text-slate-900 border-l border-teal-100">High (NAV Daily)</td>
+                    <td class="p-4 bg-emerald-50/50 text-emerald-700 font-bold border-l border-emerald-100">High
+                        (Real-time)</td>
+                </tr>
+                <!-- VERDICT -->
+                <tr>
+                    <td class="p-4 pl-6 text-slate-500 font-bold">Goal Suitability</td>
+                    <td class="p-4 text-xs text-slate-400">Emergency Corpus</td>
+                    <td class="p-4 text-xs text-slate-400">Physical Asset</td>
+                    <td class="p-4 bg-teal-50/50 text-teal-800 font-bold border-l border-teal-100">Wealth Creation</td>
+                    <td class="p-4 bg-emerald-50/50 text-emerald-800 font-bold border-l border-emerald-100">Alpha
+                        Generation</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SEBI Disclaimer -->
+        <div class="bg-gray-50 p-3 text-[10px] text-gray-500 text-center border-t border-gray-100">
+            <strong>Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the
+            related documents carefully before investing. Registration granted by SEBI, membership of BASL (in case of
+            IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any
+            assurance of returns to investors. The securities quoted are for illustration only and are not
+            recommendatory.
+        </div>
+    </div>
+
+    <!-- Closing Statement -->
+    <div class="mt-4 flex items-center justify-between w-full max-w-6xl px-4">
+        <p class="text-slate-500 text-sm max-w-2xl">
+            Choose the asset class that aligns with your risk appetite and financial goals.
+        </p>
+        <a href="https://calendly.com/manideepak-factorlab/20min?" target="_blank" class="no-underline">
+            <div
+                class="bg-gradient-to-r from-teal-600 to-emerald-600 px-6 py-2 rounded-lg shadow-lg flex items-center cursor-pointer hover:shadow-xl transition-shadow">
+                <div class="mr-6">
+                    <p class="font-bold text-white text-sm">Contact factorlab Team</p>
+                </div>
+                <i class="fas fa-arrow-right text-white"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- Theme Listener -->
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'theme-update') {
+                const { isDark, css } = event.data;
+                let styleTag = document.getElementById('theme-style');
+                if (!styleTag) {
+                    styleTag = document.createElement('style');
+                    styleTag.id = 'theme-style';
+                    document.head.appendChild(styleTag);
+                }
+                styleTag.innerHTML = isDark ? css : '';
+            }
+        });
+    </script>
+</body>
+
+</html>

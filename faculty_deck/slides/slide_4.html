@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 3 - Landscape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col items-center justify-center">
+
+    <!-- Header -->
+    <div class="text-center mb-16 relative z-10">
+        <h1 class="text-5xl font-extrabold text-slate-800 mb-4">The Investment Spectrum</h1>
+        <p class="text-xl text-slate-500">Every asset class plays a different role in your portfolio.</p>
+    </div>
+
+    <!-- Spectrum Visual -->
+    <div class="w-full max-w-6xl relative z-10 px-8">
+
+        <!-- Spectrum Gradient Line & Labels -->
+        <div class="mb-12 relative px-12">
+            <div
+                class="h-3 w-full bg-gradient-to-r from-blue-300 via-yellow-300 to-emerald-400 rounded-full shadow-inner">
+            </div>
+
+            <!-- Axis Labels -->
+            <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-slate-400 mt-4">
+                <span>Low Risk / Safety</span>
+                <span>Active / Growth</span>
+                <span>High Risk / Wealth</span>
+            </div>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="grid grid-cols-4 gap-8">
+
+            <!-- FDs/Insurance -->
+            <div
+                class="bg-white p-6 rounded-2xl border-t-4 border-blue-400 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
+                <div
+                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-500 shadow-sm">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">FDs & Insurance</h3>
+                <p class="text-sm text-slate-500 leading-snug">Capital Protection & Guaranteed Returns.</p>
+            </div>
+
+            <!-- Real Estate -->
+            <div
+                class="bg-white p-6 rounded-2xl border-t-4 border-yellow-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
+                <div
+                    class="w-14 h-14 bg-yellow-50 rounded-full flex items-center justify-center mb-4 text-yellow-500 shadow-sm">
+                    <i class="fas fa-building text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Real Estate</h3>
+                <p class="text-sm text-slate-500 leading-snug">Physical Asset Ownership & Rental Yields.</p>
+            </div>
+
+            <!-- Mutual Funds -->
+            <div
+                class="bg-white p-6 rounded-2xl border-t-4 border-teal-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-teal-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
+                    POPULAR</div>
+                <div
+                    class="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-4 text-teal-500 shadow-sm">
+                    <i class="fas fa-chart-pie text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Mutual Funds</h3>
+                <p class="text-sm text-slate-500 leading-snug">Professional Management & Diversification.</p>
+            </div>
+
+            <!-- Equity -->
+            <div
+                class="bg-white p-6 rounded-2xl border-t-4 border-emerald-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
+                <div
+                    class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-4 text-emerald-600 shadow-sm">
+                    <i class="fas fa-rocket text-2xl"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Direct Equity</h3>
+                <p class="text-sm text-slate-500 leading-snug">Highest Alpha Potential & Wealth Creation.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Theme Listener -->
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'theme-update') {
+                const { isDark, css } = event.data;
+                let styleTag = document.getElementById('theme-style');
+                if (!styleTag) {
+                    styleTag = document.createElement('style');
+                    styleTag.id = 'theme-style';
+                    document.head.appendChild(styleTag);
+                }
+                styleTag.innerHTML = isDark ? css : '';
+            }
+        });
+    </script>
+</body>
+
+</html>

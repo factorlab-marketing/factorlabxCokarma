@@ -99,11 +99,29 @@
             height: 80px;
             background-color: var(--bg-color);
             border-top: 1px solid #334155;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
-            justify-content: space-between;
             padding: 0 40px;
             z-index: 100;
+        }
+
+        .controls-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .controls-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .controls-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
         }
 
         .deck-info {
@@ -198,6 +216,124 @@
             background-color: #334155;
         }
 
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100%;
+            background-color: #0f172a;
+            /* Slate 900 */
+            border-right: 1px solid #334155;
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-sidebar-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .close-sidebar-btn:hover {
+            color: white;
+        }
+
+        .deck-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .deck-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+        }
+
+        .deck-link:hover {
+            background-color: #1e293b;
+            color: white;
+        }
+
+        .deck-link.active {
+            background-color: rgba(13, 148, 136, 0.1);
+            /* Primary with opacity */
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .deck-link i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            backdrop-filter: blur(2px);
+        }
+
+        .overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .menu-toggle-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-right: 16px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .menu-toggle-btn:hover {
+            background-color: #334155;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .controls-bar {
@@ -221,6 +357,37 @@
 
 <body>
 
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span>Pitch Decks</span>
+            <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="deck-list">
+            <li>
+                <a href="#" class="deck-link active">
+                    <i class="fas fa-layer-group"></i>
+                    CoKarma Deck
+                </a>
+            </li>
+            <li>
+                <a href="../hr_deck/index.html" class="deck-link">
+                    <i class="fas fa-users"></i>
+                    HR Deck
+                </a>
+            </li>
+            <li>
+                <a href="../faculty_deck/index.html" class="deck-link">
+                    <i class="fas fa-university"></i>
+                    Faculty Deck
+                </a>
+            </li>
+        </ul>
+    </aside>
+
     <!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -240,12 +407,17 @@
 
     <!-- Controls -->
     <footer class="controls-bar">
-        <div class="deck-info">
-            <span class="deck-title">FactorLab x CoKarma</span>
-            <span class="deck-subtitle">Employee Investing Session</span>
+        <div class="controls-left">
+            <button class="menu-toggle-btn" id="menuToggleBtn" title="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="deck-info">
+                <span class="deck-title">FactorLab x CoKarma</span>
+                <span class="deck-subtitle">Employee Investing Session</span>
+            </div>
         </div>
 
-        <div class="nav-controls">
+        <div class="controls-center nav-controls">
             <button class="nav-btn" id="prevBtn" title="Previous Slide (Arrow Left)">
                 <i class="fas fa-arrow-left"></i>
             </button>
@@ -269,9 +441,11 @@
             </button>
         </div>
 
-        <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen (F)">
-            <i class="fas fa-expand"></i>
-        </button>
+        <div class="controls-right">
+            <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen (F)">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -318,6 +492,10 @@
         const progressBar = document.getElementById('progressBar');
         const loader = document.getElementById('loader');
         const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const menuToggleBtn = document.getElementById('menuToggleBtn');
+        const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
 
         // Init
         document.addEventListener('DOMContentLoaded', () => {
@@ -500,6 +678,16 @@
         themeBtn.addEventListener('click', toggleTheme);
         downloadBtn.addEventListener('click', downloadPitchDeck);
         document.addEventListener('keydown', handleKeyDown);
+
+        // Sidebar Navigation
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('open');
+        }
+
+        menuToggleBtn.addEventListener('click', toggleSidebar);
+        closeSidebarBtn.addEventListener('click', toggleSidebar);
+        sidebarOverlay.addEventListener('click', toggleSidebar);
 
         // Responsive Scaling Logic
         function resizeSlides() {

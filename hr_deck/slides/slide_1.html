@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Slide 1 - Cover</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.2;
+        }
+
+        .institute-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            color: #cbd5e1;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="w-[1280px] h-[720px] relative flex shadow-2xl overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0 bg-slate-900">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-teal-900 rounded-full blur-[120px] opacity-30 -translate-y-1/2 translate-x-1/3">
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 w-full h-full flex p-16 items-center">
+
+        <!-- Left: Text -->
+        <div class="w-1/2 flex flex-col justify-center pr-8">
+            <div
+                class="inline-flex items-center space-x-2 text-teal-400 font-bold tracking-widest text-sm uppercase mb-6">
+                <i class="fas fa-layer-group"></i>
+                <span>Employee Financial Wellness</span>
+            </div>
+
+            <h1 class="text-5xl font-extrabold leading-tight mb-6">
+                The Perk That <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Actually
+                    Pays.</span>
+            </h1>
+
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg">
+                Your employees work hard for their money. We teach them how to make their money work for them.
+            </p>
+
+            <div class="flex items-center space-x-6 mb-8">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-3 backdrop-blur-sm min-w-[100px]">
+                    <p class="text-2xl font-bold text-white">45<span class="text-teal-500 text-base">m</span></p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-wider">Session</p>
+                </div>
+                <div class="h-10 w-[1px] bg-slate-700"></div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-lg p-3 backdrop-blur-sm min-w-[100px]">
+                    <p class="text-2xl font-bold text-white">Zero</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-wider">Cost</p>
+                </div>
+            </div>
+
+            <!-- Company Trust Footer -->
+            <div class="mt-4 flex items-center opacity-70">
+                <i class="fas fa-shield-alt text-teal-500 mr-2"></i>
+                <span class="text-xs text-slate-400 font-medium">FactorLab Capital Services Pvt Ltd • SEBI
+                    Registered</span>
+            </div>
+        </div>
+
+        <!-- Right: Presenters -->
+        <div class="w-1/2 flex items-center justify-end relative">
+
+            <!-- Card -->
+            <div
+                class="bg-slate-800/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 w-[500px] relative shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+
+                <!-- SEBI Badge -->
+                <div
+                    class="absolute -top-5 -right-5 bg-gradient-to-br from-teal-500 to-emerald-600 text-white w-24 h-24 rounded-full flex flex-col items-center justify-center font-bold shadow-lg z-20 border-4 border-slate-900">
+                    <span class="text-[10px] font-bold opacity-80 uppercase">SEBI</span>
+                    <span class="text-sm leading-none font-extrabold">REGD.</span>
+                </div>
+
+                <p class="text-teal-400 uppercase text-xs font-bold tracking-widest mb-6 border-b border-white/10 pb-2">
+                    Invest with Experts, Not Salesmen</p>
+
+                <!-- Sekhar -->
+                <div class="flex items-start mb-6">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-slate-700 border border-teal-500/30 flex items-center justify-center text-2xl font-bold text-teal-400 mr-4 shadow-md shrink-0">
+                        S</div>
+                    <div>
+                        <h3 class="font-bold text-white text-lg leading-none">Sekhar Sudhamsh</h3>
+                        <p class="text-slate-400 text-xs mt-1 mb-2">Founder & Portfolio Manager</p>
+
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            <div class="institute-badge">BITS Pilani</div>
+                            <div class="institute-badge">IMT Ghaziabad</div>
+                        </div>
+                        <p class="text-[11px] text-teal-300 font-medium"><i class="fas fa-check-circle mr-1"></i>12+ Yrs
+                            Exp • Product & Quant</p>
+                    </div>
+                </div>
+
+                <div class="w-full h-[1px] bg-white/5 mb-6"></div>
+
+                <!-- Deepak -->
+                <div class="flex items-start">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-slate-700 border border-indigo-500/30 flex items-center justify-center text-2xl font-bold text-indigo-400 mr-4 shadow-md shrink-0">
+                        D</div>
+                    <div>
+                        <h3 class="font-bold text-white text-lg leading-none">Venkata Manideepak</h3>
+                        <p class="text-slate-400 text-xs mt-1 mb-2">Co-founder & Quant Lead</p>
+
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            <div class="institute-badge">IIT Guwahati</div>
+                            <div class="institute-badge">ISB Hyderabad</div>
+                        </div>
+                        <p class="text-[11px] text-indigo-300 font-medium"><i class="fas fa-check-circle mr-1"></i>14+
+                            Yrs Exp • Data Science</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

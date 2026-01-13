@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 2 - Agenda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative">
+
+    <!-- Background Elements -->
+    <div
+        class="absolute top-0 left-0 w-[400px] h-[400px] bg-teal-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+    </div>
+    <div
+        class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+    </div>
+
+    <div class="px-20 py-12 h-full flex items-center relative z-10">
+
+        <div class="w-1/2 pr-12">
+            <h1 class="text-6xl font-extrabold text-slate-800 mb-6">
+                Today's <br> <span class="text-teal-600">Agenda</span>
+            </h1>
+            <p class="text-xl text-slate-500 leading-relaxed">
+                A structured journey through the investment landscape, designed to help you differentiate between saving
+                and true wealth creation.
+            </p>
+        </div>
+
+        <div class="w-1/2">
+            <div class="space-y-6">
+                <!-- Item 1 -->
+                <div
+                    class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100 transform transition hover:-translate-y-1 hover:shadow-md">
+                    <div
+                        class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 font-bold text-xl mr-6">
+                        01</div>
+                    <div class="text-lg font-bold text-slate-800">The Investment Landscape</div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100 transform transition hover:-translate-y-1 hover:shadow-md">
+                    <div
+                        class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 font-bold text-xl mr-6">
+                        02</div>
+                    <div class="text-lg font-bold text-slate-800">Traditional Assets (FDs, Insurance, Real Estate)</div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100 transform transition hover:-translate-y-1 hover:shadow-md">
+                    <div
+                        class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center text-teal-600 font-bold text-xl mr-6">
+                        03</div>
+                    <div class="text-lg font-bold text-slate-800">Mutual Funds & The Selection Trap</div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                    class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100 transform transition hover:-translate-y-1 hover:shadow-md">
+                    <div
+                        class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 font-bold text-xl mr-6">
+                        04</div>
+                    <div class="text-lg font-bold text-slate-800">Direct Equity & Comparison</div>
+                </div>
+                <!-- Item 5 -->
+                <div
+                    class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100 transform transition hover:-translate-y-1 hover:shadow-md">
+                    <div
+                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold text-xl mr-6">
+                        05</div>
+                    <div class="text-lg font-bold text-slate-800">Smart Selection & Conclusion</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Theme Listener -->
+    <script>
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'theme-update') {
+                const { isDark, css } = event.data;
+                let styleTag = document.getElementById('theme-style');
+                if (!styleTag) {
+                    styleTag = document.createElement('style');
+                    styleTag.id = 'theme-style';
+                    document.head.appendChild(styleTag);
+                }
+                styleTag.innerHTML = isDark ? css : '';
+            }
+        });
+    </script>
+</body>
+
+</html>
