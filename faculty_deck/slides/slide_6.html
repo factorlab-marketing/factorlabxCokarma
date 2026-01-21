@@ -1,100 +1,176 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 3 - Real Estate</title>
+    <title>Slide 6 - Equity Wins</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        th {
             font-family: 'Montserrat', sans-serif;
         }
     </style>
+<script src='../../js/capture_helper.js'></script>
 </head>
 
-<body class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative">
+<body
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-14">
 
-    <div
-        class="absolute top-0 left-0 w-[600px] h-[600px] bg-yellow-100/60 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2">
-    </div>
+    <!-- Background Elements -->
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-emerald-50/30"></div>
 
-    <div class="px-20 py-12 h-full flex flex-col justify-center relative z-10">
+    <!-- Content Container -->
+    <div class="z-10 w-full max-w-7xl mx-auto flex flex-col h-full justify-center">
 
-        <div class="flex items-center mb-10 border-b border-slate-200 pb-6">
-            <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mr-6 text-yellow-600">
-                <i class="fas fa-building text-3xl"></i>
-            </div>
-            <div>
-                <h1 class="text-5xl font-extrabold text-slate-800">
-                    Real Estate
-                </h1>
-                <h2 class="text-xl font-semibold text-slate-500 mt-1">Physical Asset Class</h2>
-            </div>
+        <!-- Headline -->
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-extrabold text-slate-800 mb-4">
+                The Ultimate <span class="text-emerald-600">Asset Class Showdown</span>
+            </h1>
+            <p class="text-xl text-slate-500 font-bold">
+                Data doesn't lie. Who takes the trophy?
+            </p>
         </div>
 
-        <div class="grid grid-cols-2 gap-12 items-center">
+        <!-- Metric Table -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+            <table class="w-full text-center border-collapse">
+                <thead>
+                    <tr class="bg-slate-100 border-b border-slate-200">
+                        <th
+                            class="py-4 px-4 text-slate-600 font-bold uppercase text-xs tracking-wider w-1/4 text-left pl-8">
+                            Metric</th>
+                        <th class="py-4 px-4 text-slate-700 font-bold uppercase text-xs tracking-wider w-1/4">Fixed
+                            Deposit</th>
+                        <th class="py-4 px-4 text-slate-700 font-bold uppercase text-xs tracking-wider w-1/4">Real
+                            Estate</th>
+                        <th
+                            class="py-4 px-4 text-white bg-emerald-600 font-bold uppercase text-xs tracking-wider w-1/4">
+                            Equity</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-sm">
+                    <!-- Row 1: Liquidity -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Liquidity</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Ease of converting to cash</div>
+                        </td>
+                        <!-- FD: High (Tick) -->
+                        <td class="py-4 px-4 text-emerald-500 text-xl"><i class="fas fa-check-circle"></i></td>
+                        <!-- RE: Low (Cross) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- Eq: High (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
 
-            <!-- Description -->
-            <div>
-                <p class="text-xl text-slate-600 leading-relaxed mb-6">
-                    Real estate involves purchasing, owning, managing, renting, or selling land and buildings for
-                    profit. It is one of the most popular tangible asset classes globally.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
-                        <i class="fas fa-home text-yellow-500 text-xl mr-4"></i>
-                        <div>
-                            <span class="block font-bold text-slate-800">Tangible Asset</span>
-                            <span class="text-sm text-slate-500">Physical ownership provides a sense of security.</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
-                        <i class="fas fa-key text-yellow-500 text-xl mr-4"></i>
-                        <div>
-                            <span class="block font-bold text-slate-800">Income Stream</span>
-                            <span class="text-sm text-slate-500">Potential for rental income alongside capital
-                                appreciation.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <!-- Row 2: Ticket Size -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Ticket Size</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Minimum amount to invest</div>
+                        </td>
+                        <!-- FD: Low (Tick) -->
+                        <td class="py-4 px-4 text-emerald-500 text-xl"><i class="fas fa-check-circle"></i></td>
+                        <!-- RE: High (Cross) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- Eq: Low (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
 
-            <!-- Characteristics -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
-                <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">Key Considerations</h3>
+                    <!-- Row 3: Avg Returns (20yr) - NUMERIC -->
+                    <tr class="hover:bg-slate-50 transition-colors group bg-slate-50/50">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Avg Returns (20yr)</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Long-term wealth creation</div>
+                        </td>
+                        <td class="py-4 px-4 text-slate-500 font-bold">6%</td>
+                        <td class="py-4 px-4 text-slate-500 font-bold">8-10%</td>
+                        <td class="py-4 px-4 text-emerald-700 font-extrabold text-xl bg-emerald-50/50">12-15%</td>
+                    </tr>
 
-                <div class="space-y-6">
-                    <div class="flex justify-between items-center">
-                        <span class="text-slate-600">Ticket Size</span>
-                        <span class="font-bold text-slate-800 flex items-center">
-                            <span class="text-xs mr-2 bg-red-50 text-red-600 px-2 py-0.5 rounded">₹₹₹₹</span>
-                            Very High
-                        </span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-slate-600">Liquidity</span>
-                        <span class="font-bold text-slate-800 flex items-center">
-                            <div class="w-24 h-2 bg-slate-200 rounded-full mr-2 overflow-hidden">
-                                <div class="h-full bg-red-500 w-[10%]"></div>
-                            </div>
-                            Low
-                        </span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-slate-600">Rental Yields</span>
-                        <span class="font-bold text-slate-800">Can vary (Location Dependent)</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-slate-600">Management</span>
-                        <span class="font-bold text-slate-800">Active (Maintenance Required)</span>
-                    </div>
-                </div>
-            </div>
+                    <!-- Row 4: Beats Inflation -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Beats Inflation?</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Grow real purchasing power</div>
+                        </td>
+                        <!-- FD: No (Cross) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- RE: Maybe/Yes (Tick) -->
+                        <td class="py-4 px-4 text-emerald-500 text-xl"><i class="fas fa-check-circle"></i></td>
+                        <!-- Eq: Yes (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
 
+                    <!-- Row 5: Lock-in -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">No Lock-in?</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Freedom to withdraw anytime</div>
+                        </td>
+                        <!-- FD: Has lockin usually (Cross) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- RE: Hard to sell (Cross) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- Eq: No Lockin (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
+
+                    <!-- Row 6: Passive Mgmt -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Passive Mgmt?</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Zero maintenance hassle</div>
+                        </td>
+                        <!-- FD: Yes (Tick) -->
+                        <td class="py-4 px-4 text-emerald-500 text-xl"><i class="fas fa-check-circle"></i></td>
+                        <!-- RE: No (Cross - Maintenance needed) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- Eq: Yes (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
+
+                    <!-- Row 7: Transparency -->
+                    <tr class="hover:bg-slate-50 transition-colors group">
+                        <td class="py-4 px-4 text-left pl-8">
+                            <div class="font-bold text-slate-700">Transparency</div>
+                            <div class="text-[10px] text-slate-400 font-medium">Clear pricing & regulation</div>
+                        </td>
+                        <!-- FD: High (Tick) -->
+                        <td class="py-4 px-4 text-emerald-500 text-xl"><i class="fas fa-check-circle"></i></td>
+                        <!-- RE: Low (Cross - Opaque) -->
+                        <td class="py-4 px-4 text-red-400 text-xl"><i class="fas fa-times-circle"></i></td>
+                        <!-- Eq: High (Tick) -->
+                        <td class="py-4 px-4 text-emerald-600 text-xl font-bold bg-emerald-50/50"><i
+                                class="fas fa-check-circle"></i></td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
+
+        <div class="mt-8 text-center">
+            <p class="text-slate-500 italic">"History shows wealth is created in Equity, and preserved in Debt."</p>
+        </div>
+
     </div>
 
     <!-- Theme Listener -->

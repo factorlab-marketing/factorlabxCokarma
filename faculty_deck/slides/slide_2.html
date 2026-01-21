@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 2 - About factorlab</title>
+    <title>Slide 2 - Job Volatility</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -21,140 +22,143 @@
             font-family: 'Montserrat', sans-serif;
         }
     </style>
+<script src='../../js/capture_helper.js'></script>
 </head>
 
 <body
-    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-12">
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-14">
 
-    <!-- Background -->
+    <!-- Background Elements -->
     <div
-        class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 z-0">
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-red-50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-60">
     </div>
 
-    <div class="relative z-10 w-full max-w-7xl mx-auto flex gap-12 h-full">
+    <!-- Content Container -->
+    <div class="z-10 w-full max-w-7xl mx-auto flex h-full items-center">
 
-        <!-- Left Column: Identity & Founders -->
-        <div class="w-[35%] flex flex-col justify-center">
+        <!-- Left: Text & Stats -->
+        <div class="w-1/2 pr-10">
+            <h1 class="text-6xl font-extrabold text-slate-800 mb-6 leading-tight">
+                The New Reality: <br>
+                <span class="text-red-600">Job Volatility</span>
+            </h1>
 
-            <!-- Logo Area -->
-            <div class="mb-8 pl-2">
-                <img src="../../assets/factorlab_black_logo.png" alt="factorlab logo" class="h-12 object-contain mb-3">
-                <div
-                    class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-[10px] font-bold tracking-widest uppercase mb-2">
-                    SEBI Reg. INH000023144
-                </div>
-            </div>
-
-            <!-- Founders Card -->
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex flex-col justify-center w-full">
-                <h3
-                    class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5 border-b border-slate-100 pb-2">
-                    Leadership Team</h3>
-
-                <!-- Founder 1 -->
-                <div class="flex items-start mb-6">
-                    <div
-                        class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden mr-4 border-2 border-slate-50 shadow-md shrink-0">
-                        <img src="../../assets/Sekhar.jpg" alt="Sekhar" class="object-cover w-full h-full">
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg leading-tight mb-1">Sekhar Sudhamsh K.</h4>
-                        <p class="text-[10px] text-emerald-600 font-bold mb-1 uppercase tracking-wide">Founder &
-                            Portfolio Manager</p>
-
-                        <div class="space-y-0.5 text-[10px] text-slate-500 font-medium">
-                            <p class="flex items-center"><i class="fas fa-graduation-cap text-slate-400 w-3"></i> BITS
-                                Pilani, IMT Ghaziabad</p>
-                            <p class="flex items-center"><i class="fas fa-briefcase text-slate-400 w-3"></i> 12+ Yrs:
-                                Product & Quant</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Founder 2 -->
-                <div class="flex items-start">
-                    <div
-                        class="w-16 h-16 rounded-full bg-slate-200 overflow-hidden mr-4 border-2 border-slate-50 shadow-md shrink-0">
-                        <img src="../../assets/Mani.jpg" alt="Mani" class="object-cover w-full h-full">
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg leading-tight mb-1">Venkata Manideepak</h4>
-                        <p class="text-[10px] text-emerald-600 font-bold mb-1 uppercase tracking-wide">Co-founder &
-                            Quant Lead</p>
-
-                        <div class="space-y-0.5 text-[10px] text-slate-500 font-medium">
-                            <p class="flex items-center"><i class="fas fa-graduation-cap text-slate-400 w-3"></i> IIT
-                                Guwahati, ISB Hyderabad</p>
-                            <p class="flex items-center"><i class="fas fa-briefcase text-slate-400 w-3"></i> 14+ Yrs:
-                                Data Science</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Right Column: What We Do & Trust -->
-        <div class="w-[65%] flex flex-col justify-center pl-8 border-l border-slate-200">
-
-            <h1 class="text-4xl font-extrabold text-slate-900 mb-2">We Are <span class="text-emerald-600">Quant
-                    Specialists.</span></h1>
-            <p class="text-lg text-slate-500 mb-8 max-w-2xl">
-                FactorLAB Capital Services Pvt Ltd is a quantitative wealth management firm. We don't guess; we
-                calculate.
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+                The world is changing faster than ever. Are our current roles truly secure?
             </p>
 
-            <div class="grid grid-cols-2 gap-6 mb-8">
-                <!-- Card 1 -->
+            <!-- Key Stat Box -->
+            <!-- Key Stat Box -->
+            <div
+                class="bg-white border-l-8 border-red-600 rounded-r-xl shadow-2xl p-8 mb-8 relative overflow-hidden group">
+                <!-- Alarm Animation Background -->
                 <div
-                    class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fas fa-chess-board text-emerald-500 text-2xl mb-3"></i>
-                    <h3 class="font-bold text-slate-800 mb-2">Rule-Based Investing</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        No human bias. No emotional decisions. We design adaptive strategies tested across decades of
-                        market cycles.
-                    </p>
+                    class="absolute inset-0 bg-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse">
                 </div>
-                <!-- Card 2 -->
-                <div
-                    class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fas fa-cubes text-emerald-500 text-2xl mb-3"></i>
-                    <h3 class="font-bold text-slate-800 mb-2">Proven Factors</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        We build portfolios using mathematically proven factors: <span
-                            class="font-semibold text-emerald-700">Momentum, Value, Low Volatility.</span>
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div
-                    class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fas fa-search-dollar text-emerald-500 text-2xl mb-3"></i>
-                    <h3 class="font-bold text-slate-800 mb-2">Data-Backed Quant Methodology</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Decisions driven by data, not sentiment. Mathematical models that remove human bias.
-                    </p>
-                </div>
-                <!-- Card 4 -->
-                <div
-                    class="bg-white p-5 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                    <i class="fas fa-layer-group text-emerald-500 text-2xl mb-3"></i>
-                    <h3 class="font-bold text-slate-800 mb-2">Our Strategies</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Dual Momentum Quant, Factor-based smallcases designed for consistent compounding.
-                    </p>
+
+                <div class="relative z-10">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-biohazard text-5xl text-red-600 mr-4 animate-bounce"></i>
+                        <h2 class="text-6xl font-black text-slate-800 tracking-tighter">71%</h2>
+                    </div>
+                    <p class="text-2xl font-bold text-red-600 uppercase tracking-widest leading-none mb-1">JOBS WILL BE
+                        GONE</p>
+                    <p class="text-xs text-red-400 font-bold uppercase tracking-wider mb-2">(BECAUSE OF AI)</p>
+                    <p class="text-lg text-slate-500 font-semibold">in the next 5 years.</p>
                 </div>
             </div>
 
-            <!-- Footer Details -->
-            <div class="text-[10px] text-slate-400 border-t border-slate-100 pt-4 flex justify-between items-center">
-                <span><i class="fas fa-building mr-1"></i> FactorLAB Capital Services Pvt Ltd (CIN:
-                    U66190TS2025PTC196480)</span>
-                <span><i class="fas fa-map-marker-alt mr-1"></i> Co Karma, Madhapur, Hyderabad</span>
+            <div class="flex items-center justify-between mb-6">
+                <!-- Safe -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-emerald-100 p-2 rounded-lg">
+                        <span class="text-emerald-700 font-bold text-lg">19% Safe</span>
+                    </div>
+                </div>
+                <!-- Volatile -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-amber-100 p-2 rounded-lg">
+                        <span class="text-amber-700 font-bold text-lg">10% Volatile</span>
+                    </div>
+                </div>
             </div>
 
+            <div
+                class="bg-slate-800 text-white p-4 rounded-lg shadow-lg text-center transform -rotate-1 hover:rotate-0 transition-transform">
+                <p class="text-xl font-bold">
+                    <i class="fas fa-shield-alt text-yellow-400 mr-2"></i>
+                    Securing your future is not an option. <br>
+                    <span class="text-yellow-400 uppercase tracking-wider">It is a NEED.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Right: Chart Visual -->
+        <div class="w-1/2 h-[500px] bg-white rounded-3xl shadow-xl flex flex-col p-8 border border-slate-100 relative">
+            <h3 class="text-center font-bold text-slate-700 mb-6 text-xl">Workforce Anxiety Levels</h3>
+            <div class="flex-1 relative">
+                <canvas id="volatilityChart"></canvas>
+                <!-- Center Icon Overlay -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none mt-6">
+                    <i class="fas fa-face-worry text-6xl text-slate-200 opacity-20"></i>
+                </div>
+            </div>
+            <p class="text-center text-sm text-slate-400 mt-4 italic">"Is my income source truly secure?"</p>
         </div>
 
     </div>
+
+    <!-- Chart Logic -->
+    <script>
+        const ctx = document.getElementById('volatilityChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Jobs Gone', 'Safe', 'Volatile'],
+                datasets: [{
+                    label: 'Future Job Market',
+                    data: [71, 19, 10],
+                    backgroundColor: [
+                        '#ef4444', // Red (Gone)
+                        '#10b981', // Emerald (Safe)
+                        '#f59e0b'  // Amber (Volatile)
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 14, family: "'Inter', sans-serif" },
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return ' ' + context.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                        padding: 12,
+                        cornerRadius: 8
+                    }
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+    </script>
 
     <!-- Theme Listener -->
     <script>
@@ -168,12 +172,6 @@
                     document.head.appendChild(styleTag);
                 }
                 styleTag.innerHTML = isDark ? css : '';
-
-                // Logo Logic: Black for Light, Normal (Teal) for Dark
-                const logo = document.querySelector('img[alt="factorlab logo"]');
-                if (logo) {
-                    logo.src = isDark ? "../../assets/factorlab logo.png" : "../../assets/factorlab_black_logo.png";
-                }
             }
         });
     </script>

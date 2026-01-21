@@ -1,18 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 10 - Investor Categories</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Tale of Aarav vs Rahul</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f8fafc;
         }
 
         h1,
@@ -22,360 +26,152 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .category-btn.active {
-            transform: scale(1.02);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border-bottom-width: 4px;
-        }
-
-        .fade-in {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
         }
     </style>
+    <script src='../../js/capture_helper.js'></script>
 </head>
 
-<body class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative">
+<body>
+    <div class="slide-container">
+        <!-- Header: Compacted padding -->
+        <header class="pt-6 px-16">
+            <h1 class="text-4xl font-extrabold text-slate-800 leading-tight">
+                The Tale of <span class="text-teal-600">Aarav</span> vs <span class="text-orange-500">Rahul</span>
+            </h1>
+            <p class="text-lg text-slate-500 mt-1">Why time in the market beats timing the market.</p>
+        </header>
 
-    <!-- Background Grid -->
-    <div class="absolute inset-0 z-0 opacity-10"
-        style="background-image: radial-gradient(#64748b 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <!-- Main Content (Comparison): Reduced vertical padding and spacing -->
+        <main class="flex-1 px-16 py-4 flex items-center justify-center space-x-6">
 
-    <div class="relative z-10 p-12 h-full flex flex-col justify-center items-center">
-
-        <!-- Title -->
-        <div class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold text-slate-800 tracking-tight">Three Paths of Wealth</h1>
-            <p class="text-xl text-slate-500 mt-4 font-medium">Which investor profile defines your future?</p>
-        </div>
-
-        <!-- 3 Central Neutral Cards -->
-        <div class="grid grid-cols-3 gap-10 w-full max-w-6xl">
-
-            <!-- Card A -->
-            <button onclick="openModal('A')"
-                class="bg-white p-10 rounded-3xl border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center group flex flex-col items-center justify-center h-80">
+            <!-- Aarav (Winner): Compacted internals -->
+            <div
+                class="w-1/2 bg-white rounded-3xl shadow-xl border-t-8 border-teal-500 p-5 relative overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <!-- Badge -->
                 <div
-                    class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-8 group-hover:bg-slate-200 transition-colors">
-                    <i class="fas fa-user-lock text-4xl text-slate-500"></i>
+                    class="absolute top-0 right-0 bg-teal-100 text-teal-800 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Early Bird
                 </div>
-                <h3 class="text-2xl font-bold text-slate-700 mb-2">Category A</h3>
-                <p class="text-slate-500 font-medium">FD + ULIP Investors</p>
-                <div
-                    class="mt-6 px-4 py-2 bg-slate-50 rounded-lg text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:bg-slate-100">
-                    Click to Reveal
-                </div>
-            </button>
 
-            <!-- Card B -->
-            <button onclick="openModal('B')"
-                class="bg-white p-10 rounded-3xl border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center group flex flex-col items-center justify-center h-80">
-                <div
-                    class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-8 group-hover:bg-slate-200 transition-colors">
-                    <i class="fas fa-city text-4xl text-slate-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-700 mb-2">Category B</h3>
-                <p class="text-slate-500 font-medium">FD + Real Estate</p>
-                <div
-                    class="mt-6 px-4 py-2 bg-slate-50 rounded-lg text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:bg-slate-100">
-                    Click to Reveal
-                </div>
-            </button>
-
-            <!-- Card C -->
-            <button onclick="openModal('C')"
-                class="bg-white p-10 rounded-3xl border border-slate-200 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center group flex flex-col items-center justify-center h-80">
-                <div
-                    class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-8 group-hover:bg-slate-200 transition-colors">
-                    <i class="fas fa-chart-line text-4xl text-slate-500"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-700 mb-2">Category C</h3>
-                <p class="text-slate-500 font-medium">MF + Insurance</p>
-                <div
-                    class="mt-6 px-4 py-2 bg-slate-50 rounded-lg text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:bg-slate-100">
-                    Click to Reveal
-                </div>
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- Modals Container -->
-
-    <!-- Modal A -->
-    <div id="modal-A"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-        <div
-            class="bg-white w-[1000px] rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300 overflow-hidden relative">
-            <!-- Close Button -->
-            <button onclick="closeModal('A')"
-                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 z-10 p-2">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-
-            <div class="flex h-[600px]">
-                <!-- Sidebar: Status -->
-                <div class="w-1/3 bg-red-50 p-10 border-r border-red-100 flex flex-col justify-between">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div
+                        class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center text-2xl text-teal-600">
+                        <i class="fas fa-user"></i>
+                    </div>
                     <div>
-                        <div
-                            class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 mb-6">
-                            <i class="fas fa-lock text-xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-extrabold text-slate-800 mb-2">Category A</h2>
-                        <p class="text-red-600 font-bold text-lg mb-6">Safe but Stagnant</p>
-
-                        <div class="space-y-4">
-                            <div class="flex justify-between text-sm border-b border-red-100 pb-2">
-                                <span class="text-slate-600">Blended Return</span>
-                                <span class="font-bold text-slate-800">~6% Nominal</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-red-100 pb-2">
-                                <span class="text-slate-600">Tax Impact</span>
-                                <span class="font-bold text-red-600">30% Slab (Heavy)</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-red-100 pb-2">
-                                <span class="text-slate-600">Inflation Beat</span>
-                                <span class="font-bold text-red-600">Failed (-0.3% Real)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-4 rounded-xl border border-red-100 shadow-sm text-center">
-                        <span class="text-xs font-bold text-red-400 uppercase tracking-widest">Verdict</span>
-                        <p class="font-bold text-red-700 text-lg mt-1">Zero Real Wealth Growth</p>
+                        <h2 class="text-2xl font-bold text-slate-800">Aarav</h2>
+                        <p class="text-slate-500 font-medium text-sm">Starts at Age 25</p>
                     </div>
                 </div>
 
-                <!-- Main Content -->
-                <div class="w-2/3 p-10 flex flex-col justify-center">
-                    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">
-                        <i class="fas fa-user-circle text-slate-300 mr-2"></i> Real Life Example: Prof. Hari
-                    </h3>
-
-                    <div class="space-y-6">
-                        <div
-                            class="flex justify-between items-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-bold">Invested (20 Yrs)</p>
-                                <p class="text-xl font-bold text-slate-700">₹10 Lakhs</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-xs text-slate-500 uppercase font-bold">Real Value Today</p>
-                                <p class="text-2xl font-extrabold text-red-600">₹9.8 Lakhs ❌</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-3 text-slate-600 text-sm leading-relaxed">
-                            <p><strong class="text-slate-900">The Problem:</strong> Although his nominal portfolio looks
-                                like ₹32L, inflation has eaten everything.</p>
-                            <p>When his child's education costs rose to ₹15L, he had to <strong
-                                    class="text-red-600">borrow money</strong> because his corpus didn't grow enough to
-                                cover it.</p>
-                            <p class="italic text-slate-400">"He prioritized guaranteed returns, but got guaranteed
-                                stagnation."</p>
-                        </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Monthly Investment</span>
+                        <span class="text-lg font-bold text-slate-700">₹5,000</span>
                     </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Duration</span>
+                        <span class="text-lg font-bold text-slate-700">15 Years <span
+                                class="text-[10px] text-slate-400 font-normal">(Stops at 40)</span></span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Total Invested</span>
+                        <span class="text-lg font-bold text-slate-700">₹9 Lakhs</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 bg-teal-50 rounded-xl p-3 text-center border border-teal-100">
+                    <p class="text-xs text-teal-600 font-bold uppercase tracking-widest mb-0">Result at Age 60</p>
+                    <p class="text-4xl font-black text-teal-600">₹2.6 Cr</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Modal B -->
-    <div id="modal-B"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-        <div
-            class="bg-white w-[1000px] rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300 overflow-hidden relative">
-            <button onclick="closeModal('B')"
-                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 z-10 p-2">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
+            <!-- VS Badge -->
+            <div
+                class="bg-slate-200 rounded-full p-3 font-black text-slate-500 flex items-center justify-center shadow-inner z-10 w-12 h-12 -mx-6 border-4 border-white text-sm">
+                VS
+            </div>
 
-            <div class="flex h-[600px]">
-                <!-- Sidebar -->
-                <div class="w-1/3 bg-yellow-50 p-10 border-r border-yellow-100 flex flex-col justify-between">
-                    <div>
-                        <div
-                            class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mb-6">
-                            <i class="fas fa-building text-xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-extrabold text-slate-800 mb-2">Category B</h2>
-                        <p class="text-yellow-600 font-bold text-lg mb-6">Illiquid & High Effort</p>
+            <!-- Rahul (Loser): Compacted internals -->
+            <div
+                class="w-1/2 bg-white rounded-3xl shadow-lg border-t-8 border-orange-500 p-5 relative overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 opacity-90">
+                <!-- Badge -->
+                <div
+                    class="absolute top-0 right-0 bg-orange-100 text-orange-800 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                    Late Bloomer
+                </div>
 
-                        <div class="space-y-4">
-                            <div class="flex justify-between text-sm border-b border-yellow-100 pb-2">
-                                <span class="text-slate-600">Net Return</span>
-                                <span class="font-bold text-slate-800">~7% (After Costs)</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-yellow-100 pb-2">
-                                <span class="text-slate-600">Liquidity</span>
-                                <span class="font-bold text-red-500">ZERO (Months to sell)</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-yellow-100 pb-2">
-                                <span class="text-slate-600">Hassle Factor</span>
-                                <span class="font-bold text-red-500">High (Tenants/Maint)</span>
-                            </div>
-                        </div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-2xl text-orange-600">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border border-yellow-100 shadow-sm text-center">
-                        <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest">Verdict</span>
-                        <p class="font-bold text-yellow-700 text-lg mt-1">Capital Locked & Modest Growth</p>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">Rahul</h2>
+                        <p class="text-slate-500 font-medium text-sm">Starts at Age 35</p>
                     </div>
                 </div>
 
-                <!-- Main Content -->
-                <div class="w-2/3 p-10 flex flex-col justify-center">
-                    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">
-                        <i class="fas fa-user-circle text-slate-300 mr-2"></i> Real Life Example: Prof. Meera
-                    </h3>
-
-                    <div class="space-y-6">
-                        <div
-                            class="flex justify-between items-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-bold">Invested (20 Yrs)</p>
-                                <p class="text-xl font-bold text-slate-700">₹10 Lakhs</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-xs text-slate-500 uppercase font-bold">Real Value Today</p>
-                                <p class="text-2xl font-extrabold text-yellow-600">₹11.5 Lakhs ⚠️</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-3 text-slate-600 text-sm leading-relaxed">
-                            <p><strong class="text-slate-900">The Illusion:</strong> Property price doubled, but
-                                maintenance, vacancies, and transaction costs ate the profits.</p>
-                            <p>When she needed emergency funds, she was <strong class="text-red-500">stuck</strong>.
-                                Selling took 6 months. She missed the opportunity to grow it to ₹1 Cr in Equity.</p>
-                            <p class="italic text-slate-400">"Rich on paper, poor in liquidity."</p>
-                        </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Monthly Investment</span>
+                        <span class="text-lg font-bold text-slate-700">₹10,000 <span
+                                class="text-[10px] text-red-500 font-bold">(Double!)</span></span>
                     </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Duration</span>
+                        <span class="text-lg font-bold text-slate-700">25 Years <span
+                                class="text-[10px] text-slate-400 font-normal">(Until 60)</span></span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-1">
+                        <span class="text-slate-500 font-medium text-sm">Total Invested</span>
+                        <span class="text-lg font-bold text-slate-700">₹30 Lakhs <span
+                                class="text-[10px] text-red-500 font-bold">(3x More!)</span></span>
+                    </div>
+                </div>
+
+                <div class="mt-4 bg-orange-50 rounded-xl p-3 text-center border border-orange-100">
+                    <p class="text-xs text-orange-600 font-bold uppercase tracking-widest mb-0">Result at Age 60</p>
+                    <p class="text-4xl font-black text-orange-500">₹1.9 Cr</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Modal C -->
-    <div id="modal-C"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-        <div
-            class="bg-white w-[1000px] rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300 overflow-hidden relative">
-            <button onclick="closeModal('C')"
-                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 z-10 p-2">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
+        </main>
 
-            <div class="flex h-[600px]">
-                <!-- Sidebar -->
-                <div class="w-1/3 bg-emerald-50 p-10 border-r border-emerald-100 flex flex-col justify-between">
-                    <div>
-                        <div
-                            class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-6">
-                            <i class="fas fa-chart-line text-xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-extrabold text-slate-800 mb-2">Category C</h2>
-                        <p class="text-emerald-600 font-bold text-lg mb-6">Wealth & Freedom</p>
-
-                        <div class="space-y-4">
-                            <div class="flex justify-between text-sm border-b border-emerald-100 pb-2">
-                                <span class="text-slate-600">Blended Return</span>
-                                <span class="font-bold text-slate-800">~12% Nominal</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-emerald-100 pb-2">
-                                <span class="text-slate-600">Real Growth</span>
-                                <span class="font-bold text-emerald-600">4x Growth (Post Tax)</span>
-                            </div>
-                            <div class="flex justify-between text-sm border-b border-emerald-100 pb-2">
-                                <span class="text-slate-600">Liquidity</span>
-                                <span class="font-bold text-emerald-600">100% Anytime</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-emerald-500 p-4 rounded-xl border border-emerald-600 shadow-md text-center">
-                        <span class="text-xs font-bold text-emerald-100 uppercase tracking-widest">Verdict</span>
-                        <p class="font-bold text-white text-lg mt-1">Real Wealth + Peace</p>
-                    </div>
+        <!-- Key Lesson Footer: Compacted padding and font sizes -->
+        <footer class="px-16 pb-6 pt-2">
+            <div
+                class="bg-slate-900 text-white rounded-2xl p-5 flex justify-between items-center shadow-2xl relative overflow-hidden">
+                <!-- Decorative Glow -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full blur-3xl opacity-20 -mr-16 -mt-16">
                 </div>
 
-                <!-- Main Content -->
-                <div class="w-2/3 p-10 flex flex-col justify-center">
-                    <h3 class="text-xl font-bold text-slate-800 mb-6 border-b border-slate-100 pb-4">
-                        <i class="fas fa-user-circle text-slate-300 mr-2"></i> Real Life Example: Prof. Ravi
+                <div class="relative z-10 w-3/4">
+                    <h3 class="text-xl font-bold mb-1 text-teal-400"><i class="fas fa-lightbulb mr-2"></i>The Key Lesson
                     </h3>
-
-                    <div class="space-y-6">
-                        <div
-                            class="flex justify-between items-center bg-slate-50 p-4 rounded-xl border border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase font-bold">Invested (20 Yrs)</p>
-                                <p class="text-xl font-bold text-slate-700">₹10 Lakhs</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-xs text-slate-500 uppercase font-bold">Real Value Today</p>
-                                <p class="text-2xl font-extrabold text-emerald-600">₹42 Lakhs ✅</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-3 text-slate-600 text-sm leading-relaxed">
-                            <p><strong class="text-slate-900">The Outcome:</strong> His SIPs compounded silently. When
-                                his child's marriage came up, the fund was ready.</p>
-                            <p>For retirement, he has <strong class="text-emerald-600">₹1.4 Crores</strong>. He beat
-                                inflation, beat taxes, and never had to deal with tenants or lock-in periods.</p>
-                            <p class="italic text-slate-400">"Money worked for him, while he slept."</p>
-                        </div>
-                    </div>
+                    <p class="text-slate-300 text-base">Time is more powerful than money. <span
+                            class="text-white font-bold decoration-teal-500 underline decoration-2">The earlier you
+                            start, the less you have to pay.</span></p>
+                </div>
+                <!-- ROI Badge -->
+                <div class="relative z-10 text-right">
+                    <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Aarav's Advantage</p>
+                    <p class="text-2xl font-black text-white">+₹70 Lakhs</p>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 
-    <!-- Logic -->
     <script>
-        function openModal(id) {
-            const modal = document.getElementById('modal-' + id);
-            const content = modal.querySelector('div'); // The white container
-
-            modal.classList.remove('hidden');
-            // Small delay to allow display:block to apply before transition
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                content.classList.remove('scale-95');
-                content.classList.add('scale-100');
-            }, 10);
-        }
-
-        function closeModal(id) {
-            const modal = document.getElementById('modal-' + id);
-            const content = modal.querySelector('div');
-
-            modal.classList.add('opacity-0');
-            content.classList.remove('scale-100');
-            content.classList.add('scale-95');
-
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Close on clicking outside
-        ['A', 'B', 'C'].forEach(id => {
-            const modal = document.getElementById('modal-' + id);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal(id);
-            });
-        });
-
-        // Theme Toggle Listener (Existing)
         window.addEventListener('message', (event) => {
             if (event.data.type === 'theme-update') {
                 const { isDark, css } = event.data;

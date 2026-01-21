@@ -1,94 +1,107 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 3 - Landscape</title>
+    <title>Slide 4 - Investment Types</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Montserrat', sans-serif;
         }
     </style>
+<script src='../../js/capture_helper.js'></script>
 </head>
 
 <body
-    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col items-center justify-center">
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-14">
 
-    <!-- Header -->
-    <div class="text-center mb-16 relative z-10">
-        <h1 class="text-5xl font-extrabold text-slate-800 mb-4">The Investment Spectrum</h1>
-        <p class="text-xl text-slate-500">Every asset class plays a different role in your portfolio.</p>
+    <!-- Background Elements -->
+    <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-60">
     </div>
 
-    <!-- Spectrum Visual -->
-    <div class="w-full max-w-6xl relative z-10 px-8">
+    <!-- Content Container -->
+    <div class="z-10 w-full max-w-7xl mx-auto flex flex-col h-full justify-center">
 
-        <!-- Spectrum Gradient Line & Labels -->
-        <div class="mb-12 relative px-12">
-            <div
-                class="h-3 w-full bg-gradient-to-r from-blue-300 via-yellow-300 to-emerald-400 rounded-full shadow-inner">
-            </div>
-
-            <!-- Axis Labels -->
-            <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-slate-400 mt-4">
-                <span>Low Risk / Safety</span>
-                <span>Active / Growth</span>
-                <span>High Risk / Wealth</span>
-            </div>
+        <!-- Headline -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-slate-800 mb-4">
+                Pick Your <span class="text-blue-600">Wealth Vehicle</span>.
+            </h1>
+            <p class="text-xl text-slate-500">
+                Fast lane or slow lane? The choice determines your destination.
+            </p>
         </div>
 
-        <!-- Cards Container -->
-        <div class="grid grid-cols-4 gap-8">
+        <!-- 3 Columns Grid -->
+        <div class="grid grid-cols-3 gap-8">
 
-            <!-- FDs/Insurance -->
+            <!-- 1. FD -->
             <div
-                class="bg-white p-6 rounded-2xl border-t-4 border-blue-400 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
+                class="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
                 <div
-                    class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-4 text-blue-500 shadow-sm">
-                    <i class="fas fa-shield-alt text-2xl"></i>
+                    class="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-slate-500 text-4xl">
+                    <i class="fas fa-lock"></i>
                 </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">FDs & Insurance</h3>
-                <p class="text-sm text-slate-500 leading-snug">Capital Protection & Guaranteed Returns.</p>
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Fixed Deposits</h3>
+                <p class="text-blue-600 font-semibold uppercase tracking-wider text-sm mb-4">The "Safe" Path</p>
+                <div class="bg-slate-50 w-full py-3 rounded-lg mb-4">
+                    <p class="text-slate-600 font-medium">Promise: Safety</p>
+                </div>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Guaranteed Returns</li>
+                    <li><i class="fas fa-times text-red-500 mr-2"></i> Low Growth</li>
+                </ul>
             </div>
 
-            <!-- Real Estate -->
+            <!-- 2. Real Estate -->
             <div
-                class="bg-white p-6 rounded-2xl border-t-4 border-yellow-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
+                class="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
                 <div
-                    class="w-14 h-14 bg-yellow-50 rounded-full flex items-center justify-center mb-4 text-yellow-500 shadow-sm">
-                    <i class="fas fa-building text-2xl"></i>
+                    class="w-20 h-20 bg-amber-50 rounded-full flex items-center justify-center mb-6 text-amber-500 text-4xl">
+                    <i class="fas fa-home"></i>
                 </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">Real Estate</h3>
-                <p class="text-sm text-slate-500 leading-snug">Physical Asset Ownership & Rental Yields.</p>
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Real Estate</h3>
+                <p class="text-amber-600 font-semibold uppercase tracking-wider text-sm mb-4">The "Tangible" Path</p>
+                <div class="bg-amber-50 w-full py-3 rounded-lg mb-4">
+                    <p class="text-slate-600 font-medium">Promise: Income</p>
+                </div>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Physical Asset</li>
+                    <li><i class="fas fa-times text-red-500 mr-2"></i> High Maintenance</li>
+                </ul>
             </div>
 
-            <!-- Mutual Funds -->
+            <!-- 3. Equity -->
             <div
-                class="bg-white p-6 rounded-2xl border-t-4 border-teal-500 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full relative overflow-hidden">
+                class="bg-white rounded-2xl shadow-lg border-2 border-emerald-500 p-8 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                    WINNER</div>
                 <div
-                    class="absolute top-0 right-0 bg-teal-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
-                    POPULAR</div>
-                <div
-                    class="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-4 text-teal-500 shadow-sm">
-                    <i class="fas fa-chart-pie text-2xl"></i>
+                    class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mb-6 text-emerald-600 text-4xl">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">Mutual Funds</h3>
-                <p class="text-sm text-slate-500 leading-snug">Professional Management & Diversification.</p>
-            </div>
-
-            <!-- Equity -->
-            <div
-                class="bg-white p-6 rounded-2xl border-t-4 border-emerald-600 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col items-center text-center h-full">
-                <div
-                    class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-4 text-emerald-600 shadow-sm">
-                    <i class="fas fa-rocket text-2xl"></i>
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Equity</h3>
+                <p class="text-emerald-600 font-semibold uppercase tracking-wider text-sm mb-4">The "Growth" Path</p>
+                <div class="bg-emerald-50 w-full py-3 rounded-lg mb-4">
+                    <p class="text-emerald-800 font-medium">Promise: Wealth</p>
                 </div>
-                <h3 class="font-bold text-slate-800 text-lg mb-2">Direct Equity</h3>
-                <p class="text-sm text-slate-500 leading-snug">Highest Alpha Potential & Wealth Creation.</p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> High Returns</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i> Inflation Beating</li>
+                </ul>
             </div>
 
         </div>

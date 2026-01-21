@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 6 - Comparison</title>
+    <title>Slide 11 - Market Performance</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <style>
         body {
@@ -17,123 +18,181 @@
 
         h1,
         h2,
-        th {
+        h3 {
             font-family: 'Montserrat', sans-serif;
         }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        /* Slate-50 */
     </style>
+    <script src='../../js/capture_helper.js'></script>
 </head>
 
 <body
-    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col items-center justify-center p-8">
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-14">
 
-    <!-- Header -->
-    <div class="text-center mb-6">
-        <h1 class="text-4xl font-bold mb-2 text-slate-900">Asset Class Comparison</h1>
-        <p class="text-slate-500">Understanding the right fit for your portfolio</p>
+    <!-- Background Elements -->
+    <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-red-50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 opacity-60">
     </div>
 
-    <!-- Table Container -->
-    <div class="w-full max-w-6xl bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xl mb-4">
-        <table class="w-full text-left border-collapse">
-            <thead>
-                <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider border-b border-slate-200">
-                    <th class="p-4 pl-6 font-bold w-1/5">Feature</th>
-                    <th class="p-4 text-slate-500 w-1/5">Insurance / FDs</th>
-                    <th class="p-4 text-slate-500 w-1/5">Real Estate</th>
-                    <th class="p-4 text-teal-600 font-bold bg-teal-50 w-1/5 border-l border-teal-100">Mutual Funds</th>
-                    <th class="p-4 text-emerald-600 font-bold bg-emerald-50 w-1/5 border-l border-emerald-100">Stocks
-                    </th>
-                </tr>
-            </thead>
-            <tbody class="text-sm font-medium">
-                <!-- RETURNS -->
-                <!-- RETURNS -->
-                <tr class="border-b border-slate-100">
-                    <td class="p-4 pl-6 text-slate-500 font-bold text-xs uppercase">Historical Returns<br><span
-                            class="font-normal text-[10px] lowercase text-slate-400">(Past 5 Yrs, Post-Tax)</span></td>
-                    <td class="p-4">6-7%<br><span class="text-xs text-slate-400">(Fixed)</span></td>
-                    <td class="p-4 text-sm">Rental + Appr.<br><span class="text-xs text-slate-400">(Varies)</span></td>
-                    <td class="p-4 bg-teal-50/50 text-slate-900 font-bold border-l border-teal-100">10-12%*<br><span
-                            class="text-xs font-normal text-slate-500">(Market-Linked)</span></td>
-                    <td class="p-4 bg-emerald-50/50 text-emerald-700 font-bold border-l border-emerald-100">
-                        12-14%*<br><span class="text-xs font-normal text-emerald-600">(Market-Linked)</span></td>
-                </tr>
-                <!-- INFLATION BEATING -->
-                <tr class="border-b border-slate-100">
-                    <td class="p-4 pl-6 text-slate-500">Inflation Protection</td>
-                    <td class="p-4 text-red-500">Low</td>
-                    <td class="p-4 text-orange-500">Moderate</td>
-                    <td class="p-4 bg-teal-50/50 text-teal-700 border-l border-teal-100">Good Potential</td>
-                    <td class="p-4 bg-emerald-50/50 text-emerald-700 border-l border-emerald-100">High Potential</td>
-                </tr>
-                <!-- LIQUIDITY -->
-                <tr class="border-b border-slate-100">
-                    <td class="p-4 pl-6 text-slate-500">Liquidity</td>
-                    <td class="p-4 text-orange-500">Moderate (Lock-ins)</td>
-                    <td class="p-4 text-red-500">Low</td>
-                    <td class="p-4 bg-teal-50/50 text-teal-600 border-l border-teal-100">High</td>
-                    <td class="p-4 bg-emerald-50/50 text-emerald-600 border-l border-emerald-100">High</td>
-                </tr>
-                <!-- STARTING CAPITAL -->
-                <tr class="border-b border-slate-100">
-                    <td class="p-4 pl-6 text-slate-500">Min. Investment</td>
-                    <td class="p-4">Varied</td>
-                    <td class="p-4 text-red-500">Very High</td>
-                    <td class="p-4 bg-teal-50/50 font-bold text-slate-900 border-l border-teal-100">Low (SIPs)</td>
-                    <td class="p-4 bg-emerald-50/50 font-bold text-slate-900 border-l border-emerald-100">Moderate</td>
-                </tr>
-                <!-- CONTROL -->
-                <tr class="border-b border-slate-100">
-                    <td class="p-4 pl-6 text-slate-500">Transparency</td>
-                    <td class="p-4 text-slate-500">Low/Moderate</td>
-                    <td class="p-4 text-slate-500">Low</td>
-                    <td class="p-4 bg-teal-50/50 text-slate-900 border-l border-teal-100">High (NAV Daily)</td>
-                    <td class="p-4 bg-emerald-50/50 text-emerald-700 font-bold border-l border-emerald-100">High
-                        (Real-time)</td>
-                </tr>
-                <!-- VERDICT -->
-                <tr>
-                    <td class="p-4 pl-6 text-slate-500 font-bold">Goal Suitability</td>
-                    <td class="p-4 text-xs text-slate-400">Emergency Corpus</td>
-                    <td class="p-4 text-xs text-slate-400">Physical Asset</td>
-                    <td class="p-4 bg-teal-50/50 text-teal-800 font-bold border-l border-teal-100">Wealth Creation</td>
-                    <td class="p-4 bg-emerald-50/50 text-emerald-800 font-bold border-l border-emerald-100">Alpha
-                        Generation</td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- Content Container -->
+    <div class="z-10 w-full max-w-7xl mx-auto flex h-full items-center">
 
-        <!-- SEBI Disclaimer -->
-        <div class="bg-gray-50 p-3 text-[10px] text-gray-500 text-center border-t border-gray-100">
-            <strong>Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the
-            related documents carefully before investing. Registration granted by SEBI, membership of BASL (in case of
-            IAs) and certification from NISM in no way guarantee performance of the intermediary or provide any
-            assurance of returns to investors. The securities quoted are for illustration only and are not
-            recommendatory.
-        </div>
-    </div>
-
-    <!-- Closing Statement -->
-    <div class="mt-4 flex items-center justify-between w-full max-w-6xl px-4">
-        <p class="text-slate-500 text-sm max-w-2xl">
-            Choose the asset class that aligns with your risk appetite and financial goals.
-        </p>
-        <a href="https://calendly.com/manideepak-factorlab/20min?" target="_blank" class="no-underline">
-            <div
-                class="bg-gradient-to-r from-teal-600 to-emerald-600 px-6 py-2 rounded-lg shadow-lg flex items-center cursor-pointer hover:shadow-xl transition-shadow">
-                <div class="mr-6">
-                    <p class="font-bold text-white text-sm">Contact factorlab Team</p>
+        <!-- Left: Data & Stats -->
+        <div class="w-1/2 pr-12 flex flex-col justify-center h-full">
+            <header class="mb-8">
+                <div class="flex items-center space-x-3 mb-2">
+                    <div class="h-1 w-10 bg-red-500 rounded-full"></div>
+                    <p class="text-xs font-bold tracking-widest text-red-600 uppercase">The Ugly Truth</p>
                 </div>
-                <i class="fas fa-arrow-right text-white"></i>
+                <h1 class="text-5xl font-extrabold text-slate-800 leading-tight">
+                    Most Funds <span class="text-red-500 underline decoration-red-200 underline-offset-4">FAIL</span>.
+                    <br>
+                    We Find the <span class="text-emerald-600">Winners</span>.
+                </h1>
+            </header>
+
+            <!-- Key Numbers Row -->
+            <div
+                class="flex justify-between items-center mb-8 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                <div class="text-center px-4 border-r border-slate-100">
+                    <p class="text-3xl font-black text-slate-700">53</p>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">AMCs</p>
+                </div>
+                <div class="text-center px-4 border-r border-slate-100">
+                    <p class="text-3xl font-black text-slate-700">3,600+</p>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Schemes</p>
+                </div>
+                <div class="text-center px-4">
+                    <p class="text-3xl font-black text-red-500">74%</p>
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Underperform</p>
+                </div>
             </div>
-        </a>
+
+            <!-- Detailed Stats -->
+            <div class="space-y-4">
+                <!-- Stat 1 -->
+                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-500">
+                    <div
+                        class="w-10 h-10 bg-red-50 rounded flex items-center justify-center text-red-500 mr-4 shrink-0">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">Large-cap Funds</h3>
+                        <p class="text-sm text-slate-600"><strong class="text-red-600">73%</strong> failed to beat Nifty
+                            50 over 10 years.</p>
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex items-start bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-500">
+                    <div
+                        class="w-10 h-10 bg-red-50 rounded flex items-center justify-center text-red-500 mr-4 shrink-0">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">Mid-cap Funds</h3>
+                        <p class="text-sm text-slate-600"><strong class="text-red-600">82%</strong> failed to beat Nifty
+                            Midcap 150.</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3 (Cost) -->
+                <div class="flex items-start bg-slate-100 p-4 rounded-xl border border-slate-200">
+                    <div
+                        class="w-10 h-10 bg-slate-200 rounded flex items-center justify-center text-slate-600 mr-4 shrink-0">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">The Cost of Wrong Choice</h3>
+                        <p class="text-sm text-slate-600">Avg investor loses <strong
+                                class="text-slate-900 border-b border-slate-300">₹7-10 Lakhs</strong> per ₹1M invested.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="w-1/2 flex flex-col items-center justify-center h-full pl-8">
+
+            <div class="bg-white p-8 rounded-3xl shadow-xl w-full border border-slate-100 relative">
+                <h3 class="text-center font-bold text-slate-700 mb-6 uppercase tracking-wider text-sm">Active Fund
+                    Performance</h3>
+
+                <div class="h-64 relative">
+                    <canvas id="performanceChart"></canvas>
+                    <!-- Center Metric -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none pb-4">
+                        <span class="text-4xl font-black text-emerald-500">26%</span>
+                        <span class="text-[10px] text-slate-400 font-bold uppercase">Winners</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-slate-900 text-white p-5 rounded-2xl flex items-center justify-between shadow-lg">
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Our Expertise</p>
+                        <p class="text-lg font-bold">We identify the <span class="text-emerald-400 text-2xl">26%</span>.
+                        </p>
+                    </div>
+                    <div
+                        class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white shadow-lg animate-pulse">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <!-- Source Footnote -->
+                <div class="mt-4 text-center">
+                    <p class="text-[10px] text-slate-400">Source: SPIVA India Scorecard / S&P Global</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
+    <!-- Chart Logic -->
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Winners', 'Underperformers'],
+                datasets: [{
+                    data: [26, 74],
+                    backgroundColor: [
+                        '#10b981', // Emerald (Winners)
+                        '#ef4444'  // Red (Losers)
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20,
+                            font: { family: "'Inter', sans-serif" }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                        padding: 12,
+                        callbacks: {
+                            label: function (context) {
+                                return ' ' + context.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 
     <!-- Theme Listener -->
     <script>

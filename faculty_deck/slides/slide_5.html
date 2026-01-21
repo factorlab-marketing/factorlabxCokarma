@@ -1,137 +1,159 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide 2 - Traditional Savings</title>
+    <title>Slide 5 - Real Estate Pitfalls</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Montserrat', sans-serif;
         }
+
+        .cracked-house {
+            position: relative;
+        }
+
+        .cracked-house::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 2px;
+            height: 60%;
+            background: #ef4444;
+            transform: rotate(15deg);
+            box-shadow: 2px 0 0 white;
+        }
     </style>
+<script src='../../js/capture_helper.js'></script>
 </head>
 
-<body class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative">
+<body
+    class="bg-slate-50 text-slate-900 w-[1280px] h-[720px] overflow-hidden relative flex flex-col justify-center p-14">
 
-    <!-- Background Decoration -->
-    <div
-        class="absolute top-0 right-0 w-[600px] h-[600px] bg-slate-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 z-0 opacity-10"
+        style="background-image: repeating-linear-gradient(45deg, #cbd5e1 0, #cbd5e1 1px, transparent 0, transparent 50%); background-size: 20px 20px;">
     </div>
 
-    <div class="px-16 py-12 h-full flex flex-col justify-center relative z-10">
+    <!-- Content Container -->
+    <div class="z-10 w-full max-w-7xl mx-auto flex h-full items-center">
 
-        <!-- Header -->
-        <div class="mb-10 text-center">
-            <h1 class="text-5xl font-extrabold text-slate-800">
-                Traditional Instruments
+        <!-- Left: Pitfalls Info -->
+        <div class="w-1/2 pr-12">
+            <h1 class="text-5xl font-extrabold text-slate-800 mb-6 leading-tight">
+                Real Estate: <br>
+                <span class="text-red-600">The "Dream" or The "Trap"?</span>
             </h1>
-            <h2 class="text-2xl font-semibold text-slate-500 mt-2">Insurance & Fixed Deposits</h2>
-        </div>
 
-        <!-- Two Column Layout: FDs and Insurance -->
-        <div class="grid grid-cols-2 gap-12">
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed font-bold">
+                It looks solid, but the hidden costs <span class="text-red-500">break</span> the returns.
+            </p>
 
-            <!-- Fixed Deposits -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-600">
-                        <i class="fas fa-piggy-bank text-xl"></i>
+            <!-- 3 Pitfalls Icons -->
+            <!-- 3 Hard Data Facts -->
+            <div class="space-y-6">
+                <!-- Fact 1: Yield vs Inflation -->
+                <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                    <div
+                        class="w-14 h-14 bg-red-100 rounded-lg flex flex-col items-center justify-center mr-4 shrink-0 text-red-600">
+                        <span class="text-xs font-bold uppercase">Rent</span>
+                        <span class="text-lg font-black">2%</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Fixed Deposits</h3>
+                    <div>
+                        <h3 class="font-bold text-slate-800">The Yield Trap</h3>
+                        <p class="text-sm text-slate-500">Rental Yield (2%) is <strong>lower</strong> than Inflation
+                            (6%). You are <span class="text-red-500 font-bold">losing purchasing power</span> every
+                            year.</p>
+                    </div>
                 </div>
 
-                <ul class="space-y-4 text-slate-600">
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-green-500 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Concept:</strong> Lending money to a bank for a fixed tenure.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Primary Benefit:</strong> Capital protection and guaranteed (nominal)
-                            returns.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-chart-pie text-slate-400 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Returns:</strong> Fixed interest rates (Taxable).</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-info-circle text-orange-400 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Consideration:</strong> Post-tax returns may struggle to beat high
-                            inflation.</span>
-                    </li>
-                </ul>
-                <div class="mt-6 relative h-32 w-full">
-                    <canvas id="fdChart"></canvas>
+                <!-- Fact 2: EMI Interest -->
+                <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                    <div
+                        class="w-14 h-14 bg-amber-100 rounded-lg flex flex-col items-center justify-center mr-4 shrink-0 text-amber-600">
+                        <span class="text-xs font-bold uppercase">Loan</span>
+                        <span class="text-lg font-black">8.5%</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">The Negative Carry</h3>
+                        <p class="text-sm text-slate-500">You pay bank <strong>9% interest</strong> to earn <strong>2%
+                                rent</strong>. You differ the difference from your pocket for years.</p>
+                    </div>
+                </div>
+
+                <!-- Fact 3: Historical CAGR -->
+                <div class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                    <div
+                        class="w-14 h-14 bg-blue-100 rounded-lg flex flex-col items-center justify-center mr-4 shrink-0 text-blue-600">
+                        <span class="text-xs font-bold uppercase">CAGR</span>
+                        <span class="text-lg font-black">5.4%</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800">The Growth Reality</h3>
+                        <p class="text-sm text-slate-500">Pan-India Housing Index (RBI) 10Y CAGR is ~5.4%. Equity is
+                            ~12-15%. <span class="font-bold text-slate-700">Math wins.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Map/House Visual -->
+        <div class="w-1/2 flex flex-col items-center justify-center relative">
+
+            <!-- Map Card Idea -->
+            <div
+                class="bg-white p-6 rounded-3xl shadow-2xl border-2 border-slate-100 relative w-[400px] transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <!-- Map Header -->
+                <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
+                    <div class="flex items-center text-slate-600 font-bold">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Banjara Hills
+                    </div>
+                    <span class="text-xs font-mono bg-slate-100 px-2 py-1 rounded">HYD</span>
+                </div>
+
+                <!-- House Graphic -->
+                <div
+                    class="bg-slate-50 rounded-xl h-48 flex items-center justify-center mb-4 relative overflow-hidden cracked-house group">
+                    <i class="fas fa-home text-9xl text-slate-300 group-hover:text-slate-400 transition-colors"></i>
+                    <!-- Crack Visual via CSS pseudo-element in header -->
+                </div>
+
+                <!-- Returns Reality -->
+                <div class="text-center">
+                    <p class="text-slate-400 text-sm mb-1 uppercase tracking-wider">The Reality</p>
+                    <div class="bg-red-50 border border-red-100 rounded-lg p-3">
+                        <p class="text-red-700 font-bold text-lg">
+                            <i class="fas fa-arrow-down mr-1"></i>
+                            20% Returns Eaten
+                        </p>
+                        <p class="text-xs text-red-500">by Taxes, Maintenance & Inflation</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Insurance -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div class="flex items-center mb-6">
-                    <div
-                        class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 text-purple-600">
-                        <i class="fas fa-umbrella text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800">Traditional Insurance</h3>
-                </div>
-
-                <ul class="space-y-4 text-slate-600">
-                    <li class="flex items-start">
-                        <i class="fas fa-check text-green-500 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Concept:</strong> Risk management tool for life/health coverage.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-file-contract text-purple-500 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Investment Policies:</strong> Endowment/Moneyback policies combine insurance +
-                            savings.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-lock text-slate-400 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Stability:</strong> Long-term commitments with surrender clauses.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-info-circle text-orange-400 mt-1 mr-3 text-xs"></i>
-                        <span><strong>Consideration:</strong> Insurance and Investment goals are often best kept
-                            separate for efficiency.</span>
-                    </li>
-                </ul>
+            <!-- Speech Bubble -->
+            <div
+                class="absolute -top-4 right-10 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-bold transform -rotate-3 z-20">
+                It's a trap!
             </div>
 
         </div>
 
     </div>
 
-    <!-- FD Chart Script -->
-    <script>
-        const ctx = document.getElementById('fdChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Nominal Return', 'Real Return (Post-Tax & Inflation)'],
-                datasets: [{
-                    label: 'Return %',
-                    data: [7.0, -1.6],
-                    backgroundColor: ['#3b82f6', '#ef4444'],
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { grid: { display: false } },
-                    y: { grid: { display: false }, ticks: { font: { size: 10 } } }
-                }
-            }
-        });
-    </script>
     <!-- Theme Listener -->
     <script>
         window.addEventListener('message', (event) => {

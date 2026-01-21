@@ -454,7 +454,12 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- PDF Tools Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Custom PDF Generator -->
+    <script src="../js/pdf_generator.js"></script>
+
     <script>
         // Configuration
         const TOTAL_SLIDES = 12;
@@ -639,8 +644,14 @@
 
         // PDF Download Logic
         function downloadPitchDeck() {
-            // Placeholder for now, can implement similar to others if print.html exists
-            alert('PDF Download not yet configured for this deck.');
+            if (window.PDFTools) {
+                // Pass the 'preloadFrameId' iframe as the worker frame.
+                // It is already part of the DOM and has permissions to load slides.
+                const workerFrame = document.getElementById(preloadFrameId);
+                window.PDFTools.generate(TOTAL_SLIDES, 'FactorLab_Faculty_Deck', 'slides/', workerFrame);
+            } else {
+                alert('PDF Tool not loaded correctly.');
+            }
         }
 
         // Event Listeners
