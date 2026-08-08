@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel Companion - Print A4 Landscape PDF</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Print Reset */
+        body {
+            background-color: white !important;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+        
+        .page {
+            width: 297mm !important;  /* A4 Landscape Width */
+            height: 210mm !important; /* A4 Landscape Height */
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            transform: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background-color: #FAF7EE !important;
+            page-break-after: always !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .page:last-child {
+            page-break-after: avoid !important;
+        }
+
+        #print-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+        }
+
+        @media print {
+            #print-container {
+                background: none !important;
+                display: block !important;
+            }
+            .page {
+                background-color: #FAF7EE !important;
+                margin: 0 !important;
+            }
+            #status-overlay {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="print-container"></div>
+
+    <!-- Status indicator -->
+    <div id="status-overlay" style="position: fixed; inset: 0; background: rgba(0,0,0,0.85); color: white; display: flex; align-items: center; justify-content: center; z-index: 9999; font-family: 'Montserrat', sans-serif;">
+        <div style="text-align: center;">
+            <h1 style="font-size: 24px; font-weight: 800; color: var(--accent-red); margin-bottom: 8px;">PREPARING SLIDES FOR PRINT...</h1>
+            <p id="status-text" style="font-size: 14px; opacity: 0.8;">Loading slides...</p>
+        </div>
+    </div>
+
+    <script>
+        const TOTAL_PAGES = 24;
+        
+        async function loadAndPrint() {
+            const container = document.getElementById('print-container');
+            const statusText = document.getElementById('status-text');
+            const statusOverlay = document.getElementById('status-overlay');
+
+            try {
+                for (let i = 1; i <= TOTAL_PAGES; i++) {
+                    statusText.textContent = `Loading Slide ${i} of ${TOTAL_PAGES}...`;
+                    const response = await fetch(`pages/page_${i}.html`);
+                    if (!response.ok) throw new Error(`Failed to load page_${i}.html`);
+                    
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+                    
+                    const pageDiv = document.createElement('div');
+                    pageDiv.className = 'page';
+                    pageDiv.setAttribute('data-page', i);
+                    
+                    const contentWrapper = document.createElement('div');
+                    contentWrapper.className = 'page-content';
+                    contentWrapper.innerHTML = doc.body.querySelector('.page-content').innerHTML;
+                    
+                    pageDiv.appendChild(contentWrapper);
+                    container.appendChild(pageDiv);
+                }
+
+                statusText.textContent = "Finalizing presentation fonts...";
+                await document.fonts.ready;
+                
+                statusOverlay.style.display = 'none';
+                
+                // Trigger print dialog
+                setTimeout(() => {
+                    window.print();
+                }, 500);
+
+            } catch (err) {
+                console.error(err);
+                statusText.innerHTML = `<span style="color: red;">Error: ${err.message}</span>`;
+            }
+        }
+
+        window.addEventListener('load', loadAndPrint);
+    </script>
+</body>
+</html>

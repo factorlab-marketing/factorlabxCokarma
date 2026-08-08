@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>Go-To-Market</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .text-main-color { color: #FFFFFF; }
+        .text-muted-color { color: #94A3B8; }
+        .card-bg { background: #1E293B; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+        
+        body.light-mode {
+            background: #F7F7F6 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-main-color { color: #0D0D0D !important; }
+        body.light-mode .text-muted-color { color: #555555 !important; }
+        body.light-mode .card-bg {
+            background: #FFFFFF !important;
+            border: 1px solid rgba(13, 13, 13, 0.08) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+        }
+        body.light-mode .border-main-color { border-color: rgba(13, 13, 13, 0.1) !important; }
+        body.light-mode .bg-slate-800 { background-color: #E2E8F0 !important; }
+        body.light-mode .text-slate-300 { color: #334155 !important; }
+        body.light-mode .text-slate-400 { color: #475569 !important; }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="slide-container">
+        
+        <div class="animate-up">
+            <span class="text-xs uppercase tracking-widest text-muted-color font-semibold">Slide 10 // Go-To-Market</span>
+            <h2 class="text-3xl font-bold text-main-color mt-2 mb-6">Land in the institution. Expand within it. Compound.</h2>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 items-center flex-1 my-4">
+            <!-- Left: GTM Phases -->
+            <div class="col-span-5 flex flex-col space-y-4">
+                <div class="card-bg p-4 rounded-xl border-l-4 border-blue-500">
+                    <div class="text-xs font-bold text-blue-500 uppercase">Phase 1: Land (0-12 Mo)</div>
+                    <p class="text-[10px] text-main-color mt-1">Target tier-2/3 & autonomous colleges via TPOs. Wedges: 1-day Bootcamps, faculty workshops, free readiness audits.</p>
+                </div>
+                
+                <div class="card-bg p-4 rounded-xl border-l-4 border-gold">
+                    <div class="text-xs font-bold accent-gold uppercase">Phase 2: Expand (12-24 Mo)</div>
+                    <p class="text-[10px] text-main-color mt-1">Multi-department contracts, faculty enablement, student performance dashboards, and formal alumni loops.</p>
+                </div>
+                
+                <div class="card-bg p-4 rounded-xl border border-dashed border-gold bg-gold bg-opacity-5">
+                    <div class="text-xs font-bold text-main-color flex justify-between">
+                        <span>Velocity Metric</span>
+                        <span class="accent-gold">40% / 35%</span>
+                    </div>
+                    <p class="text-[9px] text-muted-color mt-1">Reduction in sales cycles (12 to 7 wks) and acquisition costs (CAC) observed between early and recent deals.</p>
+                </div>
+            </div>
+
+            <!-- Right: Circular Flywheel Loop (CSS render) -->
+            <div class="col-span-7 flex justify-center items-center">
+                <div class="card-bg p-6 rounded-2xl w-full flex flex-col items-center">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-muted-color mb-6">The Campus Acquisition Flywheel</h4>
+                    
+                    <div class="relative w-72 h-72 flex items-center justify-center">
+                        <!-- Connecting circle line -->
+                        <div class="absolute w-56 h-56 rounded-full border-2 border-dashed border-main-color border-opacity-20"></div>
+                        
+                        <div class="absolute -top-4 bg-blue-500 text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">1. Partner Institution</div>
+                        <div class="absolute top-1/4 -right-16 bg-blue-500 text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">2. Free Bootcamp</div>
+                        <div class="absolute bottom-1/4 -right-16 bg-gold text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">3. Accelerator Enroll</div>
+                        <div class="absolute -bottom-4 bg-indigo-500 text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">4. Project Portfolios</div>
+                        <div class="absolute bottom-1/4 -left-12 bg-emerald-500 text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">5. Hires & Outcomes</div>
+                        <div class="absolute top-1/4 -left-12 bg-slate-700 text-white font-bold text-[9px] px-3 py-1.5 rounded-full shadow-md">6. Referrals & trust</div>
+                        
+                        <div class="text-center z-10 bg-white p-4 rounded-full border border-main-color shadow">
+                            <i class="fas fa-sync text-2xl accent-gold animate-spin" style="animation-duration: 10s;"></i>
+                            <span class="block text-[8px] font-extrabold uppercase mt-1">SB Flywheel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span>Distribution</span>
+            <span>To slide 11: "This isn't theoretical — here's where that flywheel stands today."</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

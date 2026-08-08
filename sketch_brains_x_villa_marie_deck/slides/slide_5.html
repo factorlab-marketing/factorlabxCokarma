@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>What Is Data Analytics?</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #3b82f6;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .definition-box {
+            background: #eff6ff;
+            border-left: 8px solid #3b82f6;
+            padding: 30px;
+            font-size: 22px;
+            color: #1e3a8a;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        .grid-arrows {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .conversion-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .arrow {
+            color: #cbd5e1;
+            font-size: 20px;
+        }
+
+        .input {
+            font-weight: 600;
+            color: #64748b;
+            font-size: 20px;
+        }
+
+        .output {
+            font-weight: 800;
+            color: #0B1F3B;
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <div class="mb-8">
+                <h1 class="font-montserrat font-bold text-3xl text-[#0B1F3B]">WHAT IS DATA ANALYTICS?</h1>
+            </div>
+
+            <div class="definition-box">
+                "Turning numbers into decisions."
+            </div>
+
+            <div class="grid-arrows">
+                <div class="conversion-row">
+                    <span class="input">Sales</span>
+                    <i class="fas fa-arrow-right arrow"></i>
+                    <span class="output text-blue-600">Insight</span>
+                </div>
+                <div class="conversion-row">
+                    <span class="input">Expenses</span>
+                    <i class="fas fa-arrow-right arrow"></i>
+                    <span class="output text-red-600">Optimization</span>
+                </div>
+                <div class="conversion-row">
+                    <span class="input">Marketing</span>
+                    <i class="fas fa-arrow-right arrow"></i>
+                    <span class="output text-green-600">Growth</span>
+                </div>
+                <div class="conversion-row">
+                    <span class="input">Data</span>
+                    <i class="fas fa-arrow-right arrow"></i>
+                    <span class="output text-purple-600">Strategy</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

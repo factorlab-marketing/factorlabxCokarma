@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>Scaling Roadmap</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .text-main-color { color: #FFFFFF; }
+        .text-muted-color { color: #94A3B8; }
+        .card-bg { background: #1E293B; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+        
+        body.light-mode {
+            background: #F7F7F6 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-main-color { color: #0D0D0D !important; }
+        body.light-mode .text-muted-color { color: #555555 !important; }
+        body.light-mode .card-bg {
+            background: #FFFFFF !important;
+            border: 1px solid rgba(13, 13, 13, 0.08) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+        }
+        body.light-mode .border-main-color { border-color: rgba(13, 13, 13, 0.1) !important; }
+        body.light-mode .bg-slate-800 { background-color: #E2E8F0 !important; }
+        body.light-mode .text-slate-300 { color: #334155 !important; }
+        body.light-mode .text-slate-400 { color: #475569 !important; }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="slide-container">
+        
+        <div class="animate-up">
+            <span class="text-xs uppercase tracking-widest text-muted-color font-semibold">Slide 13 // Scaling Roadmap</span>
+            <h2 class="text-3xl font-bold text-main-color mt-2 mb-2 font-serif text-center">3-Year Growth Target</h2>
+            <p class="text-[10px] text-center text-red-500 italic mb-6">These are targets based on execution assumptions — not guarantees.</p>
+        </div>
+
+        <!-- 3 Vertical Columns (Year 1, 2, 3) -->
+        <div class="grid grid-cols-3 gap-8 flex-1 my-4">
+            
+            <div class="card-bg p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-blue-500 uppercase tracking-widest">Year 1 // Foundation</span>
+                    <div class="h-0.5 bg-blue-500 w-12 my-3"></div>
+                    
+                    <div class="space-y-4 text-xs text-main-color">
+                        <div><span class="text-muted-color block">Campuses</span> <span class="font-bold text-lg">10 Institutions</span></div>
+                        <div><span class="text-muted-color block">Students</span> <span class="font-bold text-lg">2,000 Students</span></div>
+                        <div><span class="text-muted-color block">Revenue Target</span> <span class="font-bold text-lg">₹1.5 – 2.0 Cr</span></div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-main-color pt-4 mt-6">
+                    <span class="text-[9px] uppercase font-bold text-muted-color">Milestone goal</span>
+                    <p class="text-[10px] text-main-color mt-1">Product-market fit; 70%+ institutional renewal rate targeted.</p>
+                </div>
+            </div>
+
+            <div class="card-bg p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-indigo-500 uppercase tracking-widest">Year 2 // Expansion</span>
+                    <div class="h-0.5 bg-indigo-500 w-12 my-3"></div>
+                    
+                    <div class="space-y-4 text-xs text-main-color">
+                        <div><span class="text-muted-color block">Campuses</span> <span class="font-bold text-lg">40 Institutions</span></div>
+                        <div><span class="text-muted-color block">Students</span> <span class="font-bold text-lg">8,000 Students</span></div>
+                        <div><span class="text-muted-color block">Revenue Target</span> <span class="font-bold text-lg">₹8.0 – 10.0 Cr</span></div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-main-color pt-4 mt-6">
+                    <span class="text-[9px] uppercase font-bold text-muted-color">Milestone goal</span>
+                    <p class="text-[10px] text-main-color mt-1">Regional expansion, South & West India; launch institutional subscription platform.</p>
+                </div>
+            </div>
+
+            <div class="card-bg p-6 rounded-2xl flex flex-col justify-between border-2 border-gold">
+                <div>
+                    <span class="text-xs font-bold accent-gold uppercase tracking-widest">Year 3 // Scale</span>
+                    <div class="h-0.5 bg-gold w-12 my-3"></div>
+                    
+                    <div class="space-y-4 text-xs text-main-color">
+                        <div><span class="text-muted-color block">Campuses</span> <span class="font-bold text-lg">100 Institutions</span></div>
+                        <div><span class="text-muted-color block">Students</span> <span class="font-bold text-lg">25,000 Students</span></div>
+                        <div><span class="text-muted-color block">Revenue Target</span> <span class="font-bold text-lg">₹25.0 – 30.0 Cr</span></div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gold border-opacity-30 pt-4 mt-6">
+                    <span class="text-[9px] uppercase font-bold accent-gold">Milestone goal</span>
+                    <p class="text-[10px] text-main-color mt-1">Enterprise partnerships; launch AI-driven learning intelligence platform.</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span>Projection</span>
+            <span>To slide 14: "If this executes, here is the category we believe we end up owning."</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

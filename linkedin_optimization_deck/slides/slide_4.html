@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>The Invisible Effort</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 1280px; height: 720px; overflow: hidden;
+            font-family: 'Inter', sans-serif; background: #FFFDF9; color: #111111;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; color: #111111; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(220, 38, 38, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.05);
+        }
+        
+        .accent-text { color: #DC2626; }
+        .emerald-text { color: #111111; }
+        
+        .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(220, 38, 38, 0.08), transparent 45%),
+                        radial-gradient(circle at bottom left, rgba(17, 17, 17, 0.05), transparent 45%),
+                        #FFFDF9;
+        }
+    
+        /* Brand Light Theme Utility Overrides */
+        .text-white { color: #111111 !important; }
+        .text-slate-100 { color: #111111 !important; }
+        .text-slate-200 { color: #1F2937 !important; }
+        .text-slate-300 { color: #4B5563 !important; }
+        .text-slate-400 { color: #6B7280 !important; }
+        .text-slate-500 { color: #9CA3AF !important; }
+        
+        /* Accent elements map to brand Red & Black */
+        .text-blue-400 { color: #B91C1C !important; }
+        .text-emerald-400 { color: #111111 !important; }
+        .text-purple-400 { color: #991B1B !important; }
+        .text-yellow-400 { color: #DC2626 !important; }
+        .text-red-400 { color: #DC2626 !important; }
+        .text-pink-400 { color: #B91C1C !important; }
+        
+        .bg-blue-500\/10 { background-color: rgba(220, 38, 38, 0.08) !important; }
+        .bg-emerald-500\/10 { background-color: rgba(17, 17, 17, 0.05) !important; }
+        .bg-purple-500\/10 { background-color: rgba(185, 28, 28, 0.08) !important; }
+        .bg-yellow-500\/10 { background-color: rgba(220, 38, 38, 0.08) !important; }
+        .bg-red-950\/20 { background-color: rgba(220, 38, 38, 0.05) !important; }
+        .bg-red-950\/5 { background-color: rgba(220, 38, 38, 0.03) !important; }
+        .bg-emerald-950\/5 { background-color: rgba(17, 17, 17, 0.03) !important; }
+        .bg-blue-950\/20 { background-color: rgba(220, 38, 38, 0.05) !important; }
+        .bg-yellow-950\/10 { background-color: rgba(220, 38, 38, 0.08) !important; }
+        .bg-yellow-950\/5 { background-color: rgba(220, 38, 38, 0.04) !important; }
+        .bg-purple-950\/20 { background-color: rgba(185, 28, 28, 0.05) !important; }
+        
+        .bg-slate-900 { background-color: #FAF6EE !important; border: 1px solid rgba(220, 38, 38, 0.1) !important; }
+        .bg-slate-900\/50 { background-color: rgba(255, 255, 255, 0.6) !important; }
+        .bg-slate-900\/30 { background-color: rgba(255, 255, 255, 0.5) !important; }
+        .bg-slate-800 { background-color: #FAF6EE !important; border: 1px solid rgba(220, 38, 38, 0.1) !important; }
+        .bg-slate-800\/50 { background-color: rgba(255, 255, 255, 0.5) !important; }
+        .bg-slate-950\/20 { background-color: rgba(17, 17, 17, 0.02) !important; }
+        
+        .border-slate-700 { border-color: rgba(220, 38, 38, 0.15) !important; }
+        .border-slate-700\/50 { border-color: rgba(220, 38, 38, 0.1) !important; }
+        
+        .border-t-blue-500 { border-top-color: #DC2626 !important; }
+        .border-t-emerald-500 { border-top-color: #111111 !important; }
+        .border-t-purple-500 { border-top-color: #B91C1C !important; }
+        .border-t-yellow-500 { border-top-color: #DC2626 !important; }
+        .border-t-blue-400 { border-top-color: #DC2626 !important; }
+        .border-t-emerald-400 { border-top-color: #111111 !important; }
+        .border-t-purple-400 { border-top-color: #B91C1C !important; }
+        .border-t-yellow-400 { border-top-color: #DC2626 !important; }
+        .border-t-pink-400 { border-top-color: #991B1B !important; }
+        
+        .border-l-blue-500 { border-left-color: #DC2626 !important; }
+        .border-l-emerald-500 { border-left-color: #111111 !important; }
+        .border-l-purple-500 { border-left-color: #B91C1C !important; }
+        .border-l-yellow-500 { border-left-color: #DC2626 !important; }
+        .border-l-red-500 { border-left-color: #DC2626 !important; }
+        .border-l-blue-400 { border-left-color: #DC2626 !important; }
+        
+        .divide-slate-800 > :not([hidden]) ~ :not([hidden]) {
+            border-color: rgba(220, 38, 38, 0.1) !important;
+        }
+        
+        body.light-mode {
+            background: #FFFDF9 !important;
+            color: #111111 !important;
+        }
+    </style>
+</head>
+<body class="gradient-bg flex items-center justify-center">
+    
+        <div class="w-full h-full px-20 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold mb-12 text-slate-100">The Problem of <span class="text-red-400">Invisible Effort</span></h2>
+            
+            <div class="grid grid-cols-5 gap-8 items-center max-w-5xl">
+                <div class="col-span-2 glass-card p-8 text-center border-t-4 border-t-blue-500">
+                    <span class="text-slate-400 uppercase tracking-widest text-xs font-semibold block mb-2">Structured Training</span>
+                    <span class="text-6xl font-extrabold text-blue-400 block mb-4">150+ <span class="text-2xl font-semibold">Hours</span></span>
+                    <span class="text-slate-200 font-medium">Learning Excel, SQL, Python & Power BI</span>
+                </div>
+                
+                <div class="col-span-3 text-left space-y-6">
+                    <p class="text-2xl font-light leading-relaxed text-slate-200">
+                        "But if <span class="font-semibold text-white border-b-2 border-b-yellow-500 pb-1">nobody can see</span> what you are learning, what you are building and how you think..."
+                    </p>
+                    <div class="glass-card p-6 bg-red-950/20 border-red-500/20 flex gap-4 items-center">
+                        <i class="fas fa-eye-slash text-red-400 text-3xl"></i>
+                        <span class="text-xl font-bold text-red-400">...then a large part of that effort remains invisible.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

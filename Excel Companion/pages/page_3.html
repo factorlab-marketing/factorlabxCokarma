@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 3 - CELL REFERENCE LOCKING</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-content">
+                <div class="page-header">
+                    <span class="page-header-title">CELL REFERENCE LOCKING</span>
+                    <span class="page-header-chapter">Formula Engine</span>
+                </div>
+                
+                <div class="page-body">
+                    <h1 class="booklet-title">CELL REFERENCE LOCKING</h1>
+                    <h2 class="booklet-subtitle">Relative, Absolute, & Mixed References</h2>
+                    
+                    
+        <div class="slide-grid">
+            <div class="slide-col">
+                <div class="card" style="border-left: 4.5px solid var(--accent-red); padding: 8px 10px;">
+                    <span class="card-title">Concept & Syntax</span>
+                    <p class="card-body-text">Controls coordinate drifting during drag calculations. Toggle reference states using <code>F4</code>.</p>
+                </div>
+                <div class="card" style="padding: 8px 10px;">
+                    <span class="card-title">Lock Typology</span>
+                    <div class="lock-grid">
+                        <div class="lock-card">
+                            <span class="lock-code">A1</span>
+                            <span class="lock-title">Relative</span>
+                        </div>
+                        <div class="lock-card active-lock">
+                            <span class="lock-code">$A$1</span>
+                            <span class="lock-title">Absolute</span>
+                        </div>
+                        <div class="lock-card">
+                            <span class="lock-code">A$1</span>
+                            <span class="lock-title">Row Lock</span>
+                        </div>
+                        <div class="lock-card">
+                            <span class="lock-code">$A1</span>
+                            <span class="lock-title">Col Lock</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="card" style="padding: 8px 10px; height: 100%;">
+                    <span class="card-title">Where & How: Tax Multipliers</span>
+                    <p class="card-body-text" style="margin-bottom: 5px;">Locking the tax rate coordinate cell (Absolute: <code>$B$1</code>) when projecting sales row logs.</p>
+                    <table class="ref-table">
+                        <thead>
+                            <tr>
+                                <th>Sales (A)</th>
+                                <th>Tax Rate (B1)</th>
+                                <th>Output Tax (C)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>120000</td>
+                                <td rowspan="2" style="background-color: var(--accent-red-light); text-align: center; vertical-align: middle; font-weight: 700;">18% ($B$1)</td>
+                                <td><code>=A2*$B$1</code> <i class="fas fa-arrow-right"></i> 21600</td>
+                            </tr>
+                            <tr>
+                                <td>85000</td>
+                                <td><code>=A3*$B$1</code> <i class="fas fa-arrow-right"></i> 15300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="callout-box warning">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Common Mistakes</span>
+                        <span class="callout-text">Forgetting referencing locks during matrix drags, which shifts the lookup array and triggers `#N/A` errors.</span>
+                    </div>
+                </div>
+                <div class="callout-box interview">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Interview Prep</span>
+                        <span class="callout-text">
+                            <strong>Q:</strong> "How do $A1 and A$1 differ?"<br>
+                            <strong>Expectation:</strong> Explain that A$1 locks the row (remains vertical) and $A1 locks the column (remains horizontal). Essential for multiplication tables.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                </div>
+
+                <div class="qr-container" style="padding: 4px 10px; margin-top: 5px;">
+                    <div class="qr-text-block">
+                        <div class="qr-heading">CELL REFERENCE LOCKING Practice Lab</div>
+                        <div class="qr-paragraph">Scan to download standard starting templates, interactive workbooks, and interview files.</div>
+                    </div>
+                    <div class="qr-code-box" style="width: 32px; height: 32px;">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="15" y="15" width="15" height="15" fill="var(--text-black)"/>
+                            <rect x="65" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="10" y="65" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="45" y="45" width="10" height="10" fill="var(--accent-red)"/>
+                            <rect x="70" y="70" width="15" height="15" fill="var(--text-black)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <span>EXCEL REFERENCE DECK</span>
+                    <span class="page-number">03</span>
+                </div>
+            </div>
+</body>
+</html>

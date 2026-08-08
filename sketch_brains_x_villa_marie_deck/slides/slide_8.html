@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>What Companies Actually Want</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #1e40af;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checklist {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+
+        .list-item {
+            font-size: 24px;
+            color: #334155;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-item i {
+            color: #10B981;
+            margin-right: 20px;
+        }
+
+        .bottom-box {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .pill {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .p-grey {
+            background: #e2e8f0;
+            color: #64748b;
+            text-decoration: line-through;
+        }
+
+        .p-gold {
+            background: #C9A227;
+            color: #0B1F3B;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <h1 class="font-montserrat font-bold text-3xl text-[#0B1F3B]">WHAT COMPANIES ACTUALLY WANT</h1>
+            <p class="text-slate-500 mt-2">Can you:</p>
+
+            <div class="checklist">
+                <div class="list-item"><i class="fas fa-check-circle"></i> Analyze data?</div>
+                <div class="list-item"><i class="fas fa-check-circle"></i> Build a dashboard?</div>
+                <div class="list-item"><i class="fas fa-check-circle"></i> Present insights clearly?</div>
+                <div class="list-item"><i class="fas fa-check-circle"></i> Solve real business problems?</div>
+            </div>
+
+            <div class="bottom-box">
+                <div class="pill p-grey">Degree is entry</div>
+                <div class="pill p-gold">Skill is selection</div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 8 - SEARCH DECISION MATRIX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-content">
+                <div class="page-header">
+                    <span class="page-header-title">SEARCH DECISION MATRIX</span>
+                    <span class="page-header-chapter">Comparison Matrix</span>
+                </div>
+                
+                <div class="page-body">
+                    <h1 class="booklet-title">SEARCH DECISION MATRIX</h1>
+                    <h2 class="booklet-subtitle">Selecting the Right Lookup Tool</h2>
+                    
+                    
+        <div class="slide-grid">
+            <div class="slide-col" style="grid-column: span 2;">
+                <div class="card" style="border-left: 4.5px solid var(--accent-red); padding: 8px 10px;">
+                    <span class="card-title">Lookup Selection Flowchart</span>
+                    <p class="card-body-text">Select lookups based on environmental compatibility, search direction, and database size constraints.</p>
+                </div>
+                <div class="card" style="padding: 8px 10px;">
+                    <table class="ref-table">
+                        <thead>
+                            <tr>
+                                <th>Criteria Check</th>
+                                <th>VLOOKUP</th>
+                                <th>XLOOKUP</th>
+                                <th>INDEX + MATCH</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Left-side Search</td>
+                                <td style="color:var(--accent-red);">No</td>
+                                <td style="color:#2e7d32; font-weight:700;">Yes</td>
+                                <td style="color:#2e7d32; font-weight:700;">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Column Insertion Safety</td>
+                                <td style="color:var(--accent-red);">Breaks</td>
+                                <td style="color:#2e7d32; font-weight:700;">Safe</td>
+                                <td style="color:#2e7d32; font-weight:700;">Safe</td>
+                            </tr>
+                            <tr>
+                                <td>Calculation Speed</td>
+                                <td>Standard</td>
+                                <td>Fast</td>
+                                <td style="color:#2e7d32; font-weight:700;">Fastest (Single Col)</td>
+                            </tr>
+                            <tr>
+                                <td>Compatibility</td>
+                                <td>All Excel Versions</td>
+                                <td>Excel 365 / 2021+</td>
+                                <td>All Excel Versions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="callout-box warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Decision Rule</span>
+                        <span class="callout-text">Use XLOOKUP for standard modern spreadsheets. Use INDEX+MATCH for grid intersections or models that must run on older corporate Excel versions.</span>
+                    </div>
+                </div>
+                <div class="callout-box interview">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Interview Prep</span>
+                        <span class="callout-text">
+                            <strong>Q:</strong> "When is INDEX+MATCH better than XLOOKUP?"<br>
+                            <strong>Expectation:</strong> Cite legacy compatibility (pre-365 sheets) and complex 2D matrix lookups where you match both headers.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                </div>
+
+                <div class="qr-container" style="padding: 4px 10px; margin-top: 5px;">
+                    <div class="qr-text-block">
+                        <div class="qr-heading">SEARCH DECISION MATRIX Practice Lab</div>
+                        <div class="qr-paragraph">Scan to download standard starting templates, interactive workbooks, and interview files.</div>
+                    </div>
+                    <div class="qr-code-box" style="width: 32px; height: 32px;">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="15" y="15" width="15" height="15" fill="var(--text-black)"/>
+                            <rect x="65" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="10" y="65" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="45" y="45" width="10" height="10" fill="var(--accent-red)"/>
+                            <rect x="70" y="70" width="15" height="15" fill="var(--text-black)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <span>EXCEL REFERENCE DECK</span>
+                    <span class="page-number">08</span>
+                </div>
+            </div>
+</body>
+</html>

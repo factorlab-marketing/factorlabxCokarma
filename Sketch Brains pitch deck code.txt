@@ -1,0 +1,2146 @@
+slide 1
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide {
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted { color:#A9B4D6; }
+    .card {
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip {
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border { border:1px solid rgba(255,255,255,0.10); }
+    .arrow-line { background: rgba(255,255,255,0.18); }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-10 -left-10 w-72 h-72 rounded-full fine-border opacity-30"></div>
+<div class="absolute top-24 -right-24 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-10 left-24 w-56 h-56 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Title -->
+<div class="flex flex-col justify-between w-1/2 pr-10">
+<div>
+<div class="flex items-center space-x-3 mb-8">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-brain text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">Hiring, without the lag</p>
+<p class="text-xs muted">Sketch Brains</p>
+</div>
+</div>
+<div class="mb-6">
+<p class="text-6xl font-extrabold leading-tight">Sketch Brains</p>
+</div>
+<div class="mb-10">
+<p class="text-3xl font-semibold leading-snug">Your Pre-Trained Hiring Pipeline</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Role-ready cohorts</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">8–12 weeks</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">You hire only if they meet your bar</p>
+</div>
+</div>
+</div>
+<div class="flex items-end justify-between pt-10">
+<div>
+<p class="text-xs muted">Deck</p>
+<p class="text-sm font-semibold">Pre-Trained Hiring Pipeline</p>
+</div>
+<div class="text-right">
+<p class="text-xs muted">Contact</p>
+<p class="text-sm font-semibold">{Fill in email / phone}</p>
+</div>
+</div>
+</div>
+<!-- Right: Pipeline visual -->
+<div class="w-1/2 pl-4 flex items-center">
+<div class="card rounded-2xl p-8 w-full">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Visual</p>
+<p class="text-xl font-bold">Company → Talent → Hire</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Pipeline, pre-built</p>
+</div>
+</div>
+<!-- Embedded generated image -->
+<div class="rounded-xl overflow-hidden fine-border bg-black" style="background:#0B1220;">
+<img alt="Pipeline diagram: Company to Talent to Hire" class="w-full" src="https://www.genspark.ai/api/files/s/8c9sbfk7?cache_control=3600" style="height: 320px; object-fit: cover;"/>
+</div>
+<!-- Simple pipeline chips for redundancy (in case image doesn't render) -->
+<div class="mt-6 grid grid-cols-3 gap-4">
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-building text-lg" style="color:#BFD3FF;"></i>
+</div>
+<div>
+<p class="text-xs muted">Input</p>
+<p class="text-lg font-bold">Company</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-users text-lg" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-xs muted">Cohort</p>
+<p class="text-lg font-bold">Talent</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-handshake text-lg" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs muted">Outcome</p>
+<p class="text-lg font-bold">Hire</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center space-x-4">
+<div class="h-1 w-20 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-20 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-20 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+Slide 2
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .danger{ color:#FF6B6B; }
+    .danger-bg{ background:#2A1317; border:1px solid rgba(255,107,107,0.25); }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Problem copy -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-triangle-exclamation text-xl" style="color:#FF6B6B;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">The Hiring Problem</p>
+<p class="text-xs muted">What slows teams down</p>
+</div>
+</div>
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">Hiring is slow.</p>
+<p class="text-6xl font-extrabold leading-tight">Conversion is worse.</p>
+</div>
+<!-- Pain bullets -->
+<div class="card rounded-2xl p-7 mb-8">
+<div class="flex items-center justify-between mb-5">
+<p class="text-lg font-bold">Brutal reality</p>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Feels familiar?</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-9 h-9 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-clock danger"></i>
+</div>
+<div>
+<p class="text-xl font-semibold">Hiring takes <span class="danger">2–4 months</span></p>
+<p class="text-sm muted">Back-and-forth sourcing, screening, and drop-offs.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-9 h-9 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-graduation-cap danger"></i>
+</div>
+<div>
+<p class="text-xl font-semibold">Freshers are <span class="danger">not job-ready</span></p>
+<p class="text-sm muted">Skills don’t match your stack on Day 1.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-9 h-9 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-indian-rupee-sign danger"></i>
+</div>
+<div>
+<p class="text-xl font-semibold">Training cost = <span class="danger">time + money</span></p>
+<p class="text-sm muted">Senior bandwidth gets consumed before output starts.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="mt-1 w-9 h-9 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-arrow-down-wide-short danger"></i>
+</div>
+<div>
+<p class="text-xl font-semibold">Most candidates <span class="danger">don’t convert</span></p>
+<p class="text-sm muted">Interviews don’t translate into offers that stick.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom emphasis -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#1B0F1B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-fire-flame-curved" style="color:#FF6B6B;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">If they don’t feel this → nothing else matters.</p>
+<p class="text-sm muted">This is the bottleneck we remove.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Broken funnel visual -->
+<div class="w-1/2 pl-4 flex items-center">
+<div class="card rounded-2xl p-8 w-full">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Visual</p>
+<p class="text-xl font-bold">Broken hiring funnel</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#FFD1D1;">Leakage everywhere</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden fine-border" style="background:#0B1220;">
+<img alt="Broken hiring funnel with resumes leaking and only a few hires" class="w-full" src="https://www.genspark.ai/api/files/s/RNWzF9yi?cache_control=3600" style="height: 360px; object-fit: cover;"/>
+</div>
+<!-- Metrics strip -->
+<div class="mt-6 grid grid-cols-3 gap-4">
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-inbox danger"></i>
+</div>
+<div>
+<p class="text-xs muted">Top of funnel</p>
+<p class="text-lg font-extrabold">100+</p>
+<p class="text-xs muted">resumes</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-filter-circle-xmark danger"></i>
+</div>
+<div>
+<p class="text-xs muted">Screening load</p>
+<p class="text-lg font-extrabold">Hours</p>
+<p class="text-xs muted">every week</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl p-4 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-person-circle-check danger"></i>
+</div>
+<div>
+<p class="text-xs muted">Bottom</p>
+<p class="text-lg font-extrabold">~5</p>
+<p class="text-xs muted">hires</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5">
+<p class="text-xs muted">Result: long cycles + wasted training + low conversion.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 3
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .accent{ color:#7AA7FF; }
+    .accent2{ color:#BFF3D1; }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-16 -left-20 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-20 -right-32 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-10 left-36 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Statement -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bullseye text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">What You Actually Want</p>
+<p class="text-xs muted">Mirror the hiring manager’s brain</p>
+</div>
+</div>
+<!-- Big statement block -->
+<div class="card rounded-2xl p-10 mb-8">
+<div class="flex items-start justify-between mb-8">
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">No fluff. Just outcomes.</p>
+</div>
+<div class="w-10 h-10 rounded-lg flex items-center justify-center fine-border" style="background:#0B1730;">
+<i class="fa-solid fa-quote-right" style="color:#A9B4D6;"></i>
+</div>
+</div>
+<p class="text-4xl font-extrabold leading-tight">
+            You don’t want <span class="muted">more resumes.</span><br/>
+            You want candidates who can work from <span class="accent">Day 1.</span>
+</p>
+<div class="mt-8 flex items-center space-x-3">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0B1730; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-circle-check" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Interview = validation, not discovery</p>
+<p class="text-sm muted">You should assess fit and potential — not teach basics.</p>
+</div>
+</div>
+</div>
+<!-- Micro emphasis -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-arrow-trend-up" style="color:#BFD3FF;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">A predictable pipeline beats a big pipeline.</p>
+<p class="text-sm muted">Same outcome, less noise, faster cycles.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: List -->
+<div class="w-1/2 pl-4 flex items-center">
+<div class="card rounded-2xl p-8 w-full">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">What “Day 1 ready” means</p>
+<p class="text-xl font-bold">Your actual checklist</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">4 non-negotiables</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-screwdriver-wrench" style="color:#CFE0FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xl font-extrabold">Role-ready candidates</p>
+<p class="text-sm muted">They can execute core tasks, not just “know concepts”.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Output</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-layer-group" style="color:#FFE1B8;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xl font-extrabold">Trained on your stack</p>
+<p class="text-sm muted">Tools, workflows, and patterns your team actually uses.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Stack</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-person-running" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xl font-extrabold">Minimal onboarding</p>
+<p class="text-sm muted">They start contributing with tight guidance, not hand-holding.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Speed</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-repeat" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xl font-extrabold">Predictable pipeline</p>
+<p class="text-sm muted">Cohorts you can plan around — hiring becomes a system.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Control</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-shield-halved" style="color:#A9B4D6;"></i>
+<p class="text-xs muted">Clear bar. Clear outcomes. No noise.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full" style="background: rgba(255,255,255,0.18);"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full" style="background: rgba(255,255,255,0.18);"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 4
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .arrow-line{ background: rgba(255,255,255,0.18); }
+    .accent{ color:#7AA7FF; }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Copy -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-diagram-project text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">Our Solution</p>
+<p class="text-xs muted">A hiring pipeline you can plan around</p>
+</div>
+</div>
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">We build your hiring pipeline</p>
+<p class="text-6xl font-extrabold leading-tight">before you start hiring.</p>
+</div>
+<div class="card rounded-2xl p-8 mb-8">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">What changes</p>
+<p class="text-xl font-bold">From “search” → to “select”</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">System &gt; scramble</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0B1730; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bolt" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Role is defined upfront</p>
+<p class="text-sm muted">So training is targeted, and interviews are faster.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0B1730; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-list-check" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Candidates are pre-trained on the job</p>
+<p class="text-sm muted">Not generic “placement-ready” prep.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0B1730; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-stopwatch" style="color:#CFE0FF;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Hiring becomes predictable</p>
+<p class="text-sm muted">You know when the next batch is coming.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-shield-halved" style="color:#BFD3FF;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">You control the bar. We build the supply.</p>
+<p class="text-sm muted">Same role. Same stack. Same outcomes — every cohort.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Clean pipeline diagram -->
+<div class="w-1/2 pl-4 flex items-center">
+<div class="card rounded-2xl p-8 w-full">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Flow</p>
+<p class="text-xl font-bold">Company → We design role → Train cohort → You hire</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Clean pipeline</p>
+</div>
+</div>
+<!-- Pipeline steps -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center justify-between">
+<!-- Step 1 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1220;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-building" style="color:#BFD3FF;"></i>
+</div>
+<div>
+<p class="text-xs muted">Step 1</p>
+<p class="text-lg font-extrabold">Company</p>
+</div>
+</div>
+<p class="text-sm muted">Role need + stack + bar</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-10 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1220;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-pen-ruler" style="color:#7AA7FF;"></i>
+</div>
+<div>
+<p class="text-xs muted">Step 2</p>
+<p class="text-lg font-extrabold">We design role</p>
+</div>
+</div>
+<p class="text-sm muted">Curriculum + projects</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-10 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1220;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-users-gear" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-xs muted">Step 3</p>
+<p class="text-lg font-extrabold">Train cohort</p>
+</div>
+</div>
+<p class="text-sm muted">30–40 students</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-10 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1220;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-handshake" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs muted">Step 4</p>
+<p class="text-lg font-extrabold">You hire</p>
+</div>
+</div>
+<p class="text-sm muted">Interview top candidates</p>
+</div>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-4 gap-3">
+<div class="chip rounded-xl px-4 py-3">
+<p class="text-xs muted">Output</p>
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Shortlist is pre-qualified</p>
+</div>
+<div class="chip rounded-xl px-4 py-3">
+<p class="text-xs muted">Signal</p>
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Projects show real ability</p>
+</div>
+<div class="chip rounded-xl px-4 py-3">
+<p class="text-xs muted">Speed</p>
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Weeks, not months</p>
+</div>
+<div class="chip rounded-xl px-4 py-3">
+<p class="text-xs muted">Control</p>
+<p class="text-sm font-semibold" style="color:#CFE0FF;">You set the bar</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes" style="color:#A9B4D6;"></i>
+<p class="text-xs muted">Same role definition → repeatable cohorts → predictable hiring.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 5
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .accent{ color:#7AA7FF; }
+    .good{ color:#BFF3D1; }
+    .warn{ color:#FFE1B8; }
+    .arrow-line{ background: rgba(255,255,255,0.18); }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Title + compact promise -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-gears text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">How It Works</p>
+<p class="text-xs muted">The deal structure (simple)</p>
+</div>
+</div>
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">Define the role.</p>
+<p class="text-6xl font-extrabold leading-tight">We train the cohort.</p>
+<p class="text-6xl font-extrabold leading-tight">You hire the best.</p>
+</div>
+<!-- Mini proof chips -->
+<div class="card rounded-2xl p-7 mb-8">
+<div class="flex items-center justify-between mb-5">
+<div>
+<p class="text-sm font-semibold muted">Outcome</p>
+<p class="text-xl font-bold">Interviews become selection</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Repeatable cohorts</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bullseye" style="color:#CFE0FF;"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">Your bar</p>
+<p class="text-sm muted">Skills + tasks + stack.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-circle-check" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">Your shortlist</p>
+<p class="text-sm muted">Pre-qualified candidates.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-stopwatch" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">8–12 weeks</p>
+<p class="text-sm muted">Cohort readiness window.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-user-group" style="color:#7AA7FF;"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">30–40</p>
+<p class="text-sm muted">Students per cohort.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer microline -->
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-layer-group muted"></i>
+<p class="text-xs muted">Define once → run cohorts repeatedly → scale hiring without chaos.</p>
+</div>
+</div>
+<!-- Right: Numbered steps + emphasis banner -->
+<div class="w-1/2 pl-4 flex flex-col">
+<div class="card rounded-2xl p-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Flow</p>
+<p class="text-xl font-bold">4 steps. No surprises.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">You control hiring</p>
+</div>
+</div>
+<!-- Steps -->
+<div class="space-y-4">
+<!-- Step 1 -->
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 flex flex-col items-center">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<p class="text-lg font-extrabold" style="color:#CFE0FF;">1</p>
+</div>
+<div class="mt-3 h-10 w-1 rounded-full arrow-line"></div>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">You define role requirements</p>
+<p class="text-sm muted">Stack, core tasks, interview bar, and target numbers.</p>
+</div>
+<div class="w-12 h-12 rounded-xl flex items-center justify-center fine-border" style="background:#0B1220;">
+<i class="fa-solid fa-clipboard-list" style="color:#7AA7FF;"></i>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 flex flex-col items-center">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<p class="text-lg font-extrabold" style="color:#CFE0FF;">2</p>
+</div>
+<div class="mt-3 h-10 w-1 rounded-full arrow-line"></div>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">We design a role-specific cohort</p>
+<p class="text-sm muted">Curriculum + projects mapped to your Day 1 tasks.</p>
+</div>
+<div class="w-12 h-12 rounded-xl flex items-center justify-center fine-border" style="background:#0B1220;">
+<i class="fa-solid fa-pen-ruler" style="color:#7AA7FF;"></i>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 flex flex-col items-center">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<p class="text-lg font-extrabold" style="color:#FFE1B8;">3</p>
+</div>
+<div class="mt-3 h-10 w-1 rounded-full arrow-line"></div>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">We train 30–40 students on-campus</p>
+<p class="text-sm muted">Hands-on work, reviews, and performance tracking.</p>
+</div>
+<div class="w-12 h-12 rounded-xl flex items-center justify-center fine-border" style="background:#0B1220;">
+<i class="fa-solid fa-users-gear" style="color:#FFE1B8;"></i>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 flex flex-col items-center">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<p class="text-lg font-extrabold" style="color:#BFF3D1;">4</p>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">You interview top candidates</p>
+<p class="text-sm muted">Shortlist is already trained on the role.</p>
+</div>
+<div class="w-12 h-12 rounded-xl flex items-center justify-center fine-border" style="background:#0B1220;">
+<i class="fa-solid fa-handshake" style="color:#BFF3D1;"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Emphasis Banner (BIG) -->
+<div class="mt-7 rounded-2xl p-6 fine-border" style="background:#0B1220;">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.12);">
+<i class="fa-solid fa-shield-check text-xl" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Non-negotiable</p>
+<p class="text-3xl font-extrabold leading-tight">You only hire if candidates meet your bar.</p>
+</div>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold good">No pressure. No compromise.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-sm muted">Your team invests <span class="text-white font-semibold">only interview time</span>.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom note -->
+<div class="mt-5 flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes muted"></i>
+<p class="text-xs muted">Same role definition → same training loop → consistent hiring outcomes.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Fast to run. Easy to repeat.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 6
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .good{ color:#BFF3D1; }
+    .warn{ color:#FFE1B8; }
+    .danger{ color:#FF6B6B; }
+    .arrow-line{ background: rgba(255,255,255,0.18); }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Value props -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-gift text-xl" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">What You Get</p>
+<p class="text-xs muted">This is what your team receives in one cycle</p>
+</div>
+</div>
+<!-- Big promise -->
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">Interview-ready candidates,</p>
+<p class="text-6xl font-extrabold leading-tight">on your role, on your stack.</p>
+</div>
+<!-- Benefits list card -->
+<div class="card rounded-2xl p-8 mb-8">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Deliverables</p>
+<p class="text-xl font-bold">A shortlist you can trust</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Ready in 8–12 weeks</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-user-check" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">8–10 interview-ready candidates</p>
+<p class="text-sm muted">Pre-qualified for the role you defined.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold good">Shortlist</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-layer-group" style="color:#CFE0FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">Trained on your exact role</p>
+<p class="text-sm muted">Mapped to your Day 1 tasks and interview bar.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Role</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-code-branch" style="color:#FFE1B8;"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">Practical project experience</p>
+<p class="text-sm muted">Projects show signal before your interviews start.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold warn">Proof</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-filter-circle-xmark" style="color:#FF6B6B;"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">No resume filtering needed</p>
+<p class="text-sm muted">Your team spends time only on final interviews.</p>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold danger">Time saved</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro close -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0B1220; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bolt" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Less noise. Faster decisions. Higher conversion.</p>
+<p class="text-sm muted">You go from “searching” to “selecting”.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Before vs After visual -->
+<div class="w-1/2 pl-4 flex flex-col">
+<div class="card rounded-2xl p-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Visual</p>
+<p class="text-xl font-bold">Before vs After</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Same goal. Less waste.</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden fine-border" style="background:#0B1220;">
+<img alt="Before vs After hiring efficiency comparison" class="w-full" src="https://www.genspark.ai/api/files/s/qFel1utf?cache_control=3600" style="height: 360px; object-fit: cover;"/>
+</div>
+<!-- Numbers strip (kept factual per brief) -->
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#2A1317; border:1px solid rgba(255,107,107,0.25);">
+<i class="fa-solid fa-layer-group" style="color:#FF6B6B;"></i>
+</div>
+<div>
+<p class="text-xs muted">Before</p>
+<p class="text-2xl font-extrabold">100 resumes → 5 hires</p>
+</div>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold danger">High noise</p>
+</div>
+</div>
+<div class="mt-3 flex items-center space-x-2">
+<i class="fa-solid fa-clock danger"></i>
+<p class="text-sm muted">Filtering + screening overhead</p>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-user-check" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs muted">After</p>
+<p class="text-2xl font-extrabold">10 trained → 5 hires</p>
+</div>
+</div>
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold good">High signal</p>
+</div>
+</div>
+<div class="mt-3 flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-sm muted">Interviews focus on fit + execution</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-shield-halved muted"></i>
+<p class="text-xs muted">Pre-trained cohort reduces filtering and onboarding load.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+<div class="mt-5 flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes muted"></i>
+<p class="text-xs muted">Outcome: fewer candidates, better prepared, faster decisions.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">No resume pile. Just a shortlist.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 7
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .good{ color:#BFF3D1; }
+    .accent{ color:#7AA7FF; }
+    .danger{ color:#FF6B6B; }
+    .good-bg{ background:#0D5A2B; border:1px solid rgba(255,255,255,0.10); }
+    .accent-bg{ background:#0F2A66; border:1px solid rgba(255,255,255,0.10); }
+    .danger-bg{ background:#2A1317; border:1px solid rgba(255,107,107,0.25); }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: copy + guarantee -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-shield-halved text-xl" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">Zero Risk</p>
+<p class="text-xs muted">Risk reversal that removes “what if”</p>
+</div>
+</div>
+<!-- Big headline -->
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">You don’t pay to “try”.</p>
+<p class="text-6xl font-extrabold leading-tight">You pay only when you hire.</p>
+</div>
+<!-- Big guarantee banner -->
+<div class="rounded-2xl p-8 fine-border mb-8" style="background:#0B1220;">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-4">
+<div class="w-14 h-14 rounded-2xl flex items-center justify-center good-bg">
+<i class="fa-solid fa-badge-check text-2xl" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Guarantee</p>
+<p class="text-5xl font-extrabold leading-tight">No hire <span class="muted">→</span> No cost</p>
+<p class="text-sm muted mt-3">Your only investment is interview time.</p>
+</div>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold good">Hard risk reversal</p>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-3 gap-4">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center danger-bg">
+<i class="fa-solid fa-credit-card danger"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">No upfront payment</p>
+<p class="text-sm muted">No retainers. No “setup fee”.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center accent-bg">
+<i class="fa-solid fa-hand-paper accent"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">No hiring obligation</p>
+<p class="text-sm muted">You walk away if the bar isn’t met.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center good-bg">
+<i class="fa-solid fa-clock good"></i>
+</div>
+<div>
+<p class="text-lg font-extrabold">Only interview time</p>
+<p class="text-sm muted">No resume pile. No training load.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom micro close -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-lock" style="color:#CFE0FF;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">This removes procurement friction.</p>
+<p class="text-sm muted">Low commitment to start. High confidence to continue.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: risk reversal as "benefit badges" + mini diagram -->
+<div class="w-1/2 pl-4 flex flex-col">
+<div class="card rounded-2xl p-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">What makes it zero-risk</p>
+<p class="text-xl font-bold">We de-risk both sides</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Pilot-friendly</p>
+</div>
+</div>
+<!-- Badge grid -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center accent-bg">
+<i class="fa-solid fa-users-line accent"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">Multi-company cohort</p>
+<p class="text-sm muted">Risk is spread across partners.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Demand pooled</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-xs muted">More stable supply</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center good-bg">
+<i class="fa-solid fa-list-check good"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">Your bar stays intact</p>
+<p class="text-sm muted">You select only if it meets your standard.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold good">No compromise</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-shield-halved muted"></i>
+<p class="text-xs muted">Quality protected</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center danger-bg">
+<i class="fa-solid fa-ban danger"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">No lock-in</p>
+<p class="text-sm muted">Start with one role. Expand if it works.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold danger">Low commitment</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+<p class="text-xs muted">Scale later</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-hourglass-half" style="color:#FFE1B8;"></i>
+</div>
+<div class="flex-1">
+<p class="text-2xl font-extrabold">Time boxed</p>
+<p class="text-sm muted">You see outcomes in a defined window.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#FFE1B8;">Predictable</p>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-stopwatch" style="color:#FFE1B8;"></i>
+<p class="text-xs muted">Pilot-ready</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Mini “cost logic” visual -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1220;">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-sm font-semibold muted">Cost logic</p>
+<p class="text-xl font-bold">You pay only for outcomes</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#CFE0FF;">Simple</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="w-72 rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center danger-bg">
+<i class="fa-solid fa-receipt danger"></i>
+</div>
+<div>
+<p class="text-xs muted">If no hire</p>
+<p class="text-2xl font-extrabold">₹0</p>
+</div>
+</div>
+<p class="text-sm muted">No payment triggered.</p>
+</div>
+<div class="flex flex-col items-center px-4">
+<div class="h-1 w-16 rounded-full" style="background: rgba(255,255,255,0.18);"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<div class="w-72 rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center good-bg">
+<i class="fa-solid fa-handshake good"></i>
+</div>
+<div>
+<p class="text-xs muted">If you hire</p>
+<p class="text-2xl font-extrabold">Pay per hire</p>
+</div>
+</div>
+<p class="text-sm muted">Aligned incentives.</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-sm muted">Risk moves from you → to the pipeline.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full" style="background: rgba(255,255,255,0.18);"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full" style="background: rgba(255,255,255,0.18);"></div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes muted"></i>
+<p class="text-xs muted">Start small, validate, then scale cohorts by role.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Zero-risk pilot</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 8
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .arrow-line{ background: rgba(255,255,255,0.18); }
+    .good{ color:#BFF3D1; }
+    .warn{ color:#FFE1B8; }
+    .accent{ color:#7AA7FF; }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: Copy + Metrics -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-calendar-check text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">Pilot Plan</p>
+<p class="text-xs muted">Make it real. Time-boxed. Measurable.</p>
+</div>
+</div>
+<!-- Big headline -->
+<div class="mb-8">
+<p class="text-6xl font-extrabold leading-tight">Run a 90-day pilot.</p>
+<p class="text-6xl font-extrabold leading-tight">Get a cohort you can hire from.</p>
+</div>
+<!-- Metrics card -->
+<div class="card rounded-2xl p-8 mb-8">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Pilot scope</p>
+<p class="text-xl font-bold">Concrete numbers, clear targets</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">One role to start</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-users" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xs muted">Cohort size</p>
+<p class="text-3xl font-extrabold">40 students</p>
+<p class="text-sm muted">On-campus training cohort</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-building" style="color:#CFE0FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xs muted">Partners</p>
+<p class="text-3xl font-extrabold">2–3 companies</p>
+<p class="text-sm muted">Multi-company cohort = risk spread</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bullseye" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xs muted">Placement target</p>
+<p class="text-3xl font-extrabold">60%</p>
+<p class="text-sm muted">Targeted conversion to hires</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-stopwatch" style="color:#FFE1B8;"></i>
+</div>
+<div class="flex-1">
+<p class="text-xs muted">Timeline</p>
+<p class="text-3xl font-extrabold">90 days</p>
+<p class="text-sm muted">Defined milestones, no drift</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro close -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0B1220; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-diagram-project" style="color:#A9B4D6;"></i>
+</div>
+<div>
+<p class="text-lg font-bold">Executable plan, not a promise.</p>
+<p class="text-sm muted">One role → one cohort → measurable hiring outcomes.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Timeline -->
+<div class="w-1/2 pl-4 flex flex-col">
+<div class="card rounded-2xl p-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">90-day timeline</p>
+<p class="text-xl font-bold">Define role → Train → Interviews → Offers</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Milestone-driven</p>
+</div>
+</div>
+<!-- Horizontal timeline -->
+<div class="rounded-2xl p-6 fine-border mb-6" style="background:#0B1220;">
+<div class="flex items-center justify-between">
+<!-- Node 1 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center justify-between mb-3">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Days 1–7</p>
+</div>
+<div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-clipboard-list" style="color:#CFE0FF;"></i>
+</div>
+</div>
+<p class="text-xl font-extrabold">Define role</p>
+<p class="text-sm muted">Tasks, stack, bar, headcount.</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-12 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center justify-between mb-3">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Days 8–14</p>
+</div>
+<div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-pen-ruler" style="color:#7AA7FF;"></i>
+</div>
+</div>
+<p class="text-xl font-extrabold">Design curriculum</p>
+<p class="text-sm muted">Projects mapped to Day 1 work.</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-12 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center justify-between mb-3">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold" style="color:#FFE1B8;">Days 15–75</p>
+</div>
+<div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-users-gear" style="color:#FFE1B8;"></i>
+</div>
+</div>
+<p class="text-xl font-extrabold">Train cohort</p>
+<p class="text-sm muted">Hands-on builds + reviews + tracking.</p>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex flex-col items-center px-2">
+<div class="h-1 w-12 rounded-full arrow-line"></div>
+<div class="mt-2">
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+<!-- Node 4 -->
+<div class="w-56">
+<div class="rounded-2xl p-5 fine-border" style="background:#0B1730;">
+<div class="flex items-center justify-between mb-3">
+<div class="chip rounded-full px-3 py-1">
+<p class="text-xs font-semibold good">Days 76–90</p>
+</div>
+<div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-handshake" style="color:#BFF3D1;"></i>
+</div>
+</div>
+<p class="text-xl font-extrabold">Interviews + offers</p>
+<p class="text-sm muted">Hire the best-fit candidates.</p>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-sm muted">You invest only interview time at the end.</p>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+<!-- Milestone chips -->
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-file-circle-check" style="color:#CFE0FF;"></i>
+</div>
+<div class="flex-1">
+<p class="text-lg font-extrabold">Go/No-go checkpoints</p>
+<p class="text-sm muted">Role definition locked before training starts.</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-chart-line" style="color:#BFF3D1;"></i>
+</div>
+<div class="flex-1">
+<p class="text-lg font-extrabold">Performance signal</p>
+<p class="text-sm muted">Projects + reviews reduce interview uncertainty.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes muted"></i>
+<p class="text-xs muted">Defined scope → tracked training → fast interviews → hires.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Ready to pilot</p>
+</div>
+</div>
+</div>
+<!-- Bottom note strip -->
+<div class="mt-5 flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-shield-halved muted"></i>
+<p class="text-xs muted">Pilot is structured to be repeatable for the next role.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#BFE7FF;">Template: timeline</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+slide 9
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    html, body { margin:0; padding:0; background:#0B1220; }
+    .slide{
+      width:1280px; height:720px;
+      display:flex;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:#0B1220;
+      color:#EAF0FF;
+      position:relative;
+      overflow:hidden;
+    }
+    .muted{ color:#A9B4D6; }
+    .card{
+      background:#0F1A33;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.45);
+    }
+    .chip{
+      background:#0C1630;
+      border:1px solid rgba(255,255,255,0.10);
+    }
+    .fine-border{ border:1px solid rgba(255,255,255,0.10); }
+    .arrow-line{ background: rgba(255,255,255,0.18); }
+    .good{ color:#BFF3D1; }
+    .accent{ color:#7AA7FF; }
+    .warn{ color:#FFE1B8; }
+  </style>
+</head>
+<body>
+<div class="slide">
+<!-- Decorative rings + dots (no gradients) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute -top-20 -left-24 w-96 h-96 rounded-full fine-border opacity-25"></div>
+<div class="absolute top-14 -right-28 w-96 h-96 rounded-full fine-border opacity-20"></div>
+<div class="absolute bottom-8 left-28 w-64 h-64 rounded-full fine-border opacity-20"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, rgba(0,0,0,0) 1px); background-size: 28px 28px;"></div>
+</div>
+<div class="flex flex-1 px-16 py-14 relative">
+<!-- Left: CTA copy -->
+<div class="w-1/2 pr-10 flex flex-col">
+<!-- Header -->
+<div class="flex items-center space-x-3 mb-10">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-paper-plane text-xl" style="color:#7AA7FF;"></i>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold tracking-widest uppercase muted">Call to Action</p>
+<p class="text-xs muted">Pick one role. We’ll build the pipeline.</p>
+</div>
+</div>
+<!-- Big headline -->
+<div class="mb-6">
+<p class="text-6xl font-extrabold leading-tight">Let’s build your</p>
+<p class="text-6xl font-extrabold leading-tight">first hiring cohort.</p>
+</div>
+<!-- Supporting line (minimal) -->
+<div class="mb-10">
+<p class="text-xl muted">You define the bar. We deliver a trained shortlist.</p>
+</div>
+<!-- Quick “what happens next” strip -->
+<div class="card rounded-2xl p-7 mb-10">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-sm font-semibold muted">Next</p>
+<p class="text-xl font-bold">A fast kickoff, then a predictable cohort</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Simple process</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-clipboard-list" style="color:#CFE0FF;"></i>
+</div>
+<div>
+<p class="text-sm font-semibold">Role requirements</p>
+<p class="text-xs muted">Stack + tasks + bar</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-users-gear" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-sm font-semibold">Cohort training</p>
+<p class="text-xs muted">On-campus</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-handshake" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-sm font-semibold">Interviews</p>
+<p class="text-xs muted">Select the best</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom micro-line -->
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-xs muted">No hire <span class="text-white font-semibold">→</span> no cost. You invest only interview time.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold good">Zero-risk start</p>
+</div>
+</div>
+</div>
+<!-- Right: 3 options (cards) -->
+<div class="w-1/2 pl-4 flex flex-col">
+<div class="card rounded-2xl p-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm font-semibold muted">Choose your starting point</p>
+<p class="text-xl font-bold">3 options. Clear next step.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-sm font-semibold" style="color:#BFE7FF;">Start small</p>
+</div>
+</div>
+<div class="grid grid-rows-3 gap-4">
+<!-- Option 1 -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#0F2A66; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-bullseye" style="color:#CFE0FF;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Option 1</p>
+<p class="text-3xl font-extrabold">Define 1 role</p>
+<p class="text-sm muted mt-1">We lock the stack, tasks, and hiring bar.</p>
+</div>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Kickoff</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-clipboard-list muted"></i>
+<p class="text-xs muted">Role spec + interview rubric</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+</div>
+<!-- Option 2 -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#7A3C00; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-calendar-check" style="color:#FFE1B8;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Option 2</p>
+<p class="text-3xl font-extrabold">Run pilot</p>
+<p class="text-sm muted mt-1">Time-boxed cohort with measurable outcomes.</p>
+</div>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold warn">90 days</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-stopwatch" style="color:#FFE1B8;"></i>
+<p class="text-xs muted">Milestones: define → train → interviews</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="rounded-2xl p-6 fine-border" style="background:#0B1730;">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#0D5A2B; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-user-check" style="color:#BFF3D1;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Option 3</p>
+<p class="text-3xl font-extrabold">Start with 10 hires</p>
+<p class="text-sm muted mt-1">Build a repeatable pipeline for your first batch.</p>
+</div>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold good">Scale</p>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-check good"></i>
+<p class="text-xs muted">Shortlist → interviews → offers</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="h-1 w-14 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer prompt (no contact details fabricated) -->
+<div class="mt-6 rounded-2xl p-6 fine-border" style="background:#0B1220;">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#111E3D; border:1px solid rgba(255,255,255,0.10);">
+<i class="fa-solid fa-message" style="color:#7AA7FF;"></i>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-widest uppercase muted">Decision</p>
+<p class="text-2xl font-extrabold">Pick one option to start.</p>
+</div>
+</div>
+<div class="flex items-center space-x-3">
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#CFE0FF;">Next: {Schedule link / email here}</p>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-circle-nodes muted"></i>
+<p class="text-xs muted">Define the role once → run cohorts repeatedly → predictable hiring.</p>
+</div>
+<div class="flex items-center space-x-2">
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+<i class="fa-solid fa-arrow-right muted"></i>
+<div class="h-1 w-16 rounded-full arrow-line"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5 flex items-center justify-between px-1">
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-shield-halved muted"></i>
+<p class="text-xs muted">No “thank you” slide. Just the next step.</p>
+</div>
+<div class="chip rounded-full px-4 py-2">
+<p class="text-xs font-semibold" style="color:#BFE7FF;">Template: cta_minimal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

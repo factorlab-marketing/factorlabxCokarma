@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>Product Roadmap</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .text-main-color { color: #FFFFFF; }
+        .text-muted-color { color: #94A3B8; }
+        .card-bg { background: #1E293B; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+        
+        body.light-mode {
+            background: #F7F7F6 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-main-color { color: #0D0D0D !important; }
+        body.light-mode .text-muted-color { color: #555555 !important; }
+        body.light-mode .card-bg {
+            background: #FFFFFF !important;
+            border: 1px solid rgba(13, 13, 13, 0.08) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+        }
+        body.light-mode .border-main-color { border-color: rgba(13, 13, 13, 0.1) !important; }
+        body.light-mode .bg-slate-800 { background-color: #E2E8F0 !important; }
+        body.light-mode .text-slate-300 { color: #334155 !important; }
+        body.light-mode .text-slate-400 { color: #475569 !important; }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="slide-container">
+        
+        <div class="animate-up">
+            <span class="text-xs uppercase tracking-widest text-muted-color font-semibold">Appendix 07 // Product Roadmap</span>
+            <h2 class="text-3xl font-bold text-main-color mt-2 mb-6">Product Roadmap & Platform Architecture</h2>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 flex-1 my-4">
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="bg-blue-500 bg-opacity-20 text-blue-500 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Phase 1 (Completed)</span>
+                    <h4 class="font-bold text-sm text-main-color mt-3 mb-2">AnalytIQ Curriculum</h4>
+                    <p class="text-[10px] text-muted-color">Standard curriculum frameworks, mentor manuals, and offline workbook systems established and tested.</p>
+                </div>
+            </div>
+
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between border border-gold">
+                <div>
+                    <span class="bg-gold bg-opacity-20 text-gold text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Phase 2 (In Development)</span>
+                    <h4 class="font-bold text-sm text-main-color mt-3 mb-2">Leaderboard Platform</h4>
+                    <p class="text-[10px] text-muted-color">Web-based automated code evaluation dashboard and live campus rankings tracker—powering student competition loops.</p>
+                </div>
+            </div>
+
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <span class="bg-slate-500 bg-opacity-20 text-slate-400 text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Phase 3 (Planned Y2)</span>
+                    <h4 class="font-bold text-sm text-main-color mt-3 mb-2">Enterprise Upskill Dashboard</h4>
+                    <p class="text-[10px] text-muted-color">Corporate L&D dashboards tracking student performance analytics during recruitment wedges.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span>Appendix</span>
+            <span>Product & Development Roadmap</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

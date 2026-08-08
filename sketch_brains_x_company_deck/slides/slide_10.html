@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Use Cases</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0B1F3A;
+            --accent: #2563EB;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F5F7FA;
+            --border-light: #E5E7EB;
+            --border-med: #D1D5DB;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-gray); /* Outer boundary */
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-white);
+            padding: 70px 90px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* very subtle framing */
+        }
+        
+        /* Corporate Tracker / Kicker */
+        .kicker {
+            position: absolute;
+            top: 40px;
+            left: 90px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .kicker::before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        /* Typography - Enterprise Grade */
+        .heading { 
+            font-size: 38px; 
+            font-weight: 800; 
+            color: var(--primary); 
+            margin-top: 20px;
+            margin-bottom: 40px; 
+            line-height: 1.2; 
+            letter-spacing: -1px;
+        }
+        .body-text { font-size: 18px; color: var(--text-dark); line-height: 1.6; font-weight: 400; }
+        
+        /* Info-graphic Helpers */
+        .flex { display: flex; }
+        .flex-col { display: flex; flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .gap-4 { gap: 16px; }
+        .gap-6 { gap: 24px; }
+        .gap-10 { gap: 40px; }
+        
+        /* Grid system */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; height: 100%; }
+        
+        /* Footer */
+        .footer { 
+            position: absolute; 
+            bottom: 30px; 
+            left: 90px; 
+            right: 90px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 13px; 
+            color: var(--text-light); 
+            border-top: 1px solid var(--border-light); 
+            padding-top: 15px; 
+            font-weight: 500;
+        }
+        
+        
+        .target-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .uc-card { background: var(--bg-gray); padding: 40px; display: flex; align-items: center; gap: 24px; border: 1px solid var(--border-light); }
+        .uc-icon { width: 60px; height: 60px; background: var(--bg-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex-shrink: 0;}
+        .uc-text { font-size: 24px; font-weight: 600; color: var(--primary); }
+    
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        
+        <div class="kicker">Application Focus</div>
+        <h2 class="heading">Ideal Configuration</h2>
+        
+        <div class="target-grid">
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="uc-text">Batch hiring of freshers</div>
+            </div>
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="uc-text">Campus hiring programs</div>
+            </div>
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <div class="uc-text">Roles requiring training</div>
+            </div>
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fa-solid fa-rotate"></i></div>
+                <div class="uc-text">Recurring hiring needs</div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <span>Sketch Brains</span>
+            <span>Confidential & Proprietary</span>
+        </div>
+    </div>
+    <!-- PDF Capture Bridge script -->
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

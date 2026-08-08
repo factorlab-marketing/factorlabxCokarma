@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 6 - XLOOKUP REFERENCE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-content">
+                <div class="page-header">
+                    <span class="page-header-title">XLOOKUP REFERENCE</span>
+                    <span class="page-header-chapter">Finding Data</span>
+                </div>
+                
+                <div class="page-body">
+                    <h1 class="booklet-title">XLOOKUP REFERENCE</h1>
+                    <h2 class="booklet-subtitle">Modern and Versatile Lookup Engine</h2>
+                    
+                    
+        <div class="slide-grid">
+            <div class="slide-col">
+                <div class="card" style="border-left: 4.5px solid var(--accent-red); padding: 8px 10px;">
+                    <span class="card-title">Concept & Syntax</span>
+                    <p class="card-body-text" style="margin-bottom: 4px;">Modern, robust replacement for VLOOKUP. Searches any direction, defaults to exact match, and provides custom search modes.</p>
+                    <div style="font-family: var(--font-mono); font-size: 0.54rem; font-weight: 700; background-color: var(--accent-red-light); padding: 4px; border-radius: 4px; text-align: center; line-height: 1.3;">
+                        =XLOOKUP(<span style="color:#c2185b;">val</span>, <span style="color:#0d47a1;">lk_arr</span>, <span style="color:#2e7d32;">ret_arr</span>, <span style="color:#ef6c00;">[empty]</span>, <span style="color:#6a1b9a;">[match]</span>)
+                    </div>
+                </div>
+                <div class="card" style="padding: 8px 10px;">
+                    <span class="card-title"><i class="fas fa-briefcase" style="color:var(--text-muted);"></i> Where is it Used</span>
+                    <p class="card-body-text">Searching leftward (finding keys left of lookup ID), reverse searching from bottom-to-top, and setting up fallback strings natively.</p>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="card" style="padding: 8px 10px; height: 100%;">
+                    <span class="card-title"><i class="fas fa-table" style="color:var(--text-muted);"></i> Example Model: Leftward search</span>
+                    <table class="ref-table">
+                <thead>
+                    <tr>
+                        <th>Salary (A)</th>
+                        <th>Name (B)</th>
+                        <th>Employee ID (C)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:var(--accent-red-light); font-weight:700;">
+                        <td style="color:var(--accent-red);">75000 (Return)</td>
+                        <td>Isha</td>
+                        <td style="color:var(--accent-red);">E104 (Lookup)</td>
+                    </tr>
+                </tbody>
+            </table>
+                    <div style="font-family: var(--font-mono); font-size: 0.52rem; font-weight: 700; color: var(--text-black); background-color: var(--bg-cream); padding: 4px; border-radius: 4px; text-align: center; margin-top: 4px; line-height: 1.3;">
+                        =XLOOKUP("E104", C2:C2, A2:A2, "Missing") <i class="fas fa-arrow-right" style="color: var(--accent-red); margin: 0 2px;"></i> 75000
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="callout-box warning">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Common Mistakes</span>
+                        <span class="callout-text">Range size mismatches (lookup and return ranges must be the exact same width or height, or it throws `#VALUE!`). Older Excel versions lack the function.</span>
+                    </div>
+                </div>
+                <div class="callout-box interview">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Interview Prep</span>
+                        <span class="callout-text">
+                            <strong>Q:</strong> "Why is XLOOKUP superior to VLOOKUP in dynamic sheets?"<br>
+                            <strong>Expectation:</strong> Detail that it is insertion-safe, performs leftward searches, defaults to exact matches, and natively manages empty values.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                </div>
+
+                <div class="qr-container" style="padding: 4px 10px; margin-top: 5px;">
+                    <div class="qr-text-block">
+                        <div class="qr-heading">XLOOKUP REFERENCE Practice Lab</div>
+                        <div class="qr-paragraph">Scan to download standard starting templates, interactive workbooks, and interview files.</div>
+                    </div>
+                    <div class="qr-code-box" style="width: 32px; height: 32px;">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="15" y="15" width="15" height="15" fill="var(--text-black)"/>
+                            <rect x="65" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="10" y="65" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="45" y="45" width="10" height="10" fill="var(--accent-red)"/>
+                            <rect x="70" y="70" width="15" height="15" fill="var(--text-black)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <span>EXCEL REFERENCE DECK</span>
+                    <span class="page-number">06</span>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #09090B;
+            --accent: #DC2626;
+            --accent-glow: rgba(220, 38, 38, 0.06);
+            --text-dark: #18181B;
+            --text-muted: #71717A;
+            --bg-canvas: #FAFAFA;
+            --bg-slide: #FFFFFF;
+            --border-light: #E4E4E7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-slide);
+            padding: 60px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(220, 38, 38, 0.05) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-glow-1 {
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-glow-2 {
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(9, 9, 11, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quote-container {
+            max-width: 950px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .teaser-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(220, 38, 38, 0.12);
+            padding: 8px 16px;
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .teaser-badge span {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .teaser-text {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 46px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.35;
+            letter-spacing: -1.5px;
+        }
+
+        .teaser-highlight {
+            background: linear-gradient(135deg, #09090B 0%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .teaser-close {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .teaser-close::before,
+        .teaser-close::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            opacity: 0.3;
+        }
+
+        /* Custom Brand Logo */
+        .sb-logo {
+            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .sb-logo:hover {
+            opacity: 0.7;
+        }
+
+        .sb-dot {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-dots"></div>
+        <div class="orb-glow-1"></div>
+        <div class="orb-glow-2"></div>
+
+        <div class="slide-content">
+            <div class="quote-container">
+                <div class="teaser-badge">
+                    <i class="fa-solid fa-star" style="color: var(--accent);"></i>
+                    <span>The Connection</span>
+                </div>
+                
+                <h1 class="teaser-text">
+                    This is more than a hackathon — it's where <span class="teaser-highlight">Hyderabad's best talent</span> meets the companies who know how to spot it.
+                </h1>
+
+                <div class="teaser-close">
+                    Make your verdict
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://sketchbrains.live" class="sb-logo" target="_blank">
+                SketchBrains<span class="sb-dot">.</span>
+            </a>
+            <span>The Verdict 1.0 • October 10th</span>
+            <span>09 / 10</span>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

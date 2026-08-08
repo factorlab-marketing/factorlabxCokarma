@@ -1,0 +1,142 @@
+
+Slide 1: Title Slide
+Title: "Global Industry Immersion Program"
+Subtitle: "Villa Marie Degree College x Sketch Brains"
+Visuals: Dark blue gradient background with subtle gold abstract circles. Clean typography with Montserrat font.
+Key Message: Introduces the partnership and the core offering: a global immersion program.
+
+Slide 2: The Core Challenge
+Title: "The Academic-Industry Gap"
+Content:
+- Visual chart showing "Academic Theory" vs "Industry Application" gap.
+- 3 Key Pain Points:
+    1. Lack of practical exposure.
+    2. Outdated curriculum vs current tech stack.
+    3. Missing "Soft Skills" for corporate readiness.
+Key Message: Students are graduating with degrees but without employability.
+
+Slide 3: Our Solution: The "Opportunity Lens"
+Title: "The Opportunity Lens"
+Content:
+- Metaphorical graphic of a lens focusing scattered light into a coherent beam.
+- 3 Pillars:
+    1. Industry-led Curriculum
+    2. Global Mentorship
+    3. Live Projects
+Key Message: We don't just teach; we focus student potential into industry readiness.
+
+Slide 4: Strategic Alignment
+Title: "Strategic Alignment"
+Content:
+- Table comparing "Current State" vs "Future State with Sketch Brains".
+- Rows: Curriculum, Mentorship, Outcomes.
+- Key shift: From "Theoretical" to "Experiential".
+Key Message: A clear roadmap of transformation for the college.
+
+Slide 5: The Immersion Model
+Title: "4-Stage Immersion Model"
+Content:
+- Horizontal timeline:
+    1. Discovery (Week 1-2): Assessments.
+    2. Foundation (Week 3-8): Core skills.
+    3. Application (Week 9-16): Projects.
+    4. Launch (Week 17+): Placement prep.
+Key Message: structured, phased approach to learning.
+
+Slide 6: Skill Compounding
+Title: "Skill Compounding Effect"
+Content:
+- Line chart showing exponential growth of skills over time with our program vs linear growth without.
+- Highlights: "Technical Skills", "Soft Skills", "Network".
+Key Message: Our program accelerates growth through compounding benefits.
+
+Slide 7: Global Mentorship Network
+Title: "Access to Global Mentors"
+Content:
+- World map with pins indicating mentor locations (USA, UK, Singapore, Dubai).
+- Icons representing diverse industries (Tech, Finance, Marketing).
+Key Message: Bringing global perspectives to the local classroom.
+
+Slide 8: Live Project Ecosystem
+Title: "Real-World Projects"
+Content:
+- Grid of project types:
+    - Fintech App Development
+    - AI/ML Model Training
+    - Digital Marketing Campaigns
+- "Not Toy Projects" badge.
+Key Message: Students build portfolios, not just pass exams.
+
+Slide 9: Placement & Career Support
+Title: "Career Launchpad"
+Content:
+- Flowchart: Resume Building -> Mock Interviews -> Corporate Connections -> Placement.
+- Highlight: "1-on-1 Personalized Coaching".
+Key Message: End-to-end support until the offer letter.
+
+Slide 10: Student Success Stories
+Title: "Proven Impact"
+Content:
+- 2-3 brief testimonials or case snippets (anonymized if needed).
+- Metrics: "40% avg salary hike", "90% placement rate".
+Key Message: It works.
+
+Slide 11: Program Structure & Certifications
+Title: "Certification Path"
+Content:
+- Visual badge roadmap: Beginner -> Intermediate -> Specialist.
+- Mention of "Industry Recognized Certificates".
+Key Message: Tangible credentials for their CVs.
+
+Slide 12: Technology Stack
+Title: "Modern Tech Stack"
+Content:
+- Logos of tools taught: Python, React, SQL, AWS, Tableau.
+- Categorized: Frontend, Backend, Data, Cloud.
+Key Message: We teach what the market demands *now*.
+
+Slide 13: The "Villa Marie" Advantage
+Title: "Why Villa Marie?"
+Content:
+- Highlighting the college's unique position.
+- "Legacy of Excellence" + "Future-Ready Innovation".
+Key Message: Reinforcing the college's brand value in this partnership.
+
+Slide 14: Implementation Timeline
+Title: "Rollout Plan"
+Content:
+- Month 1: Onboarding.
+- Month 2: Curriculum Integration.
+- Month 3: First Cohort Launch.
+Key Message: We are ready to start immediately.
+
+Slide 15: Financial Model & Investment
+Title: "Investment & ROI"
+Content:
+- Breakdown of costs (transparent).
+- Highlighting value per student.
+- "Institutional Value" vs "Student Value".
+Key Message: A worthy investment for long-term growth.
+
+Slide 16: Next Steps
+Title: "Path Forward"
+Content:
+- Checklist:
+    1. Sign MOU.
+    2. Finalize Curriculum.
+    3. Announce to Students.
+Key Message: Clear call to action.
+
+Slide 17: Contact & Team
+Title: "Meet the Team"
+Content:
+- Photos/Names of key Sketch Brains leaders.
+- Contact info (email, website: www.sketchbrains.com).
+Key Message: Real people committed to this partnership.
+
+Slide 18: Q&A / Thank You
+Title: "Thank You"
+Content:
+- Large "Questions?" text.
+- Clean closing visual.
+Key Message: Open floor for discussion.

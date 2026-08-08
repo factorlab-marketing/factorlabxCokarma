@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Intermediate Level (Months 3–4)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 1280px; height: 720px; overflow: hidden;
+            font-family: 'Inter', sans-serif; background: #0F172A; color: white;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accent-text { color: #3B82F6; }
+        .emerald-text { color: #10B981; }
+        
+        .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
+        }
+    
+        /* Light Mode Overrides with Dual Tone Strategy */
+        body.light-mode {
+            background: #F8FAFC !important; /* Slate 50 */
+            color: #0F172A !important; /* Slate 900 */
+        }
+        
+        body.light-mode .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%) !important;
+        }
+
+        body.light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid #E2E8F0 !important; /* Slate 200 */
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Typography Inversions */
+        body.light-mode .text-white { color: #0F172A !important; }
+        body.light-mode .text-slate-200 { color: #334155 !important; }
+        body.light-mode .text-slate-300 { color: #475569 !important; }
+        body.light-mode .text-slate-400 { color: #64748B !important; }
+        body.light-mode .text-slate-500 { color: #94A3B8 !important; }
+        
+        /* Interactive Elements */
+        body.light-mode .border-slate-600 { border-color: #CBD5E1 !important; }
+        body.light-mode .border-slate-700 { border-color: #E2E8F0 !important; }
+        body.light-mode .bg-slate-800 { background-color: #F1F5F9 !important; border: 1px solid #E2E8F0; }
+        body.light-mode .bg-white\/5 { background-color: rgba(0, 0, 0, 0.03) !important; }
+        body.light-mode .bg-white\/10 { background-color: rgba(0, 0, 0, 0.05) !important; }
+        
+        /* Accents - Keeping them but ensuring contrast */
+        body.light-mode .text-blue-400 { color: #2563EB !important; } /* Darker blue */
+        body.light-mode .text-emerald-400 { color: #059669 !important; } /* Darker emerald */
+        body.light-mode .text-purple-400 { color: #7C3AED !important; } /* Darker purple */
+        
+        /* Specific Fixes */
+        body.light-mode .mock-resume { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+    </style>
+</head>
+<body class="gradient-bg flex items-center justify-center">
+    
+        <div class="w-full h-full px-20 pt-16">
+            <div class="flex items-center mb-8">
+                <div class="bg-indigo-500 text-white font-bold py-1 px-3 rounded text-sm uppercase mr-4">Phase 2</div>
+                <h1 class="text-3xl font-bold">Intermediate Level <span class="text-slate-500 text-xl font-normal ml-2">(Months 3–4)</span></h1>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-6 h-96">
+                <!-- Software Engineer -->
+                <div class="glass-card p-6 border-t-4 border-t-blue-500 flex flex-col">
+                    <h3 class="font-bold text-lg mb-4 text-blue-400 flex items-center"><i class="fas fa-code mr-2"></i> Software Engineer</h3>
+                    <ul class="space-y-3 text-sm text-slate-300 flex-1">
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2"></span>Backend/Full-Stack Framework</li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2"></span>REST APIs</li>
+                        <li class="flex items-start font-bold text-white"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2"></span>Build 1 Real Project</li>
+                    </ul>
+                </div>
+                
+                <!-- Data Analyst -->
+                <div class="glass-card p-6 border-t-4 border-t-emerald-500 flex flex-col">
+                    <h3 class="font-bold text-lg mb-4 text-emerald-400 flex items-center"><i class="fas fa-chart-bar mr-2"></i> Data Analyst</h3>
+                    <ul class="space-y-3 text-sm text-slate-300 flex-1">
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2"></span>Advanced SQL Queries</li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2"></span>Excel Advanced</li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2"></span>Power BI / Tableau</li>
+                        <li class="flex items-start font-bold text-white"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2"></span>1 Dashboard Project</li>
+                    </ul>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="glass-card p-6 border-t-4 border-t-purple-500 flex flex-col">
+                    <h3 class="font-bold text-lg mb-4 text-purple-400 flex items-center"><i class="fas fa-brain mr-2"></i> AI/ML Engineer</h3>
+                    <ul class="space-y-3 text-sm text-slate-300 flex-1">
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2"></span>Python Deep Dive</li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2"></span>Basic Statistics</li>
+                        <li class="flex items-start"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2"></span>Intro to ML Libraries</li>
+                        <li class="flex items-start font-bold text-white"><span class="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-2"></span>1 Prediction Project</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center bg-white/5 py-4 rounded-lg border border-white/10">
+                <span class="text-indigo-400 font-bold uppercase tracking-wider text-sm mr-2">Phase Focus:</span>
+                <span class="text-white font-medium text-lg">Build and Complete.</span>
+            </div>
+        </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

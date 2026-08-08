@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Implementation Governance</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #C9A227;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gov-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .gov-node {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            width: 200px;
+        }
+
+        .gov-node.root {
+            background: #0B1F3B;
+            color: white;
+            border: none;
+            width: 250px;
+            font-weight: 700;
+        }
+
+        .gov-node.level-2 {
+            width: 200px;
+            border-top: 4px solid #C9A227;
+        }
+
+        .tree-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        /* Connectors */
+        .tree-row::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: #cbd5e1;
+        }
+
+        .tree-row::after {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            height: 25px;
+            width: 2px;
+            background: #cbd5e1;
+            transform: translateX(-50%);
+        }
+
+        .gov-node.level-2::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            height: 25px;
+            width: 2px;
+            background: #cbd5e1;
+            transform: translateX(-50%);
+        }
+
+        .n-title {
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .n-desc {
+            font-size: 11px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="sidebar">
+            <i class="fas fa-bars sidebar-icon"></i>
+            <i class="fas fa-sitemap sidebar-icon active"></i>
+        </div>
+        <div class="main-content">
+            <div class="mb-4 text-center">
+                <h1 class="font-montserrat font-bold text-3xl text-[#0B1F3B]">Implementation Governance</h1>
+                <p class="text-slate-500">Structured oversight for assured quality.</p>
+            </div>
+
+            <div class="gov-tree">
+                <div class="gov-node root">
+                    Joint Steering Committee
+                    <div class="text-xs font-normal opacity-80 mt-1">Principal (Chair) & Program Lead</div>
+                </div>
+
+                <div class="tree-row">
+                    <div class="gov-node level-2">
+                        <div class="n-title">Operational Review</div>
+                        <div class="n-desc">Monthly progress checks (Attendance, Assessments)</div>
+                    </div>
+
+                    <div class="gov-node level-2">
+                        <div class="n-title">Strategic Review</div>
+                        <div class="n-desc">Quarterly outcome analysis with IQAC</div>
+                    </div>
+
+                    <div class="gov-node level-2">
+                        <div class="n-title">Risk Management</div>
+                        <div class="n-desc">Proactive mitigation of delivery risks</div>
+                    </div>
+
+                    <div class="gov-node level-2">
+                        <div class="n-title">Feedback Loop</div>
+                        <div class="n-desc">Student NPS and Mentor feedback integration</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-sm text-slate-500 italic max-w-2xl mx-auto">
+                "Governance ensures that the program remains aligned with Villa Marie's institutional goals throughout
+                the engagement, providing full transparency and accountability."
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

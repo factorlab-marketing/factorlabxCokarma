@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Is Coding Too Difficult?</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #0B1F3B;
+            color: white;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #f59e0b;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .question {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .answer {
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 50px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tool-name {
+            font-weight: 700;
+            font-size: 22px;
+            margin-top: 15px;
+            color: #fff;
+        }
+
+        .closing {
+            margin-top: 60px;
+            font-size: 24px;
+            text-align: center;
+            color: #f59e0b;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <h1 class="question">IS CODING TOO DIFFICULT?</h1>
+            <p class="answer">Data Analytics is not hardcore coding.</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <i class="fas fa-file-excel text-green-500 text-4xl"></i>
+                    <div class="tool-name">Excel</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-database text-blue-400 text-4xl"></i>
+                    <div class="tool-name">SQL</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-chart-bar text-yellow-500 text-4xl"></i>
+                    <div class="tool-name">Power BI</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fab fa-python text-yellow-300 text-4xl"></i>
+                    <div class="tool-name">Basic Python</div>
+                </div>
+            </div>
+
+            <div class="closing">
+                Logical. Structured. Learnable.
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

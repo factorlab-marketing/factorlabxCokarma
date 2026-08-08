@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team Behind FactorLab</title>
+    <script src="../../js/tailwind.js"></script>
+    <link href="../../css/fontawesome.css" rel="stylesheet">
+    <link href="../../css/local_fonts.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d97706;
+            --bg-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: #1e293b;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        .founder-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .founder-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .network-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(30, 58, 138, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.05) 0%, transparent 25%);
+        }
+    </style>
+</head>
+
+<body class="w-[1280px] h-[720px] relative flex flex-col p-16">
+
+    <div class="network-bg"></div>
+
+    <div class="relative z-10 w-full h-full flex flex-col">
+
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-extrabold text-slate-900 mb-2">Founders: <span class="gold-text">BITS, IIT, ISB
+                    Alums</span></h1>
+            <p class="text-slate-500 text-xl max-w-3xl mx-auto">From avid Smallcase users to builders.</p>
+        </div>
+
+        <!-- Founders Grid -->
+        <div class="grid grid-cols-2 gap-12 flex-1 items-center px-8">
+
+            <!-- Founder 1 -->
+            <div class="founder-card p-6 rounded-2xl flex items-center gap-6 group">
+                <div
+                    class="w-28 h-28 rounded-full overflow-hidden border-4 border-slate-200 group-hover:border-amber-500 transition-colors shadow-xl flex-shrink-0">
+                    <img src="../../assets/Mani.jpg" alt="Mani" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Venkata
+                        Manideepak</h3>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest mb-3">Co-founder & Quant Lead</div>
+                    <ul class="space-y-1 text-sm text-slate-600">
+                        <li><i class="fas fa-check text-amber-600 mr-2 text-xs"></i>14+ Yrs in Data Science</li>
+                        <li><i class="fas fa-check text-amber-600 mr-2 text-xs"></i>Expert in Factor Models</li>
+                        <li><i class="fas fa-user-graduate text-slate-400 mr-2 text-xs"></i>IIT Guwahati / ISB</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="founder-card p-6 rounded-2xl flex items-center gap-6 group">
+                <div
+                    class="w-28 h-28 rounded-full overflow-hidden border-4 border-slate-200 group-hover:border-amber-500 transition-colors shadow-xl flex-shrink-0">
+                    <img src="../../assets/Sekhar.jpg" alt="Sekhar" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors">Sekhar
+                        Sudhamsh</h3>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest mb-3">Founder & Portfolio Manager</div>
+                    <ul class="space-y-1 text-sm text-slate-600">
+                        <li><i class="fas fa-check text-amber-600 mr-2 text-xs"></i>SEBI Registered Expert</li>
+                        <li><i class="fas fa-check text-amber-600 mr-2 text-xs"></i>Strategic Outperformance</li>
+                        <li><i class="fas fa-user-graduate text-slate-400 mr-2 text-xs"></i>BITS Pilani / IMT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Narrative / Trust Box -->
+            <div
+                class="col-span-2 bg-white rounded-xl p-6 flex justify-between items-center border border-slate-200 shadow-sm">
+                <div class="flex gap-4 items-center">
+                    <div class="text-4xl text-blue-200"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-lg text-slate-600 italic">
+                        We studied market behaviors—momentum persistence and volatility shifts—to build what we wanted
+                        to invest in. Now, we bring these institutional-grade strategies to you.
+                    </p>
+                </div>
+                <div class="text-right pl-6 border-l border-slate-200">
+                    <div class="text-xs text-slate-500">SEBI Registration</div>
+                    <div class="text-emerald-600 font-mono font-bold">INH000023144</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA Footer -->
+        <div
+            class="mt-8 bg-gradient-to-r from-blue-900 to-slate-900 border-t border-blue-800 p-6 flex justify-between items-center rounded-t-2xl shadow-2xl relative z-20">
+            <div>
+                <div class="text-slate-300 text-sm mb-1">Ready to Invest?</div>
+                <div class="text-2xl font-bold text-white">Visit <span
+                        class="text-emerald-400">factorlab.smallcase.com</span></div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <button
+                    class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-emerald-500/30 transition-all transform hover:scale-105">
+                    Start Your Journey <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

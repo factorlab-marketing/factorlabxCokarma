@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Closing Slide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #0F172A;
+            color: white;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .accent-text {
+            color: #3B82F6;
+        }
+
+        .emerald-text {
+            color: #10B981;
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
+        }
+    
+        /* Light Mode Overrides with Dual Tone Strategy */
+        body.light-mode {
+            background: #F8FAFC !important; /* Slate 50 */
+            color: #0F172A !important; /* Slate 900 */
+        }
+        
+        body.light-mode .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%) !important;
+        }
+
+        body.light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid #E2E8F0 !important; /* Slate 200 */
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Typography Inversions */
+        body.light-mode .text-white { color: #0F172A !important; }
+        body.light-mode .text-slate-200 { color: #334155 !important; }
+        body.light-mode .text-slate-300 { color: #475569 !important; }
+        body.light-mode .text-slate-400 { color: #64748B !important; }
+        body.light-mode .text-slate-500 { color: #94A3B8 !important; }
+        
+        /* Interactive Elements */
+        body.light-mode .border-slate-600 { border-color: #CBD5E1 !important; }
+        body.light-mode .border-slate-700 { border-color: #E2E8F0 !important; }
+        body.light-mode .bg-slate-800 { background-color: #F1F5F9 !important; border: 1px solid #E2E8F0; }
+        body.light-mode .bg-white\/5 { background-color: rgba(0, 0, 0, 0.03) !important; }
+        body.light-mode .bg-white\/10 { background-color: rgba(0, 0, 0, 0.05) !important; }
+        
+        /* Accents - Keeping them but ensuring contrast */
+        body.light-mode .text-blue-400 { color: #2563EB !important; } /* Darker blue */
+        body.light-mode .text-emerald-400 { color: #059669 !important; } /* Darker emerald */
+        body.light-mode .text-purple-400 { color: #7C3AED !important; } /* Darker purple */
+        
+        /* Specific Fixes */
+        body.light-mode .mock-resume { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+    </style>
+</head>
+
+<body class="gradient-bg flex items-center justify-center">
+
+    <div class="w-full h-full px-20 flex flex-col justify-center items-center text-center">
+        <h1 class="text-5xl font-bold mb-12 tracking-tight">Your Career Is Not Built In Final Year.</h1>
+
+        <div class="flex items-center space-x-6 text-xl text-slate-300 mb-16">
+            <span>Clarity</span>
+            <i class="fas fa-arrow-right text-slate-600 text-sm"></i>
+            <span>Structure</span>
+            <i class="fas fa-arrow-right text-slate-600 text-sm"></i>
+            <span>Execution</span>
+            <i class="fas fa-arrow-right text-slate-600 text-sm"></i>
+            <span class="text-white font-bold border-b-2 border-emerald-500 pb-1">Consistency</span>
+        </div>
+
+        <h2 class="text-3xl font-light text-white mb-8">It is built <span class="text-blue-500 font-bold">every
+                week.</span></h2>
+
+        <div class="mt-8 opacity-70">
+            <div class="text-2xl font-bold font-montserrat tracking-widest text-slate-500 uppercase">Sketch Brains</div>
+        </div>
+    </div>
+
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+
+</html>

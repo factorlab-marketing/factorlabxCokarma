@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>SB x TASK - Blueprint 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 1280px; height: 720px; overflow: hidden;
+            font-family: 'Inter', sans-serif; background: #0A0A0A; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 800; }
+        
+        .accent-orange { color: #FF7A00; }
+        .accent-cream { color: #F5F1E8; }
+        .border-orange-accent { border-color: #FF7A00; }
+        .bg-orange-accent { background-color: #FF7A00; }
+        
+        /* Slide margins/layout */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        /* Fade and slide transitions */
+        .fade-in {
+            animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Light Mode Native Overrides */
+        body.light-mode {
+            background: #F5F1E8 !important;
+            color: #0D0D0D !important;
+        }
+        
+        body.light-mode .text-white { color: #0D0D0D !important; }
+        body.light-mode .text-slate-300, 
+        body.light-mode .text-slate-400 { color: #4A4A4A !important; }
+        body.light-mode .text-slate-500 { color: #777777 !important; }
+        body.light-mode .accent-cream { color: #0D0D0D !important; }
+        
+        body.light-mode .border-white\/10 { border-color: rgba(13, 13, 13, 0.15) !important; }
+        body.light-mode .bg-white\/5 { background-color: rgba(13, 13, 13, 0.04) !important; }
+        body.light-mode .bg-white\/10 { background-color: rgba(13, 13, 13, 0.08) !important; }
+        body.light-mode .bg-slate-900 { background-color: #E6E1D5 !important; }
+        body.light-mode .opacity-40 { opacity: 0.65 !important; }
+        body.light-mode .opacity-60 { opacity: 0.80 !important; }
+        
+        html {
+            filter: none !important;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="slide-container">
+        <!-- Top Metadata -->
+        <div class="flex justify-between items-center text-xs tracking-wider text-[#F5F1E8] opacity-40 accent-cream">
+            <div>KEYNOTE PRESENTATION</div>
+            <div>SKETCH BRAINS × TASK</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col justify-center my-auto">
+            <div class="text-left fade-in">
+                <h1 class="text-8xl font-extrabold tracking-tight leading-none mb-6">
+                    Making a Tech Career<br/>in <span class="accent-orange">2026</span>
+                </h1>
+                <p class="text-3xl font-light text-[#F5F1E8] opacity-80 tracking-wide max-w-3xl mt-6 text-white">
+                    The zero-noise action blueprint for engineering graduates.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="flex justify-between items-center text-xs tracking-wider text-[#F5F1E8] opacity-40 accent-cream">
+            <div>BUILDING COHORTS. SHIPPING CODE.</div>
+            <div>© 2026 SKETCH BRAINS</div>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

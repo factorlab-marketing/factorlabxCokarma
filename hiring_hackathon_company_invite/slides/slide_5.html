@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 5</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #09090B;
+            --accent: #DC2626;
+            --success: #DC2626;
+            --success-glow: rgba(220, 38, 38, 0.05);
+            --danger: #71717A;
+            --text-dark: #18181B;
+            --text-muted: #71717A;
+            --bg-canvas: #FAFAFA;
+            --bg-slide: #FFFFFF;
+            --border-light: #E4E4E7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-slide);
+            padding: 50px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(220, 38, 38, 0.05) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-header {
+            margin-bottom: 30px;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(9, 9, 11, 0.04);
+            border: 1px solid var(--border-light);
+            padding: 6px 12px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-bottom: 12px;
+        }
+
+        .kicker span {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        /* Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .compare-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+            transition: all 0.3s ease;
+        }
+
+        /* Traditional Hiring Styling */
+        .compare-card.traditional {
+            background: #FAFAFA;
+        }
+
+        /* Hackathon Hiring Styling (Highlighted) */
+        .compare-card.hackathon {
+            border: 2px solid var(--success);
+            box-shadow: 0 20px 40px -10px rgba(220, 38, 38, 0.08);
+        }
+
+        .badge-highlight {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 16px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+        }
+
+        .card-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .traditional .card-title { color: var(--text-muted); }
+        .hackathon .card-title { color: var(--accent); }
+
+        .item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .list-item i {
+            font-size: 18px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .traditional .list-item i { color: var(--danger); }
+        .hackathon .list-item i { color: var(--accent); }
+
+        .item-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .item-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        /* Custom Brand Logo */
+        .sb-logo {
+            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .sb-logo:hover {
+            opacity: 0.7;
+        }
+
+        .sb-dot {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-dots"></div>
+
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="kicker">
+                    <i class="fa-solid fa-code-compare" style="color: var(--primary);"></i>
+                    <span>Method Comparison</span>
+                </div>
+                <h2 class="title">How do you evaluate potential?</h2>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Traditional Hiring -->
+                <div class="compare-card traditional">
+                    <h3 class="card-title">
+                        <i class="fa-solid fa-circle-xmark"></i> Traditional Hiring
+                    </h3>
+                    <ul class="item-list">
+                        <li class="list-item">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <div class="item-text">
+                                <span class="item-label">Resumes</span>
+                                <span class="item-desc">Relying on self-reported, static summaries of candidate history.</span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <i class="fa-solid fa-comments"></i>
+                            <div class="item-text">
+                                <span class="item-label">Couple of Interviews</span>
+                                <span class="item-desc">Subjective conversations based on hypothetical scenarios.</span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <i class="fa-solid fa-spinner"></i>
+                            <div class="item-text">
+                                <span class="item-label">Hoping & Waiting</span>
+                                <span class="item-desc">Crossing your fingers that the candidate can execute when on the job.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 24px; border-top: 1px solid var(--border-light); padding-top: 16px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--danger); font-family: 'Plus Jakarta Sans', sans-serif; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-clock-rotate-left"></i> Hiring on Promise
+                    </div>
+                </div>
+
+                <!-- This Hackathon -->
+                <div class="compare-card hackathon">
+                    <div class="badge-highlight">The New Standard</div>
+                    <h3 class="card-title">
+                        <i class="fa-solid fa-circle-check"></i> The Verdict 1.0
+                    </h3>
+                    <ul class="item-list">
+                        <li class="list-item">
+                            <i class="fa-solid fa-gears"></i>
+                            <div class="item-text">
+                                <span class="item-label">Real Problem</span>
+                                <span class="item-desc">Observe candidate performance on high-fidelity, production-grade tasks.</span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <div class="item-text">
+                                <span class="item-label">Real Work</span>
+                                <span class="item-desc">See exactly how they code, debug, research, and collaborate live.</span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <div class="item-text">
+                                <span class="item-label">Real Judgment — Same Day</span>
+                                <span class="item-desc">Make direct, data-backed hiring decisions in a single day.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 24px; border-top: 1px dashed rgba(220, 38, 38, 0.2); padding-top: 16px; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-family: 'Plus Jakarta Sans', sans-serif; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-square-check"></i> Hiring on Proof
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://sketchbrains.live" class="sb-logo" target="_blank">
+                SketchBrains<span class="sb-dot">.</span>
+            </a>
+            <span>The Verdict 1.0 • October 10th</span>
+            <span>05 / 10</span>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

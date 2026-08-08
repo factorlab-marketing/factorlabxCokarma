@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Call to Action</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 1280px; height: 720px; overflow: hidden;
+            font-family: 'Inter', sans-serif; background: #0A0A0A; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 800; }
+        
+        .accent-orange { color: #FF7A00; }
+        .accent-cream { color: #F5F1E8; }
+        .border-orange-accent { border-color: #FF7A00; }
+        .bg-orange-accent { background-color: #FF7A00; }
+        
+        /* Slide margins/layout */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            padding: 80px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body.light-mode {
+            background: #F5F1E8 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-white { color: #0D0D0D !important; }
+        body.light-mode .text-slate-300, 
+        body.light-mode .text-slate-400 { color: #4A4A4A !important; }
+        body.light-mode .accent-cream { color: #0D0D0D !important; }
+        body.light-mode .border-white\/10 { border-color: rgba(13, 13, 13, 0.15) !important; }
+        body.light-mode .bg-white\/5 { background-color: rgba(13, 13, 13, 0.04) !important; }
+        body.light-mode .opacity-40 { opacity: 0.65 !important; }
+        body.light-mode .opacity-60 { opacity: 0.80 !important; }
+        
+        html {
+            filter: none !important;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="slide-container">
+        <!-- Top Metadata -->
+        <div class="flex justify-between items-center text-xs tracking-wider text-[#F5F1E8] opacity-40 accent-cream">
+            <div>NEXT STEPS</div>
+            <div>SKETCH BRAINS × TASK</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col justify-center my-auto">
+            <div class="grid grid-cols-2 gap-12 items-center fade-in">
+                <div>
+                    <h2 class="text-6xl font-extrabold tracking-tight leading-none mb-6">
+                        Own Your<br/><span class="accent-orange">2026.</span>
+                    </h2>
+                    <p class="text-2xl font-light text-slate-300 leading-relaxed mb-8">
+                        The SKETCH BRAINS × TASK cohort applications are now open for third & fourth year engineering graduates.
+                    </p>
+                    <div class="text-sm font-semibold text-slate-400 uppercase tracking-wider space-y-2">
+                        <div><i class="fas fa-envelope mr-3 text-slate-300"></i> task@sketchbrains.com</div>
+                        <div><i class="fas fa-globe mr-3 text-slate-300"></i> task.sketchbrains.com</div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="p-8 bg-white/5 rounded-2xl border border-orange-accent/30 text-center max-w-sm w-full" style="background: rgba(255,122,0,0.03);">
+                        <div class="w-48 h-48 bg-white mx-auto rounded-xl flex items-center justify-center mb-6 border border-white/10 relative overflow-hidden">
+                            <!-- Styled QR Graphic -->
+                            <i class="fas fa-qrcode text-8xl text-black"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">Scan to Apply</h4>
+                        <p class="text-xs text-slate-300">Complete the initial system architecture check to qualify.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="flex justify-between items-center text-xs tracking-wider text-[#F5F1E8] opacity-40 accent-cream">
+            <div>CLARITY. CAPABILITY. CAREER EXECUTION.</div>
+            <div>© 2026 SKETCH BRAINS</div>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+SKETCH BRAINS × KPRIT — 60 MIN SESSION SCRIPT
+
+1. COLD OPEN — "You Have 4 Years. You've Used 3." (0:00–5:00)
+
+[Walk in. No mic small talk. No "hi how's everyone doing." Start mid-thought, like you're finishing a conversation with yourself.]
+
+"Before I say a single word about who I am — I want you to do one thing. Take your phone out. Open calculator.
+
+Type 48. That's how many months a B.Tech degree gives you.
+
+Now subtract 36. That's what most of you have already spent.
+
+[pause — let them actually do it]
+
+You have 12 months left. Not 4 years. Not 'final year is far.' Twelve months — and inside those twelve months, at least 3-4 will go into exams, backlogs, projects you're forced to submit, and placements drives you didn't prepare for.
+
+So today, I'm not here to give you a motivational speech. I'm here to do maths with you. Real maths. About your salary, your job title, and where you'll be standing 5 years from today — while everyone around you is still figuring out what LPA means.
+
+By the end of this hour, some of you will feel uncomfortable. Good. That's the point."
+
+{Reference image: countdown/calendar visual — "12 months left" style graphic, minimal, red on black}
+
+2. THE FORK IN THE ROAD — Why 4th Year Is the Sweetest Spot (5:00–15:00)
+
+"Here's what nobody tells you about 4th year — it's not the end of college. It's the only window where two things are true at the same time:
+
+You still have zero job pressure — no offer letter, no manager, no targets. And you still have full control of your time — no 9-to-6 eating your day.
+
+This window closes the day you get any job. Doesn't matter if it's a good one or a bad one — once you're employed, your energy, your evenings, your weekends belong to that company. You will never again have this much free time with this much clarity about what's coming.
+
+So 4th year isn't 'chill year.' It's the last year you get to choose your future before your future starts choosing for you.
+
+Right now, in this room, there are two kinds of students.
+
+Type A: They'll spend these 12 months exactly like the last 36 — attend class, scroll reels, submit assignments a night before, wait for placement season, take whatever comes.
+
+Type B: They'll use these 12 months differently. Not harder — differently. And in 3 years, Type A and Type B will not even look like they graduated from the same college. Same degree, same campus, same faculty — completely different life.
+
+I'm not telling you which one you are. You already know. I just want you to notice — today's the day that decision quietly gets made, whether you make it consciously or not."
+
+{Reference image: split-path/fork-in-road illustration, two divergent paths, minimal editorial style — could search "career fork in the road minimal illustration"}
+
+3. THE MYTH — "Business Development Executive" Isn't What You Think (15:00–27:00)
+
+"Let's talk about placements. Because I need to break something for you before it breaks you after you've signed the offer letter.
+
+Every year, companies come to tier-2 and tier-3 colleges — Cognizant, Accenture, TCS, Wipro, and dozens like them — and they hire in bulk. Hundreds of students. Great, right? More opportunities.
+
+Here's what they don't put on the slide: most of these roles are not technical roles.
+
+They'll call it 'Business Development Executive.' Sounds powerful. Sounds like you're driving business growth for a global company.
+
+Let me tell you what it actually is, on a Tuesday morning, 9 AM: You're sitting in a cubicle. Headset on. A screen in front of you with a script. A customer calls in, angry about a delayed order or a billing issue. You read the script. You log the ticket. Next call.
+
+That's it. That's the job. It's a call centre role wearing a corporate title.
+
+I'm not saying it's a bad job — it pays the bills, it's stable, some people are genuinely good at it and build careers in it. But I am saying — if you walked into engineering thinking you'd end up writing code, doing analytics, building products — and instead you're on your 40th call of the day reading from a script — that gap between what you expected and what you got? That gap is permanent if you don't do something about it now.
+
+Here's the part that should actually worry you: these roles almost never convert into technical roles. You don't do 2 years of BPO and then get moved to 'Data Analyst.' Companies don't work that way. The track you start on is usually the track you stay on.
+
+So the real question isn't 'will I get placed.' Almost everyone in this room will get placed. The real question is — placed as what?"
+
+{Reference image: split-screen comparison — "What the title says" vs "What the job actually is" — corporate title card vs headset/call centre desk photo}
+
+{Reference image: logos of Cognizant, Accenture, TCS, Wipro arranged neutrally — not mocking, just for visual recognition}
+
+4. THE NUMBERS DON'T LIE — Two Graphs, Two Lives (27:00–40:00)
+
+"I don't want you to take my word for any of this. I want you to see it. Numbers don't have an opinion — they just show you where you end up."
+
+Graph 1: ₹4 LPA vs ₹7 LPA — The Starting Gap That Doesn't Stay Small
+
+"Two students. One starts at 4 LPA. One starts at 7 LPA. Both get a decent 10% hike every year, both switch jobs every 2-3 years for a slightly better jump. Watch what happens by year 8."
+
+(Live graph — see below)
+
+"That's not a 3 LPA gap anymore. That's a completely different tax bracket, different EMI capacity, different life. And this isn't even the wide version — this is the conservative version."
+
+Graph 2: Non-Technical vs Technical Growth Trajectory
+
+"Now the more important one. Because starting salary is one thing — but the shape of your growth curve depends on whether you're on a technical track or not.
+
+A non-technical role — support, BPO, back-office — grows linearly. Small steady raises. It's a straight line, and it plateaus early because the skill ceiling is low.
+
+A technical role — even an entry-level analyst role — grows compounding. Every year you're not just earning more, you're becoming more valuable, more scarce, harder to replace. The line doesn't just go up — it curves up."
+
+(Live graph — see below)
+
+"This is the actual difference between a job and a career. One pays you for your time. The other pays you for your skill. Time doesn't compound. Skill does."
+
+Segment 5 — What Industry-Ready Actually Looks Like (40:00–48:00)
+
+"So if technical roles are the better track — why doesn't everyone just get one?
+
+Because of how training normally happens. Walk into almost any engineering college in this country — doesn't matter which one — and you'll see the same thing. A projector. A professor reading off the slide. Students copying notes for an exam three months away. That's not a KPRIT problem — that's every college. It's the default. Nobody's trained to actually build anything; they're trained to recall things for 3 hours on exam day.
+
+Here's what's different about what's happening in this room right now. Your Training & Placement Cell looked at that default — and decided they didn't want KPRIT students going through the same motion as everyone else. They wanted something that doesn't exist in most colleges — a program built around the exact tech stack that Global Capability Centres — JP Morgan, Goldman Sachs, Wells Fargo, the kind of companies sitting in Hyderabad and Bangalore right now — are actually hiring for.
+
+Not theory. Not projector-notes. You'd be sitting in a room with the other serious students from your own campus, solving the same category of problems these companies solve internally, competing against each other on a live leaderboard — so you already know where you stand before you ever sit in front of a recruiter."
+
+{Reference image: leaderboard/competition UI mockup — clean, minimal, showing ranked names/scores} {Reference image: GCC company logos — JP Morgan, Goldman Sachs, Wells Fargo — arranged neutrally, associated with Hyderabad/Bangalore skyline}
+
+Segment 6 — What This Actually Looks Like (48:00–55:00)
+
+(Renamed from "Soft Reveal" — no pitch framing, just describing the initiative KPRIT is running)
+
+"Now here's the part that makes this genuinely different from a normal 'extra class' or 'certification course' — the kind you've probably seen posters for in the corridor.
+
+Think about what IIT campuses actually look like. It's not just the syllabus that makes them different — it's who walks into the classroom. Corporate leaders, people who've actually worked inside these companies, coming in and teaching from real-world experience, not a textbook.
+
+That's exactly what KPRIT is doing here. Instead of only faculty teaching from slides, you'll have mentors who've actually worked inside MNCs and GCCs walking into your sessions — training you on real problems these companies deal with, not hypothetical case studies. Every 1-2 weeks, there's a live competition or a hackathon-style build where you apply what you just learned under real pressure — not a written exam, an actual build. Alongside that, there's work done on your LinkedIn and your professional presence, because by the time this is done, your profile needs to look like someone who's already done the job, not someone who just finished a course.
+
+The goal isn't a certificate to put in a folder. The goal is that three months from now, you're not walking into a placement interview hoping to get any offer — you're walking in already knowing how a GCC analyst actually works, because you've been doing it."
+
+{Reference image: mentor/industry professional teaching in a classroom setting — professional, engaged, not stock-photo generic} {Reference image: program pillars icon row — GCC-aligned tech stack / Leaderboard competitions / MNC mentors / LinkedIn & personal brand}
+
+Segment 7 — The Ask (55:00–60:00)
+
+"So here's all I'll ask from you today — and it's not a form for anything, it's not asking you to sign up for anything, it's not asking for a single rupee.
+
+Your TPO wants to know one thing before this goes further: how many of you are actually serious about this. Not politely interested — actually serious, the kind of serious that means you'd show up to every session and put in the work.
+
+There's a QR code on the screen. If everything in the last hour made sense to you — if some part of you just decided you don't want to be the version of yourself that does nothing different in this last year — scan it, fill it out. Takes less than a minute.
+
+This is purely about interest. Nobody's asking you to commit to anything today. But your answer here is literally what decides whether this program happens at KPRIT or not — so if you want it, this is where you say so."
+
+[QR code on screen, hold 3-4 minutes]
+
+Now let me build the two graphs as live visuals for segment 4.
+
+Both graphs are live above. Numbers behind them, so you can defend them if a smart student pushes back:
+
+Graph 1: ₹4L → ₹8.6L vs ₹7L → ₹15L over 8 years, both at ~10% annual growth. Same rate, gap nearly doubles in absolute terms — good for showing that starting point compounds even when effort is equal.
+
+Graph 2: Non-technical modeled as linear (+₹0.5L/year, realistic for BPO-track raises) reaching ~₹8L by year 8. Technical modeled at ~22% compounding (accounts for skill growth + job switches, not just hikes) reaching ~₹18L. This is the one that should land hardest — same starting salary, wildly different shape.

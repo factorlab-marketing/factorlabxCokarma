@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Higher Packages Are Possible</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #10B981;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .list-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            margin-top: 30px;
+        }
+
+        .item {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #334155;
+            display: flex;
+            align-items: center;
+        }
+
+        .item i {
+            color: #10B981;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <h1 class="font-montserrat font-bold text-4xl text-[#0B1F3B]">HIGHER PACKAGES ARE POSSIBLE.</h1>
+            <p class="text-slate-500 mt-2 text-xl">But only for those who:</p>
+
+            <div class="list-box">
+                <div class="item"><i class="fas fa-check-square"></i> Choose a direction</div>
+                <div class="item"><i class="fas fa-check-square"></i> Commit to skill-building</div>
+                <div class="item"><i class="fas fa-check-square"></i> Build real projects</div>
+                <div class="item"><i class="fas fa-check-square"></i> Stay consistent</div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

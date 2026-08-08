@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide 4 - EXCEL GRID COORDINATES</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-content">
+                <div class="page-header">
+                    <span class="page-header-title">EXCEL GRID COORDINATES</span>
+                    <span class="page-header-chapter">Formula Engine</span>
+                </div>
+                
+                <div class="page-body">
+                    <h1 class="booklet-title">EXCEL GRID COORDINATES</h1>
+                    <h2 class="booklet-subtitle">Sheets, Ranges, & Structured References</h2>
+                    
+                    
+        <div class="slide-grid">
+            <div class="slide-col">
+                <div class="card" style="border-left: 4.5px solid var(--accent-red); padding: 8px 10px;">
+                    <span class="card-title">Concept & Syntax</span>
+                    <p class="card-body-text">Excel maps cells by letter (columns) and numbers (rows). References point to cells or dynamic table headers.</p>
+                    <div style="font-family: var(--font-mono); font-size: 0.54rem; font-weight: 700; background-color: var(--accent-red-light); padding: 4px; border-radius: 4px; text-align: center; margin-top: 4px;">
+                        Sheet: <code>'Sales'!A1:B10</code> | Table: <code>Sales[Amount]</code>
+                    </div>
+                </div>
+                <div class="card" style="padding: 8px 10px;">
+                    <span class="card-title">Business Use Cases</span>
+                    <p class="card-body-text">Referencing across sheets for consolidation logs, and utilizing structured table names in dynamic reports.</p>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="card" style="padding: 8px 10px; height: 100%;">
+                    <span class="card-title">Reference Style Matrix</span>
+                    <table class="ref-table" style="margin-top: 5px;">
+                        <thead>
+                            <tr>
+                                <th>Style</th>
+                                <th>Syntax</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Single Cell</td>
+                                <td><code>B2</code></td>
+                                <td>Col B, Row 2 intersection.</td>
+                            </tr>
+                            <tr>
+                                <td>Array Block</td>
+                                <td><code>A1:C10</code></td>
+                                <td>From A1 down to C10.</td>
+                            </tr>
+                            <tr>
+                                <td>Table Column</td>
+                                <td><code>Table1[Salary]</code></td>
+                                <td>Dynamic table column check.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="slide-col">
+                <div class="callout-box warning">
+                    <i class="fas fa-times-circle"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Common Mistakes</span>
+                        <span class="callout-text">Omitting single quotes around sheet names containing spaces (e.g., <code>Sales Data!A1</code> instead of <code>'Sales Data'!A1</code>).</span>
+                    </div>
+                </div>
+                <div class="callout-box interview">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="callout-content">
+                        <span class="callout-title">Interview Prep</span>
+                        <span class="callout-text">
+                            <strong>Q:</strong> "Why use Structured References over static ranges?"<br>
+                            <strong>Expectation:</strong> Explain that table names scale automatically with additions and are human-readable.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                </div>
+
+                <div class="qr-container" style="padding: 4px 10px; margin-top: 5px;">
+                    <div class="qr-text-block">
+                        <div class="qr-heading">EXCEL GRID COORDINATES Practice Lab</div>
+                        <div class="qr-paragraph">Scan to download standard starting templates, interactive workbooks, and interview files.</div>
+                    </div>
+                    <div class="qr-code-box" style="width: 32px; height: 32px;">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="10" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="15" y="15" width="15" height="15" fill="var(--text-black)"/>
+                            <rect x="65" y="10" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="10" y="65" width="25" height="25" fill="none" stroke="var(--accent-red)" stroke-width="4"/>
+                            <rect x="45" y="45" width="10" height="10" fill="var(--accent-red)"/>
+                            <rect x="70" y="70" width="15" height="15" fill="var(--text-black)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="page-footer">
+                    <span>EXCEL REFERENCE DECK</span>
+                    <span class="page-number">04</span>
+                </div>
+            </div>
+</body>
+</html>

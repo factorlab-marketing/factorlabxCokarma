@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0B1F3A;
+            --accent: #2563EB;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F5F7FA;
+            --border-light: #E5E7EB;
+            --border-med: #D1D5DB;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-gray); /* Outer boundary */
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-white);
+            padding: 70px 90px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* very subtle framing */
+        }
+        
+        /* Corporate Tracker / Kicker */
+        .kicker {
+            position: absolute;
+            top: 40px;
+            left: 90px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .kicker::before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        /* Typography - Enterprise Grade */
+        .heading { 
+            font-size: 38px; 
+            font-weight: 800; 
+            color: var(--primary); 
+            margin-top: 20px;
+            margin-bottom: 40px; 
+            line-height: 1.2; 
+            letter-spacing: -1px;
+        }
+        .body-text { font-size: 18px; color: var(--text-dark); line-height: 1.6; font-weight: 400; }
+        
+        /* Info-graphic Helpers */
+        .flex { display: flex; }
+        .flex-col { display: flex; flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .gap-4 { gap: 16px; }
+        .gap-6 { gap: 24px; }
+        .gap-10 { gap: 40px; }
+        
+        /* Grid system */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; height: 100%; }
+        
+        /* Footer */
+        .footer { 
+            position: absolute; 
+            bottom: 30px; 
+            left: 90px; 
+            right: 90px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 13px; 
+            color: var(--text-light); 
+            border-top: 1px solid var(--border-light); 
+            padding-top: 15px; 
+            font-weight: 500;
+        }
+        
+        
+        .title-wrapper { height: 100%; display: flex; flex-direction: column; justify-content: center; position: relative; padding-left: 60px; }
+        .title-wrapper::before { content: ''; position: absolute; left: 0; top: 15%; height: 70%; width: 8px; background-color: var(--accent); }
+        .hero-title { font-size: 72px; font-weight: 900; color: var(--primary); letter-spacing: -2px; line-height: 1; margin-bottom: 24px; }
+        .hero-subtitle { font-size: 32px; font-weight: 400; color: var(--text-dark); margin-bottom: 40px; max-width: 800px; line-height: 1.3; }
+        .hero-statement { display: inline-block; font-size: 18px; font-weight: 600; color: var(--bg-white); background-color: var(--primary); padding: 16px 32px; letter-spacing: 1px; }
+    
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        
+        <div class="title-wrapper">
+            <div class="hero-title">Sketch Brains</div>
+            <div class="hero-subtitle">A structured pipeline for pre-trained, job-ready talent.</div>
+            <div>
+                <div class="hero-statement">Reduce hiring cycles. Eliminate training overhead.</div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <span>Sketch Brains</span>
+            <span>Confidential & Proprietary</span>
+        </div>
+    </div>
+    <!-- PDF Capture Bridge script -->
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

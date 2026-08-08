@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #09090B; /* Deep Black */
+            --accent: #DC2626; /* Vivid Red */
+            --accent-glow: rgba(220, 38, 38, 0.04);
+            --text-dark: #18181B;
+            --text-muted: #71717A;
+            --bg-canvas: #FAFAFA;
+            --bg-slide: #FFFFFF;
+            --border-light: #E4E4E7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-slide);
+            padding: 60px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ambient background decoration - Sketch Brains Red Theme */
+        .grid-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(220, 38, 38, 0.05) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-glow-1 {
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-glow-2 {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(9, 9, 11, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .circle-decor {
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            width: 300px;
+            height: 300px;
+            border: 1px dashed rgba(220, 38, 38, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            animation: rotate 60s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Kicker Badge */
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(220, 38, 38, 0.06);
+            border: 1px solid rgba(220, 38, 38, 0.12);
+            padding: 8px 16px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-bottom: 24px;
+        }
+
+        .kicker span {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Typography */
+        .question-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.35;
+            letter-spacing: -1px;
+            max-width: 1050px;
+            margin-bottom: 20px; /* Reduced to fit subheadline nicely */
+        }
+
+        .question-subheadline {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            font-weight: 550;
+            line-height: 1.5;
+            max-width: 900px;
+        }
+
+        .question-highlight {
+            background: linear-gradient(135deg, #09090B 0%, #DC2626 70%, #7F1D1D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Logo Grid */
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            max-width: 1000px;
+        }
+        .company-badge {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px; /* gap between icon and text */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #27272A;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+            transition: all 0.3s ease;
+        }
+
+        .company-badge:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.06);
+            color: var(--accent);
+            background: #FFFFFF;
+        }
+
+        /* Custom Brand Logo */
+        .sb-logo {
+            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .sb-logo:hover {
+            opacity: 0.7;
+        }
+
+        .sb-dot {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-dots"></div>
+        <div class="orb-glow-1"></div>
+        <div class="orb-glow-2"></div>
+        <div class="circle-decor"></div>
+
+        <div class="slide-content">
+            <div class="kicker">
+                <i class="fa-solid fa-circle-question" style="color: var(--accent);"></i>
+                <span>The Core Question</span>
+            </div>
+            
+            <h1 class="question-headline">
+                Why do <span class="question-highlight">JPMorgan Chase & Co, Flipkart, Microsoft, Amazon, Google, Goldman Sachs, American Express, and Walmart Global Tech</span> have the best-in-class employees?
+            </h1>
+
+            <p class="question-subheadline">
+                The world's top engineering teams don't hire off resumes. They hire off evidence.
+            </p>
+
+            <div class="company-grid">
+                <div class="company-badge"><i class="fa-solid fa-building-columns mr-2"></i> JPMorgan Chase</div>
+                <div class="company-badge"><i class="fa-solid fa-cart-shopping mr-2"></i> Flipkart</div>
+                <div class="company-badge"><i class="fa-brands fa-microsoft mr-2"></i> Microsoft</div>
+                <div class="company-badge"><i class="fa-brands fa-amazon mr-2"></i> Amazon</div>
+                <div class="company-badge"><i class="fa-brands fa-google mr-2"></i> Google</div>
+                <div class="company-badge"><i class="fa-solid fa-coins mr-2"></i> Goldman Sachs</div>
+                <div class="company-badge"><i class="fa-solid fa-credit-card mr-2"></i> American Express</div>
+                <div class="company-badge"><i class="fa-solid fa-store mr-2"></i> Walmart Global Tech</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://sketchbrains.live" class="sb-logo" target="_blank">
+                SketchBrains<span class="sb-dot">.</span>
+            </a>
+            <span>The Verdict 1.0 • October 10th</span>
+            <span>01 / 10</span>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

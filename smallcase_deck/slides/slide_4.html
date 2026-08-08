@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy 2: Adaptive Asset Allocation</title>
+    <script src="../../js/tailwind.js"></script>
+    <link href="../../css/fontawesome.css" rel="stylesheet">
+    <link href="../../css/local_fonts.css" rel="stylesheet">
+    <script src="../../js/chart.js"></script>
+    <style>
+        :root {
+            --primary-gold: #d97706;
+            --bg-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: #1e293b;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dashboard-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(30, 58, 138, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(30, 58, 138, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(226, 232, 240, 1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            transition: all 0.3s ease;
+        }
+
+        /* Subtle animated gradients for active states */
+        .active-ring-emerald {
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
+
+        .active-ring-blue {
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+
+        .active-ring-amber {
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+
+<body class="w-[1280px] h-[720px] relative flex flex-col">
+
+    <!-- Background -->
+    <div class="dashboard-grid"></div>
+
+    <div class="relative z-10 w-full h-full flex flex-col px-16 py-12">
+
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-12 border-b border-slate-200 pb-4">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <span
+                        class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Strategy
+                        2</span>
+                    <span class="text-slate-400 text-xs uppercase tracking-widest">Systematic Core</span>
+                </div>
+                <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight">Adaptive Asset Allocation</h1>
+            </div>
+            <div class="text-right">
+                <div class="text-sm font-bold text-slate-500 uppercase tracking-widest">Portfolio Autopilot</div>
+                <div class="text-xs text-slate-400 mt-1">Dynamic Rebalancing</div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="flex-1 grid grid-cols-12 gap-16">
+
+            <!-- LEFT: Core Concept (4 Cols) -->
+            <div class="col-span-4 flex flex-col justify-center space-y-10">
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">All-Weather Growth</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Shifts smoothly between <span class="font-semibold text-blue-700">Equity</span>, <span
+                            class="font-semibold text-amber-600">Gold</span>, and <span
+                            class="font-semibold text-slate-600">Debt</span> based on rigorous momentum & volatility
+                        signals.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-emerald-600 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-lg">Systematic Execution</div>
+                            <div class="text-sm text-slate-500">Zero emotional bias</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-amber-600 text-xl group-hover:scale-110 transition-transform">
+                            <i class="fas fa-umbrella"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-lg">Drawdown Control</div>
+                            <div class="text-sm text-slate-500">Protects capital in crashes</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: Regime Visuals (8 Cols) -->
+            <div class="col-span-8 flex flex-col justify-center">
+
+                <!-- Regime Cards Container -->
+                <div class="grid grid-cols-3 gap-6">
+
+                    <!-- 1. Bull Regime -->
+                    <div
+                        class="glass-card rounded-2xl p-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
+                        <div class="p-5 flex flex-col items-center">
+                            <div class="w-full flex justify-between items-center mb-4">
+                                <span
+                                    class="text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded">Bull</span>
+                                <i class="fas fa-arrow-up text-emerald-400"></i>
+                            </div>
+
+                            <div class="relative w-32 h-32 mb-4">
+                                <canvas id="bullChart"></canvas>
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                    <span class="text-2xl font-bold text-slate-800">80<span
+                                            class="text-xs">%</span></span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold">Equity</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full text-center border-t border-slate-100 pt-3">
+                                <p class="text-xs text-slate-500 font-medium">Maximizes Growth</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Sideways Regime -->
+                    <div
+                        class="glass-card rounded-2xl p-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+                        <div class="p-5 flex flex-col items-center">
+                            <div class="w-full flex justify-between items-center mb-4">
+                                <span
+                                    class="text-xs font-bold text-blue-700 uppercase tracking-wider bg-blue-50 px-2 py-1 rounded">Sideways</span>
+                                <i class="fas fa-arrows-alt-h text-blue-400"></i>
+                            </div>
+
+                            <div class="relative w-32 h-32 mb-4">
+                                <canvas id="sidewaysChart"></canvas>
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                    <span class="text-2xl font-bold text-slate-800">50<span
+                                            class="text-xs">%</span></span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold">Equity</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full text-center border-t border-slate-100 pt-3">
+                                <p class="text-xs text-slate-500 font-medium">Balances Risk</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Bear Regime -->
+                    <div
+                        class="glass-card rounded-2xl p-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-amber-500"></div>
+                        <div class="p-5 flex flex-col items-center">
+                            <div class="w-full flex justify-between items-center mb-4">
+                                <span
+                                    class="text-xs font-bold text-amber-700 uppercase tracking-wider bg-amber-50 px-2 py-1 rounded">Bear</span>
+                                <i class="fas fa-shield-alt text-amber-400"></i>
+                            </div>
+
+                            <div class="relative w-32 h-32 mb-4">
+                                <canvas id="bearChart"></canvas>
+                                <div
+                                    class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                    <span class="text-2xl font-bold text-slate-800">10<span
+                                            class="text-xs">%</span></span>
+                                    <span class="text-[10px] text-slate-400 uppercase font-bold">Equity</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full text-center border-t border-slate-100 pt-3">
+                                <p class="text-xs text-slate-500 font-medium">Preserves Capital</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Legend -->
+                <div class="mt-8 flex justify-center gap-8">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 shadow-sm"></span>
+                        <span class="text-sm font-semibold text-slate-600">Equity ETFs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-amber-500 shadow-sm"></span>
+                        <span class="text-sm font-semibold text-slate-600">Gold ETFs</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-slate-500 shadow-sm"></span>
+                        <span class="text-sm font-semibold text-slate-600">Liquid Debt</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Common Pie Config
+        const pieOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '75%',
+            plugins: { legend: { display: false }, tooltip: { enabled: false } }, // Clean look
+            elements: { arc: { borderWidth: 0, hoverOffset: 4 } },
+            animation: { animateScale: true, animateRotate: true }
+        };
+
+        // Bull Chart (High Equity)
+        new Chart(document.getElementById('bullChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Equity', 'Gold', 'Debt'],
+                datasets: [{
+                    data: [80, 10, 10],
+                    backgroundColor: ['#10b981', '#f59e0b', '#64748b'],
+                }]
+            },
+            options: pieOptions
+        });
+
+        // Sideways Chart (Balanced)
+        new Chart(document.getElementById('sidewaysChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Equity', 'Gold', 'Debt'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['#3b82f6', '#f59e0b', '#64748b'], // Blue for focus
+                }]
+            },
+            options: { ...pieOptions, cutout: '75%' }
+        });
+
+        // Bear Chart (High Gold/Debt)
+        new Chart(document.getElementById('bearChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Equity', 'Gold', 'Debt'],
+                datasets: [{
+                    data: [10, 50, 40],
+                    backgroundColor: ['#ef4444', '#f59e0b', '#64748b'], // Red/Amber warning
+                }]
+            },
+            options: pieOptions
+        });
+    </script>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

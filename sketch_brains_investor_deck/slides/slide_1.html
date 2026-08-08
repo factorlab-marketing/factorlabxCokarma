@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>Opening Thesis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #F7F7F6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .text-main-color { color: #F7F7F6; }
+        .text-muted-color { color: #A0AEC0; }
+        .card-bg { background: #161616; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+     
+    <div class="slide-container">
+        
+        <div class="flex-1 flex flex-col justify-center items-start pl-10 max-w-4xl">
+            <p class="font-serif text-5xl font-bold mb-6 text-main-color animate-up leading-tight">
+                India optimized higher education for placements.
+            </p>
+            <p class="font-serif text-5xl font-bold mb-6 text-main-color animate-up delay-200 leading-tight">
+                The AI economy rewards continuous capability.
+            </p>
+            <p class="font-serif text-5xl font-bold text-main-color animate-up delay-400 leading-tight">
+                That optimization is <span class="accent-gold">now obsolete.</span>
+            </p>
+        </div>
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span class="font-bold tracking-widest uppercase">Sketch Brains</span>
+            <span>Slide 01 // Opening Thesis</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

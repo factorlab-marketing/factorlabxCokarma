@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Intelligence Framework</title>
+    <script src="../../js/tailwind.js"></script>
+    <link href="../../css/fontawesome.css" rel="stylesheet">
+    <link href="../../css/local_fonts.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d97706;
+            --bg-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: #1e293b;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .prism-core {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(30, 58, 138, 0.3);
+            position: relative;
+            z-index: 20;
+        }
+
+        .center-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px dashed #cbd5e1;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .satellite-node {
+            position: absolute;
+            width: 280px;
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .satellite-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .connector-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 2px;
+            background: #cbd5e1;
+            transform-origin: 0 50%;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body class="w-[1280px] h-[720px] relative flex flex-col p-12">
+
+    <!-- Header -->
+    <div class="text-center mb-8 relative z-30">
+        <h1 class="text-5xl font-extrabold text-slate-900 mb-2">Strategy Intelligence Framework</h1>
+        <p class="text-slate-500 text-lg">Rigorous validation before capital deployment.</p>
+    </div>
+
+    <!-- Main Graphic Container -->
+    <div class="flex-1 relative flex items-center justify-center">
+
+        <!-- Rings -->
+        <div class="center-ring w-[400px] h-[400px]"></div>
+        <div class="center-ring w-[600px] h-[600px] opacity-50"></div>
+
+        <!-- PRISM CORE -->
+        <div class="prism-core text-center text-white p-4">
+            <div>
+                <div class="text-4xl mb-2"><i class="fas fa-cubes"></i></div>
+                <div class="text-2xl font-bold tracking-widest">PRISM&trade;</div>
+                <div class="text-[10px] opacity-70">Portfolio Risk &<br>Intelligence Signal Matrix</div>
+            </div>
+        </div>
+
+        <!-- Satellite 1: Vetting (Top Left) -->
+        <div class="satellite-node" style="top: 10%; left: 15%;">
+            <div class="satellite-icon bg-blue-50 text-blue-600"><i class="fas fa-check-circle"></i></div>
+            <div>
+                <h4 class="font-bold text-slate-800 text-sm">Signal Vetting</h4>
+                <p class="text-xs text-slate-500 leading-tight mt-1">Refined through multi-regime backtesting.</p>
+            </div>
+        </div>
+        <!-- Connector -->
+        <div class="connector-line w-[180px]" style="transform: rotate(215deg) translate(80px, 0);"></div>
+
+        <!-- Satellite 2: Stress Testing (Top Right) -->
+        <div class="satellite-node" style="top: 10%; right: 15%;">
+            <div class="satellite-icon bg-amber-50 text-amber-600"><i class="fas fa-fire"></i></div>
+            <div>
+                <h4 class="font-bold text-slate-800 text-sm">Stress Simulations</h4>
+                <p class="text-xs text-slate-500 leading-tight mt-1">Rebalance impact analysis across market conditions.
+                </p>
+            </div>
+        </div>
+        <!-- Connector -->
+        <div class="connector-line w-[180px]" style="transform: rotate(-35deg) translate(80px, 0);"></div>
+
+        <!-- Satellite 3: Monitoring (Bottom Left) -->
+        <div class="satellite-node" style="bottom: 15%; left: 15%;">
+            <div class="satellite-icon bg-emerald-50 text-emerald-600"><i class="fas fa-heartbeat"></i></div>
+            <div>
+                <h4 class="font-bold text-slate-800 text-sm">Health Monitoring</h4>
+                <p class="text-xs text-slate-500 leading-tight mt-1">Ongoing check of signal health & correlations.</p>
+            </div>
+        </div>
+        <!-- Connector -->
+        <div class="connector-line w-[180px]" style="transform: rotate(145deg) translate(80px, 0);"></div>
+
+
+        <!-- Satellite 4: Risk Control (Bottom Right) -->
+        <div class="satellite-node" style="bottom: 15%; right: 15%;">
+            <div class="satellite-icon bg-red-50 text-red-600"><i class="fas fa-balance-scale"></i></div>
+            <div>
+                <h4 class="font-bold text-slate-800 text-sm">Risk Limits</h4>
+                <p class="text-xs text-slate-500 leading-tight mt-1">Concentration limits & drawdown behavior analysis.
+                </p>
+            </div>
+        </div>
+        <!-- Connector -->
+        <div class="connector-line w-[180px]" style="transform: rotate(35deg) translate(80px, 0);"></div>
+
+    </div>
+
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

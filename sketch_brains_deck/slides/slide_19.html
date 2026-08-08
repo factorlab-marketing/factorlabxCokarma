@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>LinkedIn Optimization</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 1280px; height: 720px; overflow: hidden;
+            font-family: 'Inter', sans-serif; background: #0F172A; color: white;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accent-text { color: #3B82F6; }
+        .emerald-text { color: #10B981; }
+        
+        .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
+        }
+    
+        /* Light Mode Overrides with Dual Tone Strategy */
+        body.light-mode {
+            background: #F8FAFC !important; /* Slate 50 */
+            color: #0F172A !important; /* Slate 900 */
+        }
+        
+        body.light-mode .gradient-bg {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%) !important;
+        }
+
+        body.light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid #E2E8F0 !important; /* Slate 200 */
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Typography Inversions */
+        body.light-mode .text-white { color: #0F172A !important; }
+        body.light-mode .text-slate-200 { color: #334155 !important; }
+        body.light-mode .text-slate-300 { color: #475569 !important; }
+        body.light-mode .text-slate-400 { color: #64748B !important; }
+        body.light-mode .text-slate-500 { color: #94A3B8 !important; }
+        
+        /* Interactive Elements */
+        body.light-mode .border-slate-600 { border-color: #CBD5E1 !important; }
+        body.light-mode .border-slate-700 { border-color: #E2E8F0 !important; }
+        body.light-mode .bg-slate-800 { background-color: #F1F5F9 !important; border: 1px solid #E2E8F0; }
+        body.light-mode .bg-white\/5 { background-color: rgba(0, 0, 0, 0.03) !important; }
+        body.light-mode .bg-white\/10 { background-color: rgba(0, 0, 0, 0.05) !important; }
+        
+        /* Accents - Keeping them but ensuring contrast */
+        body.light-mode .text-blue-400 { color: #2563EB !important; } /* Darker blue */
+        body.light-mode .text-emerald-400 { color: #059669 !important; } /* Darker emerald */
+        body.light-mode .text-purple-400 { color: #7C3AED !important; } /* Darker purple */
+        
+        /* Specific Fixes */
+        body.light-mode .mock-resume { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+    </style>
+</head>
+<body class="gradient-bg flex items-center justify-center">
+    
+        <div class="w-full h-full px-20 flex flex-col justify-center items-center">
+            <h1 class="text-4xl font-bold mb-12"><i class="fab fa-linkedin text-blue-500 mr-3"></i> LinkedIn Optimization</h1>
+            
+            <div class="max-w-4xl w-full">
+                <!-- Bad Example -->
+                <div class="glass-card p-6 mb-6 opacity-60 border border-red-500/20">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                        <span class="text-sm font-bold uppercase tracking-wider text-red-400">Bad Headline</span>
+                    </div>
+                    <p class="text-xl text-slate-300 font-serif">"Final Year Student"</p>
+                </div>
+                
+                <!-- Good Example -->
+                <div class="glass-card p-8 border-l-4 border-l-emerald-500 bg-emerald-900/10 shadow-lg transform scale-105">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                        <span class="text-sm font-bold uppercase tracking-wider text-emerald-400">Better Headline</span>
+                    </div>
+                    <p class="text-2xl text-white font-medium">"Aspiring Data Analyst | Built 3 Business Dashboards"</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400"><i class="fas fa-image"></i></div>
+                        <h3 class="font-bold text-white mb-2">Banner</h3>
+                        <p class="text-sm text-slate-400">Role-focused, not generic scenery.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400"><i class="fas fa-pen-fancy"></i></div>
+                        <h3 class="font-bold text-white mb-2">Activity</h3>
+                        <p class="text-sm text-slate-400">Post learning insights weekly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

@@ -391,6 +391,60 @@
                     Faculty Deck 2
                 </a>
             </li>
+            <li>
+                <a href="../smallcase_deck/index.html" class="deck-link">
+                    <i class="fas fa-chart-line"></i>
+                    FactorLab Smallcase
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_deck/index.html" class="deck-link">
+                    <i class="fas fa-brain"></i>
+                    Sketch Brains (Student)
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_investor_deck/index.html" class="deck-link">
+                    <i class="fas fa-wallet"></i>
+                    Sketch Brains Investor Deck
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_kprit_deck/index.html" class="deck-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    SB x KPRIT Keynote
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_x_task_deck/index.html" class="deck-link">
+                    <i class="fas fa-rocket"></i>
+                    SB x TASK Blueprint
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_x_villa_marie_deck/index.html" class="deck-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    SB x Villa Marie
+                </a>
+            </li>
+            <li>
+                <a href="../sketch_brains_x_company_deck/index.html" class="deck-link">
+                    <i class="fas fa-handshake"></i>
+                    SB x Company Pipeline
+                </a>
+            </li>
+            <li>
+                <a href="../hiring_hackathon_company_invite/index.html" class="deck-link">
+                    <i class="fas fa-building"></i>
+                    Hiring Hackathon Invitation
+                </a>
+            </li>
+            <li>
+                <a href="../linkedin_optimization_deck/index.html" class="deck-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn Optimization
+                </a>
+            </li>
         </ul>
     </aside>
 
@@ -455,9 +509,10 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../js/pdf_generator.js"></script>
     <script>
         // Configuration
-        const TOTAL_SLIDES = 13;
+        const TOTAL_SLIDES = 14;
         let currentSlide = 1;
         let isDarkTheme = false;
         let activeFrameId = 'slideFrameA';
@@ -639,8 +694,11 @@
 
         // PDF Download Logic
         function downloadPitchDeck() {
-            // Placeholder for now, can implement similar to others if print.html exists
-            alert('PDF Download not yet configured for this deck.');
+            if (window.PDFTools) {
+                PDFTools.generate(TOTAL_SLIDES, 'Faculty_Deck_2', 'slides/');
+            } else {
+                alert('PDF Tools not loaded.');
+            }
         }
 
         // Event Listeners

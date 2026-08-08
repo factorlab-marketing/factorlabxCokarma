@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>Market Opportunity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .text-main-color { color: #FFFFFF; }
+        .text-muted-color { color: #94A3B8; }
+        .card-bg { background: #1E293B; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+        
+        body.light-mode {
+            background: #F7F7F6 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-main-color { color: #0D0D0D !important; }
+        body.light-mode .text-muted-color { color: #555555 !important; }
+        body.light-mode .card-bg {
+            background: #FFFFFF !important;
+            border: 1px solid rgba(13, 13, 13, 0.08) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+        }
+        body.light-mode .border-main-color { border-color: rgba(13, 13, 13, 0.1) !important; }
+        body.light-mode .bg-slate-800 { background-color: #E2E8F0 !important; }
+        body.light-mode .text-slate-300 { color: #334155 !important; }
+        body.light-mode .text-slate-400 { color: #475569 !important; }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="slide-container">
+        
+        <div class="animate-up">
+            <span class="text-xs uppercase tracking-widest text-muted-color font-semibold">Slide 08 // Market Opportunity</span>
+            <h2 class="text-3xl font-bold text-main-color mt-2 mb-6">We do not use a generic EdTech TAM. Here is the market, built bottom-up.</h2>
+        </div>
+
+        <div class="grid grid-cols-12 gap-8 items-center flex-1 my-4">
+            <!-- Left: Base Data -->
+            <div class="col-span-5 flex flex-col space-y-4">
+                <div class="card-bg p-5 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-main-color">4,800</div>
+                    <div class="text-xs font-bold text-blue-500 uppercase tracking-wide mt-1">AICTE Engineering Colleges</div>
+                    <p class="text-[10px] text-muted-color mt-2">Offering 1.6 Million B.Tech seats annually across India. <span class="italic font-semibold block mt-1">(AICTE approval data 2025–26)</span></p>
+                </div>
+                
+                <div class="card-bg p-5 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-main-color">65.3%</div>
+                    <div class="text-xs font-bold text-blue-500 uppercase tracking-wide mt-1">Private Unaided Segment</div>
+                    <p class="text-[10px] text-muted-color mt-2">AISHE registered colleges requiring external outcome partnerships to stand out. <span class="italic font-semibold block mt-1">(AISHE Survey MoE)</span></p>
+                </div>
+            </div>
+
+            <!-- Right: Bottom-Up Table -->
+            <div class="col-span-7">
+                <div class="card-bg p-6 rounded-2xl">
+                    <h4 class="font-bold text-xs uppercase tracking-wider text-muted-color mb-4">Bottom-Up Valuation Steps</h4>
+                    <table class="w-full text-xs text-main-color">
+                        <thead>
+                            <tr class="border-b border-main-color pb-2 font-bold text-muted-color uppercase text-[10px]">
+                                <th class="text-left pb-2">Step</th>
+                                <th class="text-left pb-2">Assumption</th>
+                                <th class="text-right pb-2">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-main-color py-2">
+                                <td class="py-3">AICTE Colleges (National)</td>
+                                <td class="py-3">Approved engineering institutions</td>
+                                <td class="text-right font-semibold py-3">4,800</td>
+                            </tr>
+                            <tr class="border-b border-main-color py-2">
+                                <td class="py-3 font-semibold">Target Segment (institutions)</td>
+                                <td class="py-3">~50% fits tier-2/3 + active TPO cells</td>
+                                <td class="text-right font-semibold py-3 text-blue-500">2,400</td>
+                            </tr>
+                            <tr class="border-b border-main-color py-2">
+                                <td class="py-3 font-semibold">Students / Institution / Year</td>
+                                <td class="py-3">Final + pre-final CSE/IT/Allied</td>
+                                <td class="text-right font-semibold py-3">200</td>
+                            </tr>
+                            <tr class="border-b border-main-color py-2">
+                                <td class="py-3 font-semibold">Blended Annual ARPU</td>
+                                <td class="py-3">₹700 Bootcamp + 20% Accelerator conversion</td>
+                                <td class="text-right font-semibold py-3">₹3,700</td>
+                            </tr>
+                            <tr class="border-b border-main-color py-2 bg-blue-500 bg-opacity-5">
+                                <td class="py-3 font-bold">SAM (National Current)</td>
+                                <td class="py-3">2,400 × 200 × ₹3,700</td>
+                                <td class="text-right font-bold text-blue-500 py-3">≈ ₹177 Cr</td>
+                            </tr>
+                            <tr class="bg-gold bg-opacity-5">
+                                <td class="py-3 font-bold accent-gold">SOM (3-Yr Target)</td>
+                                <td class="py-3">South India Beachhead (100 campuses)</td>
+                                <td class="text-right font-bold accent-gold py-3">≈ ₹25-30 Cr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span>Market Sizing</span>
+            <span>To slide 9: "A real market this size attracts other players — here's why none compete with us."</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

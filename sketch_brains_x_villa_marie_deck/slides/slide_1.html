@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>What If Your Degree Is Not Your Limit?</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #0B1F3B;
+            color: white;
+        }
+
+        .content-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a3c6b 0%, #0B1F3B 70%);
+        }
+
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .highlight {
+            color: #C9A227;
+            -webkit-text-fill-color: #C9A227;
+        }
+
+        .degrees {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #94a3b8;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .degrees::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #C9A227;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        .college-name {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .x-divider {
+            color: #C9A227;
+            font-size: 20px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-center">
+        <h1 class="main-title">
+            WHAT IF YOUR DEGREE IS<br>
+            <span class="highlight">NOT YOUR SALARY LIMIT?</span>
+        </h1>
+
+        <div class="degrees">BBA | B.Com</div>
+
+        <div class="logos">
+            <div class="college-name">Villa Marie Degree College</div>
+            <span class="x-divider">✕</span>
+            <div class="college-name">Sketch Brains</div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

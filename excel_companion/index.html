@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Brains Excel Companion - Desk Reference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Digital Dashboard App Header -->
+    <header class="app-header">
+        <div class="logo-container">
+            <div class="logo-icon">SB</div>
+            <div class="logo-text">SKETCH <span>BRAINS</span></div>
+        </div>
+        <div class="header-controls">
+            <button class="btn" id="toggle-view-btn">
+                <i class="fas fa-book-open"></i> Spread View
+            </button>
+            <button class="btn btn-primary" id="print-btn">
+                <i class="fas fa-print"></i> Save / Print PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- Digital Workspace -->
+    <div class="viewer-workspace">
+        <div class="book-viewport">
+            <div class="book-container">
+
+                <!-- ==================== PAGE 1: COVER ==================== -->
+                <div class="page cover-page" data-page="1">
+                    <div class="cover-bg"></div>
+                    <div class="cover-header">
+                        <div class="cover-logo">
+                            <div class="cover-logo-icon">SB</div>
+                            <div class="cover-logo-text">SKETCH <span>BRAINS</span></div>
+                        </div>
+                    </div>
+                    <div class="cover-mid">
+                        <div class="cover-tag">QUICK REFERENCE</div>
+                        <h1 class="cover-title">Excel<br>Companion</h1>
+                        <p class="cover-subtitle">Pocket Reference Guide for the Sketch Brains Data Analytics Career Program</p>
+                    </div>
+                    <div class="cover-footer">
+                        SKETCH BRAINS EDUCATION &copy; 2026
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 2: WELCOME ==================== -->
+                <div class="page" data-page="2">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Sketch Brains</span>
+                            <span class="page-header-chapter">Welcome</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">The Desk Companion</h1>
+                            <h2 class="booklet-subtitle">Your Quick Memory Refresher</h2>
+                            
+                            <p class="intro-text">
+                                This booklet is <strong>not</strong> a textbook or self-learning guide. It is designed to sit directly beside your laptop as an immediate reference cheatsheet when you forget a syntax, coordinate lock, or shortcut.
+                            </p>
+
+                            <h3 class="section-heading">The Learning Framework</h3>
+                            
+                            <div class="journey-roadmap">
+                                <div class="journey-step accent">
+                                    <span>1. MENTOR INSTRUCTION</span>
+                                    <span>Explains Concepts</span>
+                                </div>
+                                <div class="journey-arrow"><i class="fas fa-chevron-down"></i></div>
+                                <div class="journey-step">
+                                    <span>2. POCKET BOOKLET</span>
+                                    <span>Refreshes Memory</span>
+                                </div>
+                                <div class="journey-arrow"><i class="fas fa-chevron-down"></i></div>
+                                <div class="journey-step accent">
+                                    <span>3. LEARNING PORTAL</span>
+                                    <span>Practice & Mastery</span>
+                                </div>
+                            </div>
+
+                            <p class="body-text" style="font-size: 0.54rem; color: var(--text-muted); font-style: italic;">
+                                Review the reference cards during class exercises or while working on projects to recall structures in less than 10 seconds.
+                            </p>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Access Learning Portal</div>
+                                <div class="qr-paragraph">Scan to enter the Sketch Brains Portal for video guides, exercises, and datasets.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="44" y="24" width="8" height="8" fill="#D32F2F"/>
+                                    <rect x="48" y="48" width="8" height="8" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM</span>
+                            <span class="page-number">2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 3: CELL REFERENCES ==================== -->
+                <div class="page" data-page="3">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">References</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Cell References & Locks</h1>
+                            <h2 class="booklet-subtitle">Relative, Absolute, & Mixed References</h2>
+
+                            <p class="intro-text">
+                                Cycles locks by pressing <strong>F4</strong> when editing coordinates in the formula bar.
+                            </p>
+
+                            <div class="lock-grid">
+                                <div class="lock-card">
+                                    <i class="fas fa-lock-open"></i>
+                                    <span class="lock-code">A1</span>
+                                    <span class="lock-title">Relative</span>
+                                    <span class="lock-desc">Drifts Row & Col</span>
+                                </div>
+                                <div class="lock-card active-lock">
+                                    <i class="fas fa-lock"></i>
+                                    <span class="lock-code">$A$1</span>
+                                    <span class="lock-title">Absolute</span>
+                                    <span class="lock-desc">Fully Locked</span>
+                                </div>
+                                <div class="lock-card">
+                                    <i class="fas fa-key"></i>
+                                    <span class="lock-code">A$1</span>
+                                    <span class="lock-title">Row Lock</span>
+                                    <span class="lock-desc">Fixed Row Height</span>
+                                </div>
+                                <div class="lock-card">
+                                    <i class="fas fa-key"></i>
+                                    <span class="lock-code">$A1</span>
+                                    <span class="lock-title">Col Lock</span>
+                                    <span class="lock-desc">Fixed Col Width</span>
+                                </div>
+                            </div>
+
+                            <table class="ref-table">
+                                <thead>
+                                    <tr>
+                                        <th>Style</th>
+                                        <th>Dragged Vertically</th>
+                                        <th>Dragged Horizontally</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>A1</code></td>
+                                        <td>Row moves (<code>A2</code>)</td>
+                                        <td>Col moves (<code>B1</code>)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>$A$1</code></td>
+                                        <td>Stays <code>$A$1</code></td>
+                                        <td>Stays <code>$A$1</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>A$1</code></td>
+                                        <td>Stays row 1</td>
+                                        <td>Col moves (<code>B$1</code>)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>$A1</code></td>
+                                        <td>Row moves (<code>$A2</code>)</td>
+                                        <td>Stays Col A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Locks Practice</div>
+                                <div class="qr-paragraph">Scan to download interactive locking drills and target models.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="42" width="10" height="10" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/LOCKS</span>
+                            <span class="page-number">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 4: EXCEL FORMATTING ==================== -->
+                <div class="page" data-page="4">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Presentation</span>
+                            <span class="page-header-chapter">Formatting</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Excel Formatting</h1>
+                            <h2 class="booklet-subtitle">Location & Layout Reference</h2>
+
+                            <div class="card-stack">
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Conditional Formatting</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Home &rarr; Styles</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Highlights anomalies (e.g. low sales)</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Applying color rules globally instead of selective rows, causing clutter.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Cell Styles & Format Painter</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Home &rarr; Styles / Clipboard</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Ensures consistent table design</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Manually reformatting every row instead of double-clicking Format Painter.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Formatting Practice</div>
+                                <div class="qr-paragraph">Scan to get practice datasets with selective layout instructions.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#D32F2F"/>
+                                    <rect x="68" y="42" width="12" height="12" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/FORMAT</span>
+                            <span class="page-number">4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 5: NUMBER FORMATS ==================== -->
+                <div class="page" data-page="5">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Presentation</span>
+                            <span class="page-header-chapter">Number Formats</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Number Formatting</h1>
+                            <h2 class="booklet-subtitle">Aligning & Displaying Metrics</h2>
+
+                            <div class="card-stack">
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Currency vs. Accounting</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Home &rarr; Number</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Aligning financial statements</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Manually typing currency symbols, converting numbers to text strings.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Percentages & Dates</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Home &rarr; Number</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Rate conversions & tenure tracks</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Applying % format to cells already holding integer scales (e.g. 50 turns to 5000%).</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Number Formats Practice</div>
+                                <div class="qr-paragraph">Scan to practice value formatting rules and dates serialization tests.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="45" y="45" width="10" height="6" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/NUMBERS</span>
+                            <span class="page-number">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 6: MATH FORMULAS ==================== -->
+                <div class="page" data-page="6">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Math & Stats</span>
+                        </div>
+                        <div class="page-body" style="gap: 6px;">
+                            <h1 class="booklet-title">Basic Math & Aggregations</h1>
+                            <h2 class="booklet-subtitle">Syntaxes & Parameter Reference</h2>
+
+                            <div class="card-stack" style="gap: 6px;">
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">SUM / SUMIF</span>
+                                        <span class="card-subtitle">=SUMIF(range, criteria, [sum_range])</span>
+                                    </div>
+                                    <p class="card-body-text">Adds values meeting criteria. Business: calculating category cost aggregates.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.5rem;">Mistake: Single SUMIF forces sum target to the end, opposite of SUMIFS.</div>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">SUMIFS / COUNTIFS</span>
+                                        <span class="card-subtitle">=SUMIFS(sum_range, crit_range, criteria, ...)</span>
+                                    </div>
+                                    <p class="card-body-text">Multi-criteria sums/counts. Business: regional branch item quantities.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.5rem;">Mistake: Mismatched criteria array lengths resulting in #VALUE! errors.</div>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">AVERAGEIFS</span>
+                                        <span class="card-subtitle">=AVERAGEIFS(avg_range, crit_range, criteria, ...)</span>
+                                    </div>
+                                    <p class="card-body-text">Averages cells by rules. Business: computing mean rep sales bounds.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Math Formulas Practice</div>
+                                <div class="qr-paragraph">Scan to download multi-criteria sum & average exercises.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="45" y="45" width="8" height="8" fill="#111111"/>
+                                    <rect x="65" y="45" width="12" height="12" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/MATH</span>
+                            <span class="page-number">6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 7: LOGICAL FORMULAS ==================== -->
+                <div class="page" data-page="7">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Logical</span>
+                        </div>
+                        <div class="page-body" style="gap: 6px;">
+                            <h1 class="booklet-title">Logical & Conditional Formulas</h1>
+                            <h2 class="booklet-subtitle">Branching Logic & Error Handling</h2>
+
+                            <div class="card-stack" style="gap: 6px;">
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">IF / IFS</span>
+                                        <span class="card-subtitle">=IFS(test1, val1, test2, val2, TRUE, val_else)</span>
+                                    </div>
+                                    <p class="card-body-text">Evaluates logical test paths. Business: categorization of order values.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.5rem;">Mistake: In IFS, placing wider criteria first, bypassing detailed locks.</div>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">IFERROR</span>
+                                        <span class="card-subtitle">=IFERROR(value, value_if_error)</span>
+                                    </div>
+                                    <p class="card-body-text">Catches cell error codes. Business: replacing #N/A lookups with labels.</p>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">AND / OR / NOT</span>
+                                        <span class="card-subtitle">=AND(logical1, [logical2], ...)</span>
+                                    </div>
+                                    <p class="card-body-text">Combines conditional parameters. Business: auditing order approvals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Logical Formulas Practice</div>
+                                <div class="qr-paragraph">Scan to practice writing clean error-proof logic loops.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="48" y="48" width="12" height="12" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/LOGIC</span>
+                            <span class="page-number">7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 8: LOOKUP FORMULAS ==================== -->
+                <div class="page" data-page="8">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Lookups</span>
+                        </div>
+                        <div class="page-body" style="gap: 6px;">
+                            <h1 class="booklet-title">Lookup & Reference</h1>
+                            <h2 class="booklet-subtitle">Mapping Database Key Coordinates</h2>
+
+                            <div class="card-stack" style="gap: 6px;">
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">XLOOKUP</span>
+                                        <span class="card-subtitle">=XLOOKUP(key, lookup_arr, return_arr, [if_not])</span>
+                                    </div>
+                                    <p class="card-body-text">Scans arrays bi-directionally. Business: linking employee names to ID codes.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.5rem;">Mistake: Key lookup data type mismatch (e.g. text "101" vs number 101).</div>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">VLOOKUP</span>
+                                        <span class="card-subtitle">=VLOOKUP(key, table, col_index, [range])</span>
+                                    </div>
+                                    <p class="card-body-text">Scans first column to right. Business: checking catalog item details.</p>
+                                </div>
+                                <div class="card" style="padding: 8px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">INDEX / MATCH</span>
+                                        <span class="card-subtitle">=INDEX(array, MATCH(key, lookup_arr, 0))</span>
+                                    </div>
+                                    <p class="card-body-text">Matrix match combo. Business: dynamic row/column intersect lookups.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Lookups Practice</div>
+                                <div class="qr-paragraph">Scan to access catalog and directory XLOOKUP practices.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="45" y="45" width="8" height="8" fill="#D32F2F"/>
+                                    <rect x="68" y="68" width="12" height="12" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/LOOKUP</span>
+                            <span class="page-number">8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 9: LOOKUP COMPARISON ==================== -->
+                <div class="page" data-page="9">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Lookups</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Lookup Comparison</h1>
+                            <h2 class="booklet-subtitle">VLOOKUP vs. XLOOKUP vs. INDEX MATCH</h2>
+
+                            <table class="ref-table" style="margin-top: 10px;">
+                                <thead>
+                                    <tr>
+                                        <th>Capability</th>
+                                        <th>VLOOKUP</th>
+                                        <th>XLOOKUP</th>
+                                        <th>INDEX MATCH</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Look Leftward?</strong></td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Column Insert Safe?</strong></td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Approx Match?</strong></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Calculation Speed</strong></td>
+                                        <td>Moderate</td>
+                                        <td>Fast</td>
+                                        <td>Fast</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Data Type Locks?</strong></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="card" style="margin-top: 6px;">
+                                <div class="card-title">Analyst Conclusion</div>
+                                <p class="card-body-text" style="font-size: 0.54rem;">
+                                    Use **XLOOKUP** as your primary choice. If sharing models with legacy Excel versions (2019 and older) that do not support XLOOKUP, build with **INDEX MATCH** to prevent formula execution failure.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Lookup Comparison</div>
+                                <div class="qr-paragraph">Scan to view benchmark speed test results on massive customer sheets.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="42" y="42" width="10" height="10" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/LOOKUP-COMP</span>
+                            <span class="page-number">9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 10: TEXT FORMULAS ==================== -->
+                <div class="page" data-page="10">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Text Functions</span>
+                        </div>
+                        <div class="page-body" style="gap: 5px;">
+                            <h1 class="booklet-title">Text Cleaning Formulas</h1>
+                            <h2 class="booklet-subtitle">Data Cleansing & Transformation</h2>
+
+                            <div class="card-stack" style="gap: 5px;">
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">LEFT / RIGHT / MID</span>
+                                        <span class="card-subtitle">=MID(text, start, num_chars)</span>
+                                    </div>
+                                    <p class="card-body-text">Extracts letter bounds. Business: parsing regional customer zip codes.</p>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">TRIM / LEN</span>
+                                        <span class="card-subtitle">=TRIM(text)</span>
+                                    </div>
+                                    <p class="card-body-text">Removes extra spaces / counts chars. Business: validating client phone structures.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.48rem;">Mistake: Expecting TRIM to clean non-printing characters like page breaks.</div>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">TEXTJOIN / CONCAT</span>
+                                        <span class="card-subtitle">=TEXTJOIN(delimiter, skip, range)</span>
+                                    </div>
+                                    <p class="card-body-text">Merges strings with delimiters. Business: compiling rep lists from rows.</p>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">SUBSTITUTE</span>
+                                        <span class="card-subtitle">=SUBSTITUTE(text, old_t, new_t)</span>
+                                    </div>
+                                    <p class="card-body-text">Replaces characters. Business: swapping spaces with dashes in ID codes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Text Formulas Practice</div>
+                                <div class="qr-paragraph">Scan to load CRM contact list text cleaning labs.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="6" height="6" fill="#111111"/>
+                                    <rect x="68" y="42" width="12" height="12" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/TEXT-FUNCS</span>
+                            <span class="page-number">10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 11: DATE FORMULAS ==================== -->
+                <div class="page" data-page="11">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Formula Engine</span>
+                            <span class="page-header-chapter">Dates</span>
+                        </div>
+                        <div class="page-body" style="gap: 5px;">
+                            <h1 class="booklet-title">Date & Time Calculations</h1>
+                            <h2 class="booklet-subtitle">Computing Durations & Business Calendars</h2>
+
+                            <div class="card-stack" style="gap: 5px;">
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">TODAY / NOW</span>
+                                        <span class="card-subtitle">=TODAY()</span>
+                                    </div>
+                                    <p class="card-body-text">Displays current date/time. Business: calculating dynamic payment limits.</p>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">YEAR / MONTH / DAY</span>
+                                        <span class="card-subtitle">=MONTH(date)</span>
+                                    </div>
+                                    <p class="card-body-text">Extracts date components. Business: grouping logs into fiscal quarters.</p>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">NETWORKDAYS</span>
+                                        <span class="card-subtitle">=NETWORKDAYS(start, end, [holidays])</span>
+                                    </div>
+                                    <p class="card-body-text">Finds work days count. Business: order turnaround times (excludes weekends).</p>
+                                </div>
+                                <div class="card" style="padding: 6px 10px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">DATEDIF</span>
+                                        <span class="card-subtitle">=DATEDIF(start, end, unit)</span>
+                                    </div>
+                                    <p class="card-body-text">Calculates completed tenure. Business: tracking employee service years.</p>
+                                    <div class="metadata-value warning-text" style="font-size: 0.48rem;">Mistake: Inputting end date before start date, returning #NUM! errors.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Date Formulas Practice</div>
+                                <div class="qr-paragraph">Scan to download invoice aging and calendar planning sheets.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#D32F2F"/>
+                                    <rect x="68" y="68" width="12" height="12" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/DATE-TIME</span>
+                            <span class="page-number">11</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 12: DATA CLEANING (CORE) ==================== -->
+                <div class="page" data-page="12">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Cleaning</span>
+                            <span class="page-header-chapter">Core Tools</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Data Cleaning: Core Tools</h1>
+                            <h2 class="booklet-subtitle">Standardizing Row & Column Layouts</h2>
+
+                            <div class="card-stack">
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Sort & Filter</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Data &rarr; Sort & Filter</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Isolates targeted subsets</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Shortcut</span>
+                                            <span class="metadata-value"><code>Ctrl+Shift+L</code></span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Sorting partial ranges, detaching rows.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Flash Fill</span>
+                                    </div>
+                                    <div class="card-metadata-grid">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Data &rarr; Data Tools</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Splits patterns automatically</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Shortcut</span>
+                                            <span class="metadata-value"><code>Ctrl+E</code></span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Unstructured data breaks AI parsing.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Cleaning Core Practice</div>
+                                <div class="qr-paragraph">Scan to practice Sorting, Filtering, and Flash Fill scripts.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="42" y="42" width="10" height="10" fill="#111111"/>
+                                    <rect x="70" y="70" width="14" height="14" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/CLEANING-CORE</span>
+                            <span class="page-number">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 13: DATA CLEANING (ADVANCED) ==================== -->
+                <div class="page" data-page="13">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Cleaning</span>
+                            <span class="page-header-chapter">Advanced Tools</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Data Cleaning: Advanced</h1>
+                            <h2 class="booklet-subtitle">Splits, Duplicates & Data Validation</h2>
+
+                            <div class="card-stack">
+                                <div class="card" style="padding: 10px 12px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Text to Columns / Remove Duplicates</span>
+                                    </div>
+                                    <div class="card-metadata-grid" style="gap: 4px 10px;">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Data &rarr; Data Tools</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Splits delimiters / clears logs</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Failing to add blank columns next to Text-to-Columns, overwriting cells.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card" style="padding: 10px 12px;">
+                                    <div class="card-title-group">
+                                        <span class="card-title">Data Validation</span>
+                                    </div>
+                                    <div class="card-metadata-grid" style="gap: 4px 10px;">
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Location</span>
+                                            <span class="metadata-value">Data &rarr; Data Tools</span>
+                                        </div>
+                                        <div class="metadata-item">
+                                            <span class="metadata-label">Business Use</span>
+                                            <span class="metadata-value">Dropdown menus for cell inputs</span>
+                                        </div>
+                                        <div class="metadata-item" style="grid-column: span 2;">
+                                            <span class="metadata-label">Common Mistake</span>
+                                            <span class="metadata-value warning-text">Pasting cells over validated targets, which overrides the lookup validation rules.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Advanced Cleaning Practice</div>
+                                <div class="qr-paragraph">Scan to download Text-to-Columns and Validation menu exercises.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#D32F2F"/>
+                                    <rect x="75" y="75" width="8" height="8" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/CLEANING-ADV</span>
+                            <span class="page-number">13</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 14: POWER QUERY ==================== -->
+                <div class="page" data-page="14">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Engineering</span>
+                            <span class="page-header-chapter">Power Query</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Power Query (ETL)</h1>
+                            <h2 class="booklet-subtitle">Automating Clean-Up Transformations</h2>
+
+                            <div class="card">
+                                <div class="card-title-group">
+                                    <span class="card-title">Extract, Transform, & Load (ETL)</span>
+                                </div>
+                                <div class="card-metadata-grid" style="gap: 4px 10px;">
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Location</span>
+                                        <span class="metadata-value">Data &rarr; Get Data</span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Business Use</span>
+                                        <span class="metadata-value">Automates data cleaning</span>
+                                    </div>
+                                    <div class="metadata-item" style="grid-column: span 2;">
+                                        <span class="metadata-label">Core Capabilities</span>
+                                        <span class="metadata-value">
+                                            - <strong>Merge Queries</strong> (Similar to SQL Joins)<br>
+                                            - <strong>Unpivot Columns</strong> (Flattens headers into dataset fields)<br>
+                                            - <strong>Append Queries</strong> (Stacks matching sheets vertically)
+                                        </span>
+                                    </div>
+                                    <div class="metadata-item" style="grid-column: span 2;">
+                                        <span class="metadata-label">Common Mistake</span>
+                                        <span class="metadata-value warning-text">Manually re-cleaning identical CSV files every month instead of clicking Refresh All.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Power Query Lab</div>
+                                <div class="qr-paragraph">Scan to download multi-sheet append and unpivot challenges.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="42" y="42" width="10" height="10" fill="#D32F2F"/>
+                                    <rect x="75" y="75" width="8" height="8" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/POWER-QUERY</span>
+                            <span class="page-number">14</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 15: TABLES ==================== -->
+                <div class="page" data-page="15">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Structures</span>
+                            <span class="page-header-chapter">Excel Tables</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Tables (Ctrl + T)</h1>
+                            <h2 class="booklet-subtitle">Replacing Manual Cell Ranges</h2>
+
+                            <div class="card" style="padding: 10px 12px;">
+                                <div class="card-title-group">
+                                    <span class="card-title">Structured Referencing</span>
+                                </div>
+                                <div class="card-metadata-grid" style="gap: 4px 10px;">
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Shortcut</span>
+                                        <span class="metadata-value"><code>Ctrl + T</code></span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Business Use</span>
+                                        <span class="metadata-value">Dynamic ranges for formulas</span>
+                                    </div>
+                                    <div class="metadata-item" style="grid-column: span 2;">
+                                        <span class="metadata-label">Benefits</span>
+                                        <span class="metadata-value">
+                                            - **Structured references** (e.g. <code>Table1[@Sales]</code> instead of C2)<br>
+                                            - **Calculated columns** autofill formulas down instantly<br>
+                                            - **Dynamic Expansion**: Appending rows inherits format & calculations
+                                        </span>
+                                    </div>
+                                    <div class="metadata-item" style="grid-column: span 2;">
+                                        <span class="metadata-label">Common Mistake</span>
+                                        <span class="metadata-value warning-text">Referencing static coordinates (e.g., C2:C100) inside PivotTables, which ignores future rows.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Tables Practice</div>
+                                <div class="qr-paragraph">Scan to download structured reference and table conversion drills.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="68" y="42" width="12" height="12" fill="#D32F2F"/>
+                                    <rect x="68" y="68" width="12" height="12" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/TABLES</span>
+                            <span class="page-number">15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 16: PIVOT TABLES ==================== -->
+                <div class="page" data-page="16">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Analytics</span>
+                            <span class="page-header-chapter">Pivot Tables</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">PivotTables Field Grid</h1>
+                            <h2 class="booklet-subtitle">Mapping Fields to Aggregate Metrics</h2>
+
+                            <div class="card" style="padding: 10px 12px;">
+                                <div class="card-title-group">
+                                    <span class="card-title">Grid Layout Fields</span>
+                                </div>
+                                <div class="card-metadata-grid" style="gap: 4px 10px;">
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Rows</span>
+                                        <span class="metadata-value">Vertical categories (e.g. Reps)</span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Columns</span>
+                                        <span class="metadata-value">Horizontal categories (Regions)</span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Filters</span>
+                                        <span class="metadata-value">Limiters (e.g. Active Years)</span>
+                                    </div>
+                                    <div class="metadata-item">
+                                        <span class="metadata-label">Values</span>
+                                        <span class="metadata-value">Aggregated numbers (Sales)</span>
+                                    </div>
+                                    <div class="metadata-item" style="grid-column: span 2;">
+                                        <span class="metadata-label">Common Mistakes</span>
+                                        <span class="metadata-value warning-text">
+                                            - Expecting PivotTables to update on source edits (Requires Right-Click &rarr; **Refresh**).<br>
+                                            - Placing unique IDs in Rows, producing thousands of rows.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">PivotTable Labs</div>
+                                <div class="qr-paragraph">Scan to download Pivot aggregation and date grouping exercises.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#D32F2F"/>
+                                    <rect x="68" y="42" width="12" height="12" fill="#111111"/>
+                                    <rect x="80" y="60" width="8" height="8" fill="#111111"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/PIVOT</span>
+                            <span class="page-number">16</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 17: CHARTS SELECTION MATRIX ==================== -->
+                <div class="page" data-page="17">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Data Visualization</span>
+                            <span class="page-header-chapter">Charts</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Chart Selection Matrix</h1>
+                            <h2 class="booklet-subtitle">Choosing Correct Layouts Instantly</h2>
+
+                            <table class="ref-table" style="margin-top: 10px;">
+                                <thead>
+                                    <tr>
+                                        <th>Objective</th>
+                                        <th>Recommended Chart</th>
+                                        <th>Corporate Context Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Compare Categories</strong></td>
+                                        <td><code>Column / Bar</code></td>
+                                        <td>Sales volume per product category.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Show Trends Over Time</strong></td>
+                                        <td><code>Line Chart</code></td>
+                                        <td>Monthly subscription churn curves.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Parts-to-Whole Share</strong></td>
+                                        <td><code>Pie / Doughnut</code></td>
+                                        <td>Market share split (use only with &lt;5 slices).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Check Relationships</strong></td>
+                                        <td><code>Scatter Plot</code></td>
+                                        <td>Correlating marketing spend to lead counts.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="card" style="margin-top: 6px; padding: 10px 12px;">
+                                <div class="card-title">Key Rule</div>
+                                <p class="card-body-text" style="font-size: 0.54rem;">
+                                    If comparing total values ($) beside ratios (%) together on a timeline, use a **Combo Chart** (Column & Line) with a **Secondary Axis** enabled.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="qr-container">
+                            <div class="qr-text-block">
+                                <div class="qr-heading">Charts Decision Portal</div>
+                                <div class="qr-paragraph">Scan to review professional chart formatting guides.</div>
+                            </div>
+                            <div class="qr-code-box">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="0" y="0" width="100" height="100" fill="none"/>
+                                    <rect x="10" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="60" y="10" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="68" y="18" width="14" height="14" fill="#111111"/>
+                                    <rect x="10" y="60" width="30" height="30" fill="#111111" stroke="#D32F2F" stroke-width="2"/>
+                                    <rect x="18" y="68" width="14" height="14" fill="#111111"/>
+                                    <rect x="42" y="18" width="10" height="6" fill="#111111"/>
+                                    <rect x="78" y="78" width="8" height="8" fill="#D32F2F"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>PORTAL: SKETCHBRAINS.COM/CHARTS</span>
+                            <span class="page-number">17</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 18: KEYBOARD SHORTCUTS ==================== -->
+                <div class="page" data-page="18">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Excel Companion</span>
+                            <span class="page-header-chapter">Shortcuts</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Keyboard Shortcuts</h1>
+                            <h2 class="booklet-subtitle">Speed Reference for Daily Work</h2>
+
+                            <div class="shortcuts-filter-wrapper">
+                                <input type="text" id="shortcut-search" class="shortcuts-search" placeholder="Filter daily shortcuts (e.g. table, filter, select)...">
+                            </div>
+
+                            <div class="keycap-container">
+                                <div class="key-item">
+                                    <span class="key-action">Create Table</span>
+                                    <span class="shortcut-keys"><span class="keycap">Ctrl</span>+<span class="keycap">T</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Toggle Filter</span>
+                                    <span class="shortcut-keys"><span class="keycap">Ctrl</span>+<span class="keycap">Shift</span>+<span class="keycap">L</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Edit Cell</span>
+                                    <span class="shortcut-keys"><span class="keycap">F2</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Lock Cell</span>
+                                    <span class="shortcut-keys"><span class="keycap">F4</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Fill Down</span>
+                                    <span class="shortcut-keys"><span class="keycap">Ctrl</span>+<span class="keycap">D</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Format Cells</span>
+                                    <span class="shortcut-keys"><span class="keycap">Ctrl</span>+<span class="keycap">1</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Select Col</span>
+                                    <span class="shortcut-keys"><span class="keycap">Ctrl</span>+<span class="keycap">Space</span></span>
+                                </div>
+                                <div class="key-item">
+                                    <span class="key-action">Select Row</span>
+                                    <span class="shortcut-keys"><span class="keycap">Shift</span>+<span class="keycap">Space</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-footer">
+                            <span>SKETCH BRAINS &bull; DATA REFERENCE</span>
+                            <span class="page-number">18</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 19: ERROR GUIDE ==================== -->
+                <div class="page" data-page="19">
+                    <div class="page-content">
+                        <div class="page-header">
+                            <span class="page-header-title">Excel Companion</span>
+                            <span class="page-header-chapter">Troubleshooting</span>
+                        </div>
+                        <div class="page-body">
+                            <h1 class="booklet-title">Excel Error Guide</h1>
+                            <h2 class="booklet-subtitle">Diagnostics & Resolution Reference</h2>
+
+                            <table class="ref-table" style="margin-top: 10px; font-size: 0.52rem;">
+                                <thead>
+                                    <tr>
+                                        <th>Error</th>
+                                        <th>Meaning</th>
+                                        <th>Fix Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>#N/A</code></td>
+                                        <td>Value not found.</td>
+                                        <td>Check key types or wrap in <code>IFERROR</code>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>#VALUE!</code></td>
+                                        <td>Math on text cells.</td>
+                                        <td>Convert text values back to numbers.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>#REF!</code></td>
+                                        <td>Deleted reference cell.</td>
+                                        <td>Undo deletion or adjust coordinates.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>#DIV/0!</code></td>
+                                        <td>Divided by zero.</td>
+                                        <td>Check denom values with <code>IF</code> checks.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>#NAME?</code></td>
+                                        <td>Typo in function.</td>
+                                        <td>Check spelling (e.g. <code>VLOOKUPP</code>).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>####</code></td>
+                                        <td>Column too narrow.</td>
+                                        <td>Double-click column border to expand.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-footer">
+                            <span>SKETCH BRAINS &bull; DATA REFERENCE</span>
+                            <span class="page-number">19</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== PAGE 20: ROADMAP & ANALYST TIPS ==================== -->
+                <div class="page" data-page="20">
+                    <div class="page-content" style="background-color: var(--bg-cream); border-left: 2px solid var(--accent-red);">
+                        <div class="page-header">
+                            <span class="page-header-title" style="color: var(--text-black);">Sketch Brains</span>
+                            <span class="page-header-chapter" style="color: var(--accent-red); font-weight: 700;">Career Road</span>
+                        </div>
+                        <div class="page-body" style="gap: 4px;">
+                            <h1 class="booklet-title" style="font-size: 0.9rem;">Analyst Roadmaps & Tips</h1>
+                            <h2 class="booklet-subtitle" style="font-size: 0.7rem;">Your Path to Career Placement</h2>
+
+                            <div class="card" style="padding: 6px 10px; border-left: 3.5px solid var(--text-black); border-radius: 4px; gap: 2px;">
+                                <div class="card-title" style="font-size: 0.54rem; font-weight: 800;">Analyst Productivity Checklist</div>
+                                <p class="card-body-text" style="font-size: 0.48rem; line-height: 1.35;">
+                                    &bull; Use Tables (Ctrl+T) instead of manual ranges.<br>
+                                    &bull; Avoid merged cells; use Center Across Selection.<br>
+                                    &bull; Freeze Panes (Row 1) before sharing massive files.<br>
+                                    &bull; Keep raw data untouched; query from separate processing sheets.
+                                </p>
+                            </div>
+
+                            <!-- Roadmap Timeline Grid -->
+                            <div class="journey-roadmap" style="margin-top: 4px;">
+                                <div class="journey-step active">
+                                    <span>1. EXCEL BASIC</span>
+                                    <span>Aggregations, formatting & tables</span>
+                                </div>
+                                <div class="journey-arrow"><i class="fas fa-chevron-down"></i></div>
+                                <div class="journey-step active">
+                                    <span>2. POWER BI</span>
+                                    <span>DAX calculations & visual models</span>
+                                </div>
+                                <div class="journey-arrow"><i class="fas fa-chevron-down"></i></div>
+                                <div class="journey-step">
+                                    <span>3. SQL & PYTHON</span>
+                                    <span>Database queries & Pandas models</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-footer" style="border-top-color: var(--border-cream);">
+                            <span style="color: var(--accent-red); font-weight: 700;">PORTAL &bull; SKETCH BRAINS</span>
+                            <span class="page-number">20</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Booklet Navigation Toolbar -->
+        <div class="bottom-controls">
+            <button class="nav-arrow" id="prev-btn" title="Previous Spread (Left Arrow)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-indicator" id="page-indicator">Spread 1 of 11</div>
+            <button class="nav-arrow" id="next-btn" title="Next Spread (Right Arrow)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive Map Overlay Card -->
+    <div class="interactive-overlay" id="interactive-overlay">
+        <div class="overlay-card">
+            <span class="close-overlay" id="close-overlay">&times;</span>
+            <div class="overlay-title" id="overlay-title">Interface Element</div>
+            <div class="overlay-body" id="overlay-body">Description of how this tool is used by professional analysts in corporate tasks.</div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

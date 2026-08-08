@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 4</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #09090B;
+            --accent: #DC2626;
+            --accent-light: rgba(220, 38, 38, 0.06);
+            --text-dark: #18181B;
+            --text-muted: #71717A;
+            --bg-canvas: #FAFAFA;
+            --bg-slide: #FFFFFF;
+            --border-light: #E4E4E7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-slide);
+            padding: 60px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-dots {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(220, 38, 38, 0.05) 1.5px, transparent 1.5px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orb-glow-1 {
+            position: absolute;
+            bottom: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .left-side {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-side {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-light);
+            border: 1px solid rgba(220, 38, 38, 0.12);
+            padding: 8px 16px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-bottom: 24px;
+        }
+
+        .kicker span {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .announcement-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #09090B 0%, #DC2626 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .announcement-desc {
+            font-size: 22px;
+            color: var(--text-dark);
+            line-height: 1.5;
+            font-weight: 400;
+            max-width: 650px;
+        }
+
+        /* Modern Calendar Badge */
+        .calendar-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            width: 280px;
+            box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.04), 0 0 1px 1px rgba(220, 38, 38, 0.03);
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px -20px rgba(220, 38, 38, 0.12);
+            border-color: var(--accent);
+        }
+
+        .calendar-header {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            color: white;
+            padding: 16px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .calendar-body {
+            padding: 32px 20px;
+        }
+
+        .calendar-date {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .calendar-month {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* Custom Brand Logo */
+        .sb-logo {
+            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .sb-logo:hover {
+            opacity: 0.7;
+        }
+
+        .sb-dot {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-dots"></div>
+        <div class="orb-glow-1"></div>
+
+        <div class="slide-content">
+            <div class="left-side">
+                <div class="kicker">
+                    <i class="fa-solid fa-bullhorn" style="color: var(--accent);"></i>
+                    <span>Introducing the Event</span>
+                </div>
+                <h1 class="announcement-title">
+                    Introducing <span class="gradient-text">The Verdict 1.0</span>
+                </h1>
+                <p class="announcement-desc">
+                    A high-fidelity hiring arena bringing Hyderabad's top developers, AI engineers, and data analysts directly to your team.
+                </p>
+            </div>
+
+            <div class="right-side">
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        Save The Date
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-date">10th</div>
+                        <div class="calendar-month">October</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="https://sketchbrains.live" class="sb-logo" target="_blank">
+                SketchBrains<span class="sb-dot">.</span>
+            </a>
+            <span>The Verdict 1.0 • October 10th</span>
+            <span>04 / 10</span>
+        </div>
+    </div>
+    
+    <script src="../../js/capture_helper.js"></script>
+</body>
+</html>

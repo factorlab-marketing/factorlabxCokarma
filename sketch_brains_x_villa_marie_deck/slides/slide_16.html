@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Pilot Partnership Proposal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #C9A227;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sheet-card {
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid #0B1F3B;
+            padding: 40px 60px;
+            margin-top: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .term-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 0;
+        }
+
+        .term-grid:last-child {
+            border-bottom: none;
+        }
+
+        .t-label {
+            font-weight: 600;
+            color: #64748b;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .t-value {
+            font-size: 18px;
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: #0B1F3B;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 40px;
+            text-align: center;
+            border: 2px solid #0B1F3B;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="sidebar">
+            <i class="fas fa-bars sidebar-icon"></i>
+            <i class="fas fa-file-signature sidebar-icon active"></i>
+        </div>
+        <div class="main-content">
+            <div class="mb-4">
+                <h1 class="font-montserrat font-bold text-3xl text-[#0B1F3B]">Pilot Partnership Proposal</h1>
+                <p class="text-slate-500">Structured for immediate start.</p>
+            </div>
+
+            <div class="sheet-card">
+                <div class="term-grid">
+                    <div class="t-label"><i class="fas fa-users mr-3 text-slate-400"></i> Target Cohort</div>
+                    <div class="t-value">2nd Year BBA/B.Com Students (Selected Top 50-70)</div>
+                </div>
+
+                <div class="term-grid">
+                    <div class="t-label"><i class="fas fa-clock mr-3 text-slate-400"></i> Duration</div>
+                    <div class="t-value">5 Months (Hybrid: Weekend/Post-hours)</div>
+                </div>
+
+                <div class="term-grid">
+                    <div class="t-label"><i class="fas fa-rupee-sign mr-3 text-slate-400"></i> Commercials</div>
+                    <div class="t-value">Student-Paid Model / Revenue Share (No Cost to College)</div>
+                </div>
+
+                <div class="term-grid">
+                    <div class="t-label"><i class="fas fa-flag-checkered mr-3 text-slate-400"></i> Outcomes</div>
+                    <div class="t-value">Live Project Certificate + Placement Portfolio + Resume Vetting</div>
+                </div>
+
+                <div class="term-grid">
+                    <div class="t-label"><i class="fas fa-rocket mr-3 text-slate-400"></i> Next Step</div>
+                    <div class="t-value font-bold text-[#C9A227]">MoU Signing & Student Orientation Session</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

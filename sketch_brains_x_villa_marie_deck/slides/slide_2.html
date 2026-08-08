@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>The Truth After Graduation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #ef4444;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .salary-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px 32px;
+            margin-bottom: 24px;
+            border-left: 6px solid #ef4444;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .salary-card:hover {
+            transform: translateX(10px);
+        }
+
+        .role-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #1e293b;
+        }
+
+        .salary-val {
+            font-size: 28px;
+            font-weight: 800;
+            color: #64748b;
+        }
+
+        .reality-check {
+            margin-top: 40px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <div class="mb-8">
+                <h1 class="font-montserrat font-bold text-4xl text-[#0B1F3B]">THE TRUTH AFTER GRADUATION</h1>
+                <p class="text-slate-500 mt-2 text-xl">Typical Starting Packages</p>
+            </div>
+
+            <div class="salary-card">
+                <span class="role-title">Accounts Assistant</span>
+                <span class="salary-val">₹2.5–3.5 LPA</span>
+            </div>
+            <div class="salary-card">
+                <span class="role-title">HR Executive</span>
+                <span class="salary-val">₹2–3 LPA</span>
+            </div>
+            <div class="salary-card">
+                <span class="role-title">Sales Executive</span>
+                <span class="salary-val">₹2–4 LPA</span>
+            </div>
+
+            <div class="reality-check">
+                (And heavy competition.)
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

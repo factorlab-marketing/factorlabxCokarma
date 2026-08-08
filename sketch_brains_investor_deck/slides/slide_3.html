@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=1280, height=720" name="viewport"/>
+    <title>The Root Problem</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        
+        body, html {
+            margin:0; padding:0; width:1280px; height:720px; overflow:hidden;
+            font-family: 'Outfit', sans-serif; background: #0D0D0D; color: #FFFFFF;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .text-main-color { color: #FFFFFF; }
+        .text-muted-color { color: #94A3B8; }
+        .card-bg { background: #1E293B; border: 1px solid rgba(255, 255, 255, 0.08); }
+        .border-main-color { border-color: rgba(255, 255, 255, 0.1); }
+        
+        body.light-mode {
+            background: #F7F7F6 !important;
+            color: #0D0D0D !important;
+        }
+        body.light-mode .text-main-color { color: #0D0D0D !important; }
+        body.light-mode .text-muted-color { color: #555555 !important; }
+        body.light-mode .card-bg {
+            background: #FFFFFF !important;
+            border: 1px solid rgba(13, 13, 13, 0.08) !important;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+        }
+        body.light-mode .border-main-color { border-color: rgba(13, 13, 13, 0.1) !important; }
+        body.light-mode .bg-slate-800 { background-color: #E2E8F0 !important; }
+        body.light-mode .text-slate-300 { color: #334155 !important; }
+        body.light-mode .text-slate-400 { color: #475569 !important; }
+    
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .slide-container {
+            width: 1280px; height: 720px; padding: 60px 100px;
+            display: flex; flex-direction: column; justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .accent-gold { color: #C9A227; }
+        .bg-gold { background-color: #C9A227; }
+        .border-gold { border-color: #C9A227; }
+        
+        /* Floating blobs for light mode only (aesthetic) */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.light-mode .blob {
+            opacity: 0.25;
+        }
+        .blob-1 { width: 500px; height: 500px; background: rgba(197, 162, 39, 0.4); top: -100px; left: -100px; }
+        .blob-2 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.3); bottom: -100px; right: -100px; }
+        
+        .animate-up {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="blob blob-1"></div><div class="blob blob-2"></div>
+    <div class="slide-container">
+        
+        <div class="animate-up">
+            <span class="text-xs uppercase tracking-widest text-muted-color font-semibold">Slide 03 // The Root Problem</span>
+            <h2 class="text-3xl font-bold text-main-color mt-2 mb-6">Everyone is optimizing for something different — and nobody for capability</h2>
+        </div>
+
+        <!-- 4 Columns of misaligned incentives -->
+        <div class="grid grid-cols-4 gap-6 my-2 flex-grow-0">
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between border-t-4 border-slate-400">
+                <div>
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-800 mb-3"><i class="fas fa-university text-sm"></i></div>
+                    <h4 class="font-bold text-sm text-main-color mb-2">Universities</h4>
+                    <p class="text-[11px] text-muted-color">Accreditation metrics, placement percentage reported to regulators.</p>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-4"><i class="fas fa-shield-alt mr-1"></i> Compliance</span>
+            </div>
+            
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between border-t-4 border-slate-400">
+                <div>
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-800 mb-3"><i class="fas fa-handshake text-sm"></i></div>
+                    <h4 class="font-bold text-sm text-main-color mb-2">CRT Vendors</h4>
+                    <p class="text-[11px] text-muted-color">Contract renewal — measured by short-term placement numbers, not skill durability.</p>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-4"><i class="fas fa-redo mr-1"></i> Renewal</span>
+            </div>
+            
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between border-t-4 border-slate-400">
+                <div>
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-800 mb-3"><i class="fas fa-user-graduate text-sm"></i></div>
+                    <h4 class="font-bold text-sm text-main-color mb-2">Students</h4>
+                    <p class="text-[11px] text-muted-color">Passing the interview, not durable competence.</p>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-4"><i class="fas fa-hourglass-half mr-1"></i> Survival</span>
+            </div>
+            
+            <div class="card-bg p-5 rounded-2xl flex flex-col justify-between border-t-4 border-slate-400">
+                <div>
+                    <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-800 mb-3"><i class="fas fa-search text-sm"></i></div>
+                    <h4 class="font-bold text-sm text-main-color mb-2">Recruiters</h4>
+                    <p class="text-[11px] text-muted-color">Filtering resumes fast, not identifying true capability.</p>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-4"><i class="fas fa-filter mr-1"></i> Filtration</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 my-2 border-t border-b border-main-color py-4">
+            <div class="text-center">
+                <span class="text-lg font-bold text-main-color">70.15%</span>
+                <p class="text-[10px] text-muted-color">Eng. Employability in India <span class="italic font-semibold block text-[8px]">(ISR 2026 - down from 71.5%)</span></p>
+            </div>
+            <div class="text-center border-l border-r border-main-color">
+                <span class="text-lg font-bold text-main-color">63rd / 69</span>
+                <p class="text-[10px] text-muted-color">India's rank on World Talent Index <span class="italic font-semibold block text-[8px]">(IMD Talent Ranking 2025)</span></p>
+            </div>
+            <div class="text-center">
+                <span class="text-lg font-bold text-main-color">63%</span>
+                <p class="text-[10px] text-muted-color">Employers citing skills gaps as top barrier <span class="italic font-semibold block text-[8px]">(WEF 2025)</span></p>
+            </div>
+        </div>
+
+        <!-- Closing isolated line -->
+        <div class="text-center py-2 bg-red-600 bg-opacity-10 rounded-xl border border-red-600 border-opacity-20">
+            <p class="font-serif text-xl font-bold text-red-600 tracking-wide uppercase">
+                Nobody is optimizing capability.
+            </p>
+        </div>
+
+        <div class="flex justify-between items-center text-xs tracking-wider border-t border-main-color pt-6 text-muted-color">
+            <span>Evidence</span>
+            <span>To slide 4: "Once you see that, the market's whole premise starts to look backwards."</span>
+        </div>
+
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+    <script src="../../js/theme_helper.js"></script>
+</body>
+</html>

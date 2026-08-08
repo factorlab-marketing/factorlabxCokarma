@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy 1: Dual Momentum</title>
+    <script src="../../js/tailwind.js"></script>
+    <link href="../../css/fontawesome.css" rel="stylesheet">
+    <link href="../../css/local_fonts.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d97706;
+            --bg-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            color: #1e293b;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gold-text {
+            color: var(--primary-gold);
+        }
+
+        /* Flowing Arrow BG - Light Mode */
+        .arrow-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+            opacity: 0.05;
+        }
+
+        .arrow-icon {
+            position: absolute;
+            color: #1e3a8a;
+            /* Dark Blue */
+            font-size: 4rem;
+            animation: flowRight 15s linear infinite;
+        }
+
+        @keyframes flowRight {
+            0% {
+                transform: translateX(-100px) translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(1380px) translateY(50px);
+                opacity: 0;
+            }
+        }
+
+        /* Flowchart Nodes */
+        .flow-node {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .flow-node:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(217, 119, 6, 0.2);
+        }
+
+        .flow-arrow {
+            color: #94a3b8;
+        }
+
+        /* Scatter Plot Styles */
+        .scatter-grid {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body class="w-[1280px] h-[720px] relative flex flex-col">
+
+    <!-- Background -->
+    <div class="arrow-bg" id="bgContainer"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 w-full h-full flex flex-col p-16">
+
+        <!-- Header -->
+        <div class="flex justify-between items-start mb-8">
+            <div>
+                <div class="text-sm font-semibold text-amber-600 tracking-wider uppercase mb-2">Strategy 1</div>
+                <h1 class="text-5xl font-extrabold text-slate-900">Dual Momentum Model</h1>
+            </div>
+            <!-- FactorLab Logo Text -->
+            <div class="opacity-80 text-right">
+                <div class="text-lg font-bold text-slate-700 tracking-tight">FactorLab</div>
+                <div class="text-xs text-slate-400 font-mono">Systematic Wealth</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 grid grid-cols-12 gap-12 items-center">
+
+            <!-- Left: Bullets -->
+            <div class="col-span-5 space-y-8">
+                <div class="flex items-start">
+                    <div
+                        class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 text-lg border border-amber-200 shrink-0 mr-4">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Strongest Asset Selection</h3>
+                        <p class="text-slate-600">Identifies strongest asset class (equity/gold/debt) and picks leading
+                            stocks within.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-lg border border-blue-200 shrink-0 mr-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Safety Switch</h3>
+                        <p class="text-slate-600">Shifts to safety on trend reversals – maximizing growth with
+                            disciplined risk management.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div
+                        class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-lg border border-emerald-200 shrink-0 mr-4">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">20+ Years Backtested</h3>
+                        <p class="text-slate-600">Adapts via rigorous rules, not predictions. Proven across multiple
+                            market cycles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Visuals (Flowchart + Concept Chart) -->
+            <div class="col-span-7 flex flex-col gap-8">
+
+                <!-- Flowchart -->
+                <div class="grid grid-cols-3 gap-4 items-center relative">
+                    <!-- 1 -->
+                    <div class="flow-node p-4 rounded-xl text-center z-10">
+                        <i class="fas fa-search text-2xl text-amber-600 mb-2"></i>
+                        <div class="font-bold text-sm text-slate-800">Asset Scan</div>
+                        <div class="text-[10px] text-slate-500">Equity vs Gold vs Debt</div>
+                    </div>
+                    <!-- Arrow 1 -->
+                    <div class="absolute left-[30%] top-1/2 -translate-y-1/2 text-slate-300"><i
+                            class="fas fa-chevron-right text-xl"></i></div>
+
+                    <!-- 2 -->
+                    <div class="flow-node p-4 rounded-xl text-center z-10">
+                        <i class="fas fa-list-ol text-2xl text-blue-600 mb-2"></i>
+                        <div class="font-bold text-sm text-slate-800">Stock Pick</div>
+                        <div class="text-[10px] text-slate-500">Top Relative Strength</div>
+                    </div>
+                    <!-- Arrow 2 -->
+                    <div class="absolute right-[30%] top-1/2 -translate-y-1/2 text-slate-300"><i
+                            class="fas fa-chevron-right text-xl"></i></div>
+
+                    <!-- 3 -->
+                    <div class="flow-node p-4 rounded-xl text-center z-10 border-emerald-200 bg-emerald-50">
+                        <i class="fas fa-check-shield text-2xl text-emerald-600 mb-2"></i>
+                        <div class="font-bold text-sm text-slate-800">Safety Switch</div>
+                        <div class="text-[10px] text-slate-500">Trend Reversal Guard</div>
+                    </div>
+                </div>
+
+                <!-- Concept Quadrant Chart (Conceptual Data) -->
+                <div
+                    class="h-[280px] bg-white rounded-2xl p-6 border border-slate-200 shadow-xl flex flex-col relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-2 z-10">
+                        <h3 class="font-bold text-slate-500 text-sm uppercase">Concept: Risk-Adjusted Returns</h3>
+                        <div class="text-[10px] text-slate-400 italic">Based on Academic Factor Investing Theory*</div>
+                    </div>
+
+                    <div class="flex-1 relative scatter-grid border-l border-b border-slate-300 m-4">
+                        <!-- Labels -->
+                        <div
+                            class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs font-bold text-slate-400 uppercase">
+                            Risk (Volatility)</div>
+                        <div
+                            class="absolute -left-8 top-1/2 -translate-y-1/2 -rotate-90 text-xs font-bold text-slate-400 uppercase">
+                            Return</div>
+
+                        <!-- Quadrant Regions -->
+                        <div
+                            class="absolute right-0 top-0 w-1/2 h-1/2 bg-emerald-50/50 rounded-bl-3xl border-b border-l border-emerald-100/50">
+                        </div>
+
+                        <!-- Data Points -->
+                        <!-- Market Index -->
+                        <div class="absolute left-[60%] top-[60%] flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-slate-400 shadow-md"></div>
+                            <div class="text-[10px] font-bold text-slate-500 mt-1">Market Index</div>
+                        </div>
+
+                        <!-- High Quality Mutual Funds -->
+                        <div class="absolute left-[70%] top-[40%] flex flex-col items-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-400 shadow-md"></div>
+                            <div class="text-[10px] font-bold text-slate-500 mt-1">Mutual Funds</div>
+                        </div>
+
+                        <!-- FactorLab (Target) -->
+                        <div class="absolute left-[40%] top-[20%] flex flex-col items-center z-20 group cursor-pointer">
+                            <div
+                                class="w-6 h-6 rounded-full bg-amber-500 shadow-lg border-2 border-white ring-4 ring-amber-500/20 animate-pulse">
+                            </div>
+                            <div
+                                class="text-xs font-bold text-amber-700 mt-1 whitespace-nowrap bg-amber-50 px-2 py-0.5 rounded border border-amber-200 shadow-sm">
+                                Dual Momentum</div>
+                            <!-- Tooltip -->
+                            <div
+                                class="absolute bottom-full mb-2 w-48 bg-slate-800 text-white text-[10px] p-2 rounded shadow-xl hidden group-hover:block transition-all z-30">
+                                Aim: Higher returns with reduced drawdown via 'Safety Switch'.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-[9px] text-slate-300 leading-tight z-10">
+                        *Theoretical visualization. Jegadeesh & Titman (1993); Asness (1994). Past performance is not
+                        indicative of future results.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // BG Animation
+        const bgContainer = document.getElementById('bgContainer');
+        for (let i = 0; i < 15; i++) {
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-chevron-right arrow-icon';
+            icon.style.top = Math.random() * 100 + '%';
+            icon.style.animationDelay = Math.random() * 15 + 's';
+            icon.style.opacity = Math.random() * 0.05 + 0.02;
+            icon.style.fontSize = (Math.random() * 3 + 2) + 'rem';
+            bgContainer.appendChild(icon);
+        }
+    </script>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

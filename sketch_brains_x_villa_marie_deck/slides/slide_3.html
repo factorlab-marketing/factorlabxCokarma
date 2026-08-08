@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280, height=720" name="viewport" />
+    <title>Same Age. Different Skill.</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #e2e8f0;
+        }
+
+        .slide-layout {
+            display: flex;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 80px;
+            background: #0B1F3B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+
+        .sidebar-icon {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-icon.active {
+            color: #10B981;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .comparison-container {
+            display: flex;
+            gap: 60px;
+            height: 400px;
+            align-items: center;
+        }
+
+        .profile-card {
+            flex: 1;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grad-role {
+            font-size: 24px;
+            color: #64748b;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .grad-salary {
+            font-size: 48px;
+            font-weight: 800;
+            color: #94a3b8;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .analyst-card {
+            transform: scale(1.05);
+            border: 2px solid #10B981;
+            box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15);
+            position: relative;
+        }
+
+        .analyst-role {
+            font-size: 28px;
+            color: #0B1F3B;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .analyst-salary {
+            font-size: 64px;
+            font-weight: 800;
+            color: #10B981;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #10B981;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-layout">
+        <div class="main-content">
+            <div class="mb-12 text-center">
+                <h1 class="font-montserrat font-bold text-3xl text-[#0B1F3B]">SAME AGE. DIFFERENT SKILL. DIFFERENT
+                    SALARY.</h1>
+            </div>
+
+            <div class="comparison-container">
+                <div class="profile-card">
+                    <div class="grad-role">Commerce Graduate</div>
+                    <div class="grad-salary">₹3 LPA</div>
+                </div>
+
+                <div class="profile-card analyst-card">
+                    <div class="badge">High Growth</div>
+                    <div class="analyst-role">Data Analyst</div>
+                    <div class="analyst-salary">₹8–10 LPA*</div>
+                    <div class="text-xs text-slate-400 mt-4">*With structured skill training & projects</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/capture_helper.js"></script>
+</body>
+
+</html>

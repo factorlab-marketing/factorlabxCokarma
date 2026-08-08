@@ -17,7 +17,7 @@ window.addEventListener('message', async (event) => {
                 windowHeight: 720,
                 logging: false,
                 backgroundColor: null,
-                allowTaint: true // Base64 sources are safe
+                allowTaint: false // MUST be false to allow toDataURL export
             });
 
             const imgData = canvas.toDataURL('image/jpeg', 0.90);
@@ -38,6 +38,14 @@ window.addEventListener('message', async (event) => {
                 success: false
             }, '*');
         }
+    } else if (event.data.type === 'theme-update') {
+        let styleEl = document.getElementById('dynamic-theme-override');
+        if (!styleEl) {
+            styleEl = document.createElement('style');
+            styleEl.id = 'dynamic-theme-override';
+            document.head.appendChild(styleEl);
+        }
+        styleEl.textContent = event.data.css || '';
     }
 });
 

@@ -91,8 +91,9 @@ window.PDFTools = {
                     iframe.src = `${slidesDir}slide_${i}.html`;
                 });
 
-                // 2. Wait for Render
-                await new Promise(r => setTimeout(r, 1200));
+                // 2. Wait for Render (5 seconds for charts and animations)
+                await new Promise(r => setTimeout(r, 5000));
+
 
                 // 3. Request Capture via Messaging
                 const imgData = await new Promise((resolve, reject) => {

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactorLab Smallcase - Pitch Deck</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #F59E0B;
+            /* Gold */
+            --primary-dark: #B45309;
+            /* Dark Gold */
+            --bg-color: #0f172a;
+            /* Slate 900 - Dark Blueish base */
+            --accent-blue: #1E3A8A;
+            /* Dark Blue */
+            --text-color: #f1f5f9;
+            /* Slate 100 */
+            --control-bg: rgba(15, 23, 42, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Main Viewport */
+        .deck-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .slide-frame {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 1280px;
+            height: 720px;
+            border: none;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+            transform-origin: center center;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: absolute;
+            inset: 0;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #334155;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Controls */
+        .controls-bar {
+            height: 80px;
+            background-color: var(--bg-color);
+            border-top: 1px solid #334155;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 0 40px;
+            z-index: 100;
+        }
+
+        .controls-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .deck-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deck-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .deck-subtitle {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background-color: #1e293b;
+            color: white;
+            border: 1px solid #334155;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.2rem;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+            color: #fff;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #0f172a;
+        }
+
+        .slide-counter {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #e2e8f0;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .progress-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #1e293b;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .fullscreen-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: #94a3b8;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .fullscreen-btn:hover {
+            color: white;
+            background-color: #334155;
+        }
+
+        .controls-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        /* Home Button */
+        .home-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-right: 16px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-btn:hover {
+            background-color: #334155;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .controls-bar {
+                padding: 0 20px;
+            }
+
+            .deck-title {
+                font-size: 0.9rem;
+            }
+
+            .deck-subtitle {
+                display: none;
+            }
+
+            .slide-frame {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="deck-container">
+        <div class="loading-overlay" id="loader">
+            <div class="loading-spinner"></div>
+        </div>
+        <!-- Double buffer frames for smooth transitions and preloading -->
+        <iframe class="slide-frame" id="slideFrameA" src="" title="Presentation Slide"></iframe>
+        <iframe class="slide-frame" id="slideFrameB" src="" title="Presentation Slide"
+            style="display: none; opacity: 0; position: absolute;"></iframe>
+
+    </div>
+
+    <!-- Controls -->
+    <footer class="controls-bar">
+        <div class="controls-left">
+            <a href="../index.html" class="home-btn" title="Back to Hub">
+                <i class="fas fa-home"></i>
+            </a>
+            <div class="deck-info">
+                <span class="deck-title">FactorLab Smallcase</span>
+                <span class="deck-subtitle">Data-Driven Quant Portfolios</span>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <button class="nav-btn" id="prevBtn" title="Previous Slide (Arrow Left)">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <div class="slide-counter">
+                <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">--</span>
+            </div>
+
+            <button class="nav-btn" id="nextBtn" title="Next Slide (Arrow Right)">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="controls-right">
+            <button class="fullscreen-btn" id="downloadBtn" title="Download PPTX"
+                style="margin-right: 10px; font-size: 0.8rem; font-weight: 600;">
+                <i class="fas fa-file-powerpoint" style="margin-right: 5px;"></i> PPTX
+            </button>
+            <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen (F)">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="../js/pptx_generator.js"></script>
+    <script>
+        // Configuration
+        const TOTAL_SLIDES = 5;
+        let currentSlide = 1;
+        let activeFrameId = 'slideFrameA';
+        let preloadFrameId = 'slideFrameB';
+
+        // DOM Elements
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentNumEl = document.getElementById('currentSlideNum');
+        const totalNumEl = document.getElementById('totalSlidesNum');
+        const progressBar = document.getElementById('progressBar');
+        const loader = document.getElementById('loader');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            totalNumEl.textContent = TOTAL_SLIDES;
+
+            // Initial load
+            loadSlideIntoFrame(activeFrameId, currentSlide, true);
+            preloadNext();
+            updateUI();
+        });
+
+        // Functions
+        function getActiveFrame() { return document.getElementById(activeFrameId); }
+        function getPreloadFrame() { return document.getElementById(preloadFrameId); }
+
+        function loadSlideIntoFrame(frameId, slideIndex, isVisible) {
+            const frame = document.getElementById(frameId);
+            frame.src = `slides/slide_${slideIndex}.html`;
+
+            frame.onload = () => {
+                // Keyboard setup inside iframe
+                try {
+                    const iframeDoc = frame.contentDocument || frame.contentWindow.document;
+                    iframeDoc.addEventListener('keydown', handleKeyDown);
+                    if (isVisible) window.focus(); // Keep focus out unless clicked
+                } catch (e) { }
+            };
+        }
+
+        function switchFrames() {
+            const active = getActiveFrame();
+            const preload = getPreloadFrame();
+
+            // Swap IDs conceptually
+            const temp = activeFrameId;
+            activeFrameId = preloadFrameId;
+            preloadFrameId = temp;
+
+            // Animate
+            active.style.opacity = '0';
+            setTimeout(() => { active.style.display = 'none'; }, 300);
+
+            preload.style.display = 'block';
+            // Force reflow
+            void preload.offsetWidth;
+            preload.style.opacity = '1';
+        }
+
+        function preloadNext() {
+            if (currentSlide < TOTAL_SLIDES) {
+                loadSlideIntoFrame(preloadFrameId, currentSlide + 1, false);
+            }
+        }
+
+        function preloadPrev() {
+            if (currentSlide > 1) {
+                loadSlideIntoFrame(preloadFrameId, currentSlide - 1, false);
+            }
+        }
+
+        function updateUI() {
+            currentNumEl.textContent = currentSlide;
+            const percentage = ((currentSlide - 1) / (TOTAL_SLIDES - 1)) * 100;
+            progressBar.style.width = `${percentage}%`;
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === TOTAL_SLIDES;
+        }
+
+        function goToNext() {
+            if (currentSlide < TOTAL_SLIDES) {
+                currentSlide++;
+
+                const nextFrame = getPreloadFrame();
+                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) {
+                    loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                }
+
+                switchFrames();
+                preloadNext(); // Prepare for next
+                updateUI();
+            }
+        }
+
+        function goToPrev() {
+            if (currentSlide > 1) {
+                currentSlide--;
+
+                const nextFrame = getPreloadFrame();
+                if (!nextFrame.src.includes(`slide_${currentSlide}.html`)) {
+                    loadSlideIntoFrame(preloadFrameId, currentSlide, false);
+                }
+
+                switchFrames();
+                preloadPrev();
+                updateUI();
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            }
+        }
+
+        function handleKeyDown(e) {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                goToNext();
+            } else if (e.key === 'ArrowLeft') {
+                goToPrev();
+            } else if (e.key.toLowerCase() === 'f') {
+                toggleFullscreen();
+            }
+        }
+
+        // Event Listeners
+        prevBtn.addEventListener('click', goToPrev);
+        nextBtn.addEventListener('click', goToNext);
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+        // PPTX Generator
+        const pptxGen = new PPTXGenerator(TOTAL_SLIDES, 'slides/slide_{i}.html');
+        downloadBtn.addEventListener('click', () => {
+            pptxGen.generate(downloadBtn);
+        });
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        // Responsive Scaling Logic
+        function resizeSlides() {
+            const container = document.querySelector('.deck-container');
+            const frames = document.querySelectorAll('.slide-frame');
+            if (!container || frames.length === 0) return;
+
+            const contentW = 1280;
+            const contentH = 720;
+
+            const availableW = container.clientWidth - 20;
+            const availableH = container.clientHeight - 20;
+
+            const scaleX = availableW / contentW;
+            const scaleY = availableH / contentH;
+
+            const scale = Math.min(scaleX, scaleY, 1.5);
+
+            frames.forEach(frame => {
+                frame.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            });
+        }
+
+        window.addEventListener('resize', resizeSlides);
+        resizeSlides();
+        setTimeout(resizeSlides, 100);
+
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
+        }, 800);
+
+    </script>
+</body>
+
+</html>
